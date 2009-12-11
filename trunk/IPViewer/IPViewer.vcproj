@@ -286,10 +286,6 @@
 				>
 			</File>
 			<File
-				RelativePath=".\res\IPViewer.ico"
-				>
-			</File>
-			<File
 				RelativePath=".\IPViewer.rc"
 				>
 			</File>
