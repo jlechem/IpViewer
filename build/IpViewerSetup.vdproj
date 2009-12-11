@@ -63,6 +63,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_D04931C605D125DFE8606B700A7CD3D7"
+        "OwnerKey" = "8:_E7398C63964644EF8DB99903418F529A"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_E7398C63964644EF8DB99903418F529A"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -202,6 +208,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D04931C605D125DFE8606B700A7CD3D7"
+            {
+            "SourcePath" = "8:IPData.dll"
+            "TargetName" = "8:IPData.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_E9CFD597F26343F4A582B847EB86B49B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EE523835EB6E4655560052ECF473DF65"
             {
             "SourcePath" = "8:NETAPI32.dll"
@@ -288,7 +314,7 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:"
+        "ProductName" = "8:IP Viewer"
         "ProductCode" = "8:{416B9FDF-6B51-48AE-B6BD-F9DBE4E09834}"
         "PackageCode" = "8:{A2371390-5B91-43B7-AEE6-B368199F77EC}"
         "UpgradeCode" = "8:{EE1F1319-04EE-4254-AEE1-4891FFC26803}"
@@ -297,7 +323,7 @@
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
         "ProductVersion" = "8:1.6.0"
-        "Manufacturer" = "8:IP Viewer"
+        "Manufacturer" = "8: "
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
         "Title" = "8:IP Viewer 1.6"
