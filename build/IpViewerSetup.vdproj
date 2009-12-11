@@ -21,20 +21,14 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_400BE5468F024D9ABFB10F1EF93C18AB"
-        "OwnerKey" = "8:_4EEF88A61F5841B594EFAFA47DCBA5FD"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_4EEF88A61F5841B594EFAFA47DCBA5FD"
-        "OwnerKey" = "8:_E7398C63964644EF8DB99903418F529A"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_4EEF88A61F5841B594EFAFA47DCBA5FD"
+        "MsmKey" = "8:_5A41A078142F4EF397BF98FB04DA5659"
         "OwnerKey" = "8:_861B5C78A0F74604BEAC388081FDD451"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_5A41A078142F4EF397BF98FB04DA5659"
+        "OwnerKey" = "8:_E7398C63964644EF8DB99903418F529A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -52,7 +46,7 @@
         "Entry"
         {
         "MsmKey" = "8:_7C8E975DB23F48B1969BBF86AA7B65EB"
-        "OwnerKey" = "8:_FDC064F51E2F46188EFD85532416576E"
+        "OwnerKey" = "8:_865FD3954639462E85FC763A4FBD9832"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -63,8 +57,26 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_D04931C605D125DFE8606B700A7CD3D7"
+        "MsmKey" = "8:_865FD3954639462E85FC763A4FBD9832"
+        "OwnerKey" = "8:_861B5C78A0F74604BEAC388081FDD451"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_865FD3954639462E85FC763A4FBD9832"
         "OwnerKey" = "8:_E7398C63964644EF8DB99903418F529A"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_C733B3787027471B817FD9417F79D921"
+        "OwnerKey" = "8:_5A41A078142F4EF397BF98FB04DA5659"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_CB0555582A4745E6BBEFDA8569821C16"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -76,18 +88,6 @@
         "Entry"
         {
         "MsmKey" = "8:_EE523835EB6E4655560052ECF473DF65"
-        "OwnerKey" = "8:_861B5C78A0F74604BEAC388081FDD451"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_FDC064F51E2F46188EFD85532416576E"
-        "OwnerKey" = "8:_E7398C63964644EF8DB99903418F529A"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_FDC064F51E2F46188EFD85532416576E"
         "OwnerKey" = "8:_861B5C78A0F74604BEAC388081FDD451"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -208,10 +208,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D04931C605D125DFE8606B700A7CD3D7"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CB0555582A4745E6BBEFDA8569821C16"
             {
-            "SourcePath" = "8:IPData.dll"
-            "TargetName" = "8:IPData.dll"
+            "SourcePath" = "8:..\\trunk\\IPViewer\\res\\IP_Viewer.ICO"
+            "TargetName" = "8:IP_Viewer.ICO"
             "Tag" = "8:"
             "Folder" = "8:_E9CFD597F26343F4A582B847EB86B49B"
             "Condition" = "8:"
@@ -225,7 +225,7 @@
             "PackageAs" = "3:1"
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EE523835EB6E4655560052ECF473DF65"
@@ -316,7 +316,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:IP Viewer"
         "ProductCode" = "8:{416B9FDF-6B51-48AE-B6BD-F9DBE4E09834}"
-        "PackageCode" = "8:{A2371390-5B91-43B7-AEE6-B368199F77EC}"
+        "PackageCode" = "8:{16378D0A-4C2F-44A9-B3E7-93295C46E441}"
         "UpgradeCode" = "8:{EE1F1319-04EE-4254-AEE1-4891FFC26803}"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
@@ -446,7 +446,7 @@
             "Target" = "8:_099BCCE39D1847C4B7F9DC0D7C45F31A"
             "Folder" = "8:_7729C43BCD3548D982A99DF37E9074EA"
             "WorkingFolder" = "8:_E9CFD597F26343F4A582B847EB86B49B"
-            "Icon" = "8:"
+            "Icon" = "8:_CB0555582A4745E6BBEFDA8569821C16"
             "Feature" = "8:"
             }
         }
@@ -845,21 +845,7 @@
         }
         "MergeModule"
         {
-            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_400BE5468F024D9ABFB10F1EF93C18AB"
-            {
-            "UseDynamicProperties" = "11:TRUE"
-            "IsDependency" = "11:TRUE"
-            "SourcePath" = "8:microsoft_vc90_crt_x86.msm"
-                "Properties"
-                {
-                }
-            "LanguageId" = "3:0"
-            "Exclude" = "11:FALSE"
-            "Folder" = "8:"
-            "Feature" = "8:"
-            "IsolateTo" = "8:"
-            }
-            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_4EEF88A61F5841B594EFAFA47DCBA5FD"
+            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_5A41A078142F4EF397BF98FB04DA5659"
             {
             "UseDynamicProperties" = "11:TRUE"
             "IsDependency" = "11:TRUE"
@@ -901,11 +887,25 @@
             "Feature" = "8:"
             "IsolateTo" = "8:"
             }
-            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_FDC064F51E2F46188EFD85532416576E"
+            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_865FD3954639462E85FC763A4FBD9832"
             {
             "UseDynamicProperties" = "11:TRUE"
             "IsDependency" = "11:TRUE"
             "SourcePath" = "8:policy_9_0_Microsoft_VC90_MFC_x86.msm"
+                "Properties"
+                {
+                }
+            "LanguageId" = "3:0"
+            "Exclude" = "11:FALSE"
+            "Folder" = "8:"
+            "Feature" = "8:"
+            "IsolateTo" = "8:"
+            }
+            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_C733B3787027471B817FD9417F79D921"
+            {
+            "UseDynamicProperties" = "11:TRUE"
+            "IsDependency" = "11:TRUE"
+            "SourcePath" = "8:microsoft_vc90_crt_x86.msm"
                 "Properties"
                 {
                 }

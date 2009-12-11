@@ -84,7 +84,6 @@ FONT 8, "MS Shell Dlg", 0, 0, 0x1
 BEGIN
     ICON            IDI_ICON_IPVIEWER,IDC_STATIC,14,14,20,20
     LTEXT           "IP Viewer, Version 1.6",IDC_STATIC,42,14,114,8,SS_NOPREFIX
-    LTEXT           "Copyright JRL Software (C) 2009",IDC_STATIC,42,26,114,8
     DEFPUSHBUTTON   "OK",IDOK,113,41,50,14,WS_GROUP
 END
 
@@ -147,11 +146,8 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "JRL Software"
-            VALUE "FileDescription", "JRL Software"
             VALUE "FileVersion", "1.6.0.0"
             VALUE "InternalName", "IPViewer.exe"
-            VALUE "LegalCopyright", "(c) JRL Software.  All rights reserved."
             VALUE "OriginalFilename", "IPViewer.exe"
             VALUE "ProductName", "IP Viewer"
             VALUE "ProductVersion", "1.6.0.0"
