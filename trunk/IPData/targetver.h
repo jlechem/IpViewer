@@ -1,8 +1,3 @@
-
-/*
-	Copyright 2009 Justin LeCheminant
-*/
-
 /*
 	This file is part of IP Viewer.
 

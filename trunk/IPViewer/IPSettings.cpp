@@ -1,8 +1,4 @@
 /*
-	Copyright 2009 Justin LeCheminant
-*/
-
-/*
 	This file is part of IP Viewer.
 
     filesort is free software: you can redistribute it and/or modify
@@ -58,7 +54,7 @@ void CIPSettings::Load()
 				// try and read the values, if it's not there then we need to write it
 				if( !m_pRegistry->Read( key, (int)_tick ) )
 				{
-					!m_pRegistry->Write( key, (int)_tick );
+					m_pRegistry->Write( key, (int)_tick );
 				}
 
 				key.LoadStringW( IDS_MINTRAY_KEY );
@@ -67,7 +63,7 @@ void CIPSettings::Load()
 
 				if( !m_pRegistry->Read( key,  newWord) )
 				{
-					!m_pRegistry->Write( key, (bool)_minToTray );
+					m_pRegistry->Write( key, (BOOL)_minToTray );
 				}
 
 				_minToTray = newWord;
@@ -78,7 +74,7 @@ void CIPSettings::Load()
 
 				if( !m_pRegistry->Read( key, newWord ) )
 				{
-					!m_pRegistry->Write( key, (bool)_closeToTray );
+					m_pRegistry->Write( key, (BOOL)_closeToTray );
 				}
 
 				_closeToTray = newWord;
@@ -89,7 +85,7 @@ void CIPSettings::Load()
 
 				if( !m_pRegistry->Read( key, newWord ) )
 				{
-					!m_pRegistry->Write( key, (bool)_onTop );
+					m_pRegistry->Write( key, (BOOL)_onTop );
 				}
 
 				_onTop = newWord;
@@ -98,7 +94,7 @@ void CIPSettings::Load()
 
 				if( !m_pRegistry->Read( key, (int)_selectedIndex ) )
 				{
-					!m_pRegistry->Write( key, (int)_selectedIndex );
+					m_pRegistry->Write( key, (int)_selectedIndex );
 				}
 
 				newWord = _startToTray;
@@ -107,7 +103,7 @@ void CIPSettings::Load()
 
 				if( !m_pRegistry->Read( key, newWord ) )
 				{
-					!m_pRegistry->Write( key, (bool)_startToTray );
+					m_pRegistry->Write( key, (BOOL)_startToTray );
 				}
 				
 				_startToTray = newWord;
@@ -147,11 +143,9 @@ void CIPSettings::Reset()
 
 }
 
-bool CIPSettings::Save()
+BOOL CIPSettings::Save()
 {
-	bool result = false;
-	
-	DWORD newWord;
+	BOOL result = false;
 
 	CString key;
 
@@ -171,19 +165,19 @@ bool CIPSettings::Save()
 		m_pRegistry->Write( key, (int)_tick );
 		
 		key.LoadStringW( IDS_MINTRAY_KEY );
-		m_pRegistry->Write( key, (bool)_minToTray );
+		m_pRegistry->Write( key, (BOOL)_minToTray );
 		
 		key.LoadStringW( IDS_CLOSETRAY_KEY);
-		m_pRegistry->Write( key, (bool)_closeToTray );
+		m_pRegistry->Write( key, (BOOL)_closeToTray );
 		
 		key.LoadStringW( IDS_SELECTED_INDEX_KEY );
 		m_pRegistry->Write( key, (int)_selectedIndex );
 		
 		key.LoadStringW( IDS_ONTOP_KEY  );
-		m_pRegistry->Write( key, (bool)_onTop );
+		m_pRegistry->Write( key, (BOOL)_onTop );
 		
 		key.LoadStringW( IDS_START_MIN_KEY );
-		m_pRegistry->Write( key, (bool)_startToTray );	
+		m_pRegistry->Write( key, (BOOL)_startToTray );	
 
 		result = true;
 
