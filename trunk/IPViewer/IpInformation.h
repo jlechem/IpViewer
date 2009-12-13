@@ -20,8 +20,6 @@
 #include "StdAfx.h"
 #include "..\IPData\IPData.h"
 
-__declspec(dllimport) CIPData;
-
 class CIpInformation
 {
 public:
