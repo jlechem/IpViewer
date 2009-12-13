@@ -27,7 +27,7 @@ class CIPViewerSettings : public CDialog
 
 public:
 	CIPViewerSettings(CWnd* pParent = NULL);   // standard constructor
-	CIPViewerSettings( CWnd* pParent = NULL, CIPSettings* settings = NULL );
+	CIPViewerSettings( CWnd* pParent, CIPSettings* settings );
 
 	virtual ~CIPViewerSettings();
 
