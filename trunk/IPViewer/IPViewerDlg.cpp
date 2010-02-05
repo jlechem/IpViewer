@@ -351,6 +351,7 @@ void CIPViewerDlg::OnClose()
 	}
 	else
 	{
+		this->TrayMessage(NIM_DELETE);
 		CDialog::OnClose();
 	}
 }
