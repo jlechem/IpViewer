@@ -27,6 +27,8 @@
 #define IDI_ICON_IPVIEWER               130
 #define IDR_MENU1                       131
 #define IDR_CONTEXT_MENU                132
+#define IDD_DIALOG1                     133
+#define IDD_DIALOG_NICS                 133
 #define IDC_CHECK_MINTRAY               1006
 #define IDC_CHECK_CLOSETRAY             1007
 #define IDC_RADIO_IP                    1008
@@ -41,6 +43,9 @@
 #define IDC_TEXT_HOST                   1024
 #define IDC_TEXT_MAC                    1025
 #define IDC_TEXT_MAC_CAPTION            1026
+#define IDC_COMBO2                      1031
+#define IDC_RADIO1                      1032
+#define IDC_RADIO2                      1033
 #define ID_FILE_EXIT                    32771
 #define ID_EDIT_SETTINGS                32772
 #define ID_HELP_ABOUT                   32773
@@ -61,9 +66,9 @@
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        133
+#define _APS_NEXT_RESOURCE_VALUE        135
 #define _APS_NEXT_COMMAND_VALUE         32786
-#define _APS_NEXT_CONTROL_VALUE         1027
+#define _APS_NEXT_CONTROL_VALUE         1034
 #define _APS_NEXT_SYMED_VALUE           105
 #endif
 #endif
