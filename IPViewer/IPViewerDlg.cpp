@@ -238,7 +238,7 @@ void CIPViewerDlg::OnEditSettings()
 	this->EditSettings();
 }
 
-void CIPViewerDlg::OnTimer( UINT TimerVal )
+void CIPViewerDlg::OnTimer( UINT_PTR TimerVal )
 {
 	this->RefreshIpInfo();
 

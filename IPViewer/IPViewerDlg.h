@@ -51,7 +51,7 @@ protected:
 	afx_msg void OnFileRefresh();
 	afx_msg void OnFileExit();
 	afx_msg void OnEditSettings();
-	afx_msg void OnTimer( UINT nID );
+	afx_msg void OnTimer( UINT_PTR nID );
 	afx_msg void OnEditCopyipaddress();
 	afx_msg void OnEditCopymac();
 	afx_msg void OnEditCopyhostname();
