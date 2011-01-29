@@ -92,7 +92,6 @@ BOOL CIPData::InitInstance()
 	return TRUE;
 }
 
-
 // IPData.cpp : Defines the initialization routines for the DLL.
 CString CIPData::LoadIpAddress( void )
 {
@@ -132,9 +131,19 @@ CString CIPData::LoadIpAddress( void )
 
 }
 
+CString CIPData::LoadIpAddress( CString adapter )
+{
+	AFX_MANAGE_STATE(AfxGetStaticModuleState());
+
+	// TODO: get the ip address for the specified adapter
+	return _T("127.0.0.1");
+}
+
+// loads the mac address of the default adapter
 CString CIPData::LoadMacAddress( void )
 {
 	AFX_MANAGE_STATE(AfxGetStaticModuleState());
+
 	try
 	{
 		unsigned char MACData[8];						// Allocate data structure for MAC (6 bytes needed)
@@ -182,6 +191,16 @@ CString CIPData::LoadMacAddress( void )
 	}
 }
 
+// loads the mac address for the specified adapter
+CString CIPData::LoadMacAddress( CString adapter )
+{
+	AFX_MANAGE_STATE(AfxGetStaticModuleState());
+	// TODO: get the mac address for the specified adapter
+	return _T("MAC ADDRESS");
+
+}
+
+// loads the host name of the machine
 CString CIPData::LoadHostName( void )
 {
 	AFX_MANAGE_STATE(AfxGetStaticModuleState());
@@ -210,13 +229,32 @@ CString CIPData::LoadHostName( void )
 	}
 	catch( ... )
 	{
-		// load some default values from the string table
+		// TODO: load some default values from the string table
 		return _T("Localhost");
 	}
 }
 
+// load the subnet for the default adapter
 CString CIPData::LoadSubnet( void )
 {
 	AFX_MANAGE_STATE(AfxGetStaticModuleState());
+	// TODO: get the subnet for the default adapter
 	return _T("255.255.255.0");
+}
+
+// loads the subnet for the specified adapyer
+CString CIPData::LoadSubnet( CString adapter )
+{
+	AFX_MANAGE_STATE(AfxGetStaticModuleState());
+	// TODO: get the subnet for the specified adapter
+	return _T("255.255.255.0");
+
+}
+
+// loads all the adapters for this machine
+CStringArray* CIPData::LoadAdapters()
+{
+	AFX_MANAGE_STATE(AfxGetStaticModuleState());
+	// TODO: get a list of all the adpaters
+	return new CStringArray();
 }
