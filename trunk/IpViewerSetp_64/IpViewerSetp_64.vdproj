@@ -21,25 +21,37 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_566A94F159604505989D7EDA960C920F"
+        "OwnerKey" = "8:_2C626EF069D54A80ABE1C0B0E9F3BDC2"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_566A94F159604505989D7EDA960C920F"
+        "OwnerKey" = "8:_5ABA73D5418D41E8AB00DA0592FC07B5"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_5ABA73D5418D41E8AB00DA0592FC07B5"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
+        "MsmKey" = "8:_6A0DC6FC97BA435582D19B2ED1A30681"
+        "OwnerKey" = "8:_2C626EF069D54A80ABE1C0B0E9F3BDC2"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_6A0DC6FC97BA435582D19B2ED1A30681"
+        "OwnerKey" = "8:_5ABA73D5418D41E8AB00DA0592FC07B5"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_83867374BC5AAD68DD1B1716BC06B67C"
-        "OwnerKey" = "8:_2C626EF069D54A80ABE1C0B0E9F3BDC2"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_8DFB40EE95BE412B88ECD28868E5AA17"
-        "OwnerKey" = "8:_2C626EF069D54A80ABE1C0B0E9F3BDC2"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_D9DB6615C3D749EE9D961C5514923885"
         "OwnerKey" = "8:_2C626EF069D54A80ABE1C0B0E9F3BDC2"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -61,6 +73,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -77,6 +97,27 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.0,Profile=Client"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4 Client Profile (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.0,Profile=Client"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
+                    {
+                    "Name" = "8:Windows Installer 3.1"
+                    "ProductCode" = "8:Microsoft.Windows.Installer.3.1"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -114,7 +155,7 @@
             "SharedLegacy" = "11:FALSE"
             "PackageAs" = "3:1"
             "Register" = "3:1"
-            "Exclude" = "11:FALSE"
+            "Exclude" = "11:TRUE"
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
@@ -186,7 +227,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:IP Viewer"
         "ProductCode" = "8:{CD324201-7F1D-46B3-9217-A16E7EA1CAC0}"
-        "PackageCode" = "8:{3BE25419-492C-4F9D-B200-A44138B69498}"
+        "PackageCode" = "8:{7421D4D9-BFC1-4AC3-9ED1-26D594F85E8B}"
         "UpgradeCode" = "8:{4F0AC61E-64CB-43FD-98DF-3F6E7A190C71}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -702,11 +743,11 @@
         }
         "MergeModule"
         {
-            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_8DFB40EE95BE412B88ECD28868E5AA17"
+            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_566A94F159604505989D7EDA960C920F"
             {
             "UseDynamicProperties" = "11:TRUE"
             "IsDependency" = "11:TRUE"
-            "SourcePath" = "8:Microsoft_VC100_MFC_x64.msm"
+            "SourcePath" = "8:Microsoft_VC100_CRT_x64.msm"
                 "Properties"
                 {
                 }
@@ -716,11 +757,11 @@
             "Feature" = "8:"
             "IsolateTo" = "8:"
             }
-            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_D9DB6615C3D749EE9D961C5514923885"
+            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_6A0DC6FC97BA435582D19B2ED1A30681"
             {
             "UseDynamicProperties" = "11:TRUE"
             "IsDependency" = "11:TRUE"
-            "SourcePath" = "8:Microsoft_VC100_CRT_x64.msm"
+            "SourcePath" = "8:Microsoft_VC100_MFC_x64.msm"
                 "Properties"
                 {
                 }

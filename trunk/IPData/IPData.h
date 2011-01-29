@@ -44,10 +44,26 @@ public:
 public:
 	virtual BOOL InitInstance();
 
-	static CString LoadIpAddress();
-	static CString LoadMacAddress();
-	static CString LoadHostName();
-	static CString LoadSubnet();
+	static CString LoadIpAddress();						// gets the default adapter internal IP address
+	static CString LoadIpAddress( CString adapter );	// gets the ip address for the specified adapter
 
+	static CString LoadMacAddress();					// gets the default adaper MAC address
+	static CString LoadMacAddress( CString adapter );	// gets the MAC address for the specified adapter
+	
+	static CString LoadSubnet();						// gets the default adapter subnet address
+	static CString LoadSubnet( CString adapter );		// gets the subnet address for the specified adapter
+
+	static CString LoadHostName();						// gets the computers host name
+	static CStringArray* LoadAdapters();				// gets a string array of all the adapters on this system
+	
+	static CString LoadExternalIpAddress();				// gets the external ip address of the default adapter
+	static CString LoadExternalIpAddress( CString );	// gets the external ip address for the specified adapter
+	
 	DECLARE_MESSAGE_MAP()
+
+private:
+
+protected:
+
+
 };
