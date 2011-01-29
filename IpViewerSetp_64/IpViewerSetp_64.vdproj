@@ -39,25 +39,25 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_D3E9463D88CC45B9AB25B2BC823E2575"
+        "MsmKey" = "8:_BF85A3FE071D48FFA40ACBC74AC52C78"
         "OwnerKey" = "8:_2C626EF069D54A80ABE1C0B0E9F3BDC2"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_D3E9463D88CC45B9AB25B2BC823E2575"
+        "MsmKey" = "8:_BF85A3FE071D48FFA40ACBC74AC52C78"
         "OwnerKey" = "8:_5ABA73D5418D41E8AB00DA0592FC07B5"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_E0EA2B08FE524598A2D400F8DF820C80"
+        "MsmKey" = "8:_C020E16118DF4FA48E4912D4A6C7856A"
         "OwnerKey" = "8:_2C626EF069D54A80ABE1C0B0E9F3BDC2"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_E0EA2B08FE524598A2D400F8DF820C80"
+        "MsmKey" = "8:_C020E16118DF4FA48E4912D4A6C7856A"
         "OwnerKey" = "8:_5ABA73D5418D41E8AB00DA0592FC07B5"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -266,13 +266,13 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:IP Viewer"
         "ProductCode" = "8:{3ADFEDEC-16CB-42FB-928C-6C3113B1AB56}"
-        "PackageCode" = "8:{5AF153C5-169B-4073-8768-2E74BCEA53AC}"
+        "PackageCode" = "8:{65285719-0109-4F5B-A9AA-84DA07916C0F}"
         "UpgradeCode" = "8:{4F0AC61E-64CB-43FD-98DF-3F6E7A190C71}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
-        "InstallAllUsers" = "11:FALSE"
+        "InstallAllUsers" = "11:TRUE"
         "ProductVersion" = "8:1.7.0"
         "Manufacturer" = "8:JRL Software"
         "ARPHELPTELEPHONE" = "8:"
@@ -782,11 +782,11 @@
         }
         "MergeModule"
         {
-            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_D3E9463D88CC45B9AB25B2BC823E2575"
+            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_BF85A3FE071D48FFA40ACBC74AC52C78"
             {
             "UseDynamicProperties" = "11:TRUE"
             "IsDependency" = "11:TRUE"
-            "SourcePath" = "8:Microsoft_VC100_DebugMFC_x64.msm"
+            "SourcePath" = "8:Microsoft_VC100_MFC_x86.msm"
                 "Properties"
                 {
                 }
@@ -796,11 +796,11 @@
             "Feature" = "8:"
             "IsolateTo" = "8:"
             }
-            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_E0EA2B08FE524598A2D400F8DF820C80"
+            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_C020E16118DF4FA48E4912D4A6C7856A"
             {
             "UseDynamicProperties" = "11:TRUE"
             "IsDependency" = "11:TRUE"
-            "SourcePath" = "8:Microsoft_VC100_DebugCRT_x64.msm"
+            "SourcePath" = "8:Microsoft_VC100_CRT_x86.msm"
                 "Properties"
                 {
                 }
