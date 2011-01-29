@@ -46,6 +46,9 @@
 #define IDC_COMBO2                      1031
 #define IDC_RADIO1                      1032
 #define IDC_RADIO2                      1033
+#define IDC_RADIO_EXTERNAL_IP           1034
+#define IDC_ext                         1035
+#define IDC_TEXT_EXTERNAL               1035
 #define ID_FILE_EXIT                    32771
 #define ID_EDIT_SETTINGS                32772
 #define ID_HELP_ABOUT                   32773
@@ -68,7 +71,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        135
 #define _APS_NEXT_COMMAND_VALUE         32786
-#define _APS_NEXT_CONTROL_VALUE         1034
+#define _APS_NEXT_CONTROL_VALUE         1036
 #define _APS_NEXT_SYMED_VALUE           105
 #endif
 #endif

@@ -77,6 +77,7 @@ private:
 	CString m_strMac;
 	CString m_strHost;
 	CString m_strIP;
+	CString m_strExternalIP;
 
 	BOOL m_bVisible;
 
@@ -86,8 +87,4 @@ private:
 	void EditSettings();
 	BOOL TrayMessage( DWORD );
 	
-	CStatic m_staticIP;
-	CStatic m_staticHost;
-	CStatic m_staticMac;
-	CStatic m_staticMacCaption;
 };

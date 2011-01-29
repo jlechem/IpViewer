@@ -113,7 +113,9 @@ void CIPViewerSettings::OnBnClickedButtonSave()
 	m_pSettings->SetStartInTray( m_bStartMinimized );
 
 	// save our changes to the registry
-	CString result = m_pSettings->Save() ? _T("Settings were saved successfully.") : _T("An error occured saving settings.");
+	CString result = m_pSettings->Save() ? 
+		_T("Settings were saved successfully.") : 
+		_T("An error occured saving settings.");
 
 	AfxMessageBox( result, MB_OKCANCEL );
 		
