@@ -21,14 +21,8 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_566A94F159604505989D7EDA960C920F"
-        "OwnerKey" = "8:_2C626EF069D54A80ABE1C0B0E9F3BDC2"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_566A94F159604505989D7EDA960C920F"
-        "OwnerKey" = "8:_5ABA73D5418D41E8AB00DA0592FC07B5"
+        "MsmKey" = "8:_449DC54018D8409397E9BF82513ECC2E"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -39,20 +33,32 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_6A0DC6FC97BA435582D19B2ED1A30681"
+        "MsmKey" = "8:_83867374BC5AAD68DD1B1716BC06B67C"
         "OwnerKey" = "8:_2C626EF069D54A80ABE1C0B0E9F3BDC2"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_6A0DC6FC97BA435582D19B2ED1A30681"
+        "MsmKey" = "8:_D3E9463D88CC45B9AB25B2BC823E2575"
+        "OwnerKey" = "8:_2C626EF069D54A80ABE1C0B0E9F3BDC2"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D3E9463D88CC45B9AB25B2BC823E2575"
         "OwnerKey" = "8:_5ABA73D5418D41E8AB00DA0592FC07B5"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_83867374BC5AAD68DD1B1716BC06B67C"
+        "MsmKey" = "8:_E0EA2B08FE524598A2D400F8DF820C80"
         "OwnerKey" = "8:_2C626EF069D54A80ABE1C0B0E9F3BDC2"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_E0EA2B08FE524598A2D400F8DF820C80"
+        "OwnerKey" = "8:_5ABA73D5418D41E8AB00DA0592FC07B5"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -80,6 +86,19 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.0,Profile=Client"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4 Client Profile (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.0,Profile=Client"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
+                    {
+                    "Name" = "8:Windows Installer 3.1"
+                    "ProductCode" = "8:Microsoft.Windows.Installer.3.1"
+                    }
+                }
             }
         }
         "Release"
@@ -139,6 +158,26 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_449DC54018D8409397E9BF82513ECC2E"
+            {
+            "SourcePath" = "8:..\\IPViewer\\res\\IP_Viewer.ICO"
+            "TargetName" = "8:IP_Viewer.ICO"
+            "Tag" = "8:"
+            "Folder" = "8:_81F21480F42647EE9DC0BF64C661ED0C"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_83867374BC5AAD68DD1B1716BC06B67C"
             {
             "SourcePath" = "8:NETAPI32.dll"
@@ -226,25 +265,25 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:IP Viewer"
-        "ProductCode" = "8:{CD324201-7F1D-46B3-9217-A16E7EA1CAC0}"
-        "PackageCode" = "8:{7421D4D9-BFC1-4AC3-9ED1-26D594F85E8B}"
+        "ProductCode" = "8:{3ADFEDEC-16CB-42FB-928C-6C3113B1AB56}"
+        "PackageCode" = "8:{5AF153C5-169B-4073-8768-2E74BCEA53AC}"
         "UpgradeCode" = "8:{4F0AC61E-64CB-43FD-98DF-3F6E7A190C71}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.6"
+        "ProductVersion" = "8:1.7.0"
         "Manufacturer" = "8:JRL Software"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:IP Viewer 1.6"
+        "Title" = "8:IP Viewer 1.7"
         "Subject" = "8:"
         "ARPCONTACT" = "8:JRL Software"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
-        "ARPPRODUCTICON" = "8:"
+        "ARPPRODUCTICON" = "8:_449DC54018D8409397E9BF82513ECC2E"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
@@ -743,11 +782,11 @@
         }
         "MergeModule"
         {
-            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_566A94F159604505989D7EDA960C920F"
+            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_D3E9463D88CC45B9AB25B2BC823E2575"
             {
             "UseDynamicProperties" = "11:TRUE"
             "IsDependency" = "11:TRUE"
-            "SourcePath" = "8:Microsoft_VC100_CRT_x64.msm"
+            "SourcePath" = "8:Microsoft_VC100_DebugMFC_x64.msm"
                 "Properties"
                 {
                 }
@@ -757,11 +796,11 @@
             "Feature" = "8:"
             "IsolateTo" = "8:"
             }
-            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_6A0DC6FC97BA435582D19B2ED1A30681"
+            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_E0EA2B08FE524598A2D400F8DF820C80"
             {
             "UseDynamicProperties" = "11:TRUE"
             "IsDependency" = "11:TRUE"
-            "SourcePath" = "8:Microsoft_VC100_MFC_x64.msm"
+            "SourcePath" = "8:Microsoft_VC100_DebugCRT_x64.msm"
                 "Properties"
                 {
                 }

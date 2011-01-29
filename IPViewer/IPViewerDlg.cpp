@@ -70,6 +70,7 @@ CIPViewerDlg::CIPViewerDlg(CWnd* pParent /*=NULL*/)
 	, m_strMac(_T(""))
 	, m_strHost(_T(""))
 	, m_strIP(_T(""))
+	, m_strExternalIP(_T(""))
 	, m_bVisible(FALSE)
 {
 	m_hIcon = AfxGetApp()->LoadIcon(IDI_ICON_IPVIEWER);
@@ -85,10 +86,7 @@ void CIPViewerDlg::DoDataExchange(CDataExchange* pDX)
 	DDX_Text(pDX, IDC_TEXT_IP, m_strIP);
 	DDX_Text(pDX, IDC_TEXT_HOST, m_strHost);
 	DDX_Text(pDX, IDC_TEXT_MAC, m_strMac);
-	DDX_Control(pDX, IDC_TEXT_IP, m_staticIP);
-	DDX_Control(pDX, IDC_TEXT_HOST, m_staticHost);
-	DDX_Control(pDX, IDC_TEXT_MAC, m_staticMac);
-	DDX_Control(pDX, IDC_TEXT_MAC_CAPTION, m_staticMacCaption);
+	DDX_Text(pDX, IDC_TEXT_EXTERNAL, m_strExternalIP);
 }
 
 BEGIN_MESSAGE_MAP(CIPViewerDlg, CDialog)
@@ -358,7 +356,6 @@ void CIPViewerDlg::OnClose()
 	}
 }
 
-
 // handles events for the tray icon we put in place
 LRESULT CIPViewerDlg::OnTrayNotification( WPARAM wParam, LPARAM lParam )
 {
@@ -406,6 +403,7 @@ LRESULT CIPViewerDlg::OnTrayNotification( WPARAM wParam, LPARAM lParam )
 			break;
 	}
 }
+
 void CIPViewerDlg::OnPopupCopyipaddress()
 {
 	CClipboard::SetData( m_strIP, m_hWnd );
