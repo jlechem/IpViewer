@@ -1,5 +1,5 @@
 /*
-	Copyright 2010 Justin LeCheminant
+	Copyright 2011 Justin LeCheminant
 
 	This file is part of IP Viewer.
 
@@ -36,7 +36,6 @@ public:
 	CString GetMacAddress() { return m_strMacAddress; };
 	CString GetAdapterDescription() { return m_strAdapterDescription; }
 	CString GetExternalIpAddress() { return m_strExternalIpAddress; }
-
 	void Update();
 
 private:
@@ -46,9 +45,13 @@ private:
 	CString m_strExternalIpAddress;
 	CString m_strAdapterDescription;
 	CString m_strMask;
+	CString m_strSubnet;
 	
+	CIPData* m_pIpData;
+
 	// Loads the ip information for the machine into the class
 	void LoadIpInformation( void );
 	void LoadMAC( void );
+	void LoadSubnet( void );
 
 };

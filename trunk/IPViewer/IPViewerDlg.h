@@ -1,5 +1,5 @@
 /*
-	Copyright 2010 Justin LeCheminant
+	Copyright 2011 Justin LeCheminant
 
 	This file is part of IP Viewer.
 
@@ -87,4 +87,7 @@ private:
 	void EditSettings();
 	BOOL TrayMessage( DWORD );
 	
+public:
+	afx_msg void OnPopupCopyexternalipaddress();
+	afx_msg void OnEditCopyexternalipaddress();
 };

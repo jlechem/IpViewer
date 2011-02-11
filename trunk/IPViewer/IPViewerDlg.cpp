@@ -1,5 +1,5 @@
 /*
-	Copyright 2010 Justin LeCheminant
+	Copyright 2011 Justin LeCheminant
 
 	This file is part of IP Viewer.
 
@@ -112,6 +112,9 @@ BEGIN_MESSAGE_MAP(CIPViewerDlg, CDialog)
 	ON_COMMAND(ID_POPUP_REFRESHIPINFORMATION, &CIPViewerDlg::OnPopupRefreshipinformation)
 	ON_COMMAND(ID_POPUP_EXIT, &CIPViewerDlg::OnPopupExit)
 	ON_MESSAGE( MY_WM_NOTIFYICON, &CIPViewerDlg::OnTrayNotification)
+	ON_COMMAND(ID_POPUP_COPYEXTERNALIPADDRESS, &CIPViewerDlg::OnPopupCopyexternalipaddress)
+	ON_COMMAND(ID_EDIT_COPYEXTERNALIPADDRESS, &CIPViewerDlg::OnEditCopyexternalipaddress)
+	ON_COMMAND(ID_EDIT_COPYEXTERNALIPADDRESS, &CIPViewerDlg::OnEditCopyexternalipaddress)
 END_MESSAGE_MAP()
 
 
@@ -255,11 +258,14 @@ void CIPViewerDlg::RefreshIpInfo()
 	this->m_strIP = m_pIpInfo->GetIpAddress();
 	this->m_strHost = m_pIpInfo->GetHostName();
 	this->m_strMac = m_pIpInfo->GetMacAddress();
+	this->m_strExternalIP = m_pIpInfo->GetExternalIpAddress();
 
 	// refresh the dialog controls
 	UpdateData( FALSE );
 	
 }
+
+#pragma region Menu Event Handles
 
 void CIPViewerDlg::OnEditCopyipaddress()
 {
@@ -276,6 +282,12 @@ void CIPViewerDlg::OnEditCopyhostname()
 	CClipboard::SetData( m_strHost, m_hWnd );
 }
 
+void CIPViewerDlg::OnEditCopyexternalipaddress()
+{
+	CClipboard::SetData( m_strExternalIP, m_hWnd );
+}
+
+#pragma endregion
 
 BOOL CIPViewerDlg::TrayMessage( DWORD dwMessage )
 {
@@ -283,8 +295,9 @@ BOOL CIPViewerDlg::TrayMessage( DWORD dwMessage )
 
 	// based on the index we show different things
 	// 0 is ip address
-	// 1 is host name
-	// 2 is MAC address
+	// 1 is the external ip address
+	// 2 is host name
+	// 3 is the MAC address
 	switch( m_pSettings->GetShowItemIndex() )
 	{
 		default:
@@ -293,10 +306,14 @@ BOOL CIPViewerDlg::TrayMessage( DWORD dwMessage )
 			break;
 		
 		case 1:
+			sTip = m_pIpInfo->GetExternalIpAddress();
+			break;
+
+		case 2:
 			sTip = m_pIpInfo->GetHostName();
 			break;
 		
-		case 2:
+		case 3:
 			sTip = m_pIpInfo->GetMacAddress();
 			break;
 	}
@@ -404,6 +421,13 @@ LRESULT CIPViewerDlg::OnTrayNotification( WPARAM wParam, LPARAM lParam )
 	}
 }
 
+#pragma region Context_Menu_Methods
+
+void CIPViewerDlg::OnPopupCopyexternalipaddress()
+{
+	CClipboard::SetData( m_strExternalIP, m_hWnd );
+}
+
 void CIPViewerDlg::OnPopupCopyipaddress()
 {
 	CClipboard::SetData( m_strIP, m_hWnd );
@@ -435,6 +459,8 @@ void CIPViewerDlg::OnPopupRefreshipinformation()
 
 }
 
+#pragma endregion
+
 void CIPViewerDlg::EditSettings()
 {
 	// show the settings dialog
@@ -445,7 +471,8 @@ void CIPViewerDlg::EditSettings()
 
 	// reset the timer based on the new tick settings
 	KillTimer( IDT_TIMER );
-	SetTimer( IDT_TIMER, m_pSettings->GetTick(), NULL );
+	// convert the minutes to milliseconds for the timer
+	SetTimer( IDT_TIMER, m_pSettings->GetTick() * 60000, NULL );
 
 }
 

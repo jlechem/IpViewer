@@ -1,5 +1,5 @@
 /*
-	Copyright 2010 Justin LeCheminant
+	Copyright 2011 Justin LeCheminant
 
 	This file is part of IP Viewer.
 
@@ -25,18 +25,21 @@
 
 CIpInformation::CIpInformation(void)
 {
+	m_pIpData =  new CIPData();
 	this->LoadIpInformation();
 	this->LoadMAC();
 }
 
 CIpInformation::~CIpInformation(void)
 {
+	delete m_pIpData;
 }
 // Loads the ip information for the machine into the class
 void CIpInformation::LoadIpInformation(void)
 {	
-	m_strIpAddress = CIPData::LoadIpAddress();
-	m_strHostName = CIPData::LoadHostName();
+	m_strIpAddress = m_pIpData->GetIpAddress();
+	m_strHostName = m_pIpData->GetHostName();
+	m_strExternalIpAddress = m_pIpData->GetExternalIpAddress();
 }
 
 // updates our IP information
@@ -47,5 +50,10 @@ void CIpInformation::Update(void)
 
 void CIpInformation::LoadMAC( void )
 {
-	m_strMacAddress = CIPData::LoadMacAddress();
+	m_strMacAddress = m_pIpData->GetMacAddress();
+}
+
+void CIpInformation::LoadSubnet( void )
+{
+	m_strSubnet = m_pIpData->GetSubNet();
 }
