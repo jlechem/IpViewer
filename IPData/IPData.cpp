@@ -1,5 +1,5 @@
 /*
-	Copyright 2010 Justin LeCheminant
+	Copyright 2011 Justin LeCheminant
 
 	This file is part of IP Viewer.
 
@@ -22,11 +22,6 @@
 
 #include "stdafx.h"
 #include "IPData.h"
-
-#include <lm.h>
-#include <winsock2.h>
-
-#pragma comment( lib, "Netapi32.lib" )
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -92,13 +87,42 @@ BOOL CIPData::InitInstance()
 	return TRUE;
 }
 
-// IPData.cpp : Defines the initialization routines for the DLL.
-CString CIPData::LoadIpAddress( void )
+void CIPData::LoadExternalIpAddress()
 {
-	AFX_MANAGE_STATE(AfxGetStaticModuleState());
-	
-	CString ip("127.0.0.1");
-	
+	m_strExternalIp = _T( "Unavailable" );
+
+	try
+	{	
+		TCHAR url[47] = _T("http://checkip.dyndns.org/Current IP Check.htm");
+		TCHAR file[7] = _T("ip.txt");
+
+		if( URLDownloadToFile( 0, url, file, 0, 0) == S_OK )
+		{
+			CStdioFile file;
+
+			if( file.Open( _T("ip.txt"), CFile::modeRead | CFile::modeNoTruncate ) )
+			{
+				file.ReadString( m_strExternalIp );
+
+				// file is in format
+				// <html><head><title>Current IP Check</title></head><body>Current IP Address: 174.52.71.72</body></html>
+				m_strExternalIp = m_strExternalIp.Mid( m_strExternalIp.Find( _T(": ") ) + 1, 
+					m_strExternalIp.GetLength() - m_strExternalIp.Find( _T("</body>") ) - 1 );
+
+				file.Close();
+			}
+		}
+	}
+	catch( CException* ex )
+	{
+		// TODO: do something with the exception
+		delete ex;
+	}
+}
+
+// IPData.cpp : Defines the initialization routines for the DLL.
+void CIPData::LoadIpAddress( void )
+{
 	try
 	{
 		WORD wVersionRequested;
@@ -113,37 +137,24 @@ CString CIPData::LoadIpAddress( void )
             {
 				if( (hostinfo = gethostbyname(name)) != NULL )
 				{
-					ip = inet_ntoa(*(struct in_addr *)hostinfo->h_addr_list[0]);
+					m_strInternalIp = inet_ntoa(*(struct in_addr *)hostinfo->h_addr_list[0]);
 				}
             }
 
 			WSACleanup();
 		}
-
-		return ip;
-
 	}
 	catch( ... )
 	{
 		// load some default values from the string table
-		return _T("127.0.0.1");
+		m_strInternalIp = _T("127.0.0.1");
 	}
 
 }
 
-CString CIPData::LoadIpAddress( CString adapter )
-{
-	AFX_MANAGE_STATE(AfxGetStaticModuleState());
-
-	// TODO: get the ip address for the specified adapter
-	return _T("127.0.0.1");
-}
-
 // loads the mac address of the default adapter
-CString CIPData::LoadMacAddress( void )
+void CIPData::LoadMacAddress( void )
 {
-	AFX_MANAGE_STATE(AfxGetStaticModuleState());
-
 	try
 	{
 		unsigned char MACData[8];						// Allocate data structure for MAC (6 bytes needed)
@@ -177,36 +188,20 @@ CString CIPData::LoadMacAddress( void )
 		dwStatus = NetApiBufferFree(pbBuffer);
 		ASSERT( dwStatus == NERR_Success );
 
-		CString mac;
-		mac.Format( _T("%02X-%02X-%02X-%02X-%02X-%02X"), MACData[0], MACData[1], MACData[2], MACData[3], MACData[4], MACData[5]);
-
-		return mac.AllocSysString();
+		m_strMacAddress.Format( _T("%02X-%02X-%02X-%02X-%02X-%02X"), MACData[0], MACData[1], MACData[2], MACData[3], MACData[4], MACData[5]);
 
 	}
 	catch( CException* ex )
 	{
 		// TODO: do somethign with the exception
 		delete ex;
-		return BSTR( L"00-00-00-00-00-00" );
+		m_strMacAddress = _T( "00-0-00-00-00-00" );
 	}
 }
 
-// loads the mac address for the specified adapter
-CString CIPData::LoadMacAddress( CString adapter )
-{
-	AFX_MANAGE_STATE(AfxGetStaticModuleState());
-	// TODO: get the mac address for the specified adapter
-	return _T("MAC ADDRESS");
-
-}
-
 // loads the host name of the machine
-CString CIPData::LoadHostName( void )
+void CIPData::LoadHostName( void )
 {
-	AFX_MANAGE_STATE(AfxGetStaticModuleState());
-	
-	CString host("Localhost");
-
 	try
 	{
 		WORD wVersionRequested;
@@ -218,43 +213,22 @@ CString CIPData::LoadHostName( void )
 		{
             if( gethostname ( name, sizeof(name)) == 0)
             {
-				host = name;
+				m_strHostName = name;
             }
 
 			WSACleanup();
 		}
-
-		return host;
-
 	}
 	catch( ... )
 	{
 		// TODO: load some default values from the string table
-		return _T("Localhost");
+		m_strHostName = _T("Localhost");
 	}
 }
 
 // load the subnet for the default adapter
-CString CIPData::LoadSubnet( void )
+void CIPData::LoadSubnet( void )
 {
-	AFX_MANAGE_STATE(AfxGetStaticModuleState());
 	// TODO: get the subnet for the default adapter
-	return _T("255.255.255.0");
-}
-
-// loads the subnet for the specified adapyer
-CString CIPData::LoadSubnet( CString adapter )
-{
-	AFX_MANAGE_STATE(AfxGetStaticModuleState());
-	// TODO: get the subnet for the specified adapter
-	return _T("255.255.255.0");
-
-}
-
-// loads all the adapters for this machine
-CStringArray* CIPData::LoadAdapters()
-{
-	AFX_MANAGE_STATE(AfxGetStaticModuleState());
-	// TODO: get a list of all the adpaters
-	return new CStringArray();
+	m_strSubnet = _T("255.255.255.0");
 }

@@ -1,5 +1,5 @@
 /*
-	Copyright 2010 Justin LeCheminant
+	Copyright 2011 Justin LeCheminant
 
 	This file is part of IP Viewer.
 

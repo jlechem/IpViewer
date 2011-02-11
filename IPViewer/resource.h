@@ -47,7 +47,6 @@
 #define IDC_RADIO1                      1032
 #define IDC_RADIO2                      1033
 #define IDC_RADIO_EXTERNAL_IP           1034
-#define IDC_ext                         1035
 #define IDC_TEXT_EXTERNAL               1035
 #define ID_FILE_EXIT                    32771
 #define ID_EDIT_SETTINGS                32772
@@ -64,13 +63,15 @@
 #define ID_POPUP_REFRESHIPINFORMATION   32783
 #define ID_POPUP_EXIT                   32784
 #define ID_POPUP_COPYALL                32785
+#define ID_POPUP_COPYEXTERNALIPADDRESS  32786
+#define ID_EDIT_COPYEXTERNALIPADDRESS   32787
 
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        135
-#define _APS_NEXT_COMMAND_VALUE         32786
+#define _APS_NEXT_COMMAND_VALUE         32788
 #define _APS_NEXT_CONTROL_VALUE         1036
 #define _APS_NEXT_SYMED_VALUE           105
 #endif

@@ -1,5 +1,5 @@
 /*
-	Copyright 2010 Justin LeCheminant
+	Copyright 2011 Justin LeCheminant
 
 	This file is part of IP Viewer.
 
@@ -136,7 +136,7 @@ void CIPSettings::Reset()
 {
 	// set some default values and set our pointer to NULL so
 	// we don't leak
-	_tick = 60000;
+	_tick = 5;
 	_onTop = false;
 	_minToTray = true;
 	_closeToTray = true;

@@ -1,5 +1,5 @@
 /*
-	Copyright 2010 Justin LeCheminant
+	Copyright 2011 Justin LeCheminant
 
 	This file is part of IP Viewer.
 
@@ -26,10 +26,16 @@
 	#error "include 'stdafx.h' before including this file for PCH"
 #endif
 
-#include "resource.h"		// main symbols
-
 #define DLLEXPORT __declspec(dllexport)
 #define DLLIMPORT __declspec(dllimport)
+
+#include "resource.h"		// main symbols
+#include <lm.h>
+#include <winsock2.h>
+#include <urlmon.h>
+
+#pragma comment(lib, "urlmon.lib")
+#pragma comment( lib, "Netapi32.lib" )
 
 // CIPDataApp
 // See IPData.cpp for the implementation of this class
@@ -44,26 +50,52 @@ public:
 public:
 	virtual BOOL InitInstance();
 
-	static CString LoadIpAddress();						// gets the default adapter internal IP address
-	static CString LoadIpAddress( CString adapter );	// gets the ip address for the specified adapter
+	CString GetIpAddress() 
+	{
+		this->LoadIpAddress(); 
+		return m_strInternalIp; 
+	}
 
-	static CString LoadMacAddress();					// gets the default adaper MAC address
-	static CString LoadMacAddress( CString adapter );	// gets the MAC address for the specified adapter
-	
-	static CString LoadSubnet();						// gets the default adapter subnet address
-	static CString LoadSubnet( CString adapter );		// gets the subnet address for the specified adapter
+	CString GetExternalIpAddress()
+	{ 
+		this->LoadExternalIpAddress();
+		return m_strExternalIp; 
+	}
 
-	static CString LoadHostName();						// gets the computers host name
-	static CStringArray* LoadAdapters();				// gets a string array of all the adapters on this system
-	
-	static CString LoadExternalIpAddress();				// gets the external ip address of the default adapter
-	static CString LoadExternalIpAddress( CString );	// gets the external ip address for the specified adapter
-	
+	CString GetMacAddress() 
+	{
+		this->LoadMacAddress();
+		return m_strMacAddress; 
+	}
+
+	CString GetHostName()
+	{
+		this->LoadHostName();
+		return m_strHostName; 
+	}
+
+	CString GetSubNet() 
+	{
+		this->LoadSubnet();
+		return m_strSubnet; 
+	}
+
 	DECLARE_MESSAGE_MAP()
 
 private:
 
-protected:
+	CString m_strInternalIp;
+	CString m_strExternalIp;
+	CString m_strHostName;
+	CString m_strMacAddress;
+	CString m_strSubnet;
 
+	void LoadIpAddress();			// gets the default adapter internal IP address
+	void LoadMacAddress();			// gets the default adaper MAC address
+	void LoadSubnet();				// gets the default adapter subnet address
+	void LoadHostName();			// gets the computers host name
+	void LoadExternalIpAddress();	// gets the external ip address of the default adapter
+
+protected:
 
 };
