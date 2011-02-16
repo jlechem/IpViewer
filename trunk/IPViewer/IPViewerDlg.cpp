@@ -22,9 +22,7 @@
 //
 
 #include "stdafx.h"
-#include "IPViewer.h"
 #include "IPViewerDlg.h"
-#include "IPViewerSettings.h"
 
 #define MAX_TOOLTIP_SIZE 64
 
@@ -33,7 +31,6 @@
 #endif
 
 // CAboutDlg dialog used for App About
-
 class CAboutDlg : public CDialog
 {
 public:
@@ -75,7 +72,7 @@ CIPViewerDlg::CIPViewerDlg(CWnd* pParent /*=NULL*/)
 {
 	m_hIcon = AfxGetApp()->LoadIcon(IDI_ICON_IPVIEWER);
 	m_pSettings = new CIPSettings();
-	m_pIpInfo = new CIpInformation();
+	m_pIpData = new CIPData();
 	m_bVisible = !m_pSettings->GetStartMinimized();
 
 }
@@ -152,7 +149,7 @@ BOOL CIPViewerDlg::OnInitDialog()
 	this->RefreshIpInfo();
 
 	// start the timer with the number of MS from the settings class
-	SetTimer( IDT_TIMER, this->m_pSettings->GetTick(), NULL );
+	SetTimer( IDT_TIMER, this->m_pSettings->GetTick() * 60000, NULL );
 
 	this->SetTopMost();
 
@@ -252,13 +249,11 @@ void CIPViewerDlg::OnTimer( UINT_PTR TimerVal )
 
 void CIPViewerDlg::RefreshIpInfo()
 {
-	// refresh teh ip class info and update our results
-	m_pIpInfo->Update();
-
-	this->m_strIP = m_pIpInfo->GetIpAddress();
-	this->m_strHost = m_pIpInfo->GetHostName();
-	this->m_strMac = m_pIpInfo->GetMacAddress();
-	this->m_strExternalIP = m_pIpInfo->GetExternalIpAddress();
+	// get our ip data
+	this->m_strIP = m_pIpData->GetIpAddress();
+	this->m_strHost = m_pIpData->GetHostName();
+	this->m_strMac = m_pIpData->GetMacAddress();
+	this->m_strExternalIP = m_pIpData->GetExternalIpAddress();
 
 	// refresh the dialog controls
 	UpdateData( FALSE );
@@ -302,19 +297,19 @@ BOOL CIPViewerDlg::TrayMessage( DWORD dwMessage )
 	{
 		default:
 		case 0:
-			sTip = m_pIpInfo->GetIpAddress();
+			sTip = m_pIpData->GetIpAddress();
 			break;
 		
 		case 1:
-			sTip = m_pIpInfo->GetExternalIpAddress();
+			sTip = m_pIpData->GetExternalIpAddress();
 			break;
 
 		case 2:
-			sTip = m_pIpInfo->GetHostName();
+			sTip = m_pIpData->GetHostName();
 			break;
 		
 		case 3:
-			sTip = m_pIpInfo->GetMacAddress();
+			sTip = m_pIpData->GetMacAddress();
 			break;
 	}
 	
