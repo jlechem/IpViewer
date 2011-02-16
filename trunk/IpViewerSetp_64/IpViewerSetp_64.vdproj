@@ -15,8 +15,26 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_1B60CE5E7B9A41889213630DE4290DD6"
+        "OwnerKey" = "8:_2C626EF069D54A80ABE1C0B0E9F3BDC2"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_1B60CE5E7B9A41889213630DE4290DD6"
+        "OwnerKey" = "8:_5ABA73D5418D41E8AB00DA0592FC07B5"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_2C626EF069D54A80ABE1C0B0E9F3BDC2"
         "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_43EFBEB7583233B580D9ABED775DDAAC"
+        "OwnerKey" = "8:_2C626EF069D54A80ABE1C0B0E9F3BDC2"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -39,25 +57,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_BF85A3FE071D48FFA40ACBC74AC52C78"
+        "MsmKey" = "8:_F159E25E2BA44D069E2C0A11E744088C"
         "OwnerKey" = "8:_2C626EF069D54A80ABE1C0B0E9F3BDC2"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_BF85A3FE071D48FFA40ACBC74AC52C78"
-        "OwnerKey" = "8:_5ABA73D5418D41E8AB00DA0592FC07B5"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_C020E16118DF4FA48E4912D4A6C7856A"
-        "OwnerKey" = "8:_2C626EF069D54A80ABE1C0B0E9F3BDC2"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_C020E16118DF4FA48E4912D4A6C7856A"
+        "MsmKey" = "8:_F159E25E2BA44D069E2C0A11E744088C"
         "OwnerKey" = "8:_5ABA73D5418D41E8AB00DA0592FC07B5"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -158,6 +164,26 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_43EFBEB7583233B580D9ABED775DDAAC"
+            {
+            "SourcePath" = "8:urlmon.dll"
+            "TargetName" = "8:urlmon.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_81F21480F42647EE9DC0BF64C661ED0C"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:4"
+            "Exclude" = "11:TRUE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_449DC54018D8409397E9BF82513ECC2E"
             {
             "SourcePath" = "8:..\\IPViewer\\res\\IP_Viewer.ICO"
@@ -782,11 +808,11 @@
         }
         "MergeModule"
         {
-            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_BF85A3FE071D48FFA40ACBC74AC52C78"
+            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_1B60CE5E7B9A41889213630DE4290DD6"
             {
             "UseDynamicProperties" = "11:TRUE"
             "IsDependency" = "11:TRUE"
-            "SourcePath" = "8:Microsoft_VC100_MFC_x86.msm"
+            "SourcePath" = "8:Microsoft_VC100_CRT_x64.msm"
                 "Properties"
                 {
                 }
@@ -796,11 +822,11 @@
             "Feature" = "8:"
             "IsolateTo" = "8:"
             }
-            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_C020E16118DF4FA48E4912D4A6C7856A"
+            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_F159E25E2BA44D069E2C0A11E744088C"
             {
             "UseDynamicProperties" = "11:TRUE"
             "IsDependency" = "11:TRUE"
-            "SourcePath" = "8:Microsoft_VC100_CRT_x86.msm"
+            "SourcePath" = "8:Microsoft_VC100_MFC_x64.msm"
                 "Properties"
                 {
                 }
