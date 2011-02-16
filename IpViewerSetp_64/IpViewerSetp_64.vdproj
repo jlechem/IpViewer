@@ -33,6 +33,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_42D8BFF45AB744FEBBAF22872B01C07D"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_43EFBEB7583233B580D9ABED775DDAAC"
         "OwnerKey" = "8:_2C626EF069D54A80ABE1C0B0E9F3BDC2"
         "MsmSig" = "8:_UNDEFINED"
@@ -164,6 +170,26 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_42D8BFF45AB744FEBBAF22872B01C07D"
+            {
+            "SourcePath" = "8:..\\x64Release\\IPViewer.exe"
+            "TargetName" = "8:IPViewer.exe"
+            "Tag" = "8:"
+            "Folder" = "8:_81F21480F42647EE9DC0BF64C661ED0C"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_43EFBEB7583233B580D9ABED775DDAAC"
             {
             "SourcePath" = "8:urlmon.dll"
@@ -292,7 +318,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:IP Viewer"
         "ProductCode" = "8:{3ADFEDEC-16CB-42FB-928C-6C3113B1AB56}"
-        "PackageCode" = "8:{65285719-0109-4F5B-A9AA-84DA07916C0F}"
+        "PackageCode" = "8:{5A7ACCA3-6DCD-4291-A1AB-E04F5D0E47B0}"
         "UpgradeCode" = "8:{4F0AC61E-64CB-43FD-98DF-3F6E7A190C71}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -412,6 +438,20 @@
         }
         "Shortcut"
         {
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_18E34AE2EA7F42FF93E929525B1F2C86"
+            {
+            "Name" = "8:IPViewer"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_42D8BFF45AB744FEBBAF22872B01C07D"
+            "Folder" = "8:_92E3B9C9A12749ED9BB66DF31EB8758D"
+            "WorkingFolder" = "8:_81F21480F42647EE9DC0BF64C661ED0C"
+            "Icon" = "8:_449DC54018D8409397E9BF82513ECC2E"
+            "Feature" = "8:"
+            }
         }
         "UserInterface"
         {
@@ -841,7 +881,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_2C626EF069D54A80ABE1C0B0E9F3BDC2"
             {
-            "SourcePath" = "8:..\\Release\\IPData.dll"
+            "SourcePath" = "8:..\\x64Release\\IPData.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_81F21480F42647EE9DC0BF64C661ED0C"
@@ -869,7 +909,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_5ABA73D5418D41E8AB00DA0592FC07B5"
             {
-            "SourcePath" = "8:..\\Release\\IPViewer.exe"
+            "SourcePath" = "8:..\\x64Release\\IPViewer.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_81F21480F42647EE9DC0BF64C661ED0C"
