@@ -222,7 +222,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Clipboard.cpp" />
-    <ClCompile Include="IpInformation.cpp" />
     <ClCompile Include="IPSettings.cpp" />
     <ClCompile Include="IPViewer.cpp" />
     <ClCompile Include="IPViewerDlg.cpp" />
@@ -236,7 +235,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Clipboard.h" />
-    <ClInclude Include="IpInformation.h" />
     <ClInclude Include="IPSettings.h" />
     <ClInclude Include="IPViewer.h" />
     <ClInclude Include="IPViewerDlg.h" />

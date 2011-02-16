@@ -22,11 +22,12 @@
 
 #define IDT_TIMER WM_USER + 200
 
+#include "..\IPData\IPData.h"
+
+#include "IPViewer.h"
 #include "IPSettings.h"
-#include "IpInformation.h"
-#include "afxcmn.h"
+#include "IPViewerSettings.h"
 #include "Clipboard.h"
-#include "afxwin.h"
 
 // CIPViewerDlg dialog
 class CIPViewerDlg : public CDialog
@@ -66,13 +67,15 @@ protected:
 	afx_msg void OnPopupExit();
 	afx_msg void OnWindowPosChanging( WINDOWPOS FAR* );
 	afx_msg void OnPopupCopyall();
+	afx_msg void OnPopupCopyexternalipaddress();
+	afx_msg void OnEditCopyexternalipaddress();
 	DECLARE_MESSAGE_MAP()
 
 private:
 	HICON m_hIcon;
 	
 	CIPSettings* m_pSettings;
-	CIpInformation* m_pIpInfo;
+	CIPData* m_pIpData;
 	
 	CString m_strMac;
 	CString m_strHost;
@@ -86,8 +89,5 @@ private:
 	void RefreshIpInfo();
 	void EditSettings();
 	BOOL TrayMessage( DWORD );
-	
-public:
-	afx_msg void OnPopupCopyexternalipaddress();
-	afx_msg void OnEditCopyexternalipaddress();
+
 };

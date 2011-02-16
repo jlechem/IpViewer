@@ -136,7 +136,7 @@ void CIPSettings::Reset()
 {
 	// set some default values and set our pointer to NULL so
 	// we don't leak
-	_tick = 5;
+	_tick = 30;
 	_onTop = false;
 	_minToTray = true;
 	_closeToTray = true;
