@@ -104,23 +104,45 @@ void CIPData::LoadExternalIpAddress()
 			{
 				file.ReadString( m_strExternalIp );
 
-				// file is in format
+				// file if successful is in format
 				// <html><head><title>Current IP Check</title></head><body>Current IP Address: 174.52.71.72</body></html>
-				m_strExternalIp = m_strExternalIp.Mid( m_strExternalIp.Find( _T(": ") ) + 1, 
-					m_strExternalIp.GetLength() - m_strExternalIp.Find( _T("</body>") ) - 1 );
+				if( m_strExternalIp.GetLength() > 110 )
+				{
+					m_strExternalIp = _T( "Unable to access IP check site" );
+				}
+				else
+				{
+					m_strExternalIp = m_strExternalIp.Mid( m_strExternalIp.Find( _T(": ") ) + 1, m_strExternalIp.GetLength() - m_strExternalIp.Find( _T("</body>") ) - 1 );
+				}
 
 				file.Close();
+
 			}
 		}
 		else
 		{
-			m_strExternalIp = _T( "IP Check Site Unavailable" );
+			m_strExternalIp = _T( "Unable to access IP check site" );
 		}
 	}
 	catch( CException* ex )
 	{
-		// TODO: do something with the exception
+		TCHAR   szCause[255];
+		CString strFormatted;
+
+		ex->GetErrorMessage(szCause, 255);
+
+		strFormatted = _T("The following error occurred: ");
+	    strFormatted += szCause;
+
+		CStdioFile file(_T("error_log.txt"), CFile::modewrite | CFile::modeNoTruncate );
+
+		if( file )
+		{
+			file.WriteString( strFormatted );
+		}
+
 		delete ex;
+
 	}
 }
 
