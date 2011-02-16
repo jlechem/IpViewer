@@ -112,6 +112,10 @@ void CIPData::LoadExternalIpAddress()
 				file.Close();
 			}
 		}
+		else
+		{
+			m_strExternalIp = _T( "IP Check Site Unavailable" );
+		}
 	}
 	catch( CException* ex )
 	{
