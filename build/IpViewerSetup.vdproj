@@ -318,7 +318,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:IP Viewer"
         "ProductCode" = "8:{0ED714BE-45F6-4DA4-8724-250F3053AC96}"
-        "PackageCode" = "8:{2DE228BA-06AA-4F93-AB42-A04481EAA6E9}"
+        "PackageCode" = "8:{B1881A1C-9E77-41B5-8456-A74454EAFB2A}"
         "UpgradeCode" = "8:{EE1F1319-04EE-4254-AEE1-4891FFC26803}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -438,9 +438,9 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_262AB5D9577D4229B93312A71212D68D"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_D3090D8EE12E491A8FFF6DAEF00838E1"
             {
-            "Name" = "8:IPViewer"
+            "Name" = "8:IPViewer 1.7"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -449,7 +449,7 @@
             "Target" = "8:_109D3E74B55A47A182DA1EF4022A0034"
             "Folder" = "8:_7729C43BCD3548D982A99DF37E9074EA"
             "WorkingFolder" = "8:_E9CFD597F26343F4A582B847EB86B49B"
-            "Icon" = "8:_CB0555582A4745E6BBEFDA8569821C16"
+            "Icon" = "8:"
             "Feature" = "8:"
             }
         }
@@ -881,7 +881,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_861B5C78A0F74604BEAC388081FDD451"
             {
-            "SourcePath" = "8:..\\trunk\\x64Release\\IPData.dll"
+            "SourcePath" = "8:..\\trunk\\Win32Release\\IPData.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_E9CFD597F26343F4A582B847EB86B49B"
@@ -909,7 +909,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_E7398C63964644EF8DB99903418F529A"
             {
-            "SourcePath" = "8:..\\trunk\\x64Release\\IPViewer.exe"
+            "SourcePath" = "8:..\\trunk\\Win32Release\\IPViewer.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_E9CFD597F26343F4A582B847EB86B49B"
