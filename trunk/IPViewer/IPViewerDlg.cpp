@@ -468,6 +468,9 @@ void CIPViewerDlg::EditSettings()
 
 	// reset the timer based on the new tick settings
 	KillTimer( IDT_TIMER );
+
+	this->RefreshIpInfo();
+
 	// convert the minutes to milliseconds for the timer
 	SetTimer( IDT_TIMER, m_pSettings->GetTick() * 60000, NULL );
 

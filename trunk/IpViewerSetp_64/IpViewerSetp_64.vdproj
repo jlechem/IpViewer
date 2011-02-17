@@ -15,18 +15,6 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_1B60CE5E7B9A41889213630DE4290DD6"
-        "OwnerKey" = "8:_2C626EF069D54A80ABE1C0B0E9F3BDC2"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_1B60CE5E7B9A41889213630DE4290DD6"
-        "OwnerKey" = "8:_5ABA73D5418D41E8AB00DA0592FC07B5"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_2C626EF069D54A80ABE1C0B0E9F3BDC2"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -57,19 +45,31 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_6246780924D04928BF87B4FBA22F3EAF"
+        "OwnerKey" = "8:_2C626EF069D54A80ABE1C0B0E9F3BDC2"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_6246780924D04928BF87B4FBA22F3EAF"
+        "OwnerKey" = "8:_5ABA73D5418D41E8AB00DA0592FC07B5"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_83867374BC5AAD68DD1B1716BC06B67C"
         "OwnerKey" = "8:_2C626EF069D54A80ABE1C0B0E9F3BDC2"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_F159E25E2BA44D069E2C0A11E744088C"
+        "MsmKey" = "8:_9351485640FE429B8F82D31826926664"
         "OwnerKey" = "8:_2C626EF069D54A80ABE1C0B0E9F3BDC2"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_F159E25E2BA44D069E2C0A11E744088C"
+        "MsmKey" = "8:_9351485640FE429B8F82D31826926664"
         "OwnerKey" = "8:_5ABA73D5418D41E8AB00DA0592FC07B5"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -317,19 +317,19 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:IP Viewer"
-        "ProductCode" = "8:{3ADFEDEC-16CB-42FB-928C-6C3113B1AB56}"
-        "PackageCode" = "8:{E330213B-A95C-4049-9AB2-F1C661DA31FD}"
+        "ProductCode" = "8:{07634542-725D-4C43-9103-E15C2FB74B57}"
+        "PackageCode" = "8:{F7BDA212-B3E4-4790-8A6A-BE5829369A7C}"
         "UpgradeCode" = "8:{4F0AC61E-64CB-43FD-98DF-3F6E7A190C71}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.7.0"
+        "ProductVersion" = "8:1.8.1"
         "Manufacturer" = "8:JRL Software"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:IP Viewer 1.7"
+        "Title" = "8:IP Viewer 1.8"
         "Subject" = "8:"
         "ARPCONTACT" = "8:JRL Software"
         "Keywords" = "8:"
@@ -438,9 +438,9 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_18E34AE2EA7F42FF93E929525B1F2C86"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_B67B93AD44D24DE0A3AD7B8002B25B4F"
             {
-            "Name" = "8:IPViewer 1.7"
+            "Name" = "8:IPViewer 1.8"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -848,7 +848,7 @@
         }
         "MergeModule"
         {
-            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_1B60CE5E7B9A41889213630DE4290DD6"
+            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_6246780924D04928BF87B4FBA22F3EAF"
             {
             "UseDynamicProperties" = "11:TRUE"
             "IsDependency" = "11:TRUE"
@@ -862,7 +862,7 @@
             "Feature" = "8:"
             "IsolateTo" = "8:"
             }
-            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_F159E25E2BA44D069E2C0A11E744088C"
+            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_9351485640FE429B8F82D31826926664"
             {
             "UseDynamicProperties" = "11:TRUE"
             "IsDependency" = "11:TRUE"
