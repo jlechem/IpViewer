@@ -41,7 +41,7 @@
 // See IPData.cpp for the implementation of this class
 //
 
-class DLLEXPORT CIPData : public CWinApp
+class DLLEXPORT CIPData
 {
 public:
 	CIPData();
@@ -79,8 +79,6 @@ public:
 		this->LoadSubnet();
 		return m_strSubnet; 
 	}
-
-	DECLARE_MESSAGE_MAP()
 
 private:
 

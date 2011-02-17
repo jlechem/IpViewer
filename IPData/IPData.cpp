@@ -53,11 +53,6 @@
 //
 
 // CIPData
-
-BEGIN_MESSAGE_MAP(CIPData, CWinApp)
-END_MESSAGE_MAP()
-
-
 // CIPData construction
 
 CIPData::CIPData()
@@ -76,8 +71,6 @@ CIPData theApp;
 
 BOOL CIPData::InitInstance()
 {
-	CWinApp::InitInstance();
-
 	if (!AfxSocketInit())
 	{
 		AfxMessageBox(IDP_SOCKETS_INIT_FAILED);
@@ -93,20 +86,33 @@ void CIPData::LoadExternalIpAddress()
 
 	try
 	{	
+		/*
+
+		to make the UrlDownloadToFile call you need the following defined
+
+		#include <urlmon.h>
+
+		#pragma comment(lib, "urlmon.lib")
+
+		*/
+
+		// holds the url to check and the name of the file to write the data to
 		TCHAR url[47] = _T("http://checkip.dyndns.org/Current IP Check.htm");
 		TCHAR file[7] = _T("ip.txt");
 
+		// here is the urlmon.dll method call, include 
 		if( URLDownloadToFile( 0, url, file, 0, 0) == S_OK )
 		{
 			CStdioFile file;
 
+			// open the file for reading
 			if( file.Open( _T("ip.txt"), CFile::modeRead | CFile::modeNoTruncate ) )
 			{
 				file.ReadString( m_strExternalIp );
 
 				// file if successful is in format
 				// <html><head><title>Current IP Check</title></head><body>Current IP Address: 174.52.71.72</body></html>
-				if( m_strExternalIp.GetLength() > 110 )
+				if( m_strExternalIp.Find(_T("</HTML>") < 0 ) )
 				{
 					m_strExternalIp = _T( "Unable to access IP check site" );
 				}
@@ -115,6 +121,7 @@ void CIPData::LoadExternalIpAddress()
 					m_strExternalIp = m_strExternalIp.Mid( m_strExternalIp.Find( _T(": ") ) + 1, m_strExternalIp.GetLength() - m_strExternalIp.Find( _T("</body>") ) - 1 );
 				}
 
+				// always close the file
 				file.Close();
 
 			}
@@ -126,6 +133,7 @@ void CIPData::LoadExternalIpAddress()
 	}
 	catch( CException* ex )
 	{
+		// write any errors to a log file
 		TCHAR   szCause[255];
 		CString strFormatted;
 
@@ -134,12 +142,14 @@ void CIPData::LoadExternalIpAddress()
 		strFormatted = _T("The following error occurred: ");
 	    strFormatted += szCause;
 
-		CStdioFile file(_T("error_log.txt"), CFile::modewrite | CFile::modeNoTruncate );
+		CStdioFile file(_T("error_log.txt"), CFile::modeWrite | CFile::modeNoTruncate );
 
 		if( file )
 		{
 			file.WriteString( strFormatted );
 		}
+
+		file.Close();
 
 		delete ex;
 
