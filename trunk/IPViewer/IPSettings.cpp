@@ -110,6 +110,16 @@ void CIPSettings::Load()
 				
 				_startToTray = newWord;
 
+				key.LoadStringW( IDS_CHECK_EXTERNAL_KEY );
+
+				if( !m_pRegistry->Read( key, newWord ) )
+				{
+					m_pRegistry->Write( key, (BOOL)_checkExternalIp );
+				}
+				
+				_checkExternalIp = newWord;
+
+
 			}
 			else
 			{
@@ -180,6 +190,9 @@ BOOL CIPSettings::Save()
 		
 		key.LoadStringW( IDS_START_MIN_KEY );
 		m_pRegistry->Write( key, (BOOL)_startToTray );	
+
+		key.LoadStringW( IDS_CHECK_EXTERNAL_KEY );
+		m_pRegistry->Write( key, (BOOL)_checkExternalIp );	
 
 		result = true;
 

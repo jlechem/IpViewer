@@ -37,6 +37,7 @@ CIPViewerSettings::CIPViewerSettings(CWnd* pParent /*=NULL*/)
 	, m_nSelectedIndex(0)
 	, m_bOnTop(FALSE)
 	, m_bStartMinimized(FALSE)
+	, m_bCheckExternalIp(FALSE)
 {
 	m_hIcon = AfxGetApp()->LoadIcon(IDI_ICON_IPVIEWER);
 }
@@ -62,6 +63,7 @@ void CIPViewerSettings::DoDataExchange(CDataExchange* pDX)
 	DDX_Text(pDX, IDC_EDIT_RATE, m_nTick);
 	DDX_Radio(pDX, IDC_RADIO_IP, m_nSelectedIndex);	
 	DDX_Check(pDX, IDC_CHECK2, m_bStartMinimized);
+	DDX_Check(pDX, IDC_CHECK_EXTERNAL, m_bCheckExternalIp);
 }
 
 
@@ -80,6 +82,7 @@ BOOL CIPViewerSettings::OnInitDialog()
 	m_nSelectedIndex = m_pSettings->GetShowItemIndex();
 	m_bOnTop = m_pSettings->GetOnTop();
 	m_bStartMinimized = m_pSettings->GetStartMinimized();
+	m_bCheckExternalIp = m_pSettings->GetCheckExternalIp();
 
 	// refresh the Dialog
 	UpdateData( FALSE );
@@ -111,6 +114,7 @@ void CIPViewerSettings::OnBnClickedButtonSave()
 	m_pSettings->SetShowItemIndex( m_nSelectedIndex );
 	m_pSettings->SetOnTOp( m_bOnTop );
 	m_pSettings->SetStartInTray( m_bStartMinimized );
+	m_pSettings->SetCheckExternalIp( m_bCheckExternalIp );
 
 	// save our changes to the registry
 	CString result = m_pSettings->Save() ? 

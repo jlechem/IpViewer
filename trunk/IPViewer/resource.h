@@ -23,6 +23,7 @@
 #define IDS_DEFAULT_MASK                116
 #define IDS_DEFAULT_MAC                 117
 #define IDS_START_MIN_KEY               118
+#define IDS_CHECK_EXTERNAL_KEY          119
 #define IDD_DIALOG_SETTINGS             129
 #define IDI_ICON_IPVIEWER               130
 #define IDR_MENU1                       131
@@ -48,6 +49,7 @@
 #define IDC_RADIO2                      1033
 #define IDC_RADIO_EXTERNAL_IP           1034
 #define IDC_TEXT_EXTERNAL               1035
+#define IDC_CHECK_EXTERNAL              1036
 #define ID_FILE_EXIT                    32771
 #define ID_EDIT_SETTINGS                32772
 #define ID_HELP_ABOUT                   32773
@@ -72,7 +74,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        135
 #define _APS_NEXT_COMMAND_VALUE         32788
-#define _APS_NEXT_CONTROL_VALUE         1036
+#define _APS_NEXT_CONTROL_VALUE         1037
 #define _APS_NEXT_SYMED_VALUE           105
 #endif
 #endif
