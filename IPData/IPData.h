@@ -56,6 +56,7 @@ public:
 		return m_strInternalIp; 
 	}
 
+	
 	CString GetExternalIpAddress()
 	{ 
 		this->LoadExternalIpAddress();

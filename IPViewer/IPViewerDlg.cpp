@@ -253,7 +253,9 @@ void CIPViewerDlg::RefreshIpInfo()
 	this->m_strIP = m_pIpData->GetIpAddress();
 	this->m_strHost = m_pIpData->GetHostName();
 	this->m_strMac = m_pIpData->GetMacAddress();
-	this->m_strExternalIP = m_pIpData->GetExternalIpAddress();
+	this->m_strExternalIP = m_pSettings->GetCheckExternalIp() ?
+		m_pIpData->GetExternalIpAddress():
+		_T("Not set to check for external ip");
 
 	// refresh the dialog controls
 	UpdateData( FALSE );
@@ -297,19 +299,19 @@ BOOL CIPViewerDlg::TrayMessage( DWORD dwMessage )
 	{
 		default:
 		case 0:
-			sTip = m_pIpData->GetIpAddress();
+			sTip = m_strIP;				//  m_pIpData->GetIpAddress();
 			break;
 		
 		case 1:
-			sTip = m_pIpData->GetExternalIpAddress();
+			sTip = m_strExternalIP;		//m_pIpData->GetExternalIpAddress();
 			break;
 
 		case 2:
-			sTip = m_pIpData->GetHostName();
+			sTip = m_strHost;		//m_pIpData->GetHostName();
 			break;
 		
 		case 3:
-			sTip = m_pIpData->GetMacAddress();
+			sTip = m_strMac;		//m_pIpData->GetMacAddress();
 			break;
 	}
 	

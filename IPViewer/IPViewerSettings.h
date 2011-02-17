@@ -54,6 +54,7 @@ private:
 	BOOL m_bCloseTray;
 	BOOL m_bOnTop;
 	BOOL m_bStartMinimized;
+	BOOL m_bCheckExternalIp;
 
 	int m_nTick;
 	int m_nSelectedIndex;

@@ -31,6 +31,7 @@ public:
 	BOOL GetCloseToTray() { return _closeToTray; }
 	BOOL GetOnTop() { return _onTop; }
 	BOOL GetStartMinimized() { return _startToTray; }
+	BOOL GetCheckExternalIp() { return _checkExternalIp; }
 
 	void SetOnTOp( BOOL value ) { _onTop = value; }
 	void SetTick( int value ) { _tick = value; }
@@ -38,6 +39,7 @@ public:
 	void SetCloseToTray( BOOL value ) { _closeToTray = value; }
 	void SetShowItemIndex( int value ) { _selectedIndex = value; }
 	void SetStartInTray( BOOL value ) { _startToTray = value; }
+	void SetCheckExternalIp( BOOL value ) { _checkExternalIp = value; }
 
 	BOOL Save();
 
@@ -48,6 +50,7 @@ private:
 	BOOL _closeToTray;
 	BOOL _onTop;
 	BOOL _startToTray;
+	BOOL _checkExternalIp;
 
 	CSettingsStore* m_pRegistry;
 
