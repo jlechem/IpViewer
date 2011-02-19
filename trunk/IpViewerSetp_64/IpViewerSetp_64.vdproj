@@ -15,6 +15,18 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_25E7A600AE3F4D1E80891701B76E8A51"
+        "OwnerKey" = "8:_2C626EF069D54A80ABE1C0B0E9F3BDC2"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_25E7A600AE3F4D1E80891701B76E8A51"
+        "OwnerKey" = "8:_5ABA73D5418D41E8AB00DA0592FC07B5"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_2C626EF069D54A80ABE1C0B0E9F3BDC2"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -51,25 +63,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_91726668824641168C3735D235472534"
+        "MsmKey" = "8:_AD34120557054BE18DFC212C09C66432"
         "OwnerKey" = "8:_2C626EF069D54A80ABE1C0B0E9F3BDC2"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_91726668824641168C3735D235472534"
-        "OwnerKey" = "8:_5ABA73D5418D41E8AB00DA0592FC07B5"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_F1321F10AD3543B3954C6B3181C2FB8C"
-        "OwnerKey" = "8:_2C626EF069D54A80ABE1C0B0E9F3BDC2"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_F1321F10AD3543B3954C6B3181C2FB8C"
+        "MsmKey" = "8:_AD34120557054BE18DFC212C09C66432"
         "OwnerKey" = "8:_5ABA73D5418D41E8AB00DA0592FC07B5"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -318,7 +318,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:IP Viewer"
         "ProductCode" = "8:{152FC5E2-3AEC-4B9F-8BAE-07141B2C7635}"
-        "PackageCode" = "8:{F8FBC03C-357B-406F-84F6-FEC52EC577D0}"
+        "PackageCode" = "8:{FEB14B79-DE89-4E0A-B254-BBCC6951BC3B}"
         "UpgradeCode" = "8:{4F0AC61E-64CB-43FD-98DF-3F6E7A190C71}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -440,7 +440,7 @@
         {
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_B67B93AD44D24DE0A3AD7B8002B25B4F"
             {
-            "Name" = "8:IPViewer 1.8"
+            "Name" = "8:IPViewer 1.9"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -848,11 +848,11 @@
         }
         "MergeModule"
         {
-            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_91726668824641168C3735D235472534"
+            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_25E7A600AE3F4D1E80891701B76E8A51"
             {
             "UseDynamicProperties" = "11:TRUE"
             "IsDependency" = "11:TRUE"
-            "SourcePath" = "8:Microsoft_VC100_DebugMFC_x64.msm"
+            "SourcePath" = "8:Microsoft_VC100_MFC_x64.msm"
                 "Properties"
                 {
                 }
@@ -862,11 +862,11 @@
             "Feature" = "8:"
             "IsolateTo" = "8:"
             }
-            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_F1321F10AD3543B3954C6B3181C2FB8C"
+            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_AD34120557054BE18DFC212C09C66432"
             {
             "UseDynamicProperties" = "11:TRUE"
             "IsDependency" = "11:TRUE"
-            "SourcePath" = "8:Microsoft_VC100_DebugCRT_x64.msm"
+            "SourcePath" = "8:Microsoft_VC100_CRT_x64.msm"
                 "Properties"
                 {
                 }
@@ -881,7 +881,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_2C626EF069D54A80ABE1C0B0E9F3BDC2"
             {
-            "SourcePath" = "8:..\\x64Debug\\IPData.dll"
+            "SourcePath" = "8:..\\Win32Release\\IPData.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_81F21480F42647EE9DC0BF64C661ED0C"
@@ -909,7 +909,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_5ABA73D5418D41E8AB00DA0592FC07B5"
             {
-            "SourcePath" = "8:..\\x64Debug\\IPViewer.exe"
+            "SourcePath" = "8:..\\Win32Release\\IPViewer.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_81F21480F42647EE9DC0BF64C661ED0C"
