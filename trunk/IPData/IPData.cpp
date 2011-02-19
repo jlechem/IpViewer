@@ -105,6 +105,8 @@ void CIPData::LoadExternalIpAddress()
 		{
 			CStdioFile file;
 
+			m_strExternalIp = _T("");
+
 			// open the file for reading
 			if( file.Open( _T("ip.txt"), CFile::modeRead | CFile::modeNoTruncate ) )
 			{
@@ -112,7 +114,7 @@ void CIPData::LoadExternalIpAddress()
 
 				// file if successful is in format
 				// <html><head><title>Current IP Check</title></head><body>Current IP Address: 174.52.71.72</body></html>
-				if( m_strExternalIp.Find(_T("</HTML>") < 0 ) )
+				if( UINT index = m_strExternalIp.Find(_T("</html>") ) == -1 )
 				{
 					m_strExternalIp = _T( "Unable to access IP check site" );
 				}
