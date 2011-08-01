@@ -318,7 +318,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:IP Viewer"
         "ProductCode" = "8:{152FC5E2-3AEC-4B9F-8BAE-07141B2C7635}"
-        "PackageCode" = "8:{CEDF42B3-2B3C-466A-ACC1-12580DE2DD5B}"
+        "PackageCode" = "8:{604CF055-D51F-4FE1-8D2F-AC93C4A5F0C1}"
         "UpgradeCode" = "8:{4F0AC61E-64CB-43FD-98DF-3F6E7A190C71}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -881,7 +881,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_2C626EF069D54A80ABE1C0B0E9F3BDC2"
             {
-            "SourcePath" = "8:..\\Win32Release\\IPData.dll"
+            "SourcePath" = "8:..\\x64Release\\IPData.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_81F21480F42647EE9DC0BF64C661ED0C"
@@ -909,7 +909,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_5ABA73D5418D41E8AB00DA0592FC07B5"
             {
-            "SourcePath" = "8:..\\Win32Release\\IPViewer.exe"
+            "SourcePath" = "8:..\\x64Release\\IPViewer.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_81F21480F42647EE9DC0BF64C661ED0C"
