@@ -7,12 +7,12 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IPData", "IPData\IPData.vcx
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "IpViewerSetup", "..\build\IpViewerSetup.vdproj", "{0A896981-227B-4B25-82CB-D18E15F841C9}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "IpViewerSetp_64", "IpViewerSetp_64\IpViewerSetp_64.vdproj", "{BAC04651-43E3-4A14-83CA-A435A7C5CEBD}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AA74D5B0-3181-40B8-841E-52B6FDAB5CE7}"
 	ProjectSection(SolutionItems) = preProject
 		readme.txt = readme.txt
 	EndProjectSection
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "IpViewerSetup_64", "..\build\IpViewerSetup_64\IpViewerSetup_64.vdproj", "{62057357-86DA-44C6-B69B-B4904E04CC37}"
 EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
@@ -46,10 +46,10 @@ Global
 		{0A896981-227B-4B25-82CB-D18E15F841C9}.Debug|x64.ActiveCfg = Debug
 		{0A896981-227B-4B25-82CB-D18E15F841C9}.Release|Win32.ActiveCfg = Release
 		{0A896981-227B-4B25-82CB-D18E15F841C9}.Release|x64.ActiveCfg = Release
-		{BAC04651-43E3-4A14-83CA-A435A7C5CEBD}.Debug|Win32.ActiveCfg = Debug
-		{BAC04651-43E3-4A14-83CA-A435A7C5CEBD}.Debug|x64.ActiveCfg = Debug
-		{BAC04651-43E3-4A14-83CA-A435A7C5CEBD}.Release|Win32.ActiveCfg = Release
-		{BAC04651-43E3-4A14-83CA-A435A7C5CEBD}.Release|x64.ActiveCfg = Release
+		{62057357-86DA-44C6-B69B-B4904E04CC37}.Debug|Win32.ActiveCfg = Debug
+		{62057357-86DA-44C6-B69B-B4904E04CC37}.Debug|x64.ActiveCfg = Debug
+		{62057357-86DA-44C6-B69B-B4904E04CC37}.Release|Win32.ActiveCfg = Release
+		{62057357-86DA-44C6-B69B-B4904E04CC37}.Release|x64.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
