@@ -15,20 +15,20 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_2C626EF069D54A80ABE1C0B0E9F3BDC2"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_3A7404E578A6446A9F5BD23191684543"
+        "MsmKey" = "8:_035F11FA1F2D4885A00CF6E12A51FD79"
         "OwnerKey" = "8:_2C626EF069D54A80ABE1C0B0E9F3BDC2"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_3A7404E578A6446A9F5BD23191684543"
+        "MsmKey" = "8:_035F11FA1F2D4885A00CF6E12A51FD79"
         "OwnerKey" = "8:_5ABA73D5418D41E8AB00DA0592FC07B5"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_2C626EF069D54A80ABE1C0B0E9F3BDC2"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -51,20 +51,20 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_54024AFCCEDD4CE59A1CEEB1C2B02920"
+        "MsmKey" = "8:_5ABA73D5418D41E8AB00DA0592FC07B5"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_74DF667334354C909ACBE380B690CEF9"
         "OwnerKey" = "8:_2C626EF069D54A80ABE1C0B0E9F3BDC2"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_54024AFCCEDD4CE59A1CEEB1C2B02920"
+        "MsmKey" = "8:_74DF667334354C909ACBE380B690CEF9"
         "OwnerKey" = "8:_5ABA73D5418D41E8AB00DA0592FC07B5"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_5ABA73D5418D41E8AB00DA0592FC07B5"
-        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -137,10 +137,10 @@
             "ComponentsUrl" = "8:"
                 "Items"
                 {
-                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.0,Profile=Client"
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Visual.C++.10.0.x64"
                     {
-                    "Name" = "8:Microsoft .NET Framework 4 Client Profile (x86 and x64)"
-                    "ProductCode" = "8:.NETFramework,Version=v4.0,Profile=Client"
+                    "Name" = "8:Visual C++ 2010 Runtime Libraries (x64)"
+                    "ProductCode" = "8:Microsoft.Visual.C++.10.0.x64"
                     }
                     "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
                     {
@@ -318,7 +318,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:IP Viewer"
         "ProductCode" = "8:{152FC5E2-3AEC-4B9F-8BAE-07141B2C7635}"
-        "PackageCode" = "8:{2F7C78D7-8105-4580-A4D9-2FDD09FA9DF8}"
+        "PackageCode" = "8:{CEDF42B3-2B3C-466A-ACC1-12580DE2DD5B}"
         "UpgradeCode" = "8:{4F0AC61E-64CB-43FD-98DF-3F6E7A190C71}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -848,7 +848,7 @@
         }
         "MergeModule"
         {
-            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_3A7404E578A6446A9F5BD23191684543"
+            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_035F11FA1F2D4885A00CF6E12A51FD79"
             {
             "UseDynamicProperties" = "11:TRUE"
             "IsDependency" = "11:TRUE"
@@ -862,7 +862,7 @@
             "Feature" = "8:"
             "IsolateTo" = "8:"
             }
-            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_54024AFCCEDD4CE59A1CEEB1C2B02920"
+            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_74DF667334354C909ACBE380B690CEF9"
             {
             "UseDynamicProperties" = "11:TRUE"
             "IsDependency" = "11:TRUE"
