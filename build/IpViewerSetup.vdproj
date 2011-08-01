@@ -21,25 +21,25 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_5FF1F0FA2BE341D383C7897F4AE9E8C5"
+        "MsmKey" = "8:_1E19654CA00947E4BD7C993A705BBD6B"
         "OwnerKey" = "8:_861B5C78A0F74604BEAC388081FDD451"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_5FF1F0FA2BE341D383C7897F4AE9E8C5"
+        "MsmKey" = "8:_1E19654CA00947E4BD7C993A705BBD6B"
         "OwnerKey" = "8:_E7398C63964644EF8DB99903418F529A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_7C04FB88FA3444619D29EF0305EA10A5"
+        "MsmKey" = "8:_7DD9B6E6342C4EDA81ED581D35AA7F3C"
         "OwnerKey" = "8:_861B5C78A0F74604BEAC388081FDD451"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_7C04FB88FA3444619D29EF0305EA10A5"
+        "MsmKey" = "8:_7DD9B6E6342C4EDA81ED581D35AA7F3C"
         "OwnerKey" = "8:_E7398C63964644EF8DB99903418F529A"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -317,23 +317,23 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:IP Viewer"
-        "ProductCode" = "8:{7C1B12AB-E3FA-4DCF-9AEE-E79C8F5E9131}"
-        "PackageCode" = "8:{DF63997E-25F3-4164-A5AA-84B394FE335B}"
+        "ProductCode" = "8:{F1BC8387-D1AE-4A0B-A25A-225870DD89BD}"
+        "PackageCode" = "8:{EF28B666-6869-4C32-8F94-6A6B8C1C0A77}"
         "UpgradeCode" = "8:{EE1F1319-04EE-4254-AEE1-4891FFC26803}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
-        "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.9"
+        "InstallAllUsers" = "11:FALSE"
+        "ProductVersion" = "8:2.0"
         "Manufacturer" = "8: JRL Software"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:IP Viewer 1.9"
+        "Title" = "8:IP Viewer 2.0"
         "Subject" = "8:"
         "ARPCONTACT" = "8:JRL Software"
         "Keywords" = "8:"
-        "ARPCOMMENTS" = "8:IP Viewer 1.9"
+        "ARPCOMMENTS" = "8:IP Viewer 2.0"
         "ARPURLINFOABOUT" = "8:"
         "ARPPRODUCTICON" = "8:_CB0555582A4745E6BBEFDA8569821C16"
         "ARPIconIndex" = "3:0"
@@ -440,7 +440,7 @@
         {
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_D3090D8EE12E491A8FFF6DAEF00838E1"
             {
-            "Name" = "8:IPViewer 1.9"
+            "Name" = "8:IP Viewer 2.0"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -848,7 +848,7 @@
         }
         "MergeModule"
         {
-            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_5FF1F0FA2BE341D383C7897F4AE9E8C5"
+            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_1E19654CA00947E4BD7C993A705BBD6B"
             {
             "UseDynamicProperties" = "11:TRUE"
             "IsDependency" = "11:TRUE"
@@ -862,7 +862,7 @@
             "Feature" = "8:"
             "IsolateTo" = "8:"
             }
-            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_7C04FB88FA3444619D29EF0305EA10A5"
+            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_7DD9B6E6342C4EDA81ED581D35AA7F3C"
             {
             "UseDynamicProperties" = "11:TRUE"
             "IsDependency" = "11:TRUE"
@@ -881,7 +881,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_861B5C78A0F74604BEAC388081FDD451"
             {
-            "SourcePath" = "8:..\\trunk\\x64Release\\IPData.dll"
+            "SourcePath" = "8:..\\trunk\\Win32Release\\IPData.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_E9CFD597F26343F4A582B847EB86B49B"
@@ -909,7 +909,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_E7398C63964644EF8DB99903418F529A"
             {
-            "SourcePath" = "8:..\\trunk\\x64Release\\IPViewer.exe"
+            "SourcePath" = "8:..\\trunk\\Win32Release\\IPViewer.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_E9CFD597F26343F4A582B847EB86B49B"
