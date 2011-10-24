@@ -23,6 +23,8 @@
 #include "stdafx.h"
 #include "IPData.h"
 
+#include <memory>
+
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
@@ -114,13 +116,30 @@ void CIPData::LoadExternalIpAddress()
 
 				// file if successful is in format
 				// <html><head><title>Current IP Check</title></head><body>Current IP Address: 174.52.71.72</body></html>
+#ifdef DEBUG
+				m_strExternalIp = _T("<html><head><title>Current IP Check</title></head><body>Current IP Address: 174.52.71.72</body></html>");
+#endif
 				if( UINT index = m_strExternalIp.Find(_T("</html>") ) == -1 )
 				{
 					m_strExternalIp = _T( "Unable to access IP check site" );
 				}
 				else
 				{
-					m_strExternalIp = m_strExternalIp.Mid( m_strExternalIp.Find( _T(": ") ) + 1, m_strExternalIp.GetLength() - m_strExternalIp.Find( _T("</body>") ) - 1 );
+					// THIS IS OLD CODE< AND WASN'T WORKING
+					//m_strExternalIp = m_strExternalIp.Mid( m_strExternalIp.Find( _T(": ") ) + 1, m_strExternalIp.GetLength() - m_strExternalIp.Find( _T("</body>") ) - 1 );
+
+					std::auto_ptr<INT> startIndex( new INT() );
+					std::auto_ptr<INT> endIndex( new INT() );
+					
+					// this should get us the index of the first digit in the address
+					*startIndex = m_strExternalIp.Find( _T(": ") ) + 2;
+
+					// this should get us the index of the last digit in the address
+					*endIndex = m_strExternalIp.Find( _T("</body>") );
+
+					// the ip address should be the length between the first index and the last index
+					m_strExternalIp = m_strExternalIp.Mid( *startIndex, *endIndex - *startIndex );
+
 				}
 
 				// always close the file
