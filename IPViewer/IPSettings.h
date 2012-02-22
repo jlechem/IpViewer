@@ -35,14 +35,14 @@ public:
 	BOOL GetOnTop() { return _onTop; }
 	BOOL GetStartMinimized() { return _startToTray; }
 	BOOL GetCheckExternalIp() { return _checkExternalIp; }
-	BOOL GetLogEnabled() { return _loggingEnabled; }
+	BOOL GetLoggingEnabled() { return _loggingEnabled; }
 	BOOL GetLogInternalIp() { return _logInternalIp; }
 	BOOL GetLogExternalIp() { return _logExternalIp; }
 	BOOL GetLogMacAddress() { return _logMacAddress; }
 	BOOL GetLogHostName() { return _logHostName; }
 	
 	CString GetLogFileName() { return _logFileName; }
-	CString GetFileExtension() { return _logFileExtension; }
+	CString GetLogFileExtension() { return _logFileExtension; }
 
 	// set methods for internal memebers
 	void SetTick( INT value ) { _tick = value; }
@@ -58,13 +58,11 @@ public:
 	void SetLogFileName( CString value ) { _logFileName = value; }
 	void SetLogFileExtension( CString value ) { _logFileExtension = value; }
 
-	void SetLogEnabled( BOOL value ) { _loggingEnabled = value; }
+	void SetLoggingEnabled( BOOL value ) { _loggingEnabled = value; }
 	void SetLogInternalIp( BOOL value ) { _logInternalIp = value; }
 	void SetLogExternalIp( BOOL value ) { _logExternalIp = value; }
 	void SetLogMacAddress( BOOL value ) { _logMacAddress = value; }
 	void SetLogHostName( BOOL value ) { _logHostName = value; }
-
-	void LogData();
 
 	BOOL Save();
 

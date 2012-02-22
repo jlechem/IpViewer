@@ -503,3 +503,29 @@ void CIPViewerDlg::OnWindowPosChanging( WINDOWPOS FAR* lpWindowPosition )
 	CDialog::OnWindowPosChanging( lpWindowPosition );
 
 }
+
+// Logs the data
+void CIPViewerDlg::LogData()
+{
+	if( m_pSettings->GetLoggingEnabled() )
+	{
+		CStdioFile file;
+
+		// we write to the text file
+		if( m_pSettings->GetLogFileExtension() == TEXT("Text") )
+		{
+			CString line;
+
+			if( file.Open( m_pSettings->GetLogFileName() + "." + m_pSettings->GetLogFileExtension(), CFile::modeNoTruncate | CFile::modeWrite ) )
+			{
+				// move to the end of the file
+				file.SeekToEnd();
+
+			}
+		}
+		// we write to the CSV file
+		else if( m_pSettings->GetLogFileExtension() == TEXT("Csv") )
+		{
+		}
+	}
+}
