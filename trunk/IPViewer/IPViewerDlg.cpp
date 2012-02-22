@@ -521,6 +521,29 @@ void CIPViewerDlg::LogData()
 				// move to the end of the file
 				file.SeekToEnd();
 
+				if( m_pSettings->GetLogInternalIp() )
+				{
+					line = m_pIpData->GetIpAddress();
+				}
+				
+				if( m_pSettings->GetLogExternalIp() )
+				{
+					line += TEXT(", ");
+					line += m_pIpData->GetExternalIpAddress();
+				}
+
+				if( m_pSettings->GetLogMacAddress() )
+				{
+					line += TEXT(", ");
+					line += m_pIpData->GetMacAddress();
+				}
+
+				if( m_pSettings->GetLogHostName() )
+				{
+					line += TEXT(", ");
+					line += m_pIpData->GetHostName();
+				}
+
 			}
 		}
 		// we write to the CSV file
