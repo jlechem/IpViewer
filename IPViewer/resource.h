@@ -7,7 +7,11 @@
 #define IDS_ABOUTBOX                    101
 #define IDD_IPVIEWER_DIALOG             102
 #define IDS_HOSTNAME                    102
+
+#ifndef IDP_SOCKETS_INIT_FAILED
 #define IDP_SOCKETS_INIT_FAILED         103
+#endif
+
 #define IDS_IPADDRESS                   104
 #define IDS_MAC                         105
 #define IDS_REG_PATH                    106
