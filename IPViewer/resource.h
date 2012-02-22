@@ -50,6 +50,15 @@
 #define IDC_RADIO_EXTERNAL_IP           1034
 #define IDC_TEXT_EXTERNAL               1035
 #define IDC_CHECK_EXTERNAL              1036
+#define IDC_CHECK_ENABLE_LOGGING        1039
+#define IDC_CHECK4                      1040
+#define IDC_CHECK5                      1041
+#define IDC_CHECK6                      1042
+#define IDC_CHECK7                      1043
+#define IDC_EDIT_LOGINTERVAL            1047
+#define IDC_EDIT_FILENAME               1048
+#define IDC_COMBO1                      1049
+#define IDC_COMBO_FILETYPE              1049
 #define ID_FILE_EXIT                    32771
 #define ID_EDIT_SETTINGS                32772
 #define ID_HELP_ABOUT                   32773
@@ -72,9 +81,9 @@
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        135
+#define _APS_NEXT_RESOURCE_VALUE        136
 #define _APS_NEXT_COMMAND_VALUE         32788
-#define _APS_NEXT_CONTROL_VALUE         1037
+#define _APS_NEXT_CONTROL_VALUE         1050
 #define _APS_NEXT_SYMED_VALUE           105
 #endif
 #endif

@@ -64,6 +64,7 @@ void CIPViewerSettings::DoDataExchange(CDataExchange* pDX)
 	DDX_Radio(pDX, IDC_RADIO_IP, m_nSelectedIndex);	
 	DDX_Check(pDX, IDC_CHECK2, m_bStartMinimized);
 	DDX_Check(pDX, IDC_CHECK_EXTERNAL, m_bCheckExternalIp);
+	DDX_Control(pDX, IDC_CHECK_ENABLE_LOGGING, m_enableLogging);
 }
 
 
@@ -94,6 +95,7 @@ BOOL CIPViewerSettings::OnInitDialog()
 BEGIN_MESSAGE_MAP(CIPViewerSettings, CDialog)
 	ON_BN_CLICKED(IDC_BUTTON_SAVE, &CIPViewerSettings::OnBnClickedButtonSave)
 	ON_BN_CLICKED(IDC_BUTTON_CANCEL, &CIPViewerSettings::OnBnClickedButtonCancel)
+	ON_BN_CLICKED(IDC_CHECK_ENABLE_LOGGING, &CIPViewerSettings::OnBnClickedCheckEnableLogging)
 END_MESSAGE_MAP()
 
 
@@ -136,4 +138,10 @@ void CIPViewerSettings::OnBnClickedButtonCancel()
 
 	// kill this dialog
 	this->EndDialog(0);
+}
+
+void CIPViewerSettings::OnBnClickedCheckEnableLogging()
+{
+	// TODO: Add your control notification handler code here
+	
 }
