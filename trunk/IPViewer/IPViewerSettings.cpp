@@ -93,6 +93,39 @@ BOOL CIPViewerSettings::OnInitDialog()
 	m_bCheckExternalIp = m_pSettings->GetCheckExternalIp();
 	m_bEnableLogging = m_pSettings->GetLoggingEnabled();
 
+	if( m_bEnableLogging )
+	{
+		m_CheckInternalIp.EnableWindow( TRUE );
+		m_CheckExternalIp.EnableWindow( TRUE );
+		m_CheckHostName.EnableWindow( TRUE );
+		m_CheckMacAddress.EnableWindow( TRUE );
+		m_LogInterval.EnableWindow( TRUE );
+		m_LogFileName.EnableWindow( TRUE );
+		m_LogFileExtension.EnableWindow( TRUE );
+	}
+	else
+	{
+		m_CheckInternalIp.EnableWindow( FALSE );
+		m_CheckExternalIp.EnableWindow( FALSE );
+		m_CheckHostName.EnableWindow( FALSE );
+		m_CheckMacAddress.EnableWindow( FALSE );
+		m_LogInterval.EnableWindow( FALSE );
+		m_LogFileName.EnableWindow( FALSE );
+		m_LogFileExtension.EnableWindow( FALSE );
+	}
+
+	// get if we're going to check the individual parts
+	m_CheckInternalIp.SetCheck( m_pSettings->GetLogInternalIp() );
+	m_CheckExternalIp.SetCheck( m_pSettings->GetLogExternalIp() );
+	m_CheckHostName.SetCheck( m_pSettings->GetLogHostName() );
+	m_CheckMacAddress.SetCheck( m_pSettings->GetLogMacAddress() );
+
+	CString text;
+	text.Format( TEXT("%d"),m_pSettings->GetLoggingInterval() );
+	m_LogInterval.SetWindowTextW( text );
+	m_LogFileName.SetWindowTextW( m_pSettings->GetLogFileName() );
+	m_LogFileExtension.SetWindowTextW( m_pSettings->GetLogFileExtension() );
+
 	// refresh the Dialog
 	UpdateData( FALSE );
 
@@ -126,11 +159,26 @@ void CIPViewerSettings::OnBnClickedButtonSave()
 	m_pSettings->SetStartInTray( m_bStartMinimized );
 	m_pSettings->SetCheckExternalIp( m_bCheckExternalIp );
 	m_pSettings->SetLoggingEnabled( m_bEnableLogging );
+	m_pSettings->SetLogInternalIp( m_CheckInternalIp.GetCheck() );
+	m_pSettings->SetLogExternalIp( m_CheckExternalIp.GetCheck() );
+	m_pSettings->SetLogHostName( m_CheckHostName.GetCheck() );
+	m_pSettings->SetLogMacAddress( m_CheckMacAddress.GetCheck() );
+
+	CString temp;
+
+	m_LogInterval.GetWindowTextW( temp );
+	m_pSettings->SetLoggingInterval( _wtoi( temp ) );
+	
+	m_LogFileName.GetWindowTextW( temp );
+	m_pSettings->SetLogFileName( temp );
+
+	m_LogFileExtension.GetWindowTextW( temp );
+	m_pSettings->SetLogFileExtension( temp );
 
 	// save our changes to the registry
 	CString result = m_pSettings->Save() ? 
-		_T("Settings were saved successfully.") : 
-		_T("An error occured saving settings.");
+		TEXT("Settings were saved successfully.") : 
+		TEXT("An error occured saving settings.");
 
 	AfxMessageBox( result, MB_OKCANCEL );
 		
@@ -152,5 +200,29 @@ void CIPViewerSettings::OnBnClickedButtonCancel()
 void CIPViewerSettings::OnBnClickedCheckEnableLogging()
 {
 	// TODO: Add your control notification handler code here
+	CButton* a = (CButton*)GetDlgItem( IDC_CHECK_ENABLE_LOGGING );
+	BOOL checked = a->GetCheck();
 	
+	m_bEnableLogging = checked;
+
+	if( checked )
+	{
+		m_CheckInternalIp.EnableWindow( TRUE );
+		m_CheckExternalIp.EnableWindow( TRUE );
+		m_CheckHostName.EnableWindow( TRUE );
+		m_CheckMacAddress.EnableWindow( TRUE );
+		m_LogInterval.EnableWindow( TRUE );
+		m_LogFileName.EnableWindow( TRUE );
+		m_LogFileExtension.EnableWindow( TRUE );
+	}
+	else
+	{
+		m_CheckInternalIp.EnableWindow( FALSE );
+		m_CheckExternalIp.EnableWindow( FALSE );
+		m_CheckHostName.EnableWindow( FALSE );
+		m_CheckMacAddress.EnableWindow( FALSE );
+		m_LogInterval.EnableWindow( FALSE );
+		m_LogFileName.EnableWindow( FALSE );
+		m_LogFileExtension.EnableWindow( FALSE );
+	}
 }

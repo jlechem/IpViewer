@@ -84,7 +84,7 @@ BOOL CIPData::InitInstance()
 
 void CIPData::LoadExternalIpAddress()
 {
-	m_strExternalIp = _T( "Unavailable" );
+	m_strExternalIp = TEXT( "Unavailable" );
 
 	try
 	{	
@@ -99,43 +99,43 @@ void CIPData::LoadExternalIpAddress()
 		*/
 
 		// holds the url to check and the name of the file to write the data to
-		TCHAR url[47] = _T("http://checkip.dyndns.org/Current IP Check.htm");
-		TCHAR file[7] = _T("ip.txt");
+		TCHAR url[47] = TEXT("http://checkip.dyndns.org/Current IP Check.htm");
+		TCHAR file[7] = TEXT("ip.txt");
 
 		// here is the urlmon.dll method call, include 
 		if( URLDownloadToFile( 0, url, file, 0, 0) == S_OK )
 		{
 			CStdioFile file;
 
-			m_strExternalIp = _T("");
+			m_strExternalIp = TEXT("");
 
 			// open the file for reading
-			if( file.Open( _T("ip.txt"), CFile::modeRead | CFile::modeNoTruncate ) )
+			if( file.Open( TEXT("ip.txt"), CFile::modeRead | CFile::modeNoTruncate ) )
 			{
 				file.ReadString( m_strExternalIp );
 
 				// file if successful is in format
 				// <html><head><title>Current IP Check</title></head><body>Current IP Address: 174.52.71.72</body></html>
 #ifdef DEBUG
-				m_strExternalIp = _T("<html><head><title>Current IP Check</title></head><body>Current IP Address: 174.52.71.72</body></html>");
+				m_strExternalIp = TEXT("<html><head><title>Current IP Check</title></head><body>Current IP Address: 174.52.71.72</body></html>");
 #endif
-				if( UINT index = m_strExternalIp.Find(_T("</html>") ) == -1 )
+				if( UINT index = m_strExternalIp.Find(TEXT("</html>") ) == -1 )
 				{
-					m_strExternalIp = _T( "Unable to access IP check site" );
+					m_strExternalIp = TEXT( "Unable to access IP check site" );
 				}
 				else
 				{
 					// THIS IS OLD CODE< AND WASN'T WORKING
-					//m_strExternalIp = m_strExternalIp.Mid( m_strExternalIp.Find( _T(": ") ) + 1, m_strExternalIp.GetLength() - m_strExternalIp.Find( _T("</body>") ) - 1 );
+					//m_strExternalIp = m_strExternalIp.Mid( m_strExternalIp.Find( TEXT(": ") ) + 1, m_strExternalIp.GetLength() - m_strExternalIp.Find( TEXT("</body>") ) - 1 );
 
 					std::auto_ptr<INT> startIndex( new INT() );
 					std::auto_ptr<INT> endIndex( new INT() );
 					
 					// this should get us the index of the first digit in the address
-					*startIndex = m_strExternalIp.Find( _T(": ") ) + 2;
+					*startIndex = m_strExternalIp.Find( TEXT(": ") ) + 2;
 
 					// this should get us the index of the last digit in the address
-					*endIndex = m_strExternalIp.Find( _T("</body>") );
+					*endIndex = m_strExternalIp.Find( TEXT("</body>") );
 
 					// the ip address should be the length between the first index and the last index
 					m_strExternalIp = m_strExternalIp.Mid( *startIndex, *endIndex - *startIndex );
@@ -149,7 +149,7 @@ void CIPData::LoadExternalIpAddress()
 		}
 		else
 		{
-			m_strExternalIp = _T( "Unable to access IP check site" );
+			m_strExternalIp = TEXT( "Unable to access IP check site" );
 		}
 	}
 	catch( CException* ex )
@@ -160,10 +160,10 @@ void CIPData::LoadExternalIpAddress()
 
 		ex->GetErrorMessage(szCause, 255);
 
-		strFormatted = _T("The following error occurred: ");
+		strFormatted = TEXT("The following error occurred: ");
 	    strFormatted += szCause;
 
-		CStdioFile file(_T("error_log.txt"), CFile::modeWrite | CFile::modeNoTruncate );
+		CStdioFile file(TEXT("error_log.txt"), CFile::modeWrite | CFile::modeNoTruncate );
 
 		if( file )
 		{
@@ -204,7 +204,7 @@ void CIPData::LoadIpAddress( void )
 	catch( ... )
 	{
 		// load some default values from the string table
-		m_strInternalIp = _T("127.0.0.1");
+		m_strInternalIp = TEXT("127.0.0.1");
 	}
 
 }
@@ -237,7 +237,7 @@ void CIPData::LoadMacAddress( void )
 
 		for(DWORD i=1; i< dwEntriesRead; i++)			// first address is 00000000, skip it
 		{												// enumerate MACs and print
-			swscanf_s((wchar_t *)pwkti[i].wkti0_transport_address, _T("%2hx%2hx%2hx%2hx%2hx%2hx"), 
+			swscanf_s((wchar_t *)pwkti[i].wkti0_transport_address, TEXT("%2hx%2hx%2hx%2hx%2hx%2hx"), 
 				&MACData[0], &MACData[1], &MACData[2], &MACData[3], &MACData[4], &MACData[5]);
 		}
 
@@ -245,14 +245,14 @@ void CIPData::LoadMacAddress( void )
 		dwStatus = NetApiBufferFree(pbBuffer);
 		ASSERT( dwStatus == NERR_Success );
 
-		m_strMacAddress.Format( _T("%02X-%02X-%02X-%02X-%02X-%02X"), MACData[0], MACData[1], MACData[2], MACData[3], MACData[4], MACData[5]);
+		m_strMacAddress.Format( TEXT("%02X-%02X-%02X-%02X-%02X-%02X"), MACData[0], MACData[1], MACData[2], MACData[3], MACData[4], MACData[5]);
 
 	}
 	catch( CException* ex )
 	{
 		// TODO: do somethign with the exception
 		delete ex;
-		m_strMacAddress = _T( "00-0-00-00-00-00" );
+		m_strMacAddress = TEXT( "00-0-00-00-00-00" );
 	}
 }
 
@@ -279,7 +279,7 @@ void CIPData::LoadHostName( void )
 	catch( ... )
 	{
 		// TODO: load some default values from the string table
-		m_strHostName = _T("Localhost");
+		m_strHostName = TEXT("Localhost");
 	}
 }
 
@@ -287,5 +287,5 @@ void CIPData::LoadHostName( void )
 void CIPData::LoadSubnet( void )
 {
 	// TODO: get the subnet for the default adapter
-	m_strSubnet = _T("255.255.255.0");
+	m_strSubnet = TEXT("255.255.255.0");
 }

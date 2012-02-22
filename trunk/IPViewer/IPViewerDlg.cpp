@@ -64,10 +64,10 @@ END_MESSAGE_MAP()
 
 CIPViewerDlg::CIPViewerDlg(CWnd* pParent /*=NULL*/)
 	: CDialog(CIPViewerDlg::IDD, pParent)
-	, m_strMac(_T(""))
-	, m_strHost(_T(""))
-	, m_strIP(_T(""))
-	, m_strExternalIP(_T(""))
+	, m_strMac(TEXT(""))
+	, m_strHost(TEXT(""))
+	, m_strIP(TEXT(""))
+	, m_strExternalIP(TEXT(""))
 	, m_bVisible(FALSE)
 {
 	m_hIcon = AfxGetApp()->LoadIcon(IDI_ICON_IPVIEWER);
@@ -255,7 +255,7 @@ void CIPViewerDlg::RefreshIpInfo()
 	this->m_strMac = m_pIpData->GetMacAddress();
 	this->m_strExternalIP = m_pSettings->GetCheckExternalIp() ?
 		m_pIpData->GetExternalIpAddress():
-		_T("Not set to check for external ip");
+		TEXT("Not set to check for external ip");
 
 	// refresh the dialog controls
 	UpdateData( FALSE );

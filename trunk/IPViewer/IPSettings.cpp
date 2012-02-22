@@ -122,6 +122,8 @@ void CIPSettings::Load()
 
 				key.LoadStringW( IDS_ENABLE_LOGGING );
 
+				newWord = _loggingEnabled;
+
 				if( !m_pRegistry->Read( key, (BOOL)_loggingEnabled ) )
 				{
 					m_pRegistry->Write( key, (BOOL)_loggingEnabled );	
@@ -130,6 +132,8 @@ void CIPSettings::Load()
 				_loggingEnabled = newWord;
 
 				key.LoadStringW( IDS_LOG_INTERNAL );
+
+				newWord = _logInternalIp;
 
 				if( !m_pRegistry->Read( key, (BOOL)_logInternalIp ) )
 				{
@@ -140,6 +144,8 @@ void CIPSettings::Load()
 
 				key.LoadStringW( IDS_LOG_EXTERNAL );
 
+				newWord = _logExternalIp;
+
 				if( !m_pRegistry->Read( key, (BOOL)_logExternalIp ) )
 				{
 					m_pRegistry->Write( key, (BOOL)_logExternalIp );
@@ -148,6 +154,8 @@ void CIPSettings::Load()
 				_logExternalIp = newWord;
 
 				key.LoadStringW( IDS_LOG_MAC );
+
+				newWord = _logMacAddress;
 
 				if( !m_pRegistry->Read( key, (BOOL)_logMacAddress ) )
 				{
@@ -158,6 +166,8 @@ void CIPSettings::Load()
 
 				key.LoadStringW( IDS_LOG_HOST );
 
+				newWord = _logHostName;
+
 				if( !m_pRegistry->Read( key, (BOOL)_logHostName ) )
 				{
 					m_pRegistry->Write( key, (BOOL)_logHostName );
@@ -166,6 +176,8 @@ void CIPSettings::Load()
 				_logHostName = newWord;
 
 				key.LoadStringW( IDS_LOG_INTERVAL );
+
+				newWord = _loggingInterval;
 
 				if( !m_pRegistry->Read( key, (INT)_loggingInterval ) )
 				{
@@ -176,18 +188,22 @@ void CIPSettings::Load()
 
 				key.LoadStringW( IDS_LOG_FILENAME );
 
-				if( !m_pRegistry->Read( key, (CString)_logFileName ) )
+				newWord = atol((char*)(LPCTSTR)_logFileName);
+
+				if( !m_pRegistry->Read( key, _logFileName ) )
 				{
-					m_pRegistry->Write( key, (CString)_logFileName );
+					m_pRegistry->Write( key, _logFileName );
 				}
 
 				_logFileName.Format( TEXT("%s"), newWord );
 
 				key.LoadStringW( IDS_LOG_EXTENSION );
 
-				if( !m_pRegistry->Read( key, (CString)_logFileExtension ) )
+				newWord = atol((char*)(LPCTSTR)_logFileExtension);
+				
+				if( !m_pRegistry->Read( key, _logFileExtension ) )
 				{
-					m_pRegistry->Write( key, (CString)_logFileExtension );
+					m_pRegistry->Write( key, _logFileExtension );
 				}
 
 				_logFileExtension.Format( TEXT("%s"), newWord );
@@ -224,6 +240,15 @@ void CIPSettings::Reset()
 	_minToTray = true;
 	_closeToTray = true;
 	_selectedIndex = 0;
+	_loggingEnabled = false;
+	_logInternalIp = false;
+	_logExternalIp = false;
+	_logHostName = false;
+	_logMacAddress = false;
+	_loggingInterval = 360;
+	_logFileName = TEXT("IP_LOGS");
+	_logFileExtension = TEXT("Text");
+
 	m_pRegistry = NULL;
 
 }
