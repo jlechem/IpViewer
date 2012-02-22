@@ -84,6 +84,7 @@ private:
 
 	BOOL m_bVisible;
 
+	void LogData();
 	void CopyAll();
 	void SetTopMost();
 	void RefreshIpInfo();

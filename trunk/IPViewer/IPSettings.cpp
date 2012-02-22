@@ -31,6 +31,7 @@ CIPSettings::~CIPSettings(void)
 {
 }
 
+// Loads the IP Settings
 void CIPSettings::Load()
 {
 	DWORD newWord;
@@ -142,6 +143,7 @@ void CIPSettings::Load()
 	}
 }
 
+// Resets the IP Settings
 void CIPSettings::Reset()
 {
 	// set some default values and set our pointer to NULL so
@@ -155,6 +157,7 @@ void CIPSettings::Reset()
 
 }
 
+// Saves the IP Settings
 BOOL CIPSettings::Save()
 {
 	BOOL result = false;
