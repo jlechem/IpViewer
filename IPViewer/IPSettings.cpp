@@ -120,6 +120,77 @@ void CIPSettings::Load()
 				
 				_checkExternalIp = newWord;
 
+				key.LoadStringW( IDS_ENABLE_LOGGING );
+
+				if( !m_pRegistry->Read( key, (BOOL)_loggingEnabled ) )
+				{
+					m_pRegistry->Write( key, (BOOL)_loggingEnabled );	
+				}
+
+				_loggingEnabled = newWord;
+
+				key.LoadStringW( IDS_LOG_INTERNAL );
+
+				if( !m_pRegistry->Read( key, (BOOL)_logInternalIp ) )
+				{
+					m_pRegistry->Write( key, (BOOL)_logInternalIp );
+				}
+
+				_logInternalIp = newWord;
+
+				key.LoadStringW( IDS_LOG_EXTERNAL );
+
+				if( !m_pRegistry->Read( key, (BOOL)_logExternalIp ) )
+				{
+					m_pRegistry->Write( key, (BOOL)_logExternalIp );
+				}
+
+				_logExternalIp = newWord;
+
+				key.LoadStringW( IDS_LOG_MAC );
+
+				if( !m_pRegistry->Read( key, (BOOL)_logMacAddress ) )
+				{
+					m_pRegistry->Write( key, (BOOL)_logMacAddress );
+				}
+
+				_logMacAddress = newWord;
+
+				key.LoadStringW( IDS_LOG_HOST );
+
+				if( !m_pRegistry->Read( key, (BOOL)_logHostName ) )
+				{
+					m_pRegistry->Write( key, (BOOL)_logHostName );
+				}
+
+				_logHostName = newWord;
+
+				key.LoadStringW( IDS_LOG_INTERVAL );
+
+				if( !m_pRegistry->Read( key, (INT)_loggingInterval ) )
+				{
+					m_pRegistry->Write( key, (INT)_loggingInterval );
+				}
+
+				_loggingInterval = newWord;
+
+				key.LoadStringW( IDS_LOG_FILENAME );
+
+				if( !m_pRegistry->Read( key, (CString)_logFileName ) )
+				{
+					m_pRegistry->Write( key, (CString)_logFileName );
+				}
+
+				_logFileName.Format( TEXT("%s"), newWord );
+
+				key.LoadStringW( IDS_LOG_EXTENSION );
+
+				if( !m_pRegistry->Read( key, (CString)_logFileExtension ) )
+				{
+					m_pRegistry->Write( key, (CString)_logFileExtension );
+				}
+
+				_logFileExtension.Format( TEXT("%s"), newWord );
 
 			}
 			else
@@ -172,13 +243,13 @@ BOOL CIPSettings::Save()
 			m_pRegistry = new CSettingsStore( FALSE, FALSE );
 			key.LoadStringW( IDS_REG_PATH );
 			m_pRegistry->CreateKey( key );
-		}//end if
-
+		}
 
 		// this opens the main root key or creates it if it doesn't exist
 		key.LoadStringW( IDS_TICK_KEY );
 		m_pRegistry->Write( key, (int)_tick );
 		
+		// we then move on and write our settings to the registry
 		key.LoadStringW( IDS_MINTRAY_KEY );
 		m_pRegistry->Write( key, (BOOL)_minToTray );
 		
@@ -186,7 +257,7 @@ BOOL CIPSettings::Save()
 		m_pRegistry->Write( key, (BOOL)_closeToTray );
 		
 		key.LoadStringW( IDS_SELECTED_INDEX_KEY );
-		m_pRegistry->Write( key, (int)_selectedIndex );
+		m_pRegistry->Write( key, (INT)_selectedIndex );
 		
 		key.LoadStringW( IDS_ONTOP_KEY  );
 		m_pRegistry->Write( key, (BOOL)_onTop );
@@ -197,14 +268,35 @@ BOOL CIPSettings::Save()
 		key.LoadStringW( IDS_CHECK_EXTERNAL_KEY );
 		m_pRegistry->Write( key, (BOOL)_checkExternalIp );	
 
+		key.LoadStringW( IDS_ENABLE_LOGGING );
+		m_pRegistry->Write( key, (BOOL)_loggingEnabled );	
+
+		key.LoadStringW( IDS_LOG_INTERNAL );
+		m_pRegistry->Write( key, (BOOL)_logInternalIp );
+
+		key.LoadStringW( IDS_LOG_EXTERNAL );
+		m_pRegistry->Write( key, (BOOL)_logExternalIp );
+
+		key.LoadStringW( IDS_LOG_MAC );
+		m_pRegistry->Write( key, (BOOL)_logMacAddress );
+
+		key.LoadStringW( IDS_LOG_HOST );
+		m_pRegistry->Write( key, (BOOL)_logHostName );
+
+		key.LoadStringW( IDS_LOG_INTERVAL );
+		m_pRegistry->Write( key, (INT)_loggingInterval );
+
+		key.LoadStringW( IDS_LOG_FILENAME );
+		m_pRegistry->Write( key, (CString)_logFileName );
+
+		key.LoadStringW( IDS_LOG_EXTENSION );
+		m_pRegistry->Write( key, (CString)_logFileExtension );
+
 		result = true;
 
 	}
 	catch( CException* ex )
 	{
-		// TODO: do something with the exception
-		/*CString error;
-		ex->GetErrorMessage( error.GetBuffer(0), 255);*/
 		delete ex;
 	}
 

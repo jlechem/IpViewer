@@ -28,7 +28,7 @@ public:
 	// get methods for internal members
 	INT GetShowItemIndex() { return _selectedIndex; }
 	INT GetTick() { return _tick; }
-	INT GetLoggingInterval() { return _loggingInteval; }
+	INT GetLoggingInterval() { return _loggingInterval; }
 
 	BOOL GetMinimizeToTray() { return _minToTray; }
 	BOOL GetCloseToTray() { return _closeToTray; }
@@ -47,7 +47,7 @@ public:
 	// set methods for internal memebers
 	void SetTick( INT value ) { _tick = value; }
 	void SetShowItemIndex( INT value ) { _selectedIndex = value; }
-	void SetLoggingInterval( INT value ) { _loggingInteval = value; }
+	void SetLoggingInterval( INT value ) { _loggingInterval = value; }
 
 	void SetMinimizeToTray( BOOL value ) { _minToTray = value; }
 	void SetCloseToTray( BOOL value ) { _closeToTray = value; }
@@ -69,7 +69,7 @@ public:
 private:
 	INT _tick;
 	INT _selectedIndex;
-	INT _loggingInteval;
+	INT _loggingInterval;
 	
 	BOOL _minToTray;
 	BOOL _closeToTray;

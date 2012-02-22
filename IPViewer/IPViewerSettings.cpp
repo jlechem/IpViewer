@@ -38,6 +38,7 @@ CIPViewerSettings::CIPViewerSettings(CWnd* pParent /*=NULL*/)
 	, m_bOnTop(FALSE)
 	, m_bStartMinimized(FALSE)
 	, m_bCheckExternalIp(FALSE)
+	, m_bEnableLogging(false)
 {
 	m_hIcon = AfxGetApp()->LoadIcon(IDI_ICON_IPVIEWER);
 }
@@ -64,7 +65,13 @@ void CIPViewerSettings::DoDataExchange(CDataExchange* pDX)
 	DDX_Radio(pDX, IDC_RADIO_IP, m_nSelectedIndex);	
 	DDX_Check(pDX, IDC_CHECK2, m_bStartMinimized);
 	DDX_Check(pDX, IDC_CHECK_EXTERNAL, m_bCheckExternalIp);
-	DDX_Control(pDX, IDC_CHECK_ENABLE_LOGGING, m_enableLogging);
+	DDX_Control(pDX, IDC_CHECK4, m_CheckInternalIp);
+	DDX_Control(pDX, IDC_CHECK5, m_CheckExternalIp);
+	DDX_Control(pDX, IDC_CHECK6, m_CheckHostName);
+	DDX_Control(pDX, IDC_CHECK7, m_CheckMacAddress);
+	DDX_Control(pDX, IDC_EDIT_LOGINTERVAL, m_LogInterval);
+	DDX_Control(pDX, IDC_EDIT_FILENAME, m_LogFileName);
+	DDX_Control(pDX, IDC_COMBO_FILETYPE, m_LogFileExtension);
 }
 
 
@@ -84,6 +91,7 @@ BOOL CIPViewerSettings::OnInitDialog()
 	m_bOnTop = m_pSettings->GetOnTop();
 	m_bStartMinimized = m_pSettings->GetStartMinimized();
 	m_bCheckExternalIp = m_pSettings->GetCheckExternalIp();
+	m_bEnableLogging = m_pSettings->GetLoggingEnabled();
 
 	// refresh the Dialog
 	UpdateData( FALSE );
@@ -117,6 +125,7 @@ void CIPViewerSettings::OnBnClickedButtonSave()
 	m_pSettings->SetOnTOp( m_bOnTop );
 	m_pSettings->SetStartInTray( m_bStartMinimized );
 	m_pSettings->SetCheckExternalIp( m_bCheckExternalIp );
+	m_pSettings->SetLoggingEnabled( m_bEnableLogging );
 
 	// save our changes to the registry
 	CString result = m_pSettings->Save() ? 

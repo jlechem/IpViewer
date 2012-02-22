@@ -7,11 +7,7 @@
 #define IDS_ABOUTBOX                    101
 #define IDD_IPVIEWER_DIALOG             102
 #define IDS_HOSTNAME                    102
-
-#ifndef IDP_SOCKETS_INIT_FAILED
 #define IDP_SOCKETS_INIT_FAILED         103
-#endif
-
 #define IDS_IPADDRESS                   104
 #define IDS_MAC                         105
 #define IDS_REG_PATH                    106
@@ -28,6 +24,14 @@
 #define IDS_DEFAULT_MAC                 117
 #define IDS_START_MIN_KEY               118
 #define IDS_CHECK_EXTERNAL_KEY          119
+#define IDS_ENABLE_LOGGING              120
+#define IDS_LOG_INTERNAL                121
+#define IDS_LOG_EXTERNAL                122
+#define IDS_LOG_MAC                     123
+#define IDS_LOG_HOST                    124
+#define IDS_LOG_INTERVAL                125
+#define IDS_LOG_FILENAME                126
+#define IDS_LOG_EXTENSION               127
 #define IDD_DIALOG_SETTINGS             129
 #define IDI_ICON_IPVIEWER               130
 #define IDR_MENU1                       131

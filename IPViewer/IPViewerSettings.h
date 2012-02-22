@@ -35,7 +35,8 @@ public:
 
 	afx_msg void OnBnClickedButtonSave();
 	afx_msg void OnBnClickedButtonCancel();
-	
+	afx_msg void OnBnClickedCheckEnableLogging();
+
 	// Dialog Data
 	enum { IDD = IDD_DIALOG_SETTINGS };
 
@@ -55,11 +56,17 @@ private:
 	BOOL m_bOnTop;
 	BOOL m_bStartMinimized;
 	BOOL m_bCheckExternalIp;
+	BOOL m_bEnableLogging;
 
 	int m_nTick;
 	int m_nSelectedIndex;
+		
 	
-	CButton m_enableLogging;
-public:
-	afx_msg void OnBnClickedCheckEnableLogging();
+	CButton m_CheckInternalIp;
+	CButton m_CheckExternalIp;
+	CButton m_CheckHostName;
+	CButton m_CheckMacAddress;
+	CEdit m_LogInterval;
+	CEdit m_LogFileName;
+	CComboBox m_LogFileExtension;
 };
