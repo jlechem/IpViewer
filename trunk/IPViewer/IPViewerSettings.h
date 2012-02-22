@@ -59,4 +59,7 @@ private:
 	int m_nTick;
 	int m_nSelectedIndex;
 	
+	CButton m_enableLogging;
+public:
+	afx_msg void OnBnClickedCheckEnableLogging();
 };
