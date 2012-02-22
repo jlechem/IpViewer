@@ -1,5 +1,5 @@
 /*
-	Copyright 2011 Justin LeCheminant
+	Copyright 2012 Justin LeCheminant
 
 	This file is part of IP Viewer.
 
@@ -25,8 +25,9 @@ public:
 	CIPSettings(void);
 	~CIPSettings(void);
 
-	int GetShowItemIndex() { return _selectedIndex; }
-	int GetTick() { return _tick; }
+	INT GetShowItemIndex() { return _selectedIndex; }
+	INT GetTick() { return _tick; }
+	
 	BOOL GetMinimizeToTray() { return _minToTray; }
 	BOOL GetCloseToTray() { return _closeToTray; }
 	BOOL GetOnTop() { return _onTop; }
@@ -34,23 +35,34 @@ public:
 	BOOL GetCheckExternalIp() { return _checkExternalIp; }
 
 	void SetOnTOp( BOOL value ) { _onTop = value; }
-	void SetTick( int value ) { _tick = value; }
+	void SetTick( INT value ) { _tick = value; }
 	void SetMinimizeToTray( BOOL value ) { _minToTray = value; }
 	void SetCloseToTray( BOOL value ) { _closeToTray = value; }
-	void SetShowItemIndex( int value ) { _selectedIndex = value; }
+	void SetShowItemIndex( INT value ) { _selectedIndex = value; }
 	void SetStartInTray( BOOL value ) { _startToTray = value; }
 	void SetCheckExternalIp( BOOL value ) { _checkExternalIp = value; }
+	void LogData();
 
 	BOOL Save();
 
 private:
-	int _tick;
-	int _selectedIndex;
+	INT _tick;
+	INT _selectedIndex;
+	INT _logInterval;
+	
 	BOOL _minToTray;
 	BOOL _closeToTray;
 	BOOL _onTop;
 	BOOL _startToTray;
 	BOOL _checkExternalIp;
+	BOOL _enableLogging;
+	BOOL _logInternalIp;
+	BOOL _logExternalIp;
+	BOOL _logMacAddress;
+	BOOL _logHostName;
+
+	CString _fileName;
+	CString _fileExtension;
 
 	CSettingsStore* m_pRegistry;
 

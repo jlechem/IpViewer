@@ -2,7 +2,9 @@
 // Microsoft Visual C++ generated include file.
 // Used by IPData.rc
 //
+#ifndef IDP_SOCKETS_INIT_FAILED
 #define IDP_SOCKETS_INIT_FAILED         101
+#endif
 
 // Next default values for new objects
 // 
