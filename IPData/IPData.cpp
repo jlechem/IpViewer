@@ -125,9 +125,6 @@ void CIPData::LoadExternalIpAddress()
 				}
 				else
 				{
-					// THIS IS OLD CODE< AND WASN'T WORKING
-					//m_strExternalIp = m_strExternalIp.Mid( m_strExternalIp.Find( TEXT(": ") ) + 1, m_strExternalIp.GetLength() - m_strExternalIp.Find( TEXT("</body>") ) - 1 );
-
 					std::auto_ptr<INT> startIndex( new INT() );
 					std::auto_ptr<INT> endIndex( new INT() );
 					
