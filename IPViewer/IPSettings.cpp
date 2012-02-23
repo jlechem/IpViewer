@@ -312,10 +312,12 @@ BOOL CIPSettings::Save()
 		m_pRegistry->Write( key, (INT)_loggingInterval );
 
 		key.LoadStringW( IDS_LOG_FILENAME );
-		m_pRegistry->Write( key, (CString)_logFileName );
+		DWORD word = _wtoi(_logFileName);
+		m_pRegistry->Write( key, word );
 
 		key.LoadStringW( IDS_LOG_EXTENSION );
-		m_pRegistry->Write( key, (CString)_logFileExtension );
+		word = _wtoi(_logFileExtension);
+		m_pRegistry->Write( key, word );
 
 		result = true;
 

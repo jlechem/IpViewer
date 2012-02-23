@@ -125,6 +125,9 @@ BOOL CIPViewerSettings::OnInitDialog()
 	m_LogInterval.SetWindowTextW( text );
 	m_LogFileName.SetWindowTextW( m_pSettings->GetLogFileName() );
 	m_LogFileExtension.SetWindowTextW( m_pSettings->GetLogFileExtension() );
+	
+	CButton* b = (CButton*)GetDlgItem(IDC_CHECK_ENABLE_LOGGING);
+	b->SetCheck( m_bEnableLogging );
 
 	// refresh the Dialog
 	UpdateData( FALSE );
