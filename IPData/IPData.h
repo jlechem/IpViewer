@@ -30,6 +30,7 @@
 #define DLLIMPORT __declspec(dllimport)
 
 #include "resource.h"		// main symbols
+#include "Logger.h"
 #include <lm.h>
 #include <winsock2.h>
 #include <urlmon.h>
