@@ -221,12 +221,14 @@ void CIPSettings::Load()
 	}//end if
 	catch( CException* ex )
 	{
-		// TODO: do something with the exception
-		/*CString error;
-		ex->GetErrorMessage( error.GetBuffer(0), 255);*/
+		CLogger::LogError( ex );
+		
 		delete ex;
+
 		this->Reset();
+		
 		delete m_pRegistry;
+
 	}
 }
 
@@ -324,6 +326,7 @@ BOOL CIPSettings::Save()
 	}
 	catch( CException* ex )
 	{
+		CLogger::LogError( ex );
 		delete ex;
 	}
 

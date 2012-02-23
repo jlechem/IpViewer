@@ -19,6 +19,8 @@
 
 #pragma once
 
+#include "..\IPData\Logger.h"
+
 class CIPSettings
 {
 public:

@@ -151,24 +151,7 @@ void CIPData::LoadExternalIpAddress()
 	}
 	catch( CException* ex )
 	{
-		// write any errors to a log file
-		TCHAR   szCause[255];
-		CString strFormatted;
-
-		ex->GetErrorMessage(szCause, 255);
-
-		strFormatted = TEXT("The following error occurred: ");
-	    strFormatted += szCause;
-
-		CStdioFile file(TEXT("error_log.txt"), CFile::modeWrite | CFile::modeNoTruncate );
-
-		if( file )
-		{
-			file.WriteString( strFormatted );
-		}
-
-		file.Close();
-
+		CLogger::LogError( ex );
 		delete ex;
 
 	}
@@ -247,7 +230,7 @@ void CIPData::LoadMacAddress( void )
 	}
 	catch( CException* ex )
 	{
-		// TODO: do somethign with the exception
+		CLogger::LogError( ex );
 		delete ex;
 		m_strMacAddress = TEXT( "00-0-00-00-00-00" );
 	}
