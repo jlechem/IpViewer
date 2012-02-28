@@ -151,6 +151,7 @@ BOOL CIPViewerDlg::OnInitDialog()
 
 	// start the timer with the number of MS from the settings class
 	SetTimer( IDT_TIMER, this->m_pSettings->GetTick() * 60000, NULL );
+	SetTimer( IDT_TIMER_LOGGER, this->m_pSettings->GetLoggingInterval() * 1000, NULL );
 
 	this->SetTopMost();
 
@@ -241,13 +242,30 @@ void CIPViewerDlg::OnEditSettings()
 
 void CIPViewerDlg::OnTimer( UINT_PTR TimerVal )
 {
-	this->RefreshIpInfo();
-
-	// if we're not visibile we need to reset the tray message
-	if( !this->IsWindowVisible() )
+	switch( TimerVal )
 	{
-		this->TrayMessage( NIM_MODIFY );
+		case IDT_TIMER:
+
+			this->RefreshIpInfo();
+
+			// if we're not visibile we need to reset the tray message
+			if( !this->IsWindowVisible() )
+			{
+				this->TrayMessage( NIM_MODIFY );
+			}
+
+			break;
+
+		case IDT_TIMER_LOGGER:
+			
+			// write out the data to the log files
+			this->LogData();
+			
+			break;
+
 	}
+
+	
 }
 
 void CIPViewerDlg::RefreshIpInfo()
@@ -471,11 +489,13 @@ void CIPViewerDlg::EditSettings()
 
 	// reset the timer based on the new tick settings
 	KillTimer( IDT_TIMER );
+	KillTimer( IDT_TIMER_LOGGER );
 
 	this->RefreshIpInfo();
 
 	// convert the minutes to milliseconds for the timer
 	SetTimer( IDT_TIMER, m_pSettings->GetTick() * 60000, NULL );
+	SetTimer( IDT_TIMER_LOGGER, this->m_pSettings->GetLoggingInterval() * 1000, NULL );
 
 }
 
@@ -512,42 +532,36 @@ void CIPViewerDlg::LogData()
 {
 	if( m_pSettings->GetLoggingEnabled() )
 	{
-		CStdioFile file;
-
 		// we write to the text file
 		if( m_pSettings->GetLogFileExtension() == TEXT("Text") )
 		{
 			CString line;
 
-			if( file.Open( m_pSettings->GetLogFileName() + "." + m_pSettings->GetLogFileExtension(), CFile::modeNoTruncate | CFile::modeWrite ) )
+			if( m_pSettings->GetLogInternalIp() )
 			{
-				// move to the end of the file
-				file.SeekToEnd();
-
-				if( m_pSettings->GetLogInternalIp() )
-				{
-					line = m_pIpData->GetIpAddress();
-				}
-				
-				if( m_pSettings->GetLogExternalIp() )
-				{
-					line += TEXT(", ");
-					line += m_pIpData->GetExternalIpAddress();
-				}
-
-				if( m_pSettings->GetLogMacAddress() )
-				{
-					line += TEXT(", ");
-					line += m_pIpData->GetMacAddress();
-				}
-
-				if( m_pSettings->GetLogHostName() )
-				{
-					line += TEXT(", ");
-					line += m_pIpData->GetHostName();
-				}
-
+				line.Format( TEXT("Internal IP Address: %s"), m_pIpData->GetIpAddress() );
 			}
+				
+			if( m_pSettings->GetLogExternalIp() )
+			{
+				line += TEXT(", External IP Address: ");
+				line += m_pIpData->GetExternalIpAddress();
+			}
+
+			if( m_pSettings->GetLogMacAddress() )
+			{
+				line += TEXT(", MAC Address: ");
+				line += m_pIpData->GetMacAddress();
+			}
+
+			if( m_pSettings->GetLogHostName() )
+			{
+				line += TEXT(", Host Name: ");
+				line += m_pIpData->GetHostName();
+			}
+
+			CLogger::Log( line, m_pSettings->GetLogFileName() + TEXT(".txt") );
+
 		}
 		// we write to the CSV file
 		else if( m_pSettings->GetLogFileExtension() == TEXT("Csv") )

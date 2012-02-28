@@ -21,8 +21,10 @@
 #pragma once
 
 #define IDT_TIMER WM_USER + 200
+#define IDT_TIMER_LOGGER IDT_TIMER + 201
 
 #include "..\IPData\IPData.h"
+#include "..\IPData\Logger.h"
 
 #include "IPViewer.h"
 #include "IPSettings.h"
