@@ -16,7 +16,6 @@ CLogger::~CLogger(void)
 
 void CLogger::LogError(CException* exception)
 {
-	// TODO: get the error, then log it
 	CString error;
 
 	exception->GetErrorMessage( error.GetBuffer(0), 255 );
@@ -38,8 +37,12 @@ void CLogger::Log(CString message)
 	CLogger::Log( false, message);
 }
 
+void CLogger::Log( CString message, CString file )
+{
+	CLogger::Log( false, message, file );
+}
 
-void::CLogger::Log( bool isError, CString message )
+void::CLogger::Log( bool isError, CString message, CString file )
 {
 	// our output stream
 	 wofstream fout;
@@ -52,7 +55,14 @@ void::CLogger::Log( bool isError, CString message )
 	else
 	{
 		// open file for appending
-		fout.open( MESSAGE_LOG_FILE, ios::app );
+		if( file )
+		{
+			fout.open( file, ios::app );
+		}
+		else
+		{
+			fout.open( MESSAGE_LOG_FILE, ios::app );
+		}
 	}
 
 	CTime theTime = CTime::GetCurrentTime();

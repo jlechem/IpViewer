@@ -17,12 +17,13 @@ public:
 	static void LogError( CException* );
 	static void LogError( CString );
 	static void Log( CString );
+	static void Log( CString, CString );
 
 private:
 
 	static CString MESSAGE_LOG_FILE;
 	static CString ERROR_LOG_FILE;
 
-	static void Log( bool isError, CString message );
+	static void Log( bool isError, CString message, CString file = NULL );
 
 };
