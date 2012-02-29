@@ -16,12 +16,14 @@ CLogger::~CLogger(void)
 
 void CLogger::LogError(CException* exception)
 {
-	CString error;
+	TCHAR   szCause[255];
+    CString strFormatted;
 
-	exception->GetErrorMessage( error.GetBuffer(0), 255 );
-	error.ReleaseBuffer();
+	exception->GetErrorMessage( szCause, 255 );
+	strFormatted = TEXT("The following error occured - ");
+	strFormatted += szCause;
 
-	CLogger::Log( true, error);
+	CLogger::Log( true, strFormatted);
 
 }
 
