@@ -58,15 +58,15 @@ private:
 	BOOL m_bCheckExternalIp;
 	BOOL m_bEnableLogging;
 
-	int m_nTick;
-	int m_nSelectedIndex;
+	INT m_nTick;
+	INT m_nSelectedIndex;
 		
-	
 	CButton m_CheckInternalIp;
 	CButton m_CheckExternalIp;
 	CButton m_CheckHostName;
 	CButton m_CheckMacAddress;
+	
 	CEdit m_LogInterval;
 	CEdit m_LogFileName;
-	CComboBox m_LogFileExtension;
+	
 };

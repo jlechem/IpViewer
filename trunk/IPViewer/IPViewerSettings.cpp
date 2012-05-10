@@ -71,7 +71,6 @@ void CIPViewerSettings::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, IDC_CHECK7, m_CheckMacAddress);
 	DDX_Control(pDX, IDC_EDIT_LOGINTERVAL, m_LogInterval);
 	DDX_Control(pDX, IDC_EDIT_FILENAME, m_LogFileName);
-	DDX_Control(pDX, IDC_COMBO_FILETYPE, m_LogFileExtension);
 }
 
 
@@ -101,7 +100,6 @@ BOOL CIPViewerSettings::OnInitDialog()
 		m_CheckMacAddress.EnableWindow( TRUE );
 		m_LogInterval.EnableWindow( TRUE );
 		m_LogFileName.EnableWindow( TRUE );
-		m_LogFileExtension.EnableWindow( TRUE );
 	}
 	else
 	{
@@ -111,7 +109,6 @@ BOOL CIPViewerSettings::OnInitDialog()
 		m_CheckMacAddress.EnableWindow( FALSE );
 		m_LogInterval.EnableWindow( FALSE );
 		m_LogFileName.EnableWindow( FALSE );
-		m_LogFileExtension.EnableWindow( FALSE );
 	}
 
 	// get if we're going to check the individual parts
@@ -124,7 +121,6 @@ BOOL CIPViewerSettings::OnInitDialog()
 	text.Format( TEXT("%d"),m_pSettings->GetLoggingInterval() );
 	m_LogInterval.SetWindowText( text );
 	m_LogFileName.SetWindowText( m_pSettings->GetLogFileName() );
-	m_LogFileExtension.SetWindowText( m_pSettings->GetLogFileExtension() );
 	
 	CButton* b = (CButton*)GetDlgItem(IDC_CHECK_ENABLE_LOGGING);
 	b->SetCheck( m_bEnableLogging );
@@ -175,9 +171,6 @@ void CIPViewerSettings::OnBnClickedButtonSave()
 	m_LogFileName.GetWindowTextW( temp );
 	m_pSettings->SetLogFileName( temp );
 
-	m_LogFileExtension.GetWindowTextW( temp );
-	m_pSettings->SetLogFileExtension( temp );
-
 	// save our changes to the registry
 	CString result = m_pSettings->Save() ? 
 		TEXT("Settings were saved successfully.") : 
@@ -202,7 +195,6 @@ void CIPViewerSettings::OnBnClickedButtonCancel()
 
 void CIPViewerSettings::OnBnClickedCheckEnableLogging()
 {
-	// TODO: Add your control notification handler code here
 	CButton* a = (CButton*)GetDlgItem( IDC_CHECK_ENABLE_LOGGING );
 	BOOL checked = a->GetCheck();
 	
@@ -216,7 +208,6 @@ void CIPViewerSettings::OnBnClickedCheckEnableLogging()
 		m_CheckMacAddress.EnableWindow( TRUE );
 		m_LogInterval.EnableWindow( TRUE );
 		m_LogFileName.EnableWindow( TRUE );
-		m_LogFileExtension.EnableWindow( TRUE );
 	}
 	else
 	{
@@ -226,6 +217,5 @@ void CIPViewerSettings::OnBnClickedCheckEnableLogging()
 		m_CheckMacAddress.EnableWindow( FALSE );
 		m_LogInterval.EnableWindow( FALSE );
 		m_LogFileName.EnableWindow( FALSE );
-		m_LogFileExtension.EnableWindow( FALSE );
 	}
 }

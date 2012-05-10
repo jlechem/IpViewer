@@ -533,39 +533,32 @@ void CIPViewerDlg::LogData()
 	if( m_pSettings->GetLoggingEnabled() )
 	{
 		// we write to the text file
-		if( m_pSettings->GetLogFileExtension() == TEXT("Text") )
-		{
-			CString line;
+		CString line;
 
-			if( m_pSettings->GetLogInternalIp() )
-			{
-				line.Format( TEXT("Internal IP Address: %s"), m_pIpData->GetIpAddress() );
-			}
+		if( m_pSettings->GetLogInternalIp() )
+		{
+			line.Format( TEXT("Internal IP Address: %s"), m_pIpData->GetIpAddress() );
+		}
 				
-			if( m_pSettings->GetLogExternalIp() )
-			{
-				line += TEXT(", External IP Address: ");
-				line += m_pIpData->GetExternalIpAddress();
-			}
-
-			if( m_pSettings->GetLogMacAddress() )
-			{
-				line += TEXT(", MAC Address: ");
-				line += m_pIpData->GetMacAddress();
-			}
-
-			if( m_pSettings->GetLogHostName() )
-			{
-				line += TEXT(", Host Name: ");
-				line += m_pIpData->GetHostName();
-			}
-
-			CLogger::Log( line, m_pSettings->GetLogFileName() + TEXT(".txt") );
-
-		}
-		// we write to the CSV file
-		else if( m_pSettings->GetLogFileExtension() == TEXT("Csv") )
+		if( m_pSettings->GetLogExternalIp() )
 		{
+			line += TEXT(", External IP Address: ");
+			line += m_pIpData->GetExternalIpAddress();
 		}
+
+		if( m_pSettings->GetLogMacAddress() )
+		{
+			line += TEXT(", MAC Address: ");
+			line += m_pIpData->GetMacAddress();
+		}
+
+		if( m_pSettings->GetLogHostName() )
+		{
+			line += TEXT(", Host Name: ");
+			line += m_pIpData->GetHostName();
+		}
+
+		CLogger::Log( line, m_pSettings->GetLogFileName() );
+
 	}
 }

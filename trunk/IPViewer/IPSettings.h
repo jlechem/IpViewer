@@ -44,8 +44,7 @@ public:
 	BOOL GetLogHostName() { return _logHostName; }
 	
 	CString GetLogFileName() { return _logFileName; }
-	CString GetLogFileExtension() { return _logFileExtension; }
-
+	
 	// set methods for internal memebers
 	void SetTick( INT value ) { _tick = value; }
 	void SetShowItemIndex( INT value ) { _selectedIndex = value; }
@@ -58,7 +57,6 @@ public:
 	void SetCheckExternalIp( BOOL value ) { _checkExternalIp = value; }
 	
 	void SetLogFileName( CString value ) { _logFileName = value; }
-	void SetLogFileExtension( CString value ) { _logFileExtension = value; }
 
 	void SetLoggingEnabled( BOOL value ) { _loggingEnabled = value; }
 	void SetLogInternalIp( BOOL value ) { _logInternalIp = value; }
@@ -85,8 +83,7 @@ private:
 	BOOL _logHostName;
 
 	CString _logFileName;
-	CString _logFileExtension;
-
+	
 	CSettingsStore* m_pRegistry;
 
 	void Load();
