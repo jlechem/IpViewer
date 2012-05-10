@@ -2,7 +2,11 @@ READ ME for IPViewer
 
 This is the read me file for IP Viewer.
 
-Current Version is 2.0
+Current Version is 2.1
+
+Added ability to log the ip information being collected.
+
+Version 2.0
 
 A bug was found in the external ip address that was trimming the last two digits.
 
