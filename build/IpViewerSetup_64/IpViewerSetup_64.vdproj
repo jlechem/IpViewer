@@ -21,18 +21,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_20BC9171823945D5BFE6F850952F8D17"
-        "OwnerKey" = "8:_0ACC6EF1EB5C42A2BF6E20718FE9A6AB"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_20BC9171823945D5BFE6F850952F8D17"
-        "OwnerKey" = "8:_FE740ACDC92846D5B443FB92E8113480"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_26D46CEDC309F031A06CEBC80D794481"
         "OwnerKey" = "8:_0ACC6EF1EB5C42A2BF6E20718FE9A6AB"
         "MsmSig" = "8:_UNDEFINED"
@@ -51,13 +39,25 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_7514446C0CF6470F85D6357BD6196D7F"
+        "MsmKey" = "8:_5BA496E1077048E1BA2D734EE9F3FA67"
         "OwnerKey" = "8:_0ACC6EF1EB5C42A2BF6E20718FE9A6AB"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_7514446C0CF6470F85D6357BD6196D7F"
+        "MsmKey" = "8:_5BA496E1077048E1BA2D734EE9F3FA67"
+        "OwnerKey" = "8:_FE740ACDC92846D5B443FB92E8113480"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_B27C29AF5D4D4A99BC8F68C90265D316"
+        "OwnerKey" = "8:_0ACC6EF1EB5C42A2BF6E20718FE9A6AB"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_B27C29AF5D4D4A99BC8F68C90265D316"
         "OwnerKey" = "8:_FE740ACDC92846D5B443FB92E8113480"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -98,6 +98,19 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.0,Profile=Client"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4 Client Profile (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.0,Profile=Client"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
+                    {
+                    "Name" = "8:Windows Installer 3.1"
+                    "ProductCode" = "8:Microsoft.Windows.Installer.3.1"
+                    }
+                }
             }
         }
         "Release"
@@ -304,23 +317,23 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:IP Viewer"
-        "ProductCode" = "8:{7724AF6A-64AC-4701-B95F-88EB9F3E895A}"
-        "PackageCode" = "8:{9A1A2DF3-3077-48E8-A0D9-0458A1E57B37}"
+        "ProductCode" = "8:{680DBE9E-81CC-48CF-8A39-352622BCEE32}"
+        "PackageCode" = "8:{7684DCDD-9444-491D-8339-CAFE01888554}"
         "UpgradeCode" = "8:{C918B47F-EC49-41C9-B643-7870E9DAB4FC}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:2.0"
-        "Manufacturer" = "8: JRL Software"
+        "ProductVersion" = "8:2.1"
+        "Manufacturer" = "8:JRL Software"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:IP Viewer 2.0"
+        "Title" = "8:IP Viewer 2.1"
         "Subject" = "8:"
         "ARPCONTACT" = "8: JRL Software"
         "Keywords" = "8:"
-        "ARPCOMMENTS" = "8:IP Viewer 2.0"
+        "ARPCOMMENTS" = "8:IP Viewer 2.1"
         "ARPURLINFOABOUT" = "8:"
         "ARPPRODUCTICON" = "8:_34E420B73EEC44D8BDDF8DF2C761FF5C"
         "ARPIconIndex" = "3:0"
@@ -835,11 +848,11 @@
         }
         "MergeModule"
         {
-            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_20BC9171823945D5BFE6F850952F8D17"
+            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_5BA496E1077048E1BA2D734EE9F3FA67"
             {
             "UseDynamicProperties" = "11:TRUE"
             "IsDependency" = "11:TRUE"
-            "SourcePath" = "8:Microsoft_VC100_DebugCRT_x64.msm"
+            "SourcePath" = "8:Microsoft_VC100_MFC_x64.msm"
                 "Properties"
                 {
                 }
@@ -849,11 +862,11 @@
             "Feature" = "8:"
             "IsolateTo" = "8:"
             }
-            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_7514446C0CF6470F85D6357BD6196D7F"
+            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_B27C29AF5D4D4A99BC8F68C90265D316"
             {
             "UseDynamicProperties" = "11:TRUE"
             "IsDependency" = "11:TRUE"
-            "SourcePath" = "8:Microsoft_VC100_DebugMFC_x64.msm"
+            "SourcePath" = "8:Microsoft_VC100_CRT_x64.msm"
                 "Properties"
                 {
                 }
