@@ -320,19 +320,19 @@ BOOL CIPViewerDlg::TrayMessage( DWORD dwMessage )
 	{
 		default:
 		case 0:
-			sTip = m_strIP;				//  m_pIpData->GetIpAddress();
+			sTip = m_strIP;
 			break;
 		
 		case 1:
-			sTip = m_strExternalIP;		//m_pIpData->GetExternalIpAddress();
+			sTip = m_strExternalIP;
 			break;
 
 		case 2:
-			sTip = m_strHost;		//m_pIpData->GetHostName();
+			sTip = m_strHost;
 			break;
 		
 		case 3:
-			sTip = m_strMac;		//m_pIpData->GetMacAddress();
+			sTip = m_strMac;
 			break;
 	}
 	
@@ -340,7 +340,7 @@ BOOL CIPViewerDlg::TrayMessage( DWORD dwMessage )
 	// since that's all we can fit in a tooltip
 	if( sTip.GetLength() > MAX_TOOLTIP_SIZE )
 	{
-		sTip.LoadStringW( IDS_TOOLTIP_SIZE_ERROR );
+		sTip.LoadString( IDS_TOOLTIP_SIZE_ERROR );
 	}
 
 	NOTIFYICONDATA tnd;

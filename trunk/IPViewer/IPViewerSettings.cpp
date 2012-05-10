@@ -122,9 +122,9 @@ BOOL CIPViewerSettings::OnInitDialog()
 
 	CString text;
 	text.Format( TEXT("%d"),m_pSettings->GetLoggingInterval() );
-	m_LogInterval.SetWindowTextW( text );
-	m_LogFileName.SetWindowTextW( m_pSettings->GetLogFileName() );
-	m_LogFileExtension.SetWindowTextW( m_pSettings->GetLogFileExtension() );
+	m_LogInterval.SetWindowText( text );
+	m_LogFileName.SetWindowText( m_pSettings->GetLogFileName() );
+	m_LogFileExtension.SetWindowText( m_pSettings->GetLogFileExtension() );
 	
 	CButton* b = (CButton*)GetDlgItem(IDC_CHECK_ENABLE_LOGGING);
 	b->SetCheck( m_bEnableLogging );

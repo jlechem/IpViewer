@@ -21,32 +21,32 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_1E19654CA00947E4BD7C993A705BBD6B"
-        "OwnerKey" = "8:_861B5C78A0F74604BEAC388081FDD451"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_1E19654CA00947E4BD7C993A705BBD6B"
-        "OwnerKey" = "8:_E7398C63964644EF8DB99903418F529A"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_7DD9B6E6342C4EDA81ED581D35AA7F3C"
-        "OwnerKey" = "8:_861B5C78A0F74604BEAC388081FDD451"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_7DD9B6E6342C4EDA81ED581D35AA7F3C"
-        "OwnerKey" = "8:_E7398C63964644EF8DB99903418F529A"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_861B5C78A0F74604BEAC388081FDD451"
         "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_A67CCC984F9B42C3912196DEFAF9AF8D"
+        "OwnerKey" = "8:_861B5C78A0F74604BEAC388081FDD451"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_A67CCC984F9B42C3912196DEFAF9AF8D"
+        "OwnerKey" = "8:_E7398C63964644EF8DB99903418F529A"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_C15F8FA5C1C945399E67449B50A87896"
+        "OwnerKey" = "8:_861B5C78A0F74604BEAC388081FDD451"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_C15F8FA5C1C945399E67449B50A87896"
+        "OwnerKey" = "8:_E7398C63964644EF8DB99903418F529A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -440,7 +440,7 @@
         {
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_D3090D8EE12E491A8FFF6DAEF00838E1"
             {
-            "Name" = "8:IP Viewer 2.0"
+            "Name" = "8:IP Viewer 2.1"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -848,11 +848,11 @@
         }
         "MergeModule"
         {
-            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_1E19654CA00947E4BD7C993A705BBD6B"
+            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_A67CCC984F9B42C3912196DEFAF9AF8D"
             {
             "UseDynamicProperties" = "11:TRUE"
             "IsDependency" = "11:TRUE"
-            "SourcePath" = "8:Microsoft_VC100_MFC_x86.msm"
+            "SourcePath" = "8:Microsoft_VC100_DebugCRT_x64.msm"
                 "Properties"
                 {
                 }
@@ -862,11 +862,11 @@
             "Feature" = "8:"
             "IsolateTo" = "8:"
             }
-            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_7DD9B6E6342C4EDA81ED581D35AA7F3C"
+            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_C15F8FA5C1C945399E67449B50A87896"
             {
             "UseDynamicProperties" = "11:TRUE"
             "IsDependency" = "11:TRUE"
-            "SourcePath" = "8:Microsoft_VC100_CRT_x86.msm"
+            "SourcePath" = "8:Microsoft_VC100_DebugMFC_x64.msm"
                 "Properties"
                 {
                 }
@@ -881,7 +881,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_861B5C78A0F74604BEAC388081FDD451"
             {
-            "SourcePath" = "8:..\\trunk\\Win32Release\\IPData.dll"
+            "SourcePath" = "8:..\\trunk\\x64Release\\IPData.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_E9CFD597F26343F4A582B847EB86B49B"
@@ -909,7 +909,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_E7398C63964644EF8DB99903418F529A"
             {
-            "SourcePath" = "8:..\\trunk\\Win32Release\\IPViewer.exe"
+            "SourcePath" = "8:..\\trunk\\x64Release\\IPViewer.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_E9CFD597F26343F4A582B847EB86B49B"

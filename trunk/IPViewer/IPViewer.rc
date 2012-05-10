@@ -81,7 +81,7 @@ CAPTION "About IP Viewer"
 FONT 8, "MS Shell Dlg", 0, 0, 0x1
 BEGIN
     ICON            IDI_ICON_IPVIEWER,IDC_STATIC,14,14,20,20
-    LTEXT           "IP Viewer, Version 2.0",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "IP Viewer, Version 2.1",IDC_STATIC,42,14,114,8,SS_NOPREFIX
     DEFPUSHBUTTON   "OK",IDOK,113,41,50,14,WS_GROUP
 END
 
@@ -161,8 +161,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 2,0,0,0
- PRODUCTVERSION 2,0,0,0
+ FILEVERSION 2,1,0,0
+ PRODUCTVERSION 2,1,0,0
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -179,12 +179,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "JRL Software"
             VALUE "FileDescription", "Executable for getting IP Information"
-            VALUE "FileVersion", "2.0.0.0"
+            VALUE "FileVersion", "2.1.0.0"
             VALUE "InternalName", "IPViewer.exe"
             VALUE "LegalCopyright", "(c) JRL Software.  All rights reserved."
             VALUE "OriginalFilename", "IPViewer.exe"
             VALUE "ProductName", "IP Viewer"
-            VALUE "ProductVersion", "2.0.0.0"
+            VALUE "ProductVersion", "2.1.0.0"
         END
     END
     BLOCK "VarFileInfo"
