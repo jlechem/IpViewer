@@ -124,8 +124,7 @@ BEGIN
     CONTROL         "Host Name",IDC_CHECK6,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,177,127,51,10
     CONTROL         "MAC Address",IDC_CHECK7,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,232,127,59,10
     EDITTEXT        IDC_EDIT_LOGINTERVAL,66,144,44,14,ES_AUTOHSCROLL
-    EDITTEXT        IDC_EDIT_FILENAME,66,162,84,14,ES_AUTOHSCROLL
-    COMBOBOX        IDC_COMBO_FILETYPE,197,162,48,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_FILENAME,66,162,136,14,ES_AUTOHSCROLL
     PUSHBUTTON      "Save",IDC_BUTTON_SAVE,186,192,50,14
     PUSHBUTTON      "Cancel",IDC_BUTTON_CANCEL,240,192,50,14
     LTEXT           "(seconds)",IDC_STATIC,114,146,32,8
@@ -136,7 +135,6 @@ BEGIN
     LTEXT           "Data to Log:",IDC_STATIC,18,126,41,8
     LTEXT           "Log Interval:",IDC_STATIC,18,146,42,8
     LTEXT           "File Name: ",IDC_STATIC,19,164,36,8
-    LTEXT           "File Type: ",IDC_STATIC,155,164,34,8
 END
 
 IDD_DIALOG_NICS DIALOGEX 0, 0, 237, 105
@@ -177,11 +175,11 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "JRL Software"
+            VALUE "CompanyName", "Justin LeCheminant"
             VALUE "FileDescription", "Executable for getting IP Information"
             VALUE "FileVersion", "2.1.0.0"
             VALUE "InternalName", "IPViewer.exe"
-            VALUE "LegalCopyright", "(c) JRL Software.  All rights reserved."
+            VALUE "LegalCopyright", "(c) Justin LeCheminant.  All rights reserved."
             VALUE "OriginalFilename", "IPViewer.exe"
             VALUE "ProductName", "IP Viewer"
             VALUE "ProductVersion", "2.1.0.0"
@@ -334,15 +332,6 @@ BEGIN
 0x5f6e, 0x6d49, 0x6761, 0x4f65, 0x526e, 0x6769, 0x7468, 0x463e, 0x4c41, 
 0x4553, 0x2f3c, 0x464d, 0x4243, 0x7475, 0x6f74, 0x5f6e, 0x6d49, 0x6761, 
 0x4f65, 0x526e, 0x6769, 0x7468, "\076" 
-    0
-END
-
-IDD_DIALOG_SETTINGS DLGINIT
-BEGIN
-    IDC_COMBO_FILETYPE, 0x403, 5, 0
-0x6554, 0x7478, "\000" 
-    IDC_COMBO_FILETYPE, 0x403, 4, 0
-0x7343, 0x0076, 
     0
 END
 
