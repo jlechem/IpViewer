@@ -23,7 +23,7 @@
 
 #include "stdafx.h"
 #include "IPViewerDlg.h"
-#include "..\IPData\Logger.h"
+#include "..\Logger\Logger.h"
 
 #define MAX_TOOLTIP_SIZE 64
 
@@ -160,8 +160,6 @@ BOOL CIPViewerDlg::OnInitDialog()
 	{
 		this->TrayMessage( NIM_ADD );
 	}
-	
-	CLogger::Log( TEXT("This is a test!!") );
 
 	return TRUE;  // return TRUE  unless you set the focus to a control
 }

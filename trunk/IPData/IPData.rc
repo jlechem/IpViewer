@@ -87,7 +87,7 @@ BEGIN
             VALUE "FileDescription", "DLL for getting IP Information"
             VALUE "FileVersion", "2.3.0.0"
             VALUE "InternalName", "IPData.dll"
-            VALUE "LegalCopyright", "(c) JRL Software.  All rights reserved."
+            VALUE "LegalCopyright", "2012 (c) JRL Software.  All rights reserved."
             VALUE "OriginalFilename", "IPData.dll"
             VALUE "ProductName", "IPData.dll"
             VALUE "ProductVersion", "2.3.0.0"
