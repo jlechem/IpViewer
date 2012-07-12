@@ -24,7 +24,7 @@
 #define IDT_TIMER_LOGGER IDT_TIMER + 201
 
 #include "..\IPData\IPData.h"
-#include "..\IPData\Logger.h"
+#include "..\Logger\Logger.h"
 
 #include "IPViewer.h"
 #include "IPSettings.h"

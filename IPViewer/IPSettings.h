@@ -19,7 +19,7 @@
 
 #pragma once
 
-#include "..\IPData\Logger.h"
+#include "..\Logger\Logger.h"
 
 class CIPSettings
 {
