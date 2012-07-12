@@ -35,9 +35,6 @@
 #include <winsock2.h>
 #include <urlmon.h>
 
-#pragma comment(lib, "urlmon.lib")
-#pragma comment( lib, "Netapi32.lib" )
-
 // CIPDataApp
 // See IPData.cpp for the implementation of this class
 //
