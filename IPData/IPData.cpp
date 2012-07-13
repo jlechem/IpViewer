@@ -23,8 +23,6 @@
 #include "stdafx.h"
 #include "IPData.h"
 
-#include <memory>
-
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
@@ -61,29 +59,31 @@ CIPData::CIPData()
 {
 	// TODO: add construction code here,
 	// Place all significant initialization in InitInstance
+
 	// determine if we're running windowsXP or higher
-		OSVERSIONINFO osvi;
-		BOOL bIsWindowsXPorLater;
+	OSVERSIONINFO osvi;
+	BOOL bIsWindowsXPorLater;
 
-		ZeroMemory(&osvi, sizeof(OSVERSIONINFO));
-		osvi.dwOSVersionInfoSize = sizeof(OSVERSIONINFO);
+	ZeroMemory(&osvi, sizeof(OSVERSIONINFO));
+	osvi.dwOSVersionInfoSize = sizeof(OSVERSIONINFO);
 
-		GetVersionEx(&osvi);
+	GetVersionEx(&osvi);
 
-		m_bIsXPorHigher = 
-			( (osvi.dwMajorVersion > 5) ||
-			( (osvi.dwMajorVersion == 5) && (osvi.dwMinorVersion >= 1) ));
+	m_bIsXPorHigher = 
+		( (osvi.dwMajorVersion > 5) ||
+		( (osvi.dwMajorVersion == 5) && (osvi.dwMinorVersion >= 1) ));
+
+	// create a new vector even if it's blank
+	m_pAdapterInformation = new vector<CIpInformation*>();
 
 }
 
 
 // The one and only CIPData object
-
 CIPData theApp;
 
 
 // CIPData initialization
-
 BOOL CIPData::InitInstance()
 {
 	if (!AfxSocketInit())
@@ -95,6 +95,7 @@ BOOL CIPData::InitInstance()
 	return TRUE;
 }
 
+// load the external ip address
 void CIPData::LoadExternalIpAddress()
 {
 	m_strExternalIp = TEXT( "Unavailable" );
@@ -167,7 +168,374 @@ void CIPData::LoadExternalIpAddress()
 	}
 }
 
-// IPData.cpp : Defines the initialization routines for the DLL.
+// loads the host name of the machine
+void CIPData::LoadHostName()
+{
+	try
+	{
+		WORD wVersionRequested;
+		WSADATA wsaData;
+		char name[512];
+		wVersionRequested = MAKEWORD( 2, 0 );
+
+		if ( WSAStartup( wVersionRequested, &wsaData ) == 0 )
+		{
+            if( gethostname ( name, sizeof(name)) == 0)
+            {
+				m_strHostName = name;
+            }
+
+			WSACleanup();
+		}
+	}
+	catch( CException* ex )
+	{
+		CLogger::LogError(ex);
+		delete ex;
+		// TODO: load some default values from the string table
+		m_strHostName = TEXT("Localhost");
+	}
+}
+
+void CIPData::LoadAdapterData()
+{
+	// based on the OS load the data
+	m_bIsXPorHigher ? this->LoadXpOrHigher() : this->LoadLowerThanXp();
+}
+
+// loads the data for windowsXP or higher, this calls the GetAdaptersAddress function
+void CIPData::LoadXpOrHigher()
+{
+	try
+	{
+		DWORD dwSize = 0;
+		DWORD dwRetVal = 0;
+
+		unsigned int i = 0;
+
+		// Set the flags to pass to GetAdaptersAddresses
+		ULONG flags = GAA_FLAG_INCLUDE_PREFIX;
+
+		// default to unspecified address family (both)
+		ULONG family = AF_UNSPEC;
+
+		LPVOID lpMsgBuf = NULL;
+
+		PIP_ADAPTER_ADDRESSES pAdapterList = NULL;
+		ULONG outBufLen = 0;
+
+		dwRetVal = GetAdaptersAddresses(family, flags, NULL, 0, &outBufLen);
+
+		// this should happen to get the correct buffer size
+		if (dwRetVal == ERROR_BUFFER_OVERFLOW)
+		{
+			BYTE* pNewBuffer = new BYTE[outBufLen];
+			
+			pAdapterList = reinterpret_cast<PIP_ADAPTER_ADDRESSES>( pNewBuffer );
+
+			if( pAdapterList )
+			{
+				dwRetVal = GetAdaptersAddresses(family, flags, NULL, pAdapterList, &outBufLen);
+
+				if ( dwRetVal != NO_ERROR )
+				{
+					CLogger::Log( TEXT("Cound not get the adapter information!  IPData.cpp line 245. ") );
+				}
+				else
+				{
+					// always clear the vector
+					m_pAdapterInformation->clear();
+
+					// set the adapter to our adapter list
+					PIP_ADAPTER_ADDRESSES pCurrentAdapter = pAdapterList;
+
+					if( pCurrentAdapter )
+					{
+						// create the first item to be added to the vector
+						CIpInformation* ipData = new CIpInformation();
+
+						ipData->SetAdapterName( pCurrentAdapter->FriendlyName );
+						ipData->SetAdapterDescription( pCurrentAdapter->Description );
+						
+						DWORD length = 256;
+						TCHAR holder[256];
+
+						WSADATA wsaData = {0};
+						WSAStartup( MAKEWORD(2, 2), &wsaData );
+
+						PIP_ADAPTER_UNICAST_ADDRESS pUnicast = NULL;
+						pUnicast = pCurrentAdapter->FirstUnicastAddress;
+
+						if( pUnicast )
+						{
+							WSAAddressToString(
+								pUnicast->Address.lpSockaddr,
+								pUnicast->Address.iSockaddrLength,
+								NULL, 
+								holder,
+								&length );
+
+							CString temp( holder );
+							if( temp.Find( TEXT("."), 0 ) > 0 )
+							{
+								ipData->SetIpV4Address( holder );
+							}
+							else
+							{
+								ipData->SetIpV6Address( holder );
+							}
+
+							pUnicast = pUnicast->Next;
+
+							if( pUnicast )
+							{
+								WSAAddressToString(
+									pUnicast->Address.lpSockaddr,
+									pUnicast->Address.iSockaddrLength,
+									NULL, 
+									holder,
+									&length );
+
+								CString temp( holder );
+								if( temp.Find( TEXT("."), 0 ) > 0 )
+								{
+									ipData->SetIpV4Address( holder );
+								}
+								else
+								{
+									ipData->SetIpV6Address( holder );
+								}
+							}
+						}
+
+						if( pCurrentAdapter->FirstGatewayAddress )
+						{
+							WSAAddressToString(
+								pCurrentAdapter->FirstGatewayAddress->Address.lpSockaddr,
+								pCurrentAdapter->FirstGatewayAddress->Address.iSockaddrLength,
+								NULL, 
+								holder,
+								&length );
+
+							ipData->SetDefaultGateway( holder );
+						}
+
+						ipData->SetIpV4Enabled( pCurrentAdapter->Ipv4Enabled );
+						ipData->SetIpV6Enabled( pCurrentAdapter->Ipv6Enabled );
+
+						m_pAdapterInformation->push_back( ipData );
+
+						pCurrentAdapter = pCurrentAdapter->Next;
+					}
+
+					while( pCurrentAdapter )
+					{
+						// create the first item to be added to the vector
+						CIpInformation* ipData = new CIpInformation();
+
+						ipData->SetAdapterName( pCurrentAdapter->FriendlyName );
+						ipData->SetAdapterDescription( pCurrentAdapter->Description );
+
+						DWORD length = 256;
+						TCHAR holder[256];
+						
+						PIP_ADAPTER_UNICAST_ADDRESS pUnicast = NULL;
+						pUnicast = pCurrentAdapter->FirstUnicastAddress;
+
+						if( pUnicast )
+						{
+							WSAAddressToString(
+								pUnicast->Address.lpSockaddr,
+								pUnicast->Address.iSockaddrLength,
+								NULL, 
+								holder,
+								&length );
+
+							CString temp( holder );
+							if( temp.Find( TEXT("."), 0 ) > 0 )
+							{
+								ipData->SetIpV4Address( holder );
+							}
+							else
+							{
+								ipData->SetIpV6Address( holder );
+							}
+
+							pUnicast = pUnicast->Next;
+
+							if( pUnicast )
+							{
+								WSAAddressToString(
+									pUnicast->Address.lpSockaddr,
+									pUnicast->Address.iSockaddrLength,
+									NULL, 
+									holder,
+									&length );
+
+								CString temp( holder );
+								if( temp.Find( TEXT("."), 0 ) > 0 )
+								{
+									ipData->SetIpV4Address( holder );
+								}
+								else
+								{
+									ipData->SetIpV6Address( holder );
+								}
+							}
+
+						}
+
+						ipData->SetIpV4Enabled( pCurrentAdapter->Ipv4Enabled );
+						ipData->SetIpV6Enabled( pCurrentAdapter->Ipv6Enabled );
+
+						if( pCurrentAdapter->FirstGatewayAddress )
+						{
+							WSAAddressToString(
+								pCurrentAdapter->FirstGatewayAddress->Address.lpSockaddr,
+								pCurrentAdapter->FirstGatewayAddress->Address.iSockaddrLength,
+								NULL, 
+								holder,
+								&length );
+
+							ipData->SetDefaultGateway( holder );
+						}
+
+						m_pAdapterInformation->push_back( ipData );
+
+						pCurrentAdapter = pCurrentAdapter->Next;
+
+					}
+				}
+			}
+		}
+
+		WSACleanup();
+
+	}
+	catch( CException *ex )
+	{
+		CLogger::LogError( ex );
+		delete ex;
+	}
+}
+
+// loads the data for windowsXP or higher, this calls the GetAdaptersInfo function
+void CIPData::LoadLowerThanXp()
+{
+	try
+	{
+		ULONG ulOutBufLen = 0;
+
+		//get the first result should be an overflow, this is expected to get the correct length
+		DWORD result = GetAdaptersInfo( 0, &ulOutBufLen );
+
+		if( result == ERROR_BUFFER_OVERFLOW )
+		{
+			PIP_ADAPTER_INFO pAdapterList;
+
+			BYTE* pNewBuffer = new BYTE[ulOutBufLen];
+			
+			pAdapterList = reinterpret_cast<PIP_ADAPTER_INFO>( pNewBuffer );
+			
+			if( pAdapterList )
+			{
+				result = GetAdaptersInfo( pAdapterList, &ulOutBufLen );
+
+				if ( result != NO_ERROR )
+				{
+					CLogger::Log( TEXT("Cound not get the adapter information!  IPData.cpp line 278. ") );
+				}
+				else
+				{
+					// always clear the vector
+					m_pAdapterInformation->clear();
+
+					// set the adapter to our adapter list
+					PIP_ADAPTER_INFO pCurrentAdapter = pAdapterList;
+
+					if( pCurrentAdapter )
+					{
+						// create the first item to be added to the vector
+						CIpInformation* ipData = new CIpInformation();
+
+						CString temp;
+
+						temp.Format( TEXT("%S"), pCurrentAdapter->AdapterName );
+						ipData->SetAdapterName( temp );
+
+						temp.Format( TEXT("%S"), pCurrentAdapter->Description );
+						ipData->SetAdapterDescription( temp );
+						
+						temp.Format( TEXT("%S"), pCurrentAdapter->IpAddressList.IpAddress.String );
+						ipData->SetIpV4Address( temp );
+						ipData->SetIpV6Address( TEXT("IP Version 6 not enabled") );
+						
+						temp.Format( TEXT("%S"), pCurrentAdapter->IpAddressList.IpMask.String );
+						ipData->SetSubnet( temp );
+
+						temp.Format( TEXT("%S"), pCurrentAdapter->GatewayList.IpAddress.String );
+						ipData->SetDefaultGateway( temp );
+
+						ipData->SetIpV4Enabled( TRUE );
+						ipData->SetIpV6Enabled( FALSE );
+
+						m_pAdapterInformation->push_back( ipData );
+
+						pCurrentAdapter = pCurrentAdapter->Next;
+
+					}
+
+					while( pCurrentAdapter )
+					{
+						// create the first item to be added to the vector
+						CIpInformation* ipData = new CIpInformation();
+
+						CString temp;
+
+						temp.Format( TEXT("%S"), pCurrentAdapter->AdapterName );
+						ipData->SetAdapterName( temp );
+
+						temp.Format( TEXT("%S"), pCurrentAdapter->Description );
+						ipData->SetAdapterDescription( temp );
+						
+						temp.Format( TEXT("%S"), pCurrentAdapter->IpAddressList.IpAddress.String );
+						ipData->SetIpV4Address( temp );
+						ipData->SetIpV6Address( TEXT("IP Version 6 not enabled"));
+						
+						temp.Format( TEXT("%S"), pCurrentAdapter->IpAddressList.IpMask.String );
+						ipData->SetSubnet( temp );
+
+						temp.Format( TEXT("%S"), pCurrentAdapter->GatewayList.IpAddress.String );
+						ipData->SetDefaultGateway( temp );
+
+						ipData->SetIpV4Enabled( TRUE );
+						ipData->SetIpV6Enabled( FALSE );
+
+						m_pAdapterInformation->push_back( ipData );
+												
+						pCurrentAdapter = pCurrentAdapter->Next;
+
+					}
+				}
+			}
+		}
+	}
+	catch( CException *ex )
+	{
+		CLogger::LogError( ex );
+		delete ex;
+	}
+}
+
+// loads the adapter information for any OS vista or higher, VISTA has all sorts of cool new IP shit so we have to do
+// this in a seperate function
+void CIPData::LoadVistaOrHigher()
+{
+}
+
+// this was old code loadinga single adapters info, we're now going to change this to load multiple adapters
+/*
+
 void CIPData::LoadIpAddress( void )
 {
 	try
@@ -175,39 +543,7 @@ void CIPData::LoadIpAddress( void )
 		//// let's try this GetAdaptersAddress function instead, this is only valid for windowsXP and higher
 		//if( m_bIsXPorHigher )
 		//{
-		//	DWORD dwSize = 0;
-		//	DWORD dwRetVal = 0;
-
-		//	unsigned int i = 0;
-
-		//	// Set the flags to pass to GetAdaptersAddresses
-		//	ULONG flags = GAA_FLAG_INCLUDE_PREFIX;
-
-		//	// default to unspecified address family (both)
-		//	ULONG family = AF_UNSPEC;
-
-		//	LPVOID lpMsgBuf = NULL;
-
-		//	PIP_ADAPTER_ADDRESSES pAddresses = NULL;
-		//	ULONG outBufLen = 0;
-		//	ULONG Iterations = 0;
-
-		//	outBufLen = WORKING_BUFFER_SIZE;
-
-		//	pAddresses = (IP_ADAPTER_ADDRESSES *) MALLOC(outBufLen);
-  //      
-		//	if (pAddresses == NULL) 
-		//	{
-		//		AfxMessageBox( TEXT("Memory allocation failed for IP_ADAPTER_ADDRESSES struct"));
-		//	}
-
-		//	dwRetVal = GetAdaptersAddresses(family, flags, NULL, pAddresses, &outBufLen);
-
-		//	if (dwRetVal == ERROR_BUFFER_OVERFLOW)
-		//	{
-		//		FREE(pAddresses);
-		//		pAddresses = NULL;
-		//	}
+		
 		//}
 		//// anything less than windows XP gets the ola WSA method
 		//else
@@ -288,35 +624,6 @@ void CIPData::LoadMacAddress( void )
 	}
 }
 
-// loads the host name of the machine
-void CIPData::LoadHostName( void )
-{
-	try
-	{
-		WORD wVersionRequested;
-		WSADATA wsaData;
-		char name[512];
-		wVersionRequested = MAKEWORD( 2, 0 );
-
-		if ( WSAStartup( wVersionRequested, &wsaData ) == 0 )
-		{
-            if( gethostname ( name, sizeof(name)) == 0)
-            {
-				m_strHostName = name;
-            }
-
-			WSACleanup();
-		}
-	}
-	catch( CException* ex )
-	{
-		CLogger::LogError(ex);
-		delete ex;
-		// TODO: load some default values from the string table
-		m_strHostName = TEXT("Localhost");
-	}
-}
-
 // load the subnet for the default adapter
 void CIPData::LoadSubnet( void )
 {
@@ -324,32 +631,7 @@ void CIPData::LoadSubnet( void )
 
 	try
 	{
-		PIP_ADAPTER_INFO FixedInfo;
-
-		ULONG ulOutBufLen = 0;
-
-		DWORD result;
-
-		//get the first result should be an overflow, this is expected to get the correct length
-		result = GetAdaptersInfo( 0, &ulOutBufLen );
-
-		if( result == ERROR_BUFFER_OVERFLOW )
-		{
-			BYTE* pNewBuffer = new BYTE[ulOutBufLen];
-			
-			FixedInfo = reinterpret_cast<PIP_ADAPTER_INFO>( pNewBuffer );
-			
-			result = GetAdaptersInfo( FixedInfo, &ulOutBufLen );
-
-			if ( result != NO_ERROR )
-			{
-				CLogger::Log( TEXT("Cound not get the adapter information!") );
-			}
-			else
-			{
-				m_strSubnet = FixedInfo->IpAddressList.IpMask.String;
-			}
-		}
+		
 	}
 	catch( CException* ex )
 	{
@@ -358,3 +640,5 @@ void CIPData::LoadSubnet( void )
 		m_strSubnet = TEXT("255.255.255.0");
 	}
 }
+
+*/

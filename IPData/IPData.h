@@ -22,29 +22,29 @@
 
 #pragma once
 
+#define MALLOC(x) HeapAlloc(GetProcessHeap(), 0, (x))
+#define FREE(x) HeapFree(GetProcessHeap(), 0, (x))
+
+#include <vector>
+#include <memory>
+
+#include "resource.h"			// main symbols
+#include "..\Logger\Logger.h"
+#include "lm.h"
+#include "winsock2.h"
+#include "urlmon.h"
+#include "Iphlpapi.h"
+#include "IpInformation.h"
+#include "stdafx.h"
+
 #ifndef __AFXWIN_H__
 	#error "include 'stdafx.h' before including this file for PCH"
 #endif
 
-#define DLLEXPORT __declspec(dllexport)
-#define DLLIMPORT __declspec(dllimport)
-
-#define WORKING_BUFFER_SIZE 100000
-#define MAX_TRIES 3
-
-#define MALLOC(x) HeapAlloc(GetProcessHeap(), 0, (x))
-#define FREE(x) HeapFree(GetProcessHeap(), 0, (x))
-
-#include "resource.h"		// main symbols
-#include "..\Logger\Logger.h"
-#include <lm.h>
-#include "winsock2.h"
-#include "urlmon.h"
-#include "Iphlpapi.h"
-
 // CIPDataApp
 // See IPData.cpp for the implementation of this class
 //
+using namespace std;
 
 class DLLEXPORT CIPData
 {
@@ -55,23 +55,10 @@ public:
 public:
 	virtual BOOL InitInstance();
 
-	CString GetIpAddress() 
-	{
-		this->LoadIpAddress(); 
-		return m_strInternalIp; 
-	}
-
-	
 	CString GetExternalIpAddress()
 	{ 
 		this->LoadExternalIpAddress();
 		return m_strExternalIp; 
-	}
-
-	CString GetMacAddress() 
-	{
-		this->LoadMacAddress();
-		return m_strMacAddress; 
 	}
 
 	CString GetHostName()
@@ -80,28 +67,26 @@ public:
 		return m_strHostName; 
 	}
 
-	CString GetSubNet() 
+	vector<CIpInformation*>* GetAdapterInformation()
 	{
-		this->LoadSubnet();
-		return m_strSubnet; 
+		this->LoadAdapterData();
+		return m_pAdapterInformation; 
 	}
 
 private:
 
-	CString m_strInternalIp;
 	CString m_strExternalIp;
 	CString m_strHostName;
-	CString m_strMacAddress;
-	CString m_strSubnet;
-	
+
 	BOOL m_bIsXPorHigher;
 
-	void LoadIpAddress();			// gets the default adapter internal IP address
-	void LoadMacAddress();			// gets the default adaper MAC address
-	void LoadSubnet();				// gets the default adapter subnet address
+	vector<CIpInformation*>* m_pAdapterInformation;
+
 	void LoadHostName();			// gets the computers host name
 	void LoadExternalIpAddress();	// gets the external ip address of the default adapter
-
-protected:
+	void LoadAdapterData();			// loads the vector list and all the ip information for all the adapters
+	void LoadXpOrHigher();			// loads data for OS windowsXP or higher
+	void LoadLowerThanXp();			// loads data for any OS before windowsXP
+	void LoadVistaOrHigher();		// loads teh data for any OS windows Vista orh higher
 
 };
