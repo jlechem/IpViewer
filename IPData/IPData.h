@@ -29,11 +29,18 @@
 #define DLLEXPORT __declspec(dllexport)
 #define DLLIMPORT __declspec(dllimport)
 
+#define WORKING_BUFFER_SIZE 100000
+#define MAX_TRIES 3
+
+#define MALLOC(x) HeapAlloc(GetProcessHeap(), 0, (x))
+#define FREE(x) HeapFree(GetProcessHeap(), 0, (x))
+
 #include "resource.h"		// main symbols
 #include "..\Logger\Logger.h"
 #include <lm.h>
-#include <winsock2.h>
-#include <urlmon.h>
+#include "winsock2.h"
+#include "urlmon.h"
+#include "Iphlpapi.h"
 
 // CIPDataApp
 // See IPData.cpp for the implementation of this class
@@ -86,6 +93,8 @@ private:
 	CString m_strHostName;
 	CString m_strMacAddress;
 	CString m_strSubnet;
+	
+	BOOL m_bIsXPorHigher;
 
 	void LoadIpAddress();			// gets the default adapter internal IP address
 	void LoadMacAddress();			// gets the default adaper MAC address
