@@ -269,9 +269,9 @@ void CIPViewerDlg::OnTimer( UINT_PTR TimerVal )
 void CIPViewerDlg::RefreshIpInfo()
 {
 	// get our ip data
-	this->m_strIP = m_pIpData->GetIpAddress();
+	//this->m_strIP = m_pIpData->GetIpAddress();
 	this->m_strHost = m_pIpData->GetHostName();
-	this->m_strMac = m_pIpData->GetMacAddress();
+	//this->m_strMac = m_pIpData->GetMacAddress();
 	this->m_strExternalIP = m_pSettings->GetCheckExternalIp() ?
 		m_pIpData->GetExternalIpAddress():
 		TEXT("Not set to check for external ip");
@@ -537,10 +537,10 @@ void CIPViewerDlg::LogData()
 		// we write to the text file
 		CString line;
 
-		if( m_pSettings->GetLogInternalIp() )
+		/*if( m_pSettings->GetLogInternalIp() )
 		{
 			line.Format( TEXT("Internal IP Address: %s"), m_pIpData->GetIpAddress() );
-		}
+		}*/
 				
 		if( m_pSettings->GetLogExternalIp() )
 		{
@@ -548,11 +548,11 @@ void CIPViewerDlg::LogData()
 			line += m_pIpData->GetExternalIpAddress();
 		}
 
-		if( m_pSettings->GetLogMacAddress() )
+		/*if( m_pSettings->GetLogMacAddress() )
 		{
 			line += TEXT(", MAC Address: ");
 			line += m_pIpData->GetMacAddress();
-		}
+		}*/
 
 		if( m_pSettings->GetLogHostName() )
 		{

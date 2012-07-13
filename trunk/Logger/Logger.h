@@ -21,6 +21,7 @@ static class DLLEXPORT CLogger
 public:
 	CLogger(void);
 	~CLogger(void);
+	static void LogError( CString, CException* );
 	static void LogError( CException* );
 	static void LogError( CString );
 	static void Log( CString );

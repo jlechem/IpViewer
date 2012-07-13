@@ -57,3 +57,6 @@
 
 #include <afxsock.h>            // MFC socket extensions
 
+#define DLLEXPORT __declspec(dllexport)
+#define DLLIMPORT __declspec(dllimport)
+

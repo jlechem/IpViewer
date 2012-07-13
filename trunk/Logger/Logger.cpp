@@ -13,6 +13,19 @@ CLogger::~CLogger(void)
 {
 }
 
+void CLogger::LogError( CString message, CException* exception )
+{
+	TCHAR   szCause[255];
+    CString strFormatted;
+
+	exception->GetErrorMessage( szCause, 255 );
+	strFormatted = TEXT("The following error occured - ");
+	strFormatted += szCause;
+	strFormatted += TEXT("\n, Message - ");
+	strFormatted += message;
+
+	CLogger::Log( true, strFormatted );	
+}
 
 void CLogger::LogError(CException* exception)
 {
