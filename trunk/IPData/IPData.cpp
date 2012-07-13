@@ -61,6 +61,19 @@ CIPData::CIPData()
 {
 	// TODO: add construction code here,
 	// Place all significant initialization in InitInstance
+	// determine if we're running windowsXP or higher
+		OSVERSIONINFO osvi;
+		BOOL bIsWindowsXPorLater;
+
+		ZeroMemory(&osvi, sizeof(OSVERSIONINFO));
+		osvi.dwOSVersionInfoSize = sizeof(OSVERSIONINFO);
+
+		GetVersionEx(&osvi);
+
+		m_bIsXPorHigher = 
+			( (osvi.dwMajorVersion > 5) ||
+			( (osvi.dwMajorVersion == 5) && (osvi.dwMinorVersion >= 1) ));
+
 }
 
 
@@ -92,9 +105,7 @@ void CIPData::LoadExternalIpAddress()
 
 		to make the UrlDownloadToFile call you need the following defined
 
-		#include <urlmon.h>
-
-		#pragma comment(lib, "urlmon.lib")
+		#include <urlmon.h>, you also have to link to the urlmon.lib library in the linker options
 
 		*/
 
@@ -153,7 +164,6 @@ void CIPData::LoadExternalIpAddress()
 	{
 		CLogger::LogError( ex );
 		delete ex;
-
 	}
 }
 
@@ -162,31 +172,73 @@ void CIPData::LoadIpAddress( void )
 {
 	try
 	{
-		WORD wVersionRequested;
-		WSADATA wsaData;
-		char name[512];
-		PHOSTENT hostinfo;
-		wVersionRequested = MAKEWORD( 2, 0 );
+		//// let's try this GetAdaptersAddress function instead, this is only valid for windowsXP and higher
+		//if( m_bIsXPorHigher )
+		//{
+		//	DWORD dwSize = 0;
+		//	DWORD dwRetVal = 0;
 
-		if ( WSAStartup( wVersionRequested, &wsaData ) == 0 )
-		{
-            if( gethostname ( name, sizeof(name)) == 0)
-            {
-				if( (hostinfo = gethostbyname(name)) != NULL )
+		//	unsigned int i = 0;
+
+		//	// Set the flags to pass to GetAdaptersAddresses
+		//	ULONG flags = GAA_FLAG_INCLUDE_PREFIX;
+
+		//	// default to unspecified address family (both)
+		//	ULONG family = AF_UNSPEC;
+
+		//	LPVOID lpMsgBuf = NULL;
+
+		//	PIP_ADAPTER_ADDRESSES pAddresses = NULL;
+		//	ULONG outBufLen = 0;
+		//	ULONG Iterations = 0;
+
+		//	outBufLen = WORKING_BUFFER_SIZE;
+
+		//	pAddresses = (IP_ADAPTER_ADDRESSES *) MALLOC(outBufLen);
+  //      
+		//	if (pAddresses == NULL) 
+		//	{
+		//		AfxMessageBox( TEXT("Memory allocation failed for IP_ADAPTER_ADDRESSES struct"));
+		//	}
+
+		//	dwRetVal = GetAdaptersAddresses(family, flags, NULL, pAddresses, &outBufLen);
+
+		//	if (dwRetVal == ERROR_BUFFER_OVERFLOW)
+		//	{
+		//		FREE(pAddresses);
+		//		pAddresses = NULL;
+		//	}
+		//}
+		//// anything less than windows XP gets the ola WSA method
+		//else
+		//{
+			WORD wVersionRequested;
+			WSADATA wsaData;
+			char name[512];
+			PHOSTENT hostinfo;
+			wVersionRequested = MAKEWORD( 2, 0 );
+
+			if ( WSAStartup( wVersionRequested, &wsaData ) == 0 )
+			{
+				if( gethostname ( name, sizeof(name)) == 0)
 				{
-					m_strInternalIp = inet_ntoa(*(struct in_addr *)hostinfo->h_addr_list[0]);
+					if( (hostinfo = gethostbyname(name)) != NULL )
+					{
+						m_strInternalIp = inet_ntoa(*(struct in_addr *)hostinfo->h_addr_list[0]);
+					}
 				}
-            }
 
-			WSACleanup();
-		}
+				WSACleanup();
+			}
+		//}
 	}
-	catch( ... )
+	catch( CException *ex )
 	{
-		// load some default values from the string table
+		CLogger::LogError( ex );
+		delete ex;
+		// TODO: load some default values from the string table
 		m_strInternalIp = TEXT("127.0.0.1");
 	}
-
 }
 
 // loads the mac address of the default adapter
@@ -256,8 +308,10 @@ void CIPData::LoadHostName( void )
 			WSACleanup();
 		}
 	}
-	catch( ... )
+	catch( CException* ex )
 	{
+		CLogger::LogError(ex);
+		delete ex;
 		// TODO: load some default values from the string table
 		m_strHostName = TEXT("Localhost");
 	}
@@ -266,6 +320,41 @@ void CIPData::LoadHostName( void )
 // load the subnet for the default adapter
 void CIPData::LoadSubnet( void )
 {
-	// TODO: get the subnet for the default adapter
 	m_strSubnet = TEXT("255.255.255.0");
+
+	try
+	{
+		PIP_ADAPTER_INFO FixedInfo;
+
+		ULONG ulOutBufLen = 0;
+
+		DWORD result;
+
+		//get the first result should be an overflow, this is expected to get the correct length
+		result = GetAdaptersInfo( 0, &ulOutBufLen );
+
+		if( result == ERROR_BUFFER_OVERFLOW )
+		{
+			BYTE* pNewBuffer = new BYTE[ulOutBufLen];
+			
+			FixedInfo = reinterpret_cast<PIP_ADAPTER_INFO>( pNewBuffer );
+			
+			result = GetAdaptersInfo( FixedInfo, &ulOutBufLen );
+
+			if ( result != NO_ERROR )
+			{
+				CLogger::Log( TEXT("Cound not get the adapter information!") );
+			}
+			else
+			{
+				m_strSubnet = FixedInfo->IpAddressList.IpMask.String;
+			}
+		}
+	}
+	catch( CException* ex )
+	{
+		CLogger::LogError(ex);
+		delete ex;
+		m_strSubnet = TEXT("255.255.255.0");
+	}
 }

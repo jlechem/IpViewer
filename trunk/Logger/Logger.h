@@ -3,13 +3,13 @@
 
 #pragma once
 
-#ifndef __AFXWIN_H__
-	#error "include 'stdafx.h' before including this file for PCH"
-#endif
-
 #include "StdAfx.h"
 #include <iostream>
 #include <fstream>
+
+#ifndef __AFXWIN_H__
+	#error "include 'stdafx.h' before including this file for PCH"
+#endif
 
 using namespace std;
 

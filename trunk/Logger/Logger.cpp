@@ -56,8 +56,9 @@ void::CLogger::Log( bool isError, CString message, CString file )
 	}
 	else
 	{
-		// open file for appending
-		if( file )
+		// open the user specified file or the default file for appending
+		if( file &&
+			file.GetLength() > 0 )
 		{
 			fout.open( file, ios::app );
 		}

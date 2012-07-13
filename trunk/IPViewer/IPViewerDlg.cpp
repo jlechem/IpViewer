@@ -276,6 +276,10 @@ void CIPViewerDlg::RefreshIpInfo()
 		m_pIpData->GetExternalIpAddress():
 		TEXT("Not set to check for external ip");
 
+
+	// TODO: Load the subnet, this code is broken right now
+	//m_pIpData->GetSubNet();
+
 	// refresh the dialog controls
 	UpdateData( FALSE );
 	

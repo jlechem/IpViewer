@@ -39,38 +39,44 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_5BA496E1077048E1BA2D734EE9F3FA67"
-        "OwnerKey" = "8:_0ACC6EF1EB5C42A2BF6E20718FE9A6AB"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_5BA496E1077048E1BA2D734EE9F3FA67"
-        "OwnerKey" = "8:_FE740ACDC92846D5B443FB92E8113480"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_B27C29AF5D4D4A99BC8F68C90265D316"
-        "OwnerKey" = "8:_0ACC6EF1EB5C42A2BF6E20718FE9A6AB"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_B27C29AF5D4D4A99BC8F68C90265D316"
-        "OwnerKey" = "8:_FE740ACDC92846D5B443FB92E8113480"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_DB9C5822C847B9CAA7E6EC82D11205E5"
         "OwnerKey" = "8:_0ACC6EF1EB5C42A2BF6E20718FE9A6AB"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
+        "MsmKey" = "8:_F682491C2EF04F109DE19D8FFAB0BCF7"
+        "OwnerKey" = "8:_0ACC6EF1EB5C42A2BF6E20718FE9A6AB"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F682491C2EF04F109DE19D8FFAB0BCF7"
+        "OwnerKey" = "8:_FE740ACDC92846D5B443FB92E8113480"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F90115A9FE66487795E56C425C27F6CB"
+        "OwnerKey" = "8:_0ACC6EF1EB5C42A2BF6E20718FE9A6AB"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F90115A9FE66487795E56C425C27F6CB"
+        "OwnerKey" = "8:_FE740ACDC92846D5B443FB92E8113480"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_FE740ACDC92846D5B443FB92E8113480"
         "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_FFC8B4D8C3257572DFF0906E10A78357"
+        "OwnerKey" = "8:_0ACC6EF1EB5C42A2BF6E20718FE9A6AB"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -250,6 +256,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FFC8B4D8C3257572DFF0906E10A78357"
+            {
+            "SourcePath" = "8:IPHLPAPI.DLL"
+            "TargetName" = "8:IPHLPAPI.DLL"
+            "Tag" = "8:"
+            "Folder" = "8:_1029B68BF8EE4A83A06A7D8256D5AC8B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:TRUE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
         }
         "FileType"
         {
@@ -318,7 +344,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:IP Viewer"
         "ProductCode" = "8:{680DBE9E-81CC-48CF-8A39-352622BCEE32}"
-        "PackageCode" = "8:{7684DCDD-9444-491D-8339-CAFE01888554}"
+        "PackageCode" = "8:{60723608-F922-4F91-B1FB-5A4491C3ECCA}"
         "UpgradeCode" = "8:{C918B47F-EC49-41C9-B643-7870E9DAB4FC}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -848,11 +874,11 @@
         }
         "MergeModule"
         {
-            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_5BA496E1077048E1BA2D734EE9F3FA67"
+            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_F682491C2EF04F109DE19D8FFAB0BCF7"
             {
             "UseDynamicProperties" = "11:TRUE"
             "IsDependency" = "11:TRUE"
-            "SourcePath" = "8:Microsoft_VC100_MFC_x64.msm"
+            "SourcePath" = "8:Microsoft_VC100_DebugCRT_x64.msm"
                 "Properties"
                 {
                 }
@@ -862,11 +888,11 @@
             "Feature" = "8:"
             "IsolateTo" = "8:"
             }
-            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_B27C29AF5D4D4A99BC8F68C90265D316"
+            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_F90115A9FE66487795E56C425C27F6CB"
             {
             "UseDynamicProperties" = "11:TRUE"
             "IsDependency" = "11:TRUE"
-            "SourcePath" = "8:Microsoft_VC100_CRT_x64.msm"
+            "SourcePath" = "8:Microsoft_VC100_DebugMFC_x64.msm"
                 "Properties"
                 {
                 }
@@ -881,7 +907,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_0ACC6EF1EB5C42A2BF6E20718FE9A6AB"
             {
-            "SourcePath" = "8:..\\..\\trunk\\x64Release\\IPData.dll"
+            "SourcePath" = "8:..\\..\\trunk\\x64Debug\\IPData.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_1029B68BF8EE4A83A06A7D8256D5AC8B"
@@ -909,7 +935,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_FE740ACDC92846D5B443FB92E8113480"
             {
-            "SourcePath" = "8:..\\..\\trunk\\x64Release\\IPViewer.exe"
+            "SourcePath" = "8:..\\..\\trunk\\x64Debug\\IPViewer.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_1029B68BF8EE4A83A06A7D8256D5AC8B"
