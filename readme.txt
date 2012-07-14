@@ -2,7 +2,15 @@ READ ME for IPViewer
 
 This is the read me file for IP Viewer.
 
-Current Version is 2.1
+Current Version is Version 3.0
+
+This is a major upgrade and adds support to view data about all the adapters on a system.  
+Most systems will only have 1 or 2 adapters LAN/Wireless but some have Virtual adapters, etc.  
+This upgrade allows for viewing all the ip addresses for all adapters.  More information about
+the adapter has also been added.
+
+
+Version 2.1
 
 Added ability to log the ip information being collected.
 
