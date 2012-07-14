@@ -68,10 +68,11 @@ CIPViewerDlg::CIPViewerDlg(CWnd* pParent /*=NULL*/)
 	, m_strHost(TEXT(""))
 	, m_strExternalIP(TEXT(""))
 	, m_bVisible(FALSE)
-	, m_strMAC(_T("00:00:00:00:00:00"))
+	, m_strMAC(TEXT("00:00:00:00:00:00"))
 	, m_bIpV4Enabled(false)
 	, m_bIpV6Enabled(false)
-	, m_strStatus(_T(""))
+	, m_strStatus(TEXT(""))
+	, m_strDescription(TEXT(""))
 {
 }
 
@@ -82,6 +83,7 @@ void CIPViewerDlg::DoDataExchange(CDataExchange* pDX)
 	DDX_Text(pDX, IDC_TEXT_EXTERNAL, m_strExternalIP);
 	DDX_Text(pDX, IDC_TEXT_MAC, m_strMAC );
 	DDX_Text(pDX, IDC_STATIC_STATUS, m_strStatus );
+	DDX_Text(pDX, IDC_STATIC_DESCRIPTION, m_strDescription );
 	DDX_Check(pDX, IDC_CHECK_V4, m_bIpV4Enabled);
 	DDX_Check(pDX, IDC_CHECK_V6, m_bIpV6Enabled);
 	DDX_Control(pDX, IDC_COMBO_ADAPTERS, m_cboAdapters);
@@ -670,4 +672,5 @@ void CIPViewerDlg::LoadAdapterControlValues()
 	this->m_bIpV4Enabled = m_pAdapterInformation->GetIpV4Enabled();
 	this->m_bIpV6Enabled = m_pAdapterInformation->GetIpV6Enabled();
 	this->m_strStatus = m_pAdapterInformation->GetStatus();
+	this->m_strDescription = m_pAdapterInformation->GetAdapterDescription();
 }
