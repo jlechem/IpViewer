@@ -65,26 +65,20 @@ END_MESSAGE_MAP()
 
 CIPViewerDlg::CIPViewerDlg(CWnd* pParent /*=NULL*/)
 	: CDialog(CIPViewerDlg::IDD, pParent)
-	, m_strMac(TEXT(""))
 	, m_strHost(TEXT(""))
-	, m_strIP(TEXT(""))
 	, m_strExternalIP(TEXT(""))
 	, m_bVisible(FALSE)
+	, m_strMAC(_T(""))
 {
-	m_hIcon = AfxGetApp()->LoadIcon(IDI_ICON_IPVIEWER);
-	m_pSettings = new CIPSettings();
-	m_pIpData = new CIPData();
-	m_bVisible = !m_pSettings->GetStartMinimized();
-
 }
 
 void CIPViewerDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialog::DoDataExchange(pDX);
-	DDX_Text(pDX, IDC_TEXT_IP, m_strIP);
 	DDX_Text(pDX, IDC_TEXT_HOST, m_strHost);
-	DDX_Text(pDX, IDC_TEXT_MAC, m_strMac);
 	DDX_Text(pDX, IDC_TEXT_EXTERNAL, m_strExternalIP);
+	DDX_Control(pDX, IDC_COMBO_ADAPTERS, m_cboAdapters);
+	DDX_Control(pDX, IDC_COMBO_ADDRESSES, m_cboAddresses);
 }
 
 BEGIN_MESSAGE_MAP(CIPViewerDlg, CDialog)
@@ -113,6 +107,7 @@ BEGIN_MESSAGE_MAP(CIPViewerDlg, CDialog)
 	ON_COMMAND(ID_POPUP_COPYEXTERNALIPADDRESS, &CIPViewerDlg::OnPopupCopyexternalipaddress)
 	ON_COMMAND(ID_EDIT_COPYEXTERNALIPADDRESS, &CIPViewerDlg::OnEditCopyexternalipaddress)
 	ON_COMMAND(ID_EDIT_COPYEXTERNALIPADDRESS, &CIPViewerDlg::OnEditCopyexternalipaddress)
+	ON_CBN_SELCHANGE(IDC_COMBO_ADAPTERS, &CIPViewerDlg::OnCbnSelchangeComboAdapters)
 END_MESSAGE_MAP()
 
 
@@ -121,6 +116,11 @@ END_MESSAGE_MAP()
 BOOL CIPViewerDlg::OnInitDialog()
 {
 	CDialog::OnInitDialog();
+
+	m_hIcon = AfxGetApp()->LoadIcon(IDI_ICON_IPVIEWER);
+	m_pSettings = new CIPSettings();
+	m_pIpData = new CIPData();
+	m_bVisible = !m_pSettings->GetStartMinimized();
 
 	// Add "About..." menu item to system menu.
 
@@ -268,17 +268,19 @@ void CIPViewerDlg::OnTimer( UINT_PTR TimerVal )
 
 void CIPViewerDlg::RefreshIpInfo()
 {
-	// get our ip data
-	//this->m_strIP = m_pIpData->GetIpAddress();
+	CWaitCursor wait;
+
+	// get the adapter data
+	m_pIpAdapterInfo = m_pIpData->GetAdapterInformation();
+
+	this->LoadAdapters();
+
+	this->LoadAddresses();
+
 	this->m_strHost = m_pIpData->GetHostName();
-	//this->m_strMac = m_pIpData->GetMacAddress();
 	this->m_strExternalIP = m_pSettings->GetCheckExternalIp() ?
 		m_pIpData->GetExternalIpAddress():
 		TEXT("Not set to check for external ip");
-
-
-	// TODO: Load the subnet, this code is broken right now
-	//m_pIpData->GetSubNet();
 
 	// refresh the dialog controls
 	UpdateData( FALSE );
@@ -289,12 +291,15 @@ void CIPViewerDlg::RefreshIpInfo()
 
 void CIPViewerDlg::OnEditCopyipaddress()
 {
-	CClipboard::SetData( m_strIP, m_hWnd );
+	CString temp;
+	this->m_cboAddresses.GetWindowTextW(temp);
+	CClipboard::SetData( temp, m_hWnd );
 }
 
 void CIPViewerDlg::OnEditCopymac()
 {
-	CClipboard::SetData( m_strMac, m_hWnd );
+	// TODO: set the mac address for clipboard copy
+	CClipboard::SetData( TEXT("MAC"), m_hWnd );
 }
 
 void CIPViewerDlg::OnEditCopyhostname()
@@ -322,7 +327,7 @@ BOOL CIPViewerDlg::TrayMessage( DWORD dwMessage )
 	{
 		default:
 		case 0:
-			sTip = m_strIP;
+			this->m_cboAddresses.GetWindowTextW(sTip);
 			break;
 		
 		case 1:
@@ -334,7 +339,8 @@ BOOL CIPViewerDlg::TrayMessage( DWORD dwMessage )
 			break;
 		
 		case 3:
-			sTip = m_strMac;
+			// TODO: insert the mac address control here
+			sTip = TEXT("MAC");//m_strMac;
 			break;
 	}
 	
@@ -450,7 +456,9 @@ void CIPViewerDlg::OnPopupCopyexternalipaddress()
 
 void CIPViewerDlg::OnPopupCopyipaddress()
 {
-	CClipboard::SetData( m_strIP, m_hWnd );
+	CString temp;
+	this->m_cboAddresses.GetWindowTextW( temp );
+	CClipboard::SetData( temp, m_hWnd );
 }
 
 void CIPViewerDlg::OnPopupCopyhostname()
@@ -460,7 +468,8 @@ void CIPViewerDlg::OnPopupCopyhostname()
 
 void CIPViewerDlg::OnPopupCopymac()
 {
-	CClipboard::SetData( m_strMac, m_hWnd );
+	// TODO: insert the code for the MAC address here
+	CClipboard::SetData( TEXT("MAC"), m_hWnd );
 }
 
 void CIPViewerDlg::OnPopupEditsettings()
@@ -562,5 +571,80 @@ void CIPViewerDlg::LogData()
 
 		CLogger::Log( line, m_pSettings->GetLogFileName() );
 
+	}
+}
+
+void CIPViewerDlg::OnCbnSelchangeComboAdapters()
+{
+	this->LoadAddresses();
+}
+
+void CIPViewerDlg::LoadAdapters()
+{
+	this->m_cboAdapters.ResetContent();
+
+	if( m_pIpAdapterInfo.size() > 0 )
+	{
+		this->m_cboAdapters.ShowWindow( TRUE );
+		this->m_cboAddresses.ShowWindow( TRUE );
+
+		std::vector<CIpInformation*>::iterator itr;
+		for ( itr = m_pIpAdapterInfo.begin(); itr != m_pIpAdapterInfo.end(); ++itr )
+		{
+			this->m_cboAdapters.AddString( (*itr)->GetAdapterName() );
+		}
+
+		this->m_cboAdapters.SetCurSel( 0 );
+		this->m_strMAC = m_pIpAdapterInfo[0]->GetMac();
+	}
+	else
+	{
+		this->m_cboAdapters.ShowWindow( FALSE );
+		this->m_cboAddresses.ShowWindow( FALSE );
+	}
+}
+
+void CIPViewerDlg::LoadAddresses()
+{
+	CWaitCursor wait;
+
+	this->m_cboAddresses.ResetContent();
+
+	// get the text from the combo box
+	CString adapter;
+	this->m_cboAdapters.GetWindowTextW( adapter );
+
+	INT index = this->m_cboAdapters.GetCurSel();
+	this->m_strMAC = this->m_pIpAdapterInfo[index]->GetMac();
+
+	std::vector<CIpInformation*>::iterator itr;
+	
+	for ( itr = m_pIpAdapterInfo.begin(); itr != m_pIpAdapterInfo.end(); ++itr )
+	{
+		if( (*itr)->GetAdapterName() == adapter )
+		{
+			vector<CString*> addresses = (*itr)->GetIpAddresses();
+
+			if( addresses.size() > 0 )
+			{
+				this->m_cboAddresses.ShowWindow( TRUE );
+
+				std::vector<CString*>::iterator itr2;
+			
+				for ( itr2 = addresses.begin(); itr2 != addresses.end(); ++itr2 )
+				{
+					this->m_cboAddresses.AddString( (**itr2) );
+				}
+
+				this->m_cboAddresses.SetCurSel(0);
+
+			}
+			else
+			{
+				this->m_cboAddresses.ShowWindow( FALSE );
+			}
+
+			break;
+		}
 	}
 }

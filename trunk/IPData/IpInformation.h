@@ -24,13 +24,13 @@ private:
 	BOOL m_isIpV4;
 	BOOL m_isIpV6;
 
-	vector<CString*>* m_pIpAddresses; 
+	vector<CString*> m_pIpAddresses; 
 
 public:
 
 	CString GetAdapterName() { return m_strAdapterName; }
 	CString GetAdapterDescription() { return m_strAdapterDescription; }
-	vector<CString*>* GetIpAddresses() { return m_pIpAddresses; }
+	vector<CString*> GetIpAddresses() { return m_pIpAddresses; }
 	CString GetMac() { return m_strMAC; }
 	CString GetSubnet() { return m_strSubnet; }
 	CString GetDefaultGateway() { return m_strDefaultGateway; }
