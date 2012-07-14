@@ -250,10 +250,8 @@ void CIPData::LoadXpOrHigher()
 
 						ipData->SetAdapterName( pCurrentAdapter->FriendlyName );
 						ipData->SetAdapterDescription( pCurrentAdapter->Description );
-						
-						CString str( (LPCSTR)&pCurrentAdapter->PhysicalAddress , sizeof(pCurrentAdapter->PhysicalAddress) );
-						ipData->SetMAC( str );
-
+						ipData->SetMAC( this->ConvertByteToString(pCurrentAdapter->PhysicalAddress, pCurrentAdapter->PhysicalAddressLength ) );
+						ipData->SetStatus( this->ConvertToStatus( pCurrentAdapter->OperStatus) );
 						DWORD length = 256;
 						TCHAR holder[256];
 
@@ -320,9 +318,8 @@ void CIPData::LoadXpOrHigher()
 
 						ipData->SetAdapterName( pCurrentAdapter->FriendlyName );
 						ipData->SetAdapterDescription( pCurrentAdapter->Description );
-
-						CString str( (LPCSTR)&pCurrentAdapter->PhysicalAddress , sizeof(pCurrentAdapter->PhysicalAddress) );
-						ipData->SetMAC( str );
+						ipData->SetMAC( this->ConvertByteToString(pCurrentAdapter->PhysicalAddress, pCurrentAdapter->PhysicalAddressLength ) );
+						ipData->SetStatus( this->ConvertToStatus( pCurrentAdapter->OperStatus) );
 
 						DWORD length = 256;
 						TCHAR holder[256];
@@ -567,8 +564,69 @@ void CIPData::LoadLowerThanXp()
 	}
 }
 
-// loads the adapter information for any OS vista or higher, VISTA has all sorts of cool new IP shit so we have to do
-// this in a seperate function
+// loads the adapter information for any OS vista or higher, VISTA has all sorts of cool new IP shit so we have to do this in a seperate function
 void CIPData::LoadVistaOrHigher()
 {
+}
+
+CString CIPData::ConvertByteToString( BYTE *byIn, UINT nCount )
+{
+   CString strReturn, strByte;
+   
+   for (UINT n = 0; n < nCount; n++)
+   {
+       strByte.Format (_T("%02x"), byIn [n]);
+       strReturn += strByte;
+
+	   if( n != nCount - 1)
+	   {
+		   strReturn += TEXT(":");
+	   }
+   }
+
+   return strReturn;
+
+}
+
+CString CIPData::ConvertToStatus( IF_OPER_STATUS status )
+{
+	CString returnStatus( TEXT("Unknown") );
+
+	switch( status )
+	{
+		case IfOperStatusUp:
+			returnStatus = TEXT("Up");
+			break;
+
+		case IfOperStatusDown:
+			returnStatus = TEXT("Down");
+			break;
+
+		case IfOperStatusTesting:
+			returnStatus = TEXT("Testing");
+			break;
+
+		case IfOperStatusUnknown:
+			returnStatus = TEXT("Uknown");
+			break;
+
+		case IfOperStatusDormant:
+			returnStatus = TEXT("Dormant");
+			break;
+
+		case IfOperStatusNotPresent:
+			returnStatus = TEXT("Status Not Present");
+			break;
+
+		case IfOperStatusLowerLayerDown:
+			returnStatus = TEXT("Lower Layer Down");
+			break;
+
+		default:
+			returnStatus = TEXT("Unknown Status");
+			break;
+	}
+
+
+	return returnStatus;
 }

@@ -78,16 +78,28 @@ protected:
 private:
 	HICON m_hIcon;
 	
-	vector<CIpInformation*> m_pIpAdapterInfo;
+	vector<CIpInformation*> m_ipAdapterInfo;
 
 	CIPSettings* m_pSettings;
 
 	CIPData* m_pIpData;
 	
+	CIpInformation* m_pAdapterInformation;
+
 	CString m_strHost;
 	CString m_strExternalIP;
 
 	BOOL m_bVisible;
+	BOOL m_bIpV4Enabled;
+	BOOL m_bIpV6Enabled;
+
+	CComboBox m_cboAdapters;
+	CComboBox m_cboAddresses;
+
+	CString m_strMAC;
+
+	INT m_nSelectedAdapterIndex;
+	INT m_nSelectedAddressIndex;
 
 	void LoadAdapters();
 	void LoadAddresses();
@@ -96,10 +108,9 @@ private:
 	void SetTopMost();
 	void RefreshIpInfo();
 	void EditSettings();
+	void LoadAdapterControlValues();
+
 	BOOL TrayMessage( DWORD );
 
-	CComboBox m_cboAdapters;
-	CComboBox m_cboAddresses;
-
-	CString m_strMAC;
+	CString m_strStatus;
 };
