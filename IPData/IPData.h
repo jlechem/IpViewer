@@ -67,7 +67,7 @@ public:
 		return m_strHostName; 
 	}
 
-	vector<CIpInformation*>* GetAdapterInformation()
+	vector<CIpInformation*> GetAdapterInformation()
 	{
 		this->LoadAdapterData();
 		return m_pAdapterInformation; 
@@ -80,7 +80,7 @@ private:
 
 	BOOL m_bIsXPorHigher;
 
-	vector<CIpInformation*>* m_pAdapterInformation;
+	vector<CIpInformation*> m_pAdapterInformation;
 
 	void LoadHostName();			// gets the computers host name
 	void LoadExternalIpAddress();	// gets the external ip address of the default adapter

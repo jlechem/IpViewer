@@ -30,6 +30,7 @@
 #include "IPSettings.h"
 #include "IPViewerSettings.h"
 #include "Clipboard.h"
+#include "afxwin.h"
 
 // CIPViewerDlg dialog
 class CIPViewerDlg : public CDialog
@@ -71,21 +72,25 @@ protected:
 	afx_msg void OnPopupCopyall();
 	afx_msg void OnPopupCopyexternalipaddress();
 	afx_msg void OnEditCopyexternalipaddress();
+	afx_msg void OnCbnSelchangeComboAdapters();
 	DECLARE_MESSAGE_MAP()
 
 private:
 	HICON m_hIcon;
 	
+	vector<CIpInformation*> m_pIpAdapterInfo;
+
 	CIPSettings* m_pSettings;
+
 	CIPData* m_pIpData;
 	
-	CString m_strMac;
 	CString m_strHost;
-	CString m_strIP;
 	CString m_strExternalIP;
 
 	BOOL m_bVisible;
 
+	void LoadAdapters();
+	void LoadAddresses();
 	void LogData();
 	void CopyAll();
 	void SetTopMost();
@@ -93,4 +98,8 @@ private:
 	void EditSettings();
 	BOOL TrayMessage( DWORD );
 
+	CComboBox m_cboAdapters;
+	CComboBox m_cboAddresses;
+
+	CString m_strMAC;
 };

@@ -28,7 +28,7 @@
 #endif
 
 //
-//TODO: If this DLL is dynamically linked against the MFC DLLs,
+//		If this DLL is dynamically linked against the MFC DLLs,
 //		any functions exported from this DLL which call into
 //		MFC must have the AFX_MANAGE_STATE macro added at the
 //		very beginning of the function.
@@ -57,7 +57,6 @@
 
 CIPData::CIPData()
 {
-	// TODO: add construction code here,
 	// Place all significant initialization in InitInstance
 
 	// determine if we're running windowsXP or higher
@@ -73,11 +72,7 @@ CIPData::CIPData()
 		( (osvi.dwMajorVersion > 5) ||
 		( (osvi.dwMajorVersion == 5) && (osvi.dwMinorVersion >= 1) ));
 
-	// create a new vector even if it's blank
-	m_pAdapterInformation = new vector<CIpInformation*>();
-
 }
-
 
 // The one and only CIPData object
 CIPData theApp;
@@ -192,7 +187,6 @@ void CIPData::LoadHostName()
 	{
 		CLogger::LogError(ex);
 		delete ex;
-		// TODO: load some default values from the string table
 		m_strHostName = TEXT("Localhost");
 	}
 }
@@ -244,7 +238,7 @@ void CIPData::LoadXpOrHigher()
 				else
 				{
 					// always clear the vector
-					m_pAdapterInformation->clear();
+					m_pAdapterInformation.clear();
 					
 					// set the adapter to our adapter list
 					PIP_ADAPTER_ADDRESSES pCurrentAdapter = pAdapterList;
@@ -257,6 +251,9 @@ void CIPData::LoadXpOrHigher()
 						ipData->SetAdapterName( pCurrentAdapter->FriendlyName );
 						ipData->SetAdapterDescription( pCurrentAdapter->Description );
 						
+						CString str( (LPCSTR)&pCurrentAdapter->PhysicalAddress , sizeof(pCurrentAdapter->PhysicalAddress) );
+						ipData->SetMAC( str );
+
 						DWORD length = 256;
 						TCHAR holder[256];
 
@@ -311,7 +308,7 @@ void CIPData::LoadXpOrHigher()
 						ipData->SetIpV4Enabled( pCurrentAdapter->Ipv4Enabled );
 						ipData->SetIpV6Enabled( pCurrentAdapter->Ipv6Enabled );
 
-						m_pAdapterInformation->push_back( ipData );
+						m_pAdapterInformation.push_back( ipData );
 
 						pCurrentAdapter = pCurrentAdapter->Next;
 					}
@@ -323,6 +320,9 @@ void CIPData::LoadXpOrHigher()
 
 						ipData->SetAdapterName( pCurrentAdapter->FriendlyName );
 						ipData->SetAdapterDescription( pCurrentAdapter->Description );
+
+						CString str( (LPCSTR)&pCurrentAdapter->PhysicalAddress , sizeof(pCurrentAdapter->PhysicalAddress) );
+						ipData->SetMAC( str );
 
 						DWORD length = 256;
 						TCHAR holder[256];
@@ -375,7 +375,7 @@ void CIPData::LoadXpOrHigher()
 							ipData->SetDefaultGateway( holder );
 						}
 
-						m_pAdapterInformation->push_back( ipData );
+						m_pAdapterInformation.push_back( ipData );
 
 						pCurrentAdapter = pCurrentAdapter->Next;
 
@@ -423,7 +423,7 @@ void CIPData::LoadLowerThanXp()
 				else
 				{
 					// always clear the vector
-					m_pAdapterInformation->clear();
+					m_pAdapterInformation.clear();
 
 					// set the adapter to our adapter list
 					PIP_ADAPTER_INFO pCurrentAdapter = pAdapterList;
@@ -486,7 +486,7 @@ void CIPData::LoadLowerThanXp()
 								break;
 						}
 
-						m_pAdapterInformation->push_back( ipData );
+						m_pAdapterInformation.push_back( ipData );
 
 						pCurrentAdapter = pCurrentAdapter->Next;
 
@@ -551,7 +551,7 @@ void CIPData::LoadLowerThanXp()
 								break;
 						}
 
-						m_pAdapterInformation->push_back( ipData );
+						m_pAdapterInformation.push_back( ipData );
 												
 						pCurrentAdapter = pCurrentAdapter->Next;
 
@@ -572,113 +572,3 @@ void CIPData::LoadLowerThanXp()
 void CIPData::LoadVistaOrHigher()
 {
 }
-
-// this was old code loadinga single adapters info, we're now going to change this to load multiple adapters
-/*
-
-void CIPData::LoadIpAddress( void )
-{
-	try
-	{
-		//// let's try this GetAdaptersAddress function instead, this is only valid for windowsXP and higher
-		//if( m_bIsXPorHigher )
-		//{
-		
-		//}
-		//// anything less than windows XP gets the ola WSA method
-		//else
-		//{
-			WORD wVersionRequested;
-			WSADATA wsaData;
-			char name[512];
-			PHOSTENT hostinfo;
-			wVersionRequested = MAKEWORD( 2, 0 );
-
-			if ( WSAStartup( wVersionRequested, &wsaData ) == 0 )
-			{
-				if( gethostname ( name, sizeof(name)) == 0)
-				{
-					if( (hostinfo = gethostbyname(name)) != NULL )
-					{
-						m_strInternalIp = inet_ntoa(*(struct in_addr *)hostinfo->h_addr_list[0]);
-					}
-				}
-
-				WSACleanup();
-			}
-		//}
-	}
-	catch( CException *ex )
-	{
-		CLogger::LogError( ex );
-		delete ex;
-		// TODO: load some default values from the string table
-		m_strInternalIp = TEXT("127.0.0.1");
-	}
-}
-
-// loads the mac address of the default adapter
-void CIPData::LoadMacAddress( void )
-{
-	try
-	{
-		unsigned char MACData[8];						// Allocate data structure for MAC (6 bytes needed)
-
-		WKSTA_TRANSPORT_INFO_0 *pwkti;					// Allocate data structure for Netbios
-		DWORD dwEntriesRead;
-		DWORD dwTotalEntries;
-		BYTE *pbBuffer;
-	    
-		// Get MAC address via NetBios's enumerate function
-		NET_API_STATUS dwStatus = NetWkstaTransportEnum(
-			NULL,						// [in]  server name
-			0,							// [in]  data structure to return
-			&pbBuffer,					// [out] pointer to buffer
-			MAX_PREFERRED_LENGTH,		// [in]  maximum length
-			&dwEntriesRead,				// [out] counter of elements actually enumerated
-			&dwTotalEntries,			// [out] total number of elements that could be enumerated
-			NULL);						// [in/out] resume handle
-
-		ASSERT( dwStatus == NERR_Success ); 
-
-		pwkti = (WKSTA_TRANSPORT_INFO_0 *)pbBuffer;		// type cast the buffer
-
-		for(DWORD i=1; i< dwEntriesRead; i++)			// first address is 00000000, skip it
-		{												// enumerate MACs and print
-			swscanf_s((wchar_t *)pwkti[i].wkti0_transport_address, TEXT("%2hx%2hx%2hx%2hx%2hx%2hx"), 
-				&MACData[0], &MACData[1], &MACData[2], &MACData[3], &MACData[4], &MACData[5]);
-		}
-
-		// Release pbBuffer allocated by above function
-		dwStatus = NetApiBufferFree(pbBuffer);
-		ASSERT( dwStatus == NERR_Success );
-
-		m_strMacAddress.Format( TEXT("%02X-%02X-%02X-%02X-%02X-%02X"), MACData[0], MACData[1], MACData[2], MACData[3], MACData[4], MACData[5]);
-
-	}
-	catch( CException* ex )
-	{
-		CLogger::LogError( ex );
-		delete ex;
-		m_strMacAddress = TEXT( "00-0-00-00-00-00" );
-	}
-}
-
-// load the subnet for the default adapter
-void CIPData::LoadSubnet( void )
-{
-	m_strSubnet = TEXT("255.255.255.0");
-
-	try
-	{
-		
-	}
-	catch( CException* ex )
-	{
-		CLogger::LogError(ex);
-		delete ex;
-		m_strSubnet = TEXT("255.255.255.0");
-	}
-}
-
-*/

@@ -67,6 +67,9 @@
 #define IDC_EDIT_FILENAME               1048
 #define IDC_COMBO1                      1049
 #define IDC_COMBO_FILETYPE              1049
+#define IDC_COMBO_ADAPTERS              1049
+#define IDC_COMBO_ADAPTERS2             1050
+#define IDC_COMBO_ADDRESSES             1050
 #define ID_FILE_EXIT                    32771
 #define ID_EDIT_SETTINGS                32772
 #define ID_HELP_ABOUT                   32773

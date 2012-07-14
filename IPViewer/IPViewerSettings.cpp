@@ -78,7 +78,6 @@ BOOL CIPViewerSettings::OnInitDialog()
 {
 	CDialog::OnInitDialog();
 
-	// TODO: init dialog here
 	SetIcon(m_hIcon, TRUE);			// Set big icon
 	SetIcon(m_hIcon, FALSE);		// Set small icon
 
