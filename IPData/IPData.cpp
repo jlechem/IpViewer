@@ -239,13 +239,13 @@ void CIPData::LoadXpOrHigher()
 
 				if ( dwRetVal != NO_ERROR )
 				{
-					CLogger::Log( TEXT("Cound not get the adapter information!  IPData.cpp line 245. ") );
+					CLogger::Log( TEXT("Cound not get the adapter information!  IPData.cpp line 242. ") );
 				}
 				else
 				{
 					// always clear the vector
 					m_pAdapterInformation->clear();
-
+					
 					// set the adapter to our adapter list
 					PIP_ADAPTER_ADDRESSES pCurrentAdapter = pAdapterList;
 
@@ -275,36 +275,24 @@ void CIPData::LoadXpOrHigher()
 								holder,
 								&length );
 
-							CString temp( holder );
-							if( temp.Find( TEXT("."), 0 ) > 0 )
-							{
-								ipData->SetIpV4Address( holder );
-							}
-							else
-							{
-								ipData->SetIpV6Address( holder );
-							}
+							CString* temp = new CString( holder );
+							ipData->AddIpAddress( temp );
 
 							pUnicast = pUnicast->Next;
 
-							if( pUnicast )
+							while( pUnicast )
 							{
 								WSAAddressToString(
-									pUnicast->Address.lpSockaddr,
-									pUnicast->Address.iSockaddrLength,
-									NULL, 
-									holder,
-									&length );
+								pUnicast->Address.lpSockaddr,
+								pUnicast->Address.iSockaddrLength,
+								NULL, 
+								holder,
+								&length );
 
-								CString temp( holder );
-								if( temp.Find( TEXT("."), 0 ) > 0 )
-								{
-									ipData->SetIpV4Address( holder );
-								}
-								else
-								{
-									ipData->SetIpV6Address( holder );
-								}
+								CString* temp = new CString( holder );
+								ipData->AddIpAddress( temp );
+
+								pUnicast = pUnicast->Next;
 							}
 						}
 
@@ -351,38 +339,25 @@ void CIPData::LoadXpOrHigher()
 								holder,
 								&length );
 
-							CString temp( holder );
-							if( temp.Find( TEXT("."), 0 ) > 0 )
-							{
-								ipData->SetIpV4Address( holder );
-							}
-							else
-							{
-								ipData->SetIpV6Address( holder );
-							}
+							CString* temp = new CString( holder );
+							ipData->AddIpAddress( temp );
 
 							pUnicast = pUnicast->Next;
 
-							if( pUnicast )
+							while( pUnicast )
 							{
 								WSAAddressToString(
-									pUnicast->Address.lpSockaddr,
-									pUnicast->Address.iSockaddrLength,
-									NULL, 
-									holder,
-									&length );
+								pUnicast->Address.lpSockaddr,
+								pUnicast->Address.iSockaddrLength,
+								NULL, 
+								holder,
+								&length );
 
-								CString temp( holder );
-								if( temp.Find( TEXT("."), 0 ) > 0 )
-								{
-									ipData->SetIpV4Address( holder );
-								}
-								else
-								{
-									ipData->SetIpV6Address( holder );
-								}
+								CString* temp = new CString( holder );
+								ipData->AddIpAddress( temp );
+
+								pUnicast = pUnicast->Next;
 							}
-
 						}
 
 						ipData->SetIpV4Enabled( pCurrentAdapter->Ipv4Enabled );
@@ -466,10 +441,9 @@ void CIPData::LoadLowerThanXp()
 						temp.Format( TEXT("%S"), pCurrentAdapter->Description );
 						ipData->SetAdapterDescription( temp );
 						
-						temp.Format( TEXT("%S"), pCurrentAdapter->IpAddressList.IpAddress.String );
-						ipData->SetIpV4Address( temp );
-						ipData->SetIpV6Address( TEXT("IP Version 6 not enabled") );
-						
+						CString* newTemp = new CString( pCurrentAdapter->IpAddressList.IpAddress.String );
+						ipData->AddIpAddress( newTemp );
+
 						temp.Format( TEXT("%S"), pCurrentAdapter->IpAddressList.IpMask.String );
 						ipData->SetSubnet( temp );
 
@@ -478,6 +452,39 @@ void CIPData::LoadLowerThanXp()
 
 						ipData->SetIpV4Enabled( TRUE );
 						ipData->SetIpV6Enabled( FALSE );
+
+						switch( pCurrentAdapter->Type ) {
+							case MIB_IF_TYPE_OTHER:
+								ipData->SetAdapterType( TEXT("Other") );
+								break;
+
+							case MIB_IF_TYPE_ETHERNET:
+								ipData->SetAdapterType( TEXT("Ethernet") );
+								break;
+							case MIB_IF_TYPE_TOKENRING:
+								ipData->SetAdapterType( TEXT("Token Ring") );
+								break;
+
+							case MIB_IF_TYPE_FDDI:
+								ipData->SetAdapterType( TEXT("FDDI") );
+								break;
+
+							case MIB_IF_TYPE_PPP:
+								ipData->SetAdapterType( TEXT("PPP") );
+								break;
+
+							case MIB_IF_TYPE_LOOPBACK:
+								ipData->SetAdapterType( TEXT("Lookback") );
+								break;
+
+							case MIB_IF_TYPE_SLIP:
+								ipData->SetAdapterType( TEXT("Slip") );
+								break;
+
+							default:
+								ipData->SetAdapterType( TEXT("Unknown type") );
+								break;
+						}
 
 						m_pAdapterInformation->push_back( ipData );
 
@@ -498,9 +505,8 @@ void CIPData::LoadLowerThanXp()
 						temp.Format( TEXT("%S"), pCurrentAdapter->Description );
 						ipData->SetAdapterDescription( temp );
 						
-						temp.Format( TEXT("%S"), pCurrentAdapter->IpAddressList.IpAddress.String );
-						ipData->SetIpV4Address( temp );
-						ipData->SetIpV6Address( TEXT("IP Version 6 not enabled"));
+						CString* newTemp = new CString( pCurrentAdapter->IpAddressList.IpAddress.String );
+						ipData->AddIpAddress( newTemp );
 						
 						temp.Format( TEXT("%S"), pCurrentAdapter->IpAddressList.IpMask.String );
 						ipData->SetSubnet( temp );
@@ -510,6 +516,40 @@ void CIPData::LoadLowerThanXp()
 
 						ipData->SetIpV4Enabled( TRUE );
 						ipData->SetIpV6Enabled( FALSE );
+
+						switch( pCurrentAdapter->Type ) {
+							case MIB_IF_TYPE_OTHER:
+								ipData->SetAdapterType( TEXT("Other") );
+								break;
+
+							case MIB_IF_TYPE_ETHERNET:
+								ipData->SetAdapterType( TEXT("Ethernet") );
+								break;
+
+							case MIB_IF_TYPE_TOKENRING:
+								ipData->SetAdapterType( TEXT("Token Ring") );
+								break;
+
+							case MIB_IF_TYPE_FDDI:
+								ipData->SetAdapterType( TEXT("FDDI") );
+								break;
+
+							case MIB_IF_TYPE_PPP:
+								ipData->SetAdapterType( TEXT("PPP") );
+								break;
+
+							case MIB_IF_TYPE_LOOPBACK:
+								ipData->SetAdapterType( TEXT("Lookback") );
+								break;
+
+							case MIB_IF_TYPE_SLIP:
+								ipData->SetAdapterType( TEXT("Slip") );
+								break;
+
+							default:
+								ipData->SetAdapterType( TEXT("Unknown type") );
+								break;
+						}
 
 						m_pAdapterInformation->push_back( ipData );
 												
