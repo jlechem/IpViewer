@@ -113,4 +113,5 @@ private:
 	BOOL TrayMessage( DWORD );
 
 	CString m_strStatus;
+	CString m_strDescription;
 };

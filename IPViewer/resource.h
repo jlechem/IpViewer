@@ -52,6 +52,7 @@
 #define IDC_TEXT_HOST                   1024
 #define IDC_TEXT_MAC                    1025
 #define IDC_TEXT_MAC_CAPTION            1026
+#define IDC_TEXT_MAC_CAPTION2           1027
 #define IDC_COMBO2                      1031
 #define IDC_RADIO1                      1032
 #define IDC_RADIO2                      1033
@@ -72,6 +73,7 @@
 #define IDC_CHECK_V4                    1051
 #define IDC_CHECK_V6                    1052
 #define IDC_STATIC_STATUS               1053
+#define IDC_STATIC_DESCRIPTION          1054
 #define ID_FILE_EXIT                    32771
 #define ID_EDIT_SETTINGS                32772
 #define ID_HELP_ABOUT                   32773
@@ -96,7 +98,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        136
 #define _APS_NEXT_COMMAND_VALUE         32788
-#define _APS_NEXT_CONTROL_VALUE         1054
+#define _APS_NEXT_CONTROL_VALUE         1055
 #define _APS_NEXT_SYMED_VALUE           105
 #endif
 #endif
