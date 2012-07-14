@@ -75,18 +75,20 @@ public:
 
 private:
 
-	CString m_strExternalIp;
-	CString m_strHostName;
+	CString m_strExternalIp;							// holds the external ip address
+	CString m_strHostName;								// holds the host name
 
-	BOOL m_bIsXPorHigher;
+	BOOL m_bIsXPorHigher;								// is the host OS windows XP or higher
 
-	vector<CIpInformation*> m_pAdapterInformation;
+	vector<CIpInformation*> m_pAdapterInformation;		// holds our adapter information
 
-	void LoadHostName();			// gets the computers host name
-	void LoadExternalIpAddress();	// gets the external ip address of the default adapter
-	void LoadAdapterData();			// loads the vector list and all the ip information for all the adapters
-	void LoadXpOrHigher();			// loads data for OS windowsXP or higher
-	void LoadLowerThanXp();			// loads data for any OS before windowsXP
-	void LoadVistaOrHigher();		// loads teh data for any OS windows Vista orh higher
+	void LoadHostName();								// gets the computers host name
+	void LoadExternalIpAddress();						// gets the external ip address of the default adapter
+	void LoadAdapterData();								// loads the vector list and all the ip information for all the adapters
+	void LoadXpOrHigher();								// loads data for OS windowsXP or higher
+	void LoadLowerThanXp();								// loads data for any OS before windowsXP
+	void LoadVistaOrHigher();							// loads tehe data for any OS windows Vista orh higher
+	CString ConvertByteToString( BYTE *, UINT );		//converts a byte array into a human readable hex string
+	CString ConvertToStatus( IF_OPER_STATUS status );	// converts a oper status to a cstring
 
 };

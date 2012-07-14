@@ -68,7 +68,10 @@ CIPViewerDlg::CIPViewerDlg(CWnd* pParent /*=NULL*/)
 	, m_strHost(TEXT(""))
 	, m_strExternalIP(TEXT(""))
 	, m_bVisible(FALSE)
-	, m_strMAC(_T(""))
+	, m_strMAC(_T("00:00:00:00:00:00"))
+	, m_bIpV4Enabled(false)
+	, m_bIpV6Enabled(false)
+	, m_strStatus(_T(""))
 {
 }
 
@@ -77,6 +80,10 @@ void CIPViewerDlg::DoDataExchange(CDataExchange* pDX)
 	CDialog::DoDataExchange(pDX);
 	DDX_Text(pDX, IDC_TEXT_HOST, m_strHost);
 	DDX_Text(pDX, IDC_TEXT_EXTERNAL, m_strExternalIP);
+	DDX_Text(pDX, IDC_TEXT_MAC, m_strMAC );
+	DDX_Text(pDX, IDC_STATIC_STATUS, m_strStatus );
+	DDX_Check(pDX, IDC_CHECK_V4, m_bIpV4Enabled);
+	DDX_Check(pDX, IDC_CHECK_V6, m_bIpV6Enabled);
 	DDX_Control(pDX, IDC_COMBO_ADAPTERS, m_cboAdapters);
 	DDX_Control(pDX, IDC_COMBO_ADDRESSES, m_cboAddresses);
 }
@@ -271,7 +278,7 @@ void CIPViewerDlg::RefreshIpInfo()
 	CWaitCursor wait;
 
 	// get the adapter data
-	m_pIpAdapterInfo = m_pIpData->GetAdapterInformation();
+	m_ipAdapterInfo = m_pIpData->GetAdapterInformation();
 
 	this->LoadAdapters();
 
@@ -577,25 +584,31 @@ void CIPViewerDlg::LogData()
 void CIPViewerDlg::OnCbnSelchangeComboAdapters()
 {
 	this->LoadAddresses();
+	this->LoadAdapterControlValues();
+	UpdateData( FALSE );
 }
 
 void CIPViewerDlg::LoadAdapters()
 {
 	this->m_cboAdapters.ResetContent();
 
-	if( m_pIpAdapterInfo.size() > 0 )
+	if( m_ipAdapterInfo.size() > 0 )
 	{
 		this->m_cboAdapters.ShowWindow( TRUE );
 		this->m_cboAddresses.ShowWindow( TRUE );
 
 		std::vector<CIpInformation*>::iterator itr;
-		for ( itr = m_pIpAdapterInfo.begin(); itr != m_pIpAdapterInfo.end(); ++itr )
+		for ( itr = m_ipAdapterInfo.begin(); itr != m_ipAdapterInfo.end(); ++itr )
 		{
 			this->m_cboAdapters.AddString( (*itr)->GetAdapterName() );
 		}
 
 		this->m_cboAdapters.SetCurSel( 0 );
-		this->m_strMAC = m_pIpAdapterInfo[0]->GetMac();
+
+		m_pAdapterInformation = this->m_ipAdapterInfo[0];
+
+		this->LoadAdapterControlValues();
+
 	}
 	else
 	{
@@ -615,15 +628,17 @@ void CIPViewerDlg::LoadAddresses()
 	this->m_cboAdapters.GetWindowTextW( adapter );
 
 	INT index = this->m_cboAdapters.GetCurSel();
-	this->m_strMAC = this->m_pIpAdapterInfo[index]->GetMac();
+	this->m_strMAC = this->m_ipAdapterInfo[index]->GetMac();
 
 	std::vector<CIpInformation*>::iterator itr;
 	
-	for ( itr = m_pIpAdapterInfo.begin(); itr != m_pIpAdapterInfo.end(); ++itr )
+	for ( itr = m_ipAdapterInfo.begin(); itr != m_ipAdapterInfo.end(); ++itr )
 	{
 		if( (*itr)->GetAdapterName() == adapter )
 		{
-			vector<CString*> addresses = (*itr)->GetIpAddresses();
+			m_pAdapterInformation = (*itr);
+
+			vector<CString*> addresses = m_pAdapterInformation->GetIpAddresses();
 
 			if( addresses.size() > 0 )
 			{
@@ -647,4 +662,12 @@ void CIPViewerDlg::LoadAddresses()
 			break;
 		}
 	}
+}
+
+void CIPViewerDlg::LoadAdapterControlValues()
+{
+	this->m_strMAC = m_pAdapterInformation->GetMac();
+	this->m_bIpV4Enabled = m_pAdapterInformation->GetIpV4Enabled();
+	this->m_bIpV6Enabled = m_pAdapterInformation->GetIpV6Enabled();
+	this->m_strStatus = m_pAdapterInformation->GetStatus();
 }

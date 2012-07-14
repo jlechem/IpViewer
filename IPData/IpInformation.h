@@ -18,6 +18,7 @@ private:
 	CString m_strSubnet;
 	CString m_strDefaultGateway;
 	CString m_strType;
+	CString m_strStatus;
 
 	BOOL m_isEnabled;
 
@@ -35,6 +36,10 @@ public:
 	CString GetSubnet() { return m_strSubnet; }
 	CString GetDefaultGateway() { return m_strDefaultGateway; }
 	CString GetAdapterType() { return m_strType; }
+	CString GetStatus() { return m_strStatus; }
+	
+	BOOL GetIpV4Enabled() { return m_isIpV4; }
+	BOOL GetIpV6Enabled() { return m_isIpV6; }
 
 	BOOL GetAdapterEnabled() { return m_isEnabled; }
 
@@ -46,7 +51,8 @@ public:
 	void SetSubnet( CString value ) { m_strSubnet = value; }
 	void SetDefaultGateway( CString value ) { m_strDefaultGateway = value; }
 	void SetAdapterType( CString value ) { m_strType = value; }
-	
+	void SetStatus( CString value ) {m_strStatus = value; }
+
 	void SetEnabled( BOOL isEnabled ) { m_isEnabled = isEnabled; }
 
 	void SetIpV4Enabled( BOOL isEnabled ) { m_isIpV4 = isEnabled; }
