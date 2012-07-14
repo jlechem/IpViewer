@@ -27,6 +27,18 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_3081A5BF9D3F41BC9839CA1F21F66905"
+        "OwnerKey" = "8:_0ACC6EF1EB5C42A2BF6E20718FE9A6AB"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_3081A5BF9D3F41BC9839CA1F21F66905"
+        "OwnerKey" = "8:_FE740ACDC92846D5B443FB92E8113480"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_34E420B73EEC44D8BDDF8DF2C761FF5C"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -39,31 +51,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_DB9C5822C847B9CAA7E6EC82D11205E5"
+        "MsmKey" = "8:_BD584E9DA79B4C6EB1BEEFE206D2EC48"
         "OwnerKey" = "8:_0ACC6EF1EB5C42A2BF6E20718FE9A6AB"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_F682491C2EF04F109DE19D8FFAB0BCF7"
-        "OwnerKey" = "8:_0ACC6EF1EB5C42A2BF6E20718FE9A6AB"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_F682491C2EF04F109DE19D8FFAB0BCF7"
-        "OwnerKey" = "8:_FE740ACDC92846D5B443FB92E8113480"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_F90115A9FE66487795E56C425C27F6CB"
-        "OwnerKey" = "8:_0ACC6EF1EB5C42A2BF6E20718FE9A6AB"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_F90115A9FE66487795E56C425C27F6CB"
+        "MsmKey" = "8:_BD584E9DA79B4C6EB1BEEFE206D2EC48"
         "OwnerKey" = "8:_FE740ACDC92846D5B443FB92E8113480"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -236,26 +230,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DB9C5822C847B9CAA7E6EC82D11205E5"
-            {
-            "SourcePath" = "8:NETAPI32.dll"
-            "TargetName" = "8:NETAPI32.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_1029B68BF8EE4A83A06A7D8256D5AC8B"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:TRUE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FFC8B4D8C3257572DFF0906E10A78357"
             {
             "SourcePath" = "8:IPHLPAPI.DLL"
@@ -343,23 +317,23 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:IP Viewer"
-        "ProductCode" = "8:{680DBE9E-81CC-48CF-8A39-352622BCEE32}"
-        "PackageCode" = "8:{60723608-F922-4F91-B1FB-5A4491C3ECCA}"
+        "ProductCode" = "8:{CCFF892C-4C2F-47A0-A0FD-298E59BF3B59}"
+        "PackageCode" = "8:{BD93DF66-27AC-4DAF-9618-4200B9F680B0}"
         "UpgradeCode" = "8:{C918B47F-EC49-41C9-B643-7870E9DAB4FC}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:2.1"
+        "ProductVersion" = "8:3.0"
         "Manufacturer" = "8:JRL Software"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:IP Viewer 2.1"
+        "Title" = "8:IP Viewer 3.0"
         "Subject" = "8:"
         "ARPCONTACT" = "8: JRL Software"
         "Keywords" = "8:"
-        "ARPCOMMENTS" = "8:IP Viewer 2.1"
+        "ARPCOMMENTS" = "8:IP Viewer 3.0"
         "ARPURLINFOABOUT" = "8:"
         "ARPPRODUCTICON" = "8:_34E420B73EEC44D8BDDF8DF2C761FF5C"
         "ARPIconIndex" = "3:0"
@@ -466,7 +440,7 @@
         {
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_A44C03CE96EE42F8B7135E7D0385920B"
             {
-            "Name" = "8:IP Viewer 2.1"
+            "Name" = "8:IP Viewer 3.0"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -874,7 +848,7 @@
         }
         "MergeModule"
         {
-            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_F682491C2EF04F109DE19D8FFAB0BCF7"
+            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_3081A5BF9D3F41BC9839CA1F21F66905"
             {
             "UseDynamicProperties" = "11:TRUE"
             "IsDependency" = "11:TRUE"
@@ -888,7 +862,7 @@
             "Feature" = "8:"
             "IsolateTo" = "8:"
             }
-            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_F90115A9FE66487795E56C425C27F6CB"
+            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_BD584E9DA79B4C6EB1BEEFE206D2EC48"
             {
             "UseDynamicProperties" = "11:TRUE"
             "IsDependency" = "11:TRUE"
