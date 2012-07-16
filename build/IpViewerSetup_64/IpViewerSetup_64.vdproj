@@ -27,18 +27,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_3081A5BF9D3F41BC9839CA1F21F66905"
-        "OwnerKey" = "8:_0ACC6EF1EB5C42A2BF6E20718FE9A6AB"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_3081A5BF9D3F41BC9839CA1F21F66905"
-        "OwnerKey" = "8:_FE740ACDC92846D5B443FB92E8113480"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_34E420B73EEC44D8BDDF8DF2C761FF5C"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -51,13 +39,25 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_BD584E9DA79B4C6EB1BEEFE206D2EC48"
+        "MsmKey" = "8:_6EF5C33BE88D479A98296CD1C9BCDA0B"
         "OwnerKey" = "8:_0ACC6EF1EB5C42A2BF6E20718FE9A6AB"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_BD584E9DA79B4C6EB1BEEFE206D2EC48"
+        "MsmKey" = "8:_6EF5C33BE88D479A98296CD1C9BCDA0B"
+        "OwnerKey" = "8:_FE740ACDC92846D5B443FB92E8113480"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_7EF6E98A28104F7BB16AF6BC214EA99E"
+        "OwnerKey" = "8:_0ACC6EF1EB5C42A2BF6E20718FE9A6AB"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_7EF6E98A28104F7BB16AF6BC214EA99E"
         "OwnerKey" = "8:_FE740ACDC92846D5B443FB92E8113480"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -318,11 +318,11 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:IP Viewer"
         "ProductCode" = "8:{CCFF892C-4C2F-47A0-A0FD-298E59BF3B59}"
-        "PackageCode" = "8:{BD93DF66-27AC-4DAF-9618-4200B9F680B0}"
+        "PackageCode" = "8:{F2827CC3-338C-4C13-84B3-E57149B1E4E0}"
         "UpgradeCode" = "8:{C918B47F-EC49-41C9-B643-7870E9DAB4FC}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
-        "RemovePreviousVersions" = "11:FALSE"
+        "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
         "ProductVersion" = "8:3.0"
@@ -848,11 +848,11 @@
         }
         "MergeModule"
         {
-            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_3081A5BF9D3F41BC9839CA1F21F66905"
+            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_6EF5C33BE88D479A98296CD1C9BCDA0B"
             {
             "UseDynamicProperties" = "11:TRUE"
             "IsDependency" = "11:TRUE"
-            "SourcePath" = "8:Microsoft_VC100_DebugCRT_x64.msm"
+            "SourcePath" = "8:Microsoft_VC100_CRT_x64.msm"
                 "Properties"
                 {
                 }
@@ -862,11 +862,11 @@
             "Feature" = "8:"
             "IsolateTo" = "8:"
             }
-            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_BD584E9DA79B4C6EB1BEEFE206D2EC48"
+            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_7EF6E98A28104F7BB16AF6BC214EA99E"
             {
             "UseDynamicProperties" = "11:TRUE"
             "IsDependency" = "11:TRUE"
-            "SourcePath" = "8:Microsoft_VC100_DebugMFC_x64.msm"
+            "SourcePath" = "8:Microsoft_VC100_MFC_x64.msm"
                 "Properties"
                 {
                 }
