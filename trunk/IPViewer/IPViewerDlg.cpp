@@ -650,9 +650,6 @@ void CIPViewerDlg::LoadAddresses()
 	CString adapter;
 	this->m_cboAdapters.GetWindowTextW( adapter );
 
-	INT index = this->m_cboAdapters.GetCurSel();
-	this->m_strMAC = this->m_ipAdapterInfo[index]->GetMac();
-
 	std::vector<CIpInformation*>::iterator itr;
 	
 	for ( itr = m_ipAdapterInfo.begin(); itr != m_ipAdapterInfo.end(); ++itr )
@@ -700,4 +697,5 @@ void CIPViewerDlg::LoadAdapterControlValues()
 	this->m_bIpV6Enabled = m_pAdapterInformation->GetIpV6Enabled();
 	this->m_strStatus = m_pAdapterInformation->GetStatus();
 	this->m_strDescription = m_pAdapterInformation->GetAdapterDescription();
+	this->m_strMAC = m_pAdapterInformation->GetMac();
 }
