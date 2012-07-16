@@ -114,4 +114,6 @@ private:
 
 	CString m_strStatus;
 	CString m_strDescription;
+public:
+	afx_msg void OnCbnSelchangeComboAddresses();
 };

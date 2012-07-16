@@ -386,6 +386,12 @@ BEGIN
     IDS_LOG_EXTENSION       "LOG_EXTENSION"
 END
 
+STRINGTABLE
+BEGIN
+    IDS_ADDRESS_INDEX       "ADDRESS_INDEX"
+    IDS_ADAPTER_INDEX       "ADAPTER_INDEX"
+END
+
 #endif    // English (United States) resources
 /////////////////////////////////////////////////////////////////////////////
 

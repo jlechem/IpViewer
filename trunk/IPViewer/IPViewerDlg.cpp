@@ -117,6 +117,7 @@ BEGIN_MESSAGE_MAP(CIPViewerDlg, CDialog)
 	ON_COMMAND(ID_EDIT_COPYEXTERNALIPADDRESS, &CIPViewerDlg::OnEditCopyexternalipaddress)
 	ON_COMMAND(ID_EDIT_COPYEXTERNALIPADDRESS, &CIPViewerDlg::OnEditCopyexternalipaddress)
 	ON_CBN_SELCHANGE(IDC_COMBO_ADAPTERS, &CIPViewerDlg::OnCbnSelchangeComboAdapters)
+	ON_CBN_SELCHANGE(IDC_COMBO_ADDRESSES, &CIPViewerDlg::OnCbnSelchangeComboAddresses)
 END_MESSAGE_MAP()
 
 
@@ -403,6 +404,7 @@ void CIPViewerDlg::OnClose()
 	}
 	else
 	{
+		m_pSettings->Save();
 		this->TrayMessage(NIM_DELETE);
 		CDialog::OnClose();
 	}
@@ -585,9 +587,18 @@ void CIPViewerDlg::LogData()
 
 void CIPViewerDlg::OnCbnSelchangeComboAdapters()
 {
+	// get the selected index
+	m_pSettings->SetAdapterIndex( this->m_cboAdapters.GetCurSel() );
+
 	this->LoadAddresses();
 	this->LoadAdapterControlValues();
 	UpdateData( FALSE );
+}
+
+void CIPViewerDlg::OnCbnSelchangeComboAddresses()
+{
+	// get the selected index
+	m_pSettings->SetAddressIndex( this->m_cboAddresses.GetCurSel() );
 }
 
 void CIPViewerDlg::LoadAdapters()
@@ -599,15 +610,25 @@ void CIPViewerDlg::LoadAdapters()
 		this->m_cboAdapters.ShowWindow( TRUE );
 		this->m_cboAddresses.ShowWindow( TRUE );
 
+		// loop through the vector to load the combo box
 		std::vector<CIpInformation*>::iterator itr;
 		for ( itr = m_ipAdapterInfo.begin(); itr != m_ipAdapterInfo.end(); ++itr )
 		{
 			this->m_cboAdapters.AddString( (*itr)->GetAdapterName() );
 		}
 
-		this->m_cboAdapters.SetCurSel( 0 );
-
-		m_pAdapterInformation = this->m_ipAdapterInfo[0];
+		// if we have a previously selected index use it
+		// if the index is invalid then load the default
+		if( this->m_cboAdapters.GetCount() >= m_pSettings->GetAdapterIndex() )
+		{
+			this->m_cboAdapters.SetCurSel( m_pSettings->GetAdapterIndex() );
+			m_pAdapterInformation = this->m_ipAdapterInfo[ m_pSettings->GetAdapterIndex() ];
+		}	
+		else
+		{
+			this->m_cboAdapters.SetCurSel( 0 );
+			m_pAdapterInformation = this->m_ipAdapterInfo[0];
+		}
 
 		this->LoadAdapterControlValues();
 
@@ -653,8 +674,14 @@ void CIPViewerDlg::LoadAddresses()
 					this->m_cboAddresses.AddString( (**itr2) );
 				}
 
-				this->m_cboAddresses.SetCurSel(0);
-
+				if( this->m_cboAddresses.GetCount() >= m_pSettings->GetAddressIndex() )
+				{
+					this->m_cboAddresses.SetCurSel( m_pSettings->GetAddressIndex() );
+				}
+				else
+				{
+					this->m_cboAddresses.SetCurSel(0);
+				}
 			}
 			else
 			{
