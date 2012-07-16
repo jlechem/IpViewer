@@ -32,7 +32,9 @@
 #define IDS_LOG_INTERVAL                125
 #define IDS_LOG_FILENAME                126
 #define IDS_LOG_EXTENSION               127
+#define IDS_ADDRESS_INDEX               128
 #define IDD_DIALOG_SETTINGS             129
+#define IDS_ADAPTER_INDEX               129
 #define IDI_ICON_IPVIEWER               130
 #define IDR_MENU1                       131
 #define IDR_CONTEXT_MENU                132
@@ -52,7 +54,6 @@
 #define IDC_TEXT_HOST                   1024
 #define IDC_TEXT_MAC                    1025
 #define IDC_TEXT_MAC_CAPTION            1026
-#define IDC_TEXT_MAC_CAPTION2           1027
 #define IDC_COMBO2                      1031
 #define IDC_RADIO1                      1032
 #define IDC_RADIO2                      1033

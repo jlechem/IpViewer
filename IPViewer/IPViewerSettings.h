@@ -60,7 +60,7 @@ private:
 
 	INT m_nTick;
 	INT m_nSelectedIndex;
-		
+
 	CButton m_CheckInternalIp;
 	CButton m_CheckExternalIp;
 	CButton m_CheckHostName;

@@ -148,6 +148,21 @@ void CIPSettings::Load()
 				{
 					m_pRegistry->Write( key, _logFileName );
 				}
+
+				key.LoadString(IDS_ADAPTER_INDEX );
+
+				if( !m_pRegistry->Read( key, _selectedAdapterIndex ) )
+				{
+					m_pRegistry->Write( key, _selectedAdapterIndex );
+				}
+
+				key.LoadString(IDS_ADDRESS_INDEX );
+
+				if( !m_pRegistry->Read( key, _selectedAddressIndex ) )
+				{
+					m_pRegistry->Write( key, _selectedAddressIndex );
+				}
+
 			}
 			else
 			{
@@ -189,7 +204,8 @@ void CIPSettings::Reset()
 	_logMacAddress = false;
 	_loggingInterval = 360;
 	_logFileName = TEXT("IP_LOGS");
-	
+	_selectedAdapterIndex = 0;
+	_selectedAddressIndex = 0;
 	m_pRegistry = NULL;
 
 }
@@ -254,6 +270,12 @@ BOOL CIPSettings::Save()
 
 		key.LoadString( IDS_LOG_FILENAME );
 		m_pRegistry->Write( key, _logFileName );
+
+		key.LoadString( IDS_ADAPTER_INDEX );
+		m_pRegistry->Write( key, _selectedAdapterIndex );
+
+		key.LoadString( IDS_ADDRESS_INDEX );
+		m_pRegistry->Write( key, _selectedAddressIndex );
 
 		result = true;
 

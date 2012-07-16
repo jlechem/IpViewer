@@ -43,6 +43,9 @@ public:
 	BOOL GetLogMacAddress() { return _logMacAddress; }
 	BOOL GetLogHostName() { return _logHostName; }
 	
+	INT GetAdapterIndex() { return _selectedAdapterIndex; }
+	INT GetAddressIndex() { return _selectedAddressIndex; }
+
 	CString GetLogFileName() { return _logFileName; }
 	
 	// set methods for internal memebers
@@ -63,6 +66,8 @@ public:
 	void SetLogExternalIp( BOOL value ) { _logExternalIp = value; }
 	void SetLogMacAddress( BOOL value ) { _logMacAddress = value; }
 	void SetLogHostName( BOOL value ) { _logHostName = value; }
+	void SetAdapterIndex( INT value ) { _selectedAdapterIndex = value; }
+	void SetAddressIndex( INT value ) { _selectedAddressIndex = value; }
 
 	BOOL Save();
 
@@ -70,7 +75,9 @@ private:
 	INT _tick;
 	INT _selectedIndex;
 	INT _loggingInterval;
-	
+	INT _selectedAdapterIndex;
+	INT _selectedAddressIndex;
+
 	BOOL _minToTray;
 	BOOL _closeToTray;
 	BOOL _onTop;
