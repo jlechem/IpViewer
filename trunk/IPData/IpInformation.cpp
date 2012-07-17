@@ -11,6 +11,7 @@ CIpInformation::CIpInformation(void)
 
 CIpInformation::~CIpInformation(void)
 {
+	m_pIpAddresses.clear();
 }
 
 
