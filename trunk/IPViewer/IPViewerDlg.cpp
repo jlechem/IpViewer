@@ -622,7 +622,19 @@ void CIPViewerDlg::LoadAdapters()
 		if( this->m_cboAdapters.GetCount() >= m_pSettings->GetAdapterIndex() )
 		{
 			this->m_cboAdapters.SetCurSel( m_pSettings->GetAdapterIndex() );
-			m_pAdapterInformation = this->m_ipAdapterInfo[ m_pSettings->GetAdapterIndex() ];
+
+			std::vector<CIpInformation*>::iterator itr;
+	
+			CString adapter; 
+			this->m_cboAdapters.GetWindowText(adapter);
+
+			for ( itr = m_ipAdapterInfo.begin(); itr != m_ipAdapterInfo.end(); ++itr )
+			{
+				if( (*itr)->GetAdapterName() == adapter )
+				{
+					m_pAdapterInformation = (*itr);
+				}
+			}
 		}	
 		else
 		{
