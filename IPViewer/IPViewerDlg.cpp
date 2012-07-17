@@ -76,6 +76,13 @@ CIPViewerDlg::CIPViewerDlg(CWnd* pParent /*=NULL*/)
 {
 }
 
+CIPViewerDlg::~CIPViewerDlg()
+{
+	delete m_pSettings;
+	delete m_pIpData;
+	delete m_pAdapterInformation;
+}
+
 void CIPViewerDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialog::DoDataExchange(pDX);
@@ -623,18 +630,7 @@ void CIPViewerDlg::LoadAdapters()
 		{
 			this->m_cboAdapters.SetCurSel( m_pSettings->GetAdapterIndex() );
 
-			std::vector<CIpInformation*>::iterator itr;
-	
-			CString adapter; 
-			this->m_cboAdapters.GetWindowText(adapter);
-
-			for ( itr = m_ipAdapterInfo.begin(); itr != m_ipAdapterInfo.end(); ++itr )
-			{
-				if( (*itr)->GetAdapterName() == adapter )
-				{
-					m_pAdapterInformation = (*itr);
-				}
-			}
+			this->GetSelectedAdapter();
 		}	
 		else
 		{
@@ -662,43 +658,31 @@ void CIPViewerDlg::LoadAddresses()
 	CString adapter;
 	this->m_cboAdapters.GetWindowTextW( adapter );
 
-	std::vector<CIpInformation*>::iterator itr;
-	
-	for ( itr = m_ipAdapterInfo.begin(); itr != m_ipAdapterInfo.end(); ++itr )
+	vector<CString*> addresses = m_pAdapterInformation->GetIpAddresses();
+
+	if( addresses.size() > 0 )
 	{
-		if( (*itr)->GetAdapterName() == adapter )
-		{
-			m_pAdapterInformation = (*itr);
+		this->m_cboAddresses.ShowWindow( TRUE );
 
-			vector<CString*> addresses = m_pAdapterInformation->GetIpAddresses();
-
-			if( addresses.size() > 0 )
-			{
-				this->m_cboAddresses.ShowWindow( TRUE );
-
-				std::vector<CString*>::iterator itr2;
+		std::vector<CString*>::iterator itr2;
 			
-				for ( itr2 = addresses.begin(); itr2 != addresses.end(); ++itr2 )
-				{
-					this->m_cboAddresses.AddString( (**itr2) );
-				}
-
-				if( this->m_cboAddresses.GetCount() >= m_pSettings->GetAddressIndex() )
-				{
-					this->m_cboAddresses.SetCurSel( m_pSettings->GetAddressIndex() );
-				}
-				else
-				{
-					this->m_cboAddresses.SetCurSel(0);
-				}
-			}
-			else
-			{
-				this->m_cboAddresses.ShowWindow( FALSE );
-			}
-
-			break;
+		for ( itr2 = addresses.begin(); itr2 != addresses.end(); ++itr2 )
+		{
+			this->m_cboAddresses.AddString( (**itr2) );
 		}
+
+		if( this->m_cboAddresses.GetCount() >= m_pSettings->GetAddressIndex() )
+		{
+			this->m_cboAddresses.SetCurSel( m_pSettings->GetAddressIndex() );
+		}
+		else
+		{
+			this->m_cboAddresses.SetCurSel(0);
+		}
+	}
+	else
+	{
+		this->m_cboAddresses.ShowWindow( FALSE );
 	}
 }
 
@@ -710,4 +694,22 @@ void CIPViewerDlg::LoadAdapterControlValues()
 	this->m_strStatus = m_pAdapterInformation->GetStatus();
 	this->m_strDescription = m_pAdapterInformation->GetAdapterDescription();
 	this->m_strMAC = m_pAdapterInformation->GetMac();
+}
+
+void CIPViewerDlg::GetSelectedAdapter()
+{
+	CIpInformation* returnData = NULL;
+
+	CString adapterName; 
+	this->m_cboAdapters.GetWindowText(adapterName);
+
+	std::vector<CIpInformation*>::iterator itr;
+	
+	for ( itr = m_ipAdapterInfo.begin(); itr != m_ipAdapterInfo.end(); ++itr )
+	{
+		if( (*itr)->GetAdapterName() == adapterName )
+		{
+			m_pAdapterInformation = (*itr);
+		}
+	}
 }

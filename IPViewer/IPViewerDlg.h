@@ -38,6 +38,7 @@ class CIPViewerDlg : public CDialog
 // Construction
 public:
 	CIPViewerDlg(CWnd* pParent = NULL);	// standard constructor
+	~CIPViewerDlg();
 
 	// Dialog Data
 	enum { IDD = IDD_IPVIEWER_DIALOG };
@@ -73,6 +74,7 @@ protected:
 	afx_msg void OnPopupCopyexternalipaddress();
 	afx_msg void OnEditCopyexternalipaddress();
 	afx_msg void OnCbnSelchangeComboAdapters();
+	afx_msg void OnCbnSelchangeComboAddresses();
 	DECLARE_MESSAGE_MAP()
 
 private:
@@ -97,6 +99,8 @@ private:
 	CComboBox m_cboAddresses;
 
 	CString m_strMAC;
+	CString m_strStatus;
+	CString m_strDescription;
 
 	INT m_nSelectedAdapterIndex;
 	INT m_nSelectedAddressIndex;
@@ -109,11 +113,9 @@ private:
 	void RefreshIpInfo();
 	void EditSettings();
 	void LoadAdapterControlValues();
+	void GetSelectedAdapter();
 
 	BOOL TrayMessage( DWORD );
 
-	CString m_strStatus;
-	CString m_strDescription;
-public:
-	afx_msg void OnCbnSelchangeComboAddresses();
+	
 };
