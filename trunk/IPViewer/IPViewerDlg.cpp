@@ -597,8 +597,11 @@ void CIPViewerDlg::OnCbnSelchangeComboAdapters()
 	// get the selected index
 	m_pSettings->SetAdapterIndex( this->m_cboAdapters.GetCurSel() );
 
-	this->LoadAddresses();
+	this->GetSelectedAdapter();
+
 	this->LoadAdapterControlValues();
+	this->LoadAddresses();
+	
 	UpdateData( FALSE );
 }
 
@@ -653,10 +656,6 @@ void CIPViewerDlg::LoadAddresses()
 	CWaitCursor wait;
 
 	this->m_cboAddresses.ResetContent();
-
-	// get the text from the combo box
-	CString adapter;
-	this->m_cboAdapters.GetWindowTextW( adapter );
 
 	vector<CString*> addresses = m_pAdapterInformation->GetIpAddresses();
 
