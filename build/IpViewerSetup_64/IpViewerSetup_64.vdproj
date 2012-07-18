@@ -422,7 +422,7 @@
         {
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_A44C03CE96EE42F8B7135E7D0385920B"
             {
-            "Name" = "8:IP Viewer 3.0"
+            "Name" = "8:IP Viewer 3.0.1"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
