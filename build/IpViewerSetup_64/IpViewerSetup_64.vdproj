@@ -21,6 +21,24 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_0B096BD1789945588D1728D86D77B1E2"
+        "OwnerKey" = "8:_0ACC6EF1EB5C42A2BF6E20718FE9A6AB"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_0B096BD1789945588D1728D86D77B1E2"
+        "OwnerKey" = "8:_FE740ACDC92846D5B443FB92E8113480"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_0B096BD1789945588D1728D86D77B1E2"
+        "OwnerKey" = "8:_EF5DE69272E745C086E2A3C88E36C7B2"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_26D46CEDC309F031A06CEBC80D794481"
         "OwnerKey" = "8:_0ACC6EF1EB5C42A2BF6E20718FE9A6AB"
         "MsmSig" = "8:_UNDEFINED"
@@ -29,6 +47,24 @@
         {
         "MsmKey" = "8:_34E420B73EEC44D8BDDF8DF2C761FF5C"
         "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_378BA69FEDA44534B3EFC0E2868BB425"
+        "OwnerKey" = "8:_0ACC6EF1EB5C42A2BF6E20718FE9A6AB"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_378BA69FEDA44534B3EFC0E2868BB425"
+        "OwnerKey" = "8:_FE740ACDC92846D5B443FB92E8113480"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_378BA69FEDA44534B3EFC0E2868BB425"
+        "OwnerKey" = "8:_EF5DE69272E745C086E2A3C88E36C7B2"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -299,24 +335,24 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:IP Viewer"
-        "ProductCode" = "8:{27BCE40D-9AA1-4334-99C5-099F9FD6F42D}"
-        "PackageCode" = "8:{EE34C48F-7CB9-4C2D-85EA-D7B973770D3D}"
+        "ProductCode" = "8:{94340445-868E-4EBB-B4B0-2917721E3AB5}"
+        "PackageCode" = "8:{8E775D42-FB11-49B9-AF5D-1EA3FF92AF24}"
         "UpgradeCode" = "8:{C918B47F-EC49-41C9-B643-7870E9DAB4FC}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:3.0.1"
+        "ProductVersion" = "8:3.1"
         "Manufacturer" = "8:JRL Software"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:IP Viewer 3.0.1"
+        "Title" = "8:IP Viewer 3.1"
         "Subject" = "8:"
         "ARPCONTACT" = "8: JRL Software"
         "Keywords" = "8:"
-        "ARPCOMMENTS" = "8:IP Viewer 3.0.1"
-        "ARPURLINFOABOUT" = "8:"
+        "ARPCOMMENTS" = "8:IP Viewer 3.1"
+        "ARPURLINFOABOUT" = "8:http://www.jrl-software.com"
         "ARPPRODUCTICON" = "8:_34E420B73EEC44D8BDDF8DF2C761FF5C"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
@@ -422,7 +458,7 @@
         {
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_A44C03CE96EE42F8B7135E7D0385920B"
             {
-            "Name" = "8:IP Viewer 3.0.1"
+            "Name" = "8:IP Viewer 3.1"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -830,12 +866,40 @@
         }
         "MergeModule"
         {
+            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_0B096BD1789945588D1728D86D77B1E2"
+            {
+            "UseDynamicProperties" = "11:TRUE"
+            "IsDependency" = "11:TRUE"
+            "SourcePath" = "8:Microsoft_VC100_CRT_x64.msm"
+                "Properties"
+                {
+                }
+            "LanguageId" = "3:0"
+            "Exclude" = "11:FALSE"
+            "Folder" = "8:"
+            "Feature" = "8:"
+            "IsolateTo" = "8:"
+            }
+            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_378BA69FEDA44534B3EFC0E2868BB425"
+            {
+            "UseDynamicProperties" = "11:TRUE"
+            "IsDependency" = "11:TRUE"
+            "SourcePath" = "8:Microsoft_VC100_MFC_x64.msm"
+                "Properties"
+                {
+                }
+            "LanguageId" = "3:0"
+            "Exclude" = "11:FALSE"
+            "Folder" = "8:"
+            "Feature" = "8:"
+            "IsolateTo" = "8:"
+            }
         }
         "ProjectOutput"
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_0ACC6EF1EB5C42A2BF6E20718FE9A6AB"
             {
-            "SourcePath" = "8:..\\..\\trunk\\Win32Release\\IPData.dll"
+            "SourcePath" = "8:..\\..\\trunk\\x64Release\\IPData.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_1029B68BF8EE4A83A06A7D8256D5AC8B"
@@ -863,7 +927,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_EF5DE69272E745C086E2A3C88E36C7B2"
             {
-            "SourcePath" = "8:..\\..\\trunk\\Win32Release\\Logger.dll"
+            "SourcePath" = "8:..\\..\\trunk\\x64Release\\Logger.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_1029B68BF8EE4A83A06A7D8256D5AC8B"
@@ -891,7 +955,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_FE740ACDC92846D5B443FB92E8113480"
             {
-            "SourcePath" = "8:..\\..\\trunk\\Win32Release\\IPViewer.exe"
+            "SourcePath" = "8:..\\..\\trunk\\x64Release\\IPViewer.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_1029B68BF8EE4A83A06A7D8256D5AC8B"

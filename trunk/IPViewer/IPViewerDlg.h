@@ -49,6 +49,7 @@ protected:
 
 	// Generated message map functions
 	virtual BOOL OnInitDialog();
+	virtual BOOL PreTranslateMessage(MSG* pMsg);
 	afx_msg void OnSysCommand(UINT nID, LPARAM lParam);
 	afx_msg void OnPaint();
 	afx_msg HCURSOR OnQueryDragIcon();
@@ -88,6 +89,8 @@ private:
 	
 	CIpInformation* m_pAdapterInformation;
 
+	CToolTipCtrl* m_pToolTip;
+
 	CString m_strHost;
 	CString m_strExternalIP;
 
@@ -114,8 +117,8 @@ private:
 	void EditSettings();
 	void LoadAdapterControlValues();
 	void GetSelectedAdapter();
+	void LoadTooltips();
 
 	BOOL TrayMessage( DWORD );
-
 	
 };

@@ -61,7 +61,7 @@ CIPData::CIPData()
 
 	// determine if we're running windowsXP or higher
 	OSVERSIONINFO osvi;
-	BOOL bIsWindowsXPorLater;
+	BOOL bIsWindowsXPorLater = FALSE;
 
 	ZeroMemory(&osvi, sizeof(OSVERSIONINFO));
 	osvi.dwOSVersionInfoSize = sizeof(OSVERSIONINFO);
