@@ -81,6 +81,7 @@ CIPViewerDlg::~CIPViewerDlg()
 	delete m_pSettings;
 	delete m_pIpData;
 	delete m_pAdapterInformation;
+	delete  m_pToolTip;
 }
 
 void CIPViewerDlg::DoDataExchange(CDataExchange* pDX)
@@ -178,7 +179,12 @@ BOOL CIPViewerDlg::OnInitDialog()
 		this->TrayMessage( NIM_ADD );
 	}
 
+	m_pToolTip = new CToolTipCtrl;
+
+	this->LoadTooltips();
+
 	return TRUE;  // return TRUE  unless you set the focus to a control
+
 }
 
 void CIPViewerDlg::OnSysCommand(UINT nID, LPARAM lParam)
@@ -357,7 +363,7 @@ BOOL CIPViewerDlg::TrayMessage( DWORD dwMessage )
 		
 		case 3:
 			// TODO: insert the mac address control here
-			sTip = TEXT("MAC");//m_strMac;
+			sTip = m_strMAC;
 			break;
 	}
 	
@@ -463,6 +469,9 @@ LRESULT CIPViewerDlg::OnTrayNotification( WPARAM wParam, LPARAM lParam )
 		
 			break;
 	}
+
+	return TRUE;
+
 }
 
 #pragma region Context_Menu_Methods
@@ -487,7 +496,7 @@ void CIPViewerDlg::OnPopupCopyhostname()
 void CIPViewerDlg::OnPopupCopymac()
 {
 	// TODO: insert the code for the MAC address here
-	CClipboard::SetData( TEXT("MAC"), m_hWnd );
+	CClipboard::SetData( m_strMAC, m_hWnd );
 }
 
 void CIPViewerDlg::OnPopupEditsettings()
@@ -692,7 +701,7 @@ void CIPViewerDlg::LoadAdapterControlValues()
 	this->m_bIpV6Enabled = m_pAdapterInformation->GetIpV6Enabled();
 	this->m_strStatus = m_pAdapterInformation->GetStatus();
 	this->m_strDescription = m_pAdapterInformation->GetAdapterDescription();
-	this->m_strMAC = m_pAdapterInformation->GetMac();
+
 }
 
 void CIPViewerDlg::GetSelectedAdapter()
@@ -711,4 +720,37 @@ void CIPViewerDlg::GetSelectedAdapter()
 			m_pAdapterInformation = (*itr);
 		}
 	}
+}
+
+void CIPViewerDlg::LoadTooltips()
+{
+	if( !m_pToolTip->Create(this) )
+    {
+        TRACE("Unable To create ToolTip\n");
+        return;
+    }
+
+	if( m_pToolTip->AddTool( &this->m_cboAdapters, TEXT("A list of all the adapters on this system.") ) )
+    {
+        TRACE( TEXT("Unable to add the adapters combo box to the tooltip\n") );
+    }
+
+	if( m_pToolTip->AddTool( &this->m_cboAddresses, TEXT("A list of all the IP Addresses for the selected adapter.") ) )
+    {
+        TRACE( TEXT("Unable to add the addresses combo box to the tooltip\n") );
+	}
+
+    m_pToolTip->Activate(TRUE);
+
+}
+
+BOOL CIPViewerDlg::PreTranslateMessage(MSG* pMsg)
+{
+	 if( m_pToolTip )
+	 {
+        m_pToolTip->RelayEvent(pMsg);
+	 }
+
+    return CDialog::PreTranslateMessage(pMsg);
+
 }

@@ -16,11 +16,9 @@ using namespace std;
 #define DLLEXPORT __declspec(dllexport)
 #define DLLIMPORT __declspec(dllimport)
 
-static class DLLEXPORT CLogger
+ class DLLEXPORT CLogger
 {
 public:
-	CLogger(void);
-	~CLogger(void);
 	static void LogError( CString, CException* );
 	static void LogError( CException* );
 	static void LogError( CString );
@@ -28,6 +26,8 @@ public:
 	static void Log( CString, CString );
 
 private:
+	CLogger(void);
+	~CLogger(void);
 
 	static CString MESSAGE_LOG_FILE;
 	static CString ERROR_LOG_FILE;

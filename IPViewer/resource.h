@@ -39,7 +39,6 @@
 #define IDR_MENU1                       131
 #define IDR_CONTEXT_MENU                132
 #define IDD_DIALOG1                     133
-#define IDD_DIALOG_NICS                 133
 #define IDC_CHECK_MINTRAY               1006
 #define IDC_CHECK_CLOSETRAY             1007
 #define IDC_RADIO_IP                    1008
@@ -54,9 +53,6 @@
 #define IDC_TEXT_HOST                   1024
 #define IDC_TEXT_MAC                    1025
 #define IDC_TEXT_MAC_CAPTION            1026
-#define IDC_COMBO2                      1031
-#define IDC_RADIO1                      1032
-#define IDC_RADIO2                      1033
 #define IDC_RADIO_EXTERNAL_IP           1034
 #define IDC_TEXT_EXTERNAL               1035
 #define IDC_CHECK_EXTERNAL              1036
