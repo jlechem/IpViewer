@@ -321,8 +321,7 @@ void CIPViewerDlg::OnEditCopyipaddress()
 
 void CIPViewerDlg::OnEditCopymac()
 {
-	// TODO: set the mac address for clipboard copy
-	CClipboard::SetData( TEXT("MAC"), m_hWnd );
+	CClipboard::SetData( m_strMAC, m_hWnd );
 }
 
 void CIPViewerDlg::OnEditCopyhostname()
