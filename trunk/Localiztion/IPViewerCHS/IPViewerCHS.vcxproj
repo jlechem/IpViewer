@@ -185,6 +185,8 @@
   <ItemGroup>
     <None Include="IPViewerCHS.def" />
     <None Include="res\IPViewerCHS.rc2" />
+    <None Include="res\IP_Viewer.ICO" />
+    <None Include="res\toolbar1.bmp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="IPViewerCHS.cpp" />
