@@ -46,6 +46,8 @@ public:
 // Implementation
 protected:
 	DECLARE_MESSAGE_MAP()
+public:
+	afx_msg void OnBnClickedOk2();
 };
 
 CAboutDlg::CAboutDlg() : CDialog(CAboutDlg::IDD)
@@ -58,6 +60,7 @@ void CAboutDlg::DoDataExchange(CDataExchange* pDX)
 }
 
 BEGIN_MESSAGE_MAP(CAboutDlg, CDialog)
+	ON_BN_CLICKED(IDOK2, &CAboutDlg::OnBnClickedOk2)
 END_MESSAGE_MAP()
 
 // CIPViewerDlg dialog
@@ -752,4 +755,9 @@ BOOL CIPViewerDlg::PreTranslateMessage(MSG* pMsg)
 
     return CDialog::PreTranslateMessage(pMsg);
 
+}
+
+void CAboutDlg::OnBnClickedOk2()
+{
+	// TODO: Add your control notification handler code here
 }
