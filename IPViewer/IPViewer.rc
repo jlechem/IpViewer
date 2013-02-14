@@ -81,14 +81,14 @@ CAPTION "About IP Viewer"
 FONT 8, "MS Shell Dlg", 0, 0, 0x1
 BEGIN
     ICON            IDI_ICON_IPVIEWER,IDC_STATIC,14,14,20,20
-    LTEXT           "IP Viewer, Version 3.1",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "IP Viewer, Version 3.2",IDC_STATIC,42,14,114,8,SS_NOPREFIX
     DEFPUSHBUTTON   "OK",IDOK,113,41,50,14,WS_GROUP
 END
 
 IDD_IPVIEWER_DIALOG DIALOGEX 0, 0, 305, 156
 STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
 EXSTYLE WS_EX_APPWINDOW
-CAPTION "IP Viewer 3.1"
+CAPTION "IP Viewer 3.2"
 MENU IDR_MENU1
 FONT 8, "MS Shell Dlg", 0, 0, 0x1
 BEGIN
@@ -114,7 +114,7 @@ END
 
 IDD_DIALOG_SETTINGS DIALOGEX 0, 0, 298, 214
 STYLE DS_SETFONT | DS_3DLOOK | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "IP Viewer 3.1 Settings"
+CAPTION "IP Viewer 3.2 Settings"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     CONTROL         "Minimize To Tray",IDC_CHECK_MINTRAY,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,18,18,69,10
@@ -183,138 +183,6 @@ BEGIN
     BLOCK "VarFileInfo"
     BEGIN
         VALUE "Translation", 0x409, 1252
-    END
-END
-
-IDR_VERSION_GERMAN VERSIONINFO
- FILEVERSION 3,1,0,0
- PRODUCTVERSION 3,1,0,0
- FILEFLAGSMASK 0x3fL
-#ifdef _DEBUG
- FILEFLAGS 0x1L
-#else
- FILEFLAGS 0x0L
-#endif
- FILEOS 0x40004L
- FILETYPE 0x1L
- FILESUBTYPE 0x0L
-BEGIN
-    BLOCK "StringFileInfo"
-    BEGIN
-        BLOCK "000704b0"
-        BEGIN
-            VALUE "CompanyName", "Justin LeCheminant"
-            VALUE "FileDescription", "Executable für immer IP Information"
-            VALUE "FileVersion", "3.1.0.0"
-            VALUE "InternalName", "IPViewer.exe"
-            VALUE "LegalCopyright", "2012 (c) Justin LeCheminant.  All rights reserved."
-            VALUE "OriginalFilename", "IPViewer.exe"
-            VALUE "ProductName", "IP Viewer"
-            VALUE "ProductVersion", "3.1.0.0"
-        END
-    END
-    BLOCK "VarFileInfo"
-    BEGIN
-        VALUE "Translation", 0x7, 1200
-    END
-END
-
-IDR_VERSION_FRENCH VERSIONINFO
- FILEVERSION 3,1,0,0
- PRODUCTVERSION 3,1,0,0
- FILEFLAGSMASK 0x3fL
-#ifdef _DEBUG
- FILEFLAGS 0x1L
-#else
- FILEFLAGS 0x0L
-#endif
- FILEOS 0x40004L
- FILETYPE 0x1L
- FILESUBTYPE 0x0L
-BEGIN
-    BLOCK "StringFileInfo"
-    BEGIN
-        BLOCK "000c04b0"
-        BEGIN
-            VALUE "CompanyName", "Justin LeCheminant"
-            VALUE "FileDescription", "Exécutable pour obtenir des informations IP"
-            VALUE "FileVersion", "3.1.0.0"
-            VALUE "InternalName", "IPViewer.exe"
-            VALUE "LegalCopyright", "2012 (c) Justin LeCheminant.  All rights reserved."
-            VALUE "OriginalFilename", "IPViewer.exe"
-            VALUE "ProductName", "IP Viewer"
-            VALUE "ProductVersion", "3.1.0.0"
-        END
-    END
-    BLOCK "VarFileInfo"
-    BEGIN
-        VALUE "Translation", 0xc, 1200
-    END
-END
-
-IDR_VERSION_CHINESE VERSIONINFO
- FILEVERSION 3,1,0,0
- PRODUCTVERSION 3,1,0,0
- FILEFLAGSMASK 0x3fL
-#ifdef _DEBUG
- FILEFLAGS 0x1L
-#else
- FILEFLAGS 0x0L
-#endif
- FILEOS 0x40004L
- FILETYPE 0x1L
- FILESUBTYPE 0x0L
-BEGIN
-    BLOCK "StringFileInfo"
-    BEGIN
-        BLOCK "000404b0"
-        BEGIN
-            VALUE "CompanyName", "Justin LeCheminant"
-            VALUE "FileDescription", "??IP????????"
-            VALUE "FileVersion", "3.1.0.0"
-            VALUE "InternalName", "IPViewer.exe"
-            VALUE "LegalCopyright", "2012 (c) Justin LeCheminant.  All rights reserved."
-            VALUE "OriginalFilename", "IPViewer.exe"
-            VALUE "ProductName", "IP Viewer"
-            VALUE "ProductVersion", "3.1.0.0"
-        END
-    END
-    BLOCK "VarFileInfo"
-    BEGIN
-        VALUE "Translation", 0x4, 1200
-    END
-END
-
-IDR_VERSION_JAPANESE VERSIONINFO
- FILEVERSION 3,1,0,0
- PRODUCTVERSION 3,1,0,0
- FILEFLAGSMASK 0x3fL
-#ifdef _DEBUG
- FILEFLAGS 0x1L
-#else
- FILEFLAGS 0x0L
-#endif
- FILEOS 0x40004L
- FILETYPE 0x1L
- FILESUBTYPE 0x0L
-BEGIN
-    BLOCK "StringFileInfo"
-    BEGIN
-        BLOCK "001104b0"
-        BEGIN
-            VALUE "CompanyName", "Justin LeCheminant"
-            VALUE "FileDescription", "IP???????????????"
-            VALUE "FileVersion", "3.1.0.0"
-            VALUE "InternalName", "IPViewer.exe"
-            VALUE "LegalCopyright", "2012 (c) Justin LeCheminant.  All rights reserved."
-            VALUE "OriginalFilename", "IPViewer.exe"
-            VALUE "ProductName", "IP Viewer"
-            VALUE "ProductVersion", "3.1.0.0"
-        END
-    END
-    BLOCK "VarFileInfo"
-    BEGIN
-        VALUE "Translation", 0x11, 1200
     END
 END
 
@@ -402,13 +270,6 @@ END
 
 /////////////////////////////////////////////////////////////////////////////
 //
-// Toolbar
-//
-
-
-
-/////////////////////////////////////////////////////////////////////////////
-//
 // Bitmap
 //
 
@@ -422,10 +283,7 @@ IDR_TOOLBAR1            BITMAP                  "res\\toolbar1.bmp"
 STRINGTABLE
 BEGIN
     IDS_ABOUTBOX            "&About IPViewer..."
-    IDS_HOSTNAME            "Host Name:"
     IDP_SOCKETS_INIT_FAILED "Windows sockets initialization failed."
-    IDS_IPADDRESS           "IP Address:"
-    IDS_MAC                 "MAC Address:"
     IDS_REG_PATH            "Software\\JRL Software\\IP Viewer"
     IDS_TICK_KEY            "TICK"
     IDS_MINTRAY_KEY         "MIN_TO_TRAY"
