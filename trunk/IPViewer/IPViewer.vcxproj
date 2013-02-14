@@ -253,12 +253,6 @@
   <ItemGroup>
     <ResourceCompile Include="IPViewer.rc" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\IPData\IPData.vcxproj">
-      <Project>{85936d78-64d2-47b7-bd15-65347140f04d}</Project>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
