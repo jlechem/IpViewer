@@ -21,6 +21,12 @@
     <None Include="res\IPViewerCHS.rc2">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="res\toolbar1.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\IP_Viewer.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="IPViewerCHS.cpp">
