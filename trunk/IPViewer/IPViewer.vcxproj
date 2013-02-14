@@ -248,6 +248,7 @@
   <ItemGroup>
     <None Include="res\IP_Viewer.ICO" />
     <None Include="res\IPViewer.rc2" />
+    <None Include="res\toolbar1.bmp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="IPViewer.rc" />

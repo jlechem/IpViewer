@@ -186,6 +186,138 @@ BEGIN
     END
 END
 
+IDR_VERSION_GERMAN VERSIONINFO
+ FILEVERSION 3,1,0,0
+ PRODUCTVERSION 3,1,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000704b0"
+        BEGIN
+            VALUE "CompanyName", "Justin LeCheminant"
+            VALUE "FileDescription", "Executable für immer IP Information"
+            VALUE "FileVersion", "3.1.0.0"
+            VALUE "InternalName", "IPViewer.exe"
+            VALUE "LegalCopyright", "2012 (c) Justin LeCheminant.  All rights reserved."
+            VALUE "OriginalFilename", "IPViewer.exe"
+            VALUE "ProductName", "IP Viewer"
+            VALUE "ProductVersion", "3.1.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x7, 1200
+    END
+END
+
+IDR_VERSION_FRENCH VERSIONINFO
+ FILEVERSION 3,1,0,0
+ PRODUCTVERSION 3,1,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000c04b0"
+        BEGIN
+            VALUE "CompanyName", "Justin LeCheminant"
+            VALUE "FileDescription", "Exécutable pour obtenir des informations IP"
+            VALUE "FileVersion", "3.1.0.0"
+            VALUE "InternalName", "IPViewer.exe"
+            VALUE "LegalCopyright", "2012 (c) Justin LeCheminant.  All rights reserved."
+            VALUE "OriginalFilename", "IPViewer.exe"
+            VALUE "ProductName", "IP Viewer"
+            VALUE "ProductVersion", "3.1.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0xc, 1200
+    END
+END
+
+IDR_VERSION_CHINESE VERSIONINFO
+ FILEVERSION 3,1,0,0
+ PRODUCTVERSION 3,1,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000404b0"
+        BEGIN
+            VALUE "CompanyName", "Justin LeCheminant"
+            VALUE "FileDescription", "??IP????????"
+            VALUE "FileVersion", "3.1.0.0"
+            VALUE "InternalName", "IPViewer.exe"
+            VALUE "LegalCopyright", "2012 (c) Justin LeCheminant.  All rights reserved."
+            VALUE "OriginalFilename", "IPViewer.exe"
+            VALUE "ProductName", "IP Viewer"
+            VALUE "ProductVersion", "3.1.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x4, 1200
+    END
+END
+
+IDR_VERSION_JAPANESE VERSIONINFO
+ FILEVERSION 3,1,0,0
+ PRODUCTVERSION 3,1,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "001104b0"
+        BEGIN
+            VALUE "CompanyName", "Justin LeCheminant"
+            VALUE "FileDescription", "IP???????????????"
+            VALUE "FileVersion", "3.1.0.0"
+            VALUE "InternalName", "IPViewer.exe"
+            VALUE "LegalCopyright", "2012 (c) Justin LeCheminant.  All rights reserved."
+            VALUE "OriginalFilename", "IPViewer.exe"
+            VALUE "ProductName", "IP Viewer"
+            VALUE "ProductVersion", "3.1.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x11, 1200
+    END
+END
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -267,6 +399,20 @@ BEGIN
     END
 END
 
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_TOOLBAR1            BITMAP                  "res\\toolbar1.bmp"
 
 /////////////////////////////////////////////////////////////////////////////
 //
