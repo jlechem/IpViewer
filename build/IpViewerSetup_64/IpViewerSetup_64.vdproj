@@ -22,6 +22,12 @@
         "Entry"
         {
         "MsmKey" = "8:_145A1D059F7942529FBADDCDDD4F5171"
+        "OwnerKey" = "8:_60223B54F5294BD5BEE66264359034D0"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_145A1D059F7942529FBADDCDDD4F5171"
         "OwnerKey" = "8:_FDEA370BE41944C1A08C76EA73382897"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -58,6 +64,12 @@
         "Entry"
         {
         "MsmKey" = "8:_42AF472AA02846788F1D098F0CEDA506"
+        "OwnerKey" = "8:_60223B54F5294BD5BEE66264359034D0"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_42AF472AA02846788F1D098F0CEDA506"
         "OwnerKey" = "8:_FDEA370BE41944C1A08C76EA73382897"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -77,6 +89,12 @@
         {
         "MsmKey" = "8:_42AF472AA02846788F1D098F0CEDA506"
         "OwnerKey" = "8:_A9D948AB4F8443E9B1FA9D6ABAE796C9"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_60223B54F5294BD5BEE66264359034D0"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -125,6 +143,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_6BED1C1F7A3B4F758E0EC538B479692B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_60223B54F5294BD5BEE66264359034D0"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -931,6 +955,34 @@
         }
         "ProjectOutput"
         {
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_60223B54F5294BD5BEE66264359034D0"
+            {
+            "SourcePath" = "8:..\\..\\trunk\\x64Release\\IPViewerCHS.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_1029B68BF8EE4A83A06A7D8256D5AC8B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            "ProjectOutputGroupRegister" = "3:1"
+            "OutputConfiguration" = "8:Release|x64"
+            "OutputGroupCanonicalName" = "8:Built"
+            "OutputProjectGuid" = "8:{9A558ABA-0877-4EDD-907E-1FA2ECE3C693}"
+            "ShowKeyOutput" = "11:TRUE"
+                "ExcludeFilters"
+                {
+                }
+            }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_6BED1C1F7A3B4F758E0EC538B479692B"
             {
             "SourcePath" = "8:..\\..\\trunk\\x64Release\\Logger.dll"
