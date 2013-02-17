@@ -185,6 +185,8 @@
   <ItemGroup>
     <None Include="IPViewerJPN.def" />
     <None Include="res\IPViewerJPN.rc2" />
+    <None Include="res\IP_Viewer.ICO" />
+    <None Include="res\toolbar1.bmp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="IPViewerJPN.cpp" />
@@ -202,7 +204,12 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="IPViewerJPN.rc" />
+    <ResourceCompile Include="IPViewerJPN.rc">
+      <Culture Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">0x0011</Culture>
+      <Culture Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">0x0011</Culture>
+      <Culture Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">0x0011</Culture>
+      <Culture Condition="'$(Configuration)|$(Platform)'=='Release|x64'">0x0011</Culture>
+    </ResourceCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
