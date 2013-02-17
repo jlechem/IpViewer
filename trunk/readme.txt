@@ -2,7 +2,7 @@ READ ME for IPViewer
 
 This is the read me file for IP Viewer.
 
-Current Version is Version 3.2
+Current Version is Version 3.1
 
 This is a minor point upgrade that fixes a few bugs but added some localization for Chinese, Japanese, and German to the application.
 
