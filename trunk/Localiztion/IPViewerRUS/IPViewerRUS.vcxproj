@@ -184,7 +184,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <None Include="IPViewerRUS.def" />
-    <None Include="ReadMe.txt" />
     <None Include="res\IPViewerRUS.rc2" />
     <None Include="res\IP_Viewer.ICO" />
     <None Include="res\toolbar1.bmp" />

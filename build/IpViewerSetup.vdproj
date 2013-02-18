@@ -15,6 +15,42 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_0082D26CC38B4C2B8A661C5113B56DA5"
+        "OwnerKey" = "8:_0ADA0978F4F64BA6BC0228D93752A242"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_0082D26CC38B4C2B8A661C5113B56DA5"
+        "OwnerKey" = "8:_EB513C7497FC47D383D0DD8DA970CD62"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_0082D26CC38B4C2B8A661C5113B56DA5"
+        "OwnerKey" = "8:_8858CCD525274754B3690E4FBADB786E"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_0082D26CC38B4C2B8A661C5113B56DA5"
+        "OwnerKey" = "8:_70D584C75B704AFD804955505E12BDB2"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_0082D26CC38B4C2B8A661C5113B56DA5"
+        "OwnerKey" = "8:_1FD523E9B2804DB886AF421B4AE49DAF"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_0082D26CC38B4C2B8A661C5113B56DA5"
+        "OwnerKey" = "8:_1A1BB5460AAB49E799C8D931F19DD828"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_0ADA0978F4F64BA6BC0228D93752A242"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -23,12 +59,6 @@
         {
         "MsmKey" = "8:_0EF8FE7912D2419BAEF57703FF9C8FBC"
         "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_1654D148673F3F4382E93A8262BF2CDC"
-        "OwnerKey" = "8:_0EF8FE7912D2419BAEF57703FF9C8FBC"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -45,7 +75,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_746C337BA5604909AB9675DD909FD398"
+        "MsmKey" = "8:_70D584C75B704AFD804955505E12BDB2"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -69,8 +99,38 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_FC75C303AE9E982C50152481919A671F"
-        "OwnerKey" = "8:_0EF8FE7912D2419BAEF57703FF9C8FBC"
+        "MsmKey" = "8:_F4A8EEB82E334D9EAD34BC2007B931AF"
+        "OwnerKey" = "8:_0ADA0978F4F64BA6BC0228D93752A242"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F4A8EEB82E334D9EAD34BC2007B931AF"
+        "OwnerKey" = "8:_EB513C7497FC47D383D0DD8DA970CD62"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F4A8EEB82E334D9EAD34BC2007B931AF"
+        "OwnerKey" = "8:_8858CCD525274754B3690E4FBADB786E"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F4A8EEB82E334D9EAD34BC2007B931AF"
+        "OwnerKey" = "8:_70D584C75B704AFD804955505E12BDB2"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F4A8EEB82E334D9EAD34BC2007B931AF"
+        "OwnerKey" = "8:_1FD523E9B2804DB886AF421B4AE49DAF"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F4A8EEB82E334D9EAD34BC2007B931AF"
+        "OwnerKey" = "8:_1A1BB5460AAB49E799C8D931F19DD828"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -88,7 +148,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_1FD523E9B2804DB886AF421B4AE49DAF"
+        "OwnerKey" = "8:_EB513C7497FC47D383D0DD8DA970CD62"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -100,19 +160,31 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_EB513C7497FC47D383D0DD8DA970CD62"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_746C337BA5604909AB9675DD909FD398"
+        "OwnerKey" = "8:_1FD523E9B2804DB886AF421B4AE49DAF"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_1A1BB5460AAB49E799C8D931F19DD828"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_0EF8FE7912D2419BAEF57703FF9C8FBC"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_70D584C75B704AFD804955505E12BDB2"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_0EF8FE7912D2419BAEF57703FF9C8FBC"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -347,23 +419,23 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:IP Viewer"
-        "ProductCode" = "8:{F866FDC8-B191-44F7-82B2-C56D365652E5}"
-        "PackageCode" = "8:{F0CAD045-774D-4899-B0E1-8D04C2EA69F4}"
+        "ProductCode" = "8:{38CD5F59-A15F-45BD-931B-EB38EFB11B47}"
+        "PackageCode" = "8:{F0A0D2C1-961D-4071-B4A9-FD7456BCDE00}"
         "UpgradeCode" = "8:{EE1F1319-04EE-4254-AEE1-4891FFC26803}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:3.2"
+        "ProductVersion" = "8:3.1"
         "Manufacturer" = "8:Jutin LeCheminant"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:IP Viewer 3.2"
+        "Title" = "8:IP Viewer 3.1"
         "Subject" = "8:"
         "ARPCONTACT" = "8:Jutin LeCheminant"
         "Keywords" = "8:"
-        "ARPCOMMENTS" = "8:IP Viewer 3.2"
+        "ARPCOMMENTS" = "8:IP Viewer 3.1"
         "ARPURLINFOABOUT" = "8:http://justins-fat-tire.blogspot.com"
         "ARPPRODUCTICON" = "8:_CB0555582A4745E6BBEFDA8569821C16"
         "ARPIconIndex" = "3:0"
@@ -864,6 +936,34 @@
         }
         "MergeModule"
         {
+            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_0082D26CC38B4C2B8A661C5113B56DA5"
+            {
+            "UseDynamicProperties" = "11:TRUE"
+            "IsDependency" = "11:TRUE"
+            "SourcePath" = "8:Microsoft_VC100_MFC_x86.msm"
+                "Properties"
+                {
+                }
+            "LanguageId" = "3:0"
+            "Exclude" = "11:FALSE"
+            "Folder" = "8:"
+            "Feature" = "8:"
+            "IsolateTo" = "8:"
+            }
+            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_F4A8EEB82E334D9EAD34BC2007B931AF"
+            {
+            "UseDynamicProperties" = "11:TRUE"
+            "IsDependency" = "11:TRUE"
+            "SourcePath" = "8:Microsoft_VC100_CRT_x86.msm"
+                "Properties"
+                {
+                }
+            "LanguageId" = "3:0"
+            "Exclude" = "11:FALSE"
+            "Folder" = "8:"
+            "Feature" = "8:"
+            "IsolateTo" = "8:"
+            }
         }
         "ProjectOutput"
         {
@@ -979,9 +1079,9 @@
                 {
                 }
             }
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_746C337BA5604909AB9675DD909FD398"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_70D584C75B704AFD804955505E12BDB2"
             {
-            "SourcePath" = "8:..\\trunk\\Win32Release\\IPViewerCHS.dll"
+            "SourcePath" = "8:..\\trunk\\Win32Release\\IPViewerRUS.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_E9CFD597F26343F4A582B847EB86B49B"
@@ -1001,7 +1101,7 @@
             "ProjectOutputGroupRegister" = "3:1"
             "OutputConfiguration" = "8:Release|Win32"
             "OutputGroupCanonicalName" = "8:Built"
-            "OutputProjectGuid" = "8:{9A558ABA-0877-4EDD-907E-1FA2ECE3C693}"
+            "OutputProjectGuid" = "8:{CA30822C-6891-4DC3-A422-C17E0DA4EE17}"
             "ShowKeyOutput" = "11:TRUE"
                 "ExcludeFilters"
                 {
