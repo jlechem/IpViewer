@@ -20,6 +20,7 @@ Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "IpViewerSetup", "..\build\I
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AA74D5B0-3181-40B8-841E-52B6FDAB5CE7}"
 	ProjectSection(SolutionItems) = preProject
+		GPL v3.txt = GPL v3.txt
 		readme.txt = readme.txt
 	EndProjectSection
 EndProject
@@ -31,7 +32,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Localization", "Localizatio
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IPViewerJPN", "Localiztion\IPViewerJPN\IPViewerJPN.vcxproj", "{576BB453-2FB7-41F2-A79A-090A35423F3F}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IPViewerFRC", "Localiztion\IPViewerFRC\IPViewerFRC.vcxproj", "{C6F76172-4FFB-4905-A8C2-7BACD38F1FE5}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IPViewerFRA", "Localiztion\IPViewerFRC\IPViewerFRC.vcxproj", "{C6F76172-4FFB-4905-A8C2-7BACD38F1FE5}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IPViewerCHS", "Localiztion\IPViewerCHS\IPViewerCHS.vcxproj", "{9A558ABA-0877-4EDD-907E-1FA2ECE3C693}"
 EndProject
