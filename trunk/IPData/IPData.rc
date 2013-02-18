@@ -29,9 +29,16 @@ LANGUAGE LANG_JAPANESE, SUBLANG_NEUTRAL
 
 STRINGTABLE
 BEGIN
-    IDS_Unavailable         "Unavailable"
-    IDS_Check               "Unable to access IP check site"
+    IDS_Unavailable         "ЧШЧpВ≈ВЂВ»ВҐ"
+    IDS_Check               "IPГ`ГFГbГNГTГCГgВ…ГAГNГZГXВЈВйВ±В∆В™В≈ВЂВ№ВєВс"
     IDS_Localhost           "Localhost"
+    IDS_Up                  "ГAГbГv"
+    IDS_Down                "Г_ГEГУ"
+    IDS_Unknown             "ХsЦЊ"
+    IDS_Testing             "ГeГXГg"
+    IDS_Dormant             "ЛxЦ∞"
+    IDS_StatusNotPresent    "СґНЁВµВ»ВҐПуС‘"
+    IDS_LowerLayerDown      "Г_ГEГУЙЇИ ГМГCГД"
 END
 
 #endif    // Japanese resources
@@ -52,9 +59,16 @@ LANGUAGE LANG_CHINESE, SUBLANG_NEUTRAL
 
 STRINGTABLE
 BEGIN
-    IDS_Unavailable         "Unavailable"
-    IDS_Check               "Unable to access IP check site"
-    IDS_Localhost           "Localhost"
+    IDS_Unavailable         "≤їњ…”√"
+    IDS_Check               "IPЉм≤йЌш’ЊќёЈ®Ј√ќ "
+    IDS_Localhost           "±ЊµЎ÷чїъ"
+    IDS_Up                  "…ѕ"
+    IDS_Down                "ѕ¬"
+    IDS_Unknown             "ќі÷™"
+    IDS_Testing             "≤в ‘"
+    IDS_Dormant             "‘Ёќё"
+    IDS_StatusNotPresent    "„іћђ≤їіж‘Џ"
+    IDS_LowerLayerDown      "µЌ≤гѕ¬"
 END
 
 #endif    // Chinese (Simplified) resources
@@ -75,9 +89,16 @@ LANGUAGE LANG_RUSSIAN, SUBLANG_NEUTRAL
 
 STRINGTABLE
 BEGIN
-    IDS_Unavailable         "Unavailable"
-    IDS_Check               "Unable to access IP check site"
+    IDS_Unavailable         "Ќедоступные"
+    IDS_Check               "Ќевозможно получить доступ к IP-сайте проверка"
     IDS_Localhost           "Localhost"
+    IDS_Up                  "вверх"
+    IDS_Down                "вниз"
+    IDS_Unknown             "неизвестный"
+    IDS_Testing             "“естирование"
+    IDS_Dormant             "бездействующий"
+    IDS_StatusNotPresent    "—татус Not Present"
+    IDS_LowerLayerDown      "Ќижний слой вниз"
 END
 
 #endif    // Russian resources
@@ -101,6 +122,13 @@ BEGIN
     IDS_Unavailable         "Indisponible"
     IDS_Check               "Impossible d'accйder au site de contrфle IP"
     IDS_Localhost           "Localhost"
+    IDS_Up                  "jusqu'а"
+    IDS_Down                "vers le bas"
+    IDS_Unknown             "inconnu"
+    IDS_Testing             "test"
+    IDS_Dormant             "dormant"
+    IDS_StatusNotPresent    "Statut Absent"
+    IDS_LowerLayerDown      "Descendre le calque vers le bas"
 END
 
 #endif    // French resources
@@ -202,6 +230,13 @@ BEGIN
     IDS_Unavailable         "Unavailable"
     IDS_Check               "Unable to access IP check site"
     IDS_Localhost           "Localhost"
+    IDS_Up                  "Up"
+    IDS_Down                "Down"
+    IDS_Unknown             "Uknown"
+    IDS_Testing             "Testing"
+    IDS_Dormant             "Dormant"
+    IDS_StatusNotPresent    "Status Not Present"
+    IDS_LowerLayerDown      "Lower Layer Down"
 END
 
 #endif    // English (United States) resources
