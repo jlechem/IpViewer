@@ -297,10 +297,6 @@ STRINGTABLE
 BEGIN
     IDS_ONTOP_KEY           "ON_TOP"
     IDS_REG_ERROR           "An error occured getting the settings values from the registry."
-    IDS_DEFAULT_IP          "127.0.0.1"
-    IDS_DEFAULT_HOSTNAME    "localhost"
-    IDS_DEFAULT_MASK        "255.255.255.0"
-    IDS_DEFAULT_MAC         "00-00-00-00-00"
     IDS_START_MIN_KEY       "START_MINIMIZED"
     IDS_CHECK_EXTERNAL_KEY  "CHECK_EXTERNAL_IP"
     IDS_ENABLE_LOGGING      "ENABLE_LOGGING"
