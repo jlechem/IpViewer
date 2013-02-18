@@ -6,6 +6,14 @@
 #define IDS_Unavailable                 2000
 #define IDS_Check                       2001
 #define IDS_Localhost                   2002
+#define IDS_Up                          2003
+#define IDS_Down                        2004
+#define IDS_Unknown                     2005
+#define IDS_Testing                     2006
+#define IDS_Dormant                     2007
+#define IDS_StatusNotPresent            2008
+#define IDS_STRING2009                  2009
+#define IDS_LowerLayerDown              2009
 
 // Next default values for new objects
 // 

@@ -590,40 +590,42 @@ CString CIPData::ConvertByteToString( BYTE *byIn, UINT nCount )
 
 CString CIPData::ConvertToStatus( IF_OPER_STATUS status )
 {
-	CString returnStatus( TEXT("Unknown") );
+	AFX_MANAGE_STATE( AfxGetStaticModuleState( ) ); 
 
+	CString returnStatus;
+	
 	switch( status )
 	{
 		case IfOperStatusUp:
-			returnStatus = TEXT("Up");
+			returnStatus.LoadString( IDS_Up );
 			break;
 
 		case IfOperStatusDown:
-			returnStatus = TEXT("Down");
+			returnStatus.LoadString( IDS_Down ); 
 			break;
 
 		case IfOperStatusTesting:
-			returnStatus = TEXT("Testing");
+			returnStatus.LoadString( IDS_Testing );
 			break;
 
 		case IfOperStatusUnknown:
-			returnStatus = TEXT("Uknown");
+			returnStatus.LoadString( IDS_Unknown );
 			break;
 
 		case IfOperStatusDormant:
-			returnStatus = TEXT("Dormant");
+			returnStatus.LoadString( IDS_Dormant );
 			break;
 
 		case IfOperStatusNotPresent:
-			returnStatus = TEXT("Status Not Present");
+			returnStatus.LoadString( IDS_StatusNotPresent );
 			break;
 
 		case IfOperStatusLowerLayerDown:
-			returnStatus = TEXT("Lower Layer Down");
+			returnStatus.LoadString( IDS_LowerLayerDown );
 			break;
 
 		default:
-			returnStatus = TEXT("Unknown Status");
+			returnStatus.LoadString( IDS_Unknown );
 			break;
 	}
 
