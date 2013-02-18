@@ -141,6 +141,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_D629F9673CF845F89A1A8DA63E25E7A0"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_DC5C12FAB8694601BEFCA808CA59711F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -396,6 +402,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D629F9673CF845F89A1A8DA63E25E7A0"
+            {
+            "SourcePath" = "8:..\\..\\trunk\\GPL v3.txt"
+            "TargetName" = "8:GPL v3.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_1029B68BF8EE4A83A06A7D8256D5AC8B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FFC8B4D8C3257572DFF0906E10A78357"
             {
             "SourcePath" = "8:IPHLPAPI.DLL"
@@ -484,7 +510,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:IP Viewer"
         "ProductCode" = "8:{98ECAB30-F342-4807-9351-3EC31A72B52D}"
-        "PackageCode" = "8:{3B1BFCFA-249D-44FF-A9CA-DBFB4E1A233E}"
+        "PackageCode" = "8:{C6A893AB-9658-4655-AF69-2C48432960B3}"
         "UpgradeCode" = "8:{C918B47F-EC49-41C9-B643-7870E9DAB4FC}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
