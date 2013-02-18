@@ -283,6 +283,7 @@ IDR_TOOLBAR1            BITMAP                  "res\\toolbar1.bmp"
 STRINGTABLE
 BEGIN
     IDS_ABOUTBOX            "&About IPViewer..."
+    IDS_NO_EXTERNAL         "Not set to check for external ip"
     IDP_SOCKETS_INIT_FAILED "Windows sockets initialization failed."
     IDS_REG_PATH            "Software\\JRL Software\\IP Viewer"
     IDS_TICK_KEY            "TICK"
