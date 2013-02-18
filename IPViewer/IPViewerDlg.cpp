@@ -190,6 +190,11 @@ BOOL CIPViewerDlg::OnInitDialog()
 
 }
 
+/// <summary>
+/// Called when [sys command].
+/// </summary>
+/// <param name="nID">The n ID.</param>
+/// <param name="lParam">The l param.</param>
 void CIPViewerDlg::OnSysCommand(UINT nID, LPARAM lParam)
 {
 	if ((nID & 0xFFF0) == IDM_ABOUTBOX)
@@ -239,7 +244,6 @@ HCURSOR CIPViewerDlg::OnQueryDragIcon()
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
-
 void CIPViewerDlg::OnHelpAbout()
 {
 	// show the about dlg box
@@ -288,8 +292,6 @@ void CIPViewerDlg::OnTimer( UINT_PTR TimerVal )
 			break;
 
 	}
-
-	
 }
 
 void CIPViewerDlg::RefreshIpInfo()
@@ -304,9 +306,15 @@ void CIPViewerDlg::RefreshIpInfo()
 	this->LoadAddresses();
 
 	this->m_strHost = m_pIpData->GetHostName();
-	this->m_strExternalIP = m_pSettings->GetCheckExternalIp() ?
-		m_pIpData->GetExternalIpAddress():
-		TEXT("Not set to check for external ip");
+	
+	if( m_pSettings->GetCheckExternalIp() )
+	{
+		this->m_strExternalIP = m_pIpData->GetExternalIpAddress();
+	}
+	else
+	{
+		this->m_strExternalIP.LoadString( IDS_NO_EXTERNAL );
+	}
 
 	// refresh the dialog controls
 	UpdateData( FALSE );
@@ -497,7 +505,6 @@ void CIPViewerDlg::OnPopupCopyhostname()
 
 void CIPViewerDlg::OnPopupCopymac()
 {
-	// TODO: insert the code for the MAC address here
 	CClipboard::SetData( m_strMAC, m_hWnd );
 }
 
@@ -575,27 +582,29 @@ void CIPViewerDlg::LogData()
 		// we write to the text file
 		CString line;
 
-		/*if( m_pSettings->GetLogInternalIp() )
+		if( m_pSettings->GetLogInternalIp() )
 		{
-			line.Format( TEXT("Internal IP Address: %s"), m_pIpData->GetIpAddress() );
-		}*/
+			CString temp;
+			this->m_cboAddresses.GetWindowText( temp );
+			line.Format( TEXT("Internal IP Address: %s"), temp );
+		}
 				
 		if( m_pSettings->GetLogExternalIp() )
 		{
 			line += TEXT(", External IP Address: ");
-			line += m_pIpData->GetExternalIpAddress();
+			line += this->m_strExternalIP;
 		}
 
-		/*if( m_pSettings->GetLogMacAddress() )
+		if( m_pSettings->GetLogMacAddress() )
 		{
 			line += TEXT(", MAC Address: ");
-			line += m_pIpData->GetMacAddress();
-		}*/
+			line += this->m_strMAC;
+		}
 
 		if( m_pSettings->GetLogHostName() )
 		{
 			line += TEXT(", Host Name: ");
-			line += m_pIpData->GetHostName();
+			line += this->m_strHost;
 		}
 
 		CLogger::Log( line, m_pSettings->GetLogFileName() );
