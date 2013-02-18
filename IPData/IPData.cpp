@@ -93,7 +93,7 @@ BOOL CIPData::InitInstance()
 // load the external ip address
 void CIPData::LoadExternalIpAddress()
 {
-	m_strExternalIp = TEXT( "Unavailable" );
+	m_strExternalIp.LoadString( IDS_Unavailable );
 
 	try
 	{	
@@ -128,7 +128,7 @@ void CIPData::LoadExternalIpAddress()
 #endif
 				if( UINT index = m_strExternalIp.Find(TEXT("</html>") ) == -1 )
 				{
-					m_strExternalIp = TEXT( "Unable to access IP check site" );
+					m_strExternalIp.LoadString( IDS_Check );
 				}
 				else
 				{
@@ -153,7 +153,7 @@ void CIPData::LoadExternalIpAddress()
 		}
 		else
 		{
-			m_strExternalIp = TEXT( "Unable to access IP check site" );
+			m_strExternalIp.LoadString( IDS_Check );
 		}
 	}
 	catch( CException* ex )
@@ -187,7 +187,7 @@ void CIPData::LoadHostName()
 	{
 		CLogger::LogError(ex);
 		delete ex;
-		m_strHostName = TEXT("Localhost");
+		m_strHostName.LoadString( IDS_Localhost );
 	}
 }
 
