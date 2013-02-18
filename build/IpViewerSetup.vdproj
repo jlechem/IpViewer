@@ -81,6 +81,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_1D4402D5707F46F99DC5E81AAA96EBD8"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_1FD523E9B2804DB886AF421B4AE49DAF"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -330,6 +336,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1D4402D5707F46F99DC5E81AAA96EBD8"
+            {
+            "SourcePath" = "8:..\\trunk\\Win32Release\\IPViewer.exe"
+            "TargetName" = "8:IPViewer.exe"
+            "Tag" = "8:"
+            "Folder" = "8:_E9CFD597F26343F4A582B847EB86B49B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A26E303D6B8946DA9B6DAB3FC7AB847A"
             {
             "SourcePath" = "8:..\\trunk\\readme.txt"
@@ -458,7 +484,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:IP Viewer"
         "ProductCode" = "8:{38CD5F59-A15F-45BD-931B-EB38EFB11B47}"
-        "PackageCode" = "8:{95D03C06-8A11-43A5-BC9A-B1C8320F20B6}"
+        "PackageCode" = "8:{14ADE3A4-B930-47BF-929F-20E4C42643F7}"
         "UpgradeCode" = "8:{EE1F1319-04EE-4254-AEE1-4891FFC26803}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -578,6 +604,20 @@
         }
         "Shortcut"
         {
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_6542353E0D4C4489B9C52CE6BB6E9A59"
+            {
+            "Name" = "8:IP Viewer 3.1"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_1D4402D5707F46F99DC5E81AAA96EBD8"
+            "Folder" = "8:_7729C43BCD3548D982A99DF37E9074EA"
+            "WorkingFolder" = "8:_E9CFD597F26343F4A582B847EB86B49B"
+            "Icon" = "8:_CB0555582A4745E6BBEFDA8569821C16"
+            "Feature" = "8:"
+            }
         }
         "UserInterface"
         {
