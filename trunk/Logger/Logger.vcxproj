@@ -182,7 +182,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <None Include="Logger.def" />
-    <None Include="ReadMe.txt" />
     <None Include="res\Logger.rc2" />
   </ItemGroup>
   <ItemGroup>
