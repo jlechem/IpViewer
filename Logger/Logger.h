@@ -8,12 +8,7 @@
 #include <fstream>
 
 #include <log4cpp/Category.hh>
-#include <log4cpp/Appender.hh>
-#include <log4cpp/OstreamAppender.hh>
-#include <log4cpp/Layout.hh>
-#include <log4cpp/BasicLayout.hh>
-#include <log4cpp/Priority.hh>
-#include <log4cpp/NDC.hh>
+#include <log4cpp/PropertyConfigurator.hh>
 
 #ifndef __AFXWIN_H__
 	#error "include 'stdafx.h' before including this file for PCH"
@@ -31,15 +26,11 @@ public:
 	static void LogError( CException* );
 	static void LogError( CString );
 	static void Log( CString );
-	static void Log( CString, CString );
+	static void Init();
+	static void Log( BOOL isError, CString message );
 
 private:
 	CLogger(void);
 	~CLogger(void);
-
-	static CString MESSAGE_LOG_FILE;
-	static CString ERROR_LOG_FILE;
-
-	static void Log( bool isError, CString message, CString file = NULL );
-
+ 
 };

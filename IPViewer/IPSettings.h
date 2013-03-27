@@ -45,8 +45,6 @@ public:
 	
 	INT GetAdapterIndex() { return _selectedAdapterIndex; }
 	INT GetAddressIndex() { return _selectedAddressIndex; }
-
-	CString GetLogFileName() { return _logFileName; }
 	
 	// set methods for internal memebers
 	void SetTick( INT value ) { _tick = value; }
@@ -58,8 +56,6 @@ public:
 	void SetOnTOp( BOOL value ) { _onTop = value; }
 	void SetStartInTray( BOOL value ) { _startToTray = value; }
 	void SetCheckExternalIp( BOOL value ) { _checkExternalIp = value; }
-	
-	void SetLogFileName( CString value ) { _logFileName = value; }
 
 	void SetLoggingEnabled( BOOL value ) { _loggingEnabled = value; }
 	void SetLogInternalIp( BOOL value ) { _logInternalIp = value; }
@@ -88,8 +84,6 @@ private:
 	BOOL _logExternalIp;
 	BOOL _logMacAddress;
 	BOOL _logHostName;
-
-	CString _logFileName;
 	
 	CSettingsStore* m_pRegistry;
 

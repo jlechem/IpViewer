@@ -67,6 +67,5 @@ private:
 	CButton m_CheckMacAddress;
 	
 	CEdit m_LogInterval;
-	CEdit m_LogFileName;
 	
 };

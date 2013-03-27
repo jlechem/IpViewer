@@ -1,9 +1,6 @@
 #include "StdAfx.h"
 #include "Logger.h"
 
-CString CLogger::ERROR_LOG_FILE = TEXT("error_log.txt");
-CString CLogger::MESSAGE_LOG_FILE = TEXT("message_log.txt");
-
 CLogger::CLogger(void)
 {
 }
@@ -19,72 +16,64 @@ void CLogger::LogError( CString message, CException* exception )
     CString strFormatted;
 
 	exception->GetErrorMessage( szCause, 255 );
-	strFormatted = TEXT("The following error occured - ");
-	strFormatted += szCause;
-	strFormatted += TEXT("\n, Message - ");
+	strFormatted += TEXT("Message - ");
 	strFormatted += message;
-
-	CLogger::Log( true, strFormatted );	
+	strFormatted = TEXT("\nException - ");
+	strFormatted += szCause;
+	
+	CLogger::Log( true, strFormatted );
 }
 
-void CLogger::LogError(CException* exception)
+void CLogger::LogError( CException* exception )
 {
 	TCHAR   szCause[255];
     CString strFormatted;
 
 	exception->GetErrorMessage( szCause, 255 );
-	strFormatted = TEXT("The following error occured - ");
 	strFormatted += szCause;
 
-	CLogger::Log( true, strFormatted);
-
+	CLogger::Log( TRUE, strFormatted );
 }
 
-
-void CLogger::LogError(CString error)
+void CLogger::LogError( CString error )
 {
-	CLogger::Log(true,error);
+	CLogger::Log( TRUE, error );
 }
 
-
-void CLogger::Log(CString message)
+void CLogger::Log( CString message )
 {
-	CLogger::Log( false, message);
+	CLogger::Log( FALSE, message );
 }
 
-void CLogger::Log( CString message, CString file )
-{
-	CLogger::Log( false, message, file );
-}
+void::CLogger::Log( BOOL isError, CString message )
+{	
+	// Convert a TCHAR string to a LPCSTR
+	CT2CA pszConvertedAnsiString(message);
 
-void::CLogger::Log( bool isError, CString message, CString file )
-{
-	// our output stream
-	 wofstream fout;
+	// construct a std::string using the LPCSTR input
+	std::string strStd(pszConvertedAnsiString);
 
 	if( isError )
 	{
-		// open file for appending
-		fout.open( ERROR_LOG_FILE, ios::app );
+		log4cpp::Category& root = log4cpp::Category::getRoot();
+		root.error( strStd );
 	}
 	else
 	{
-		// open the user specified file or the default file for appending
-		if( file &&
-			file.GetLength() > 0 )
-		{
-			fout.open( file, ios::app );
-		}
-		else
-		{
-			fout.open( MESSAGE_LOG_FILE, ios::app );
-		}
+		log4cpp::Category& categoryData = log4cpp::Category::getInstance("AppLogging");
+		categoryData.info( strStd );
 	}
+}
 
-	CTime theTime = CTime::GetCurrentTime();
-	CString s;
-	s += theTime.Format( "%m/%d/%Y %X - " );
-
-	fout << (LPCTSTR)s << (LPCTSTR)message << endl;
-	fout.flush();
+void CLogger::Init( void )
+{
+	try
+	{
+		std::string initFileName = "c:\\log4cpp.properties";
+		log4cpp::PropertyConfigurator::configure(initFileName);
+	}
+	catch( log4cpp::ConfigureFailure e )
+	{
+		cout << e.what() << std::endl;
+	}
 }
