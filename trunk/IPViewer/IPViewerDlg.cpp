@@ -77,6 +77,7 @@ CIPViewerDlg::CIPViewerDlg(CWnd* pParent /*=NULL*/)
 	, m_strStatus(TEXT(""))
 	, m_strDescription(TEXT(""))
 {
+	CLogger::Init();
 }
 
 CIPViewerDlg::~CIPViewerDlg()
@@ -315,6 +316,9 @@ void CIPViewerDlg::RefreshIpInfo()
 	{
 		this->m_strExternalIP.LoadString( IDS_NO_EXTERNAL );
 	}
+
+	// force a log if they do a refresh
+	this->LogData();
 
 	// refresh the dialog controls
 	UpdateData( FALSE );
@@ -607,7 +611,7 @@ void CIPViewerDlg::LogData()
 			line += this->m_strHost;
 		}
 
-		CLogger::Log( line, m_pSettings->GetLogFileName() );
+		CLogger::Log( line );
 
 	}
 }

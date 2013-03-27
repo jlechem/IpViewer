@@ -70,7 +70,6 @@ void CIPViewerSettings::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, IDC_CHECK6, m_CheckHostName);
 	DDX_Control(pDX, IDC_CHECK7, m_CheckMacAddress);
 	DDX_Control(pDX, IDC_EDIT_LOGINTERVAL, m_LogInterval);
-	DDX_Control(pDX, IDC_EDIT_FILENAME, m_LogFileName);
 }
 
 
@@ -98,7 +97,6 @@ BOOL CIPViewerSettings::OnInitDialog()
 		m_CheckHostName.EnableWindow( TRUE );
 		m_CheckMacAddress.EnableWindow( TRUE );
 		m_LogInterval.EnableWindow( TRUE );
-		m_LogFileName.EnableWindow( TRUE );
 	}
 	else
 	{
@@ -107,7 +105,6 @@ BOOL CIPViewerSettings::OnInitDialog()
 		m_CheckHostName.EnableWindow( FALSE );
 		m_CheckMacAddress.EnableWindow( FALSE );
 		m_LogInterval.EnableWindow( FALSE );
-		m_LogFileName.EnableWindow( FALSE );
 	}
 
 	// get if we're going to check the individual parts
@@ -119,7 +116,6 @@ BOOL CIPViewerSettings::OnInitDialog()
 	CString text;
 	text.Format( TEXT("%d"),m_pSettings->GetLoggingInterval() );
 	m_LogInterval.SetWindowText( text );
-	m_LogFileName.SetWindowText( m_pSettings->GetLogFileName() );
 	
 	CButton* b = (CButton*)GetDlgItem(IDC_CHECK_ENABLE_LOGGING);
 	b->SetCheck( m_bEnableLogging );
@@ -166,9 +162,6 @@ void CIPViewerSettings::OnBnClickedButtonSave()
 
 	m_LogInterval.GetWindowTextW( temp );
 	m_pSettings->SetLoggingInterval( _wtoi( temp ) );
-	
-	m_LogFileName.GetWindowTextW( temp );
-	m_pSettings->SetLogFileName( temp );
 
 	// save our changes to the registry
 	CString result = m_pSettings->Save() ? 
@@ -206,7 +199,6 @@ void CIPViewerSettings::OnBnClickedCheckEnableLogging()
 		m_CheckHostName.EnableWindow( TRUE );
 		m_CheckMacAddress.EnableWindow( TRUE );
 		m_LogInterval.EnableWindow( TRUE );
-		m_LogFileName.EnableWindow( TRUE );
 	}
 	else
 	{
@@ -215,6 +207,5 @@ void CIPViewerSettings::OnBnClickedCheckEnableLogging()
 		m_CheckHostName.EnableWindow( FALSE );
 		m_CheckMacAddress.EnableWindow( FALSE );
 		m_LogInterval.EnableWindow( FALSE );
-		m_LogFileName.EnableWindow( FALSE );
 	}
 }

@@ -415,7 +415,7 @@ void CIPData::LoadLowerThanXp()
 
 				if ( result != NO_ERROR )
 				{
-					CLogger::Log( TEXT("Cound not get the adapter information!  IPData.cpp line 278. ") );
+					CLogger::LogError( TEXT("Cound not get the adapter information!  IPData.cpp line 418. ") );
 				}
 				else
 				{
