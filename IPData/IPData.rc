@@ -106,6 +106,36 @@ END
 
 
 /////////////////////////////////////////////////////////////////////////////
+// German resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)
+LANGUAGE LANG_GERMAN, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_Unavailable         "nicht verfügbar"
+    IDS_Check               "Kann IP-Check Website zugreifen"
+    IDS_Localhost           "localhost"
+    IDS_Up                  "nach oben"
+    IDS_Down                "nach unten"
+    IDS_Unknown             "unbekannt"
+    IDS_Testing             "testing"
+    IDS_Dormant             "ruhend"
+    IDS_StatusNotPresent    "status not present"
+    IDS_LowerLayerDown      "lower layer unten"
+END
+
+#endif    // German resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
 // French resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FRA)
