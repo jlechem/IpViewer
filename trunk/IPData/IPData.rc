@@ -187,8 +187,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 3,0,1,0
- PRODUCTVERSION 3,0,1,0
+ FILEVERSION 3,2,0,0
+ PRODUCTVERSION 3,2,0,0
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -203,14 +203,14 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "JRL Software"
+            VALUE "CompanyName", "Justin LeCheminant"
             VALUE "FileDescription", "DLL for getting IP Information"
-            VALUE "FileVersion", "3.0.1.0"
+            VALUE "FileVersion", "3.2.0.0"
             VALUE "InternalName", "IPData.dll"
-            VALUE "LegalCopyright", "2012 (c) JRL Software.  All rights reserved."
+            VALUE "LegalCopyright", "2012 (c)  Justin LeCheminant  All rights reserved."
             VALUE "OriginalFilename", "IPData.dll"
             VALUE "ProductName", "IPData.dll"
-            VALUE "ProductVersion", "3.0.1.0"
+            VALUE "ProductVersion", "3.2.0.0"
         END
     END
     BLOCK "VarFileInfo"
