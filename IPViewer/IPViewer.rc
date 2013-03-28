@@ -81,14 +81,14 @@ CAPTION "About IP Viewer"
 FONT 8, "MS Shell Dlg", 0, 0, 0x1
 BEGIN
     ICON            IDI_ICON_IPVIEWER,IDC_STATIC,14,14,20,20
-    LTEXT           "IP Viewer, Version 3.1",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "IP Viewer, Version 3.2",IDC_STATIC,42,14,114,8,SS_NOPREFIX
     DEFPUSHBUTTON   "OK",IDOK,113,41,50,14,WS_GROUP
 END
 
 IDD_IPVIEWER_DIALOG DIALOGEX 0, 0, 305, 156
 STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
 EXSTYLE WS_EX_APPWINDOW
-CAPTION "IP Viewer 3.1"
+CAPTION "IP Viewer"
 MENU IDR_MENU1
 FONT 8, "MS Shell Dlg", 0, 0, 0x1
 BEGIN
@@ -114,7 +114,7 @@ END
 
 IDD_DIALOG_SETTINGS DIALOGEX 0, 0, 298, 185
 STYLE DS_SETFONT | DS_3DLOOK | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "IP Viewer 3.1 Settings"
+CAPTION "IP Viewer Settings"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     CONTROL         "Minimize To Tray",IDC_CHECK_MINTRAY,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,18,18,69,10
@@ -152,8 +152,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 3,1,0,0
- PRODUCTVERSION 3,1,0,0
+ FILEVERSION 3,2,0,0
+ PRODUCTVERSION 3,2,0,0
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -170,12 +170,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "Justin LeCheminant"
             VALUE "FileDescription", "Executable for getting IP Information"
-            VALUE "FileVersion", "3.1.0.0"
+            VALUE "FileVersion", "3.2.0.0"
             VALUE "InternalName", "IPViewer.exe"
             VALUE "LegalCopyright", "2012 (c) Justin LeCheminant.  All rights reserved."
             VALUE "OriginalFilename", "IPViewer.exe"
             VALUE "ProductName", "IP Viewer"
-            VALUE "ProductVersion", "3.1.0.0"
+            VALUE "ProductVersion", "3.2.0.0"
         END
     END
     BLOCK "VarFileInfo"
