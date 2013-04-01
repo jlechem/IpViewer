@@ -7,6 +7,10 @@ Current Version is 3.2
 
 This is a minor point upgrade.  Localization for German was added to the application and the logging was switched from basic file writing to use log4cpp.  This added rolling log file support and made the logging much more reliable and robust.
 
+To achieve this the output filename was removed from the settings and placed into the log4cpp config file called log4cpp.properties.  There are two filenames one for error logging and one for ip information logging.  Either one can be modified from the default location.  If desired other settings can be changed but by default rolling flat file logging is performed.
+
+
+http://log4cpp.sourceforge.net/
 
 Version 3.1
 
