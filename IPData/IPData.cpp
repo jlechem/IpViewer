@@ -233,7 +233,7 @@ void CIPData::LoadXpOrHigher()
 
 				if ( dwRetVal != NO_ERROR )
 				{
-					CLogger::Log( TEXT("Cound not get the adapter information!  IPData.cpp line 242. ") );
+					CLogger::LogError( TEXT("Cound not get the adapter information!  IPData.cpp line 232. ") );
 				}
 				else
 				{
@@ -415,7 +415,7 @@ void CIPData::LoadLowerThanXp()
 
 				if ( result != NO_ERROR )
 				{
-					CLogger::LogError( TEXT("Cound not get the adapter information!  IPData.cpp line 418. ") );
+					CLogger::LogError( TEXT("Cound not get the adapter information!  IPData.cpp line 414. ") );
 				}
 				else
 				{
@@ -514,7 +514,8 @@ void CIPData::LoadLowerThanXp()
 						ipData->SetIpV4Enabled( TRUE );
 						ipData->SetIpV6Enabled( FALSE );
 
-						switch( pCurrentAdapter->Type ) {
+						switch( pCurrentAdapter->Type ) 
+						{
 							case MIB_IF_TYPE_OTHER:
 								ipData->SetAdapterType( TEXT("Other") );
 								break;
@@ -631,4 +632,5 @@ CString CIPData::ConvertToStatus( IF_OPER_STATUS status )
 
 
 	return returnStatus;
+
 }
