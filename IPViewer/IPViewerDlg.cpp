@@ -77,7 +77,6 @@ CIPViewerDlg::CIPViewerDlg(CWnd* pParent /*=NULL*/)
 	, m_strStatus(TEXT(""))
 	, m_strDescription(TEXT(""))
 {
-	CLogger::Init();
 }
 
 CIPViewerDlg::~CIPViewerDlg()

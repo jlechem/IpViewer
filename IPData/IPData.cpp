@@ -22,6 +22,7 @@
 
 #include "stdafx.h"
 #include "IPData.h"
+#include <VersionHelpers.h>
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -60,17 +61,7 @@ CIPData::CIPData()
 	// Place all significant initialization in InitInstance
 
 	// determine if we're running windowsXP or higher
-	OSVERSIONINFO osvi;
-	BOOL bIsWindowsXPorLater = FALSE;
-
-	ZeroMemory(&osvi, sizeof(OSVERSIONINFO));
-	osvi.dwOSVersionInfoSize = sizeof(OSVERSIONINFO);
-
-	GetVersionEx(&osvi);
-
-	m_bIsXPorHigher = 
-		( (osvi.dwMajorVersion > 5) ||
-		( (osvi.dwMajorVersion == 5) && (osvi.dwMinorVersion >= 1) ));
+	m_bIsXPorHigher = IsWindowsXPOrGreater();
 
 }
 

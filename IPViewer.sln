@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IPViewer", "IPViewer\IPViewer.vcxproj", "{2D455FB7-DAEC-498D-BCA0-C07282AFFAB7}"
 	ProjectSection(ProjectDependencies) = postProject
 		{CA30822C-6891-4DC3-A422-C17E0DA4EE17} = {CA30822C-6891-4DC3-A422-C17E0DA4EE17}
@@ -40,15 +42,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IPViewerRUS", "Localiztion\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{92B5C4D4-D22A-4BC6-A2E5-93DA8B99007D}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "log4cpp", "log4cpp\msvc10\log4cpp\log4cpp.vcxproj", "{8C796FDD-5BB9-41D5-8471-DDC897C8C486}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IPViewerDEU", "Localiztion\IPViewerDEU\IPViewerDEU.vcxproj", "{F653D36C-86A0-4DB8-AA15-47127B21E093}"
 EndProject
 Global
-	GlobalSection(SubversionScc) = preSolution
-		Svn-Managed = True
-		Manager = AnkhSVN - Subversion Support for Visual Studio
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
 		Debug|x64 = Debug|x64
@@ -120,14 +116,6 @@ Global
 		{CA30822C-6891-4DC3-A422-C17E0DA4EE17}.Release|Win32.Build.0 = Release|Win32
 		{CA30822C-6891-4DC3-A422-C17E0DA4EE17}.Release|x64.ActiveCfg = Release|x64
 		{CA30822C-6891-4DC3-A422-C17E0DA4EE17}.Release|x64.Build.0 = Release|x64
-		{8C796FDD-5BB9-41D5-8471-DDC897C8C486}.Debug|Win32.ActiveCfg = Debug|Win32
-		{8C796FDD-5BB9-41D5-8471-DDC897C8C486}.Debug|Win32.Build.0 = Debug|Win32
-		{8C796FDD-5BB9-41D5-8471-DDC897C8C486}.Debug|x64.ActiveCfg = Debug|x64
-		{8C796FDD-5BB9-41D5-8471-DDC897C8C486}.Debug|x64.Build.0 = Debug|x64
-		{8C796FDD-5BB9-41D5-8471-DDC897C8C486}.Release|Win32.ActiveCfg = Release|Win32
-		{8C796FDD-5BB9-41D5-8471-DDC897C8C486}.Release|Win32.Build.0 = Release|Win32
-		{8C796FDD-5BB9-41D5-8471-DDC897C8C486}.Release|x64.ActiveCfg = Release|x64
-		{8C796FDD-5BB9-41D5-8471-DDC897C8C486}.Release|x64.Build.0 = Release|x64
 		{F653D36C-86A0-4DB8-AA15-47127B21E093}.Debug|Win32.ActiveCfg = Debug|Win32
 		{F653D36C-86A0-4DB8-AA15-47127B21E093}.Debug|Win32.Build.0 = Debug|Win32
 		{F653D36C-86A0-4DB8-AA15-47127B21E093}.Debug|x64.ActiveCfg = Debug|x64
@@ -141,12 +129,16 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{62057357-86DA-44C6-B69B-B4904E04CC37} = {92B5C4D4-D22A-4BC6-A2E5-93DA8B99007D}
 		{0A896981-227B-4B25-82CB-D18E15F841C9} = {92B5C4D4-D22A-4BC6-A2E5-93DA8B99007D}
+		{62057357-86DA-44C6-B69B-B4904E04CC37} = {92B5C4D4-D22A-4BC6-A2E5-93DA8B99007D}
 		{576BB453-2FB7-41F2-A79A-090A35423F3F} = {7D6EC3B8-01EA-497F-9A41-1BF82B03C9EB}
 		{C6F76172-4FFB-4905-A8C2-7BACD38F1FE5} = {7D6EC3B8-01EA-497F-9A41-1BF82B03C9EB}
 		{9A558ABA-0877-4EDD-907E-1FA2ECE3C693} = {7D6EC3B8-01EA-497F-9A41-1BF82B03C9EB}
 		{CA30822C-6891-4DC3-A422-C17E0DA4EE17} = {7D6EC3B8-01EA-497F-9A41-1BF82B03C9EB}
 		{F653D36C-86A0-4DB8-AA15-47127B21E093} = {7D6EC3B8-01EA-497F-9A41-1BF82B03C9EB}
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
 	EndGlobalSection
 EndGlobal
