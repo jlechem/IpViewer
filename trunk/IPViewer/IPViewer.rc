@@ -152,8 +152,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 3,2,0,0
- PRODUCTVERSION 3,2,0,0
+ FILEVERSION 4,0,0,0
+ PRODUCTVERSION 4,0,0,0
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -170,12 +170,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "Justin LeCheminant"
             VALUE "FileDescription", "Executable for getting IP Information"
-            VALUE "FileVersion", "3.2.0.0"
+            VALUE "FileVersion", "4.0.0.0"
             VALUE "InternalName", "IPViewer.exe"
-            VALUE "LegalCopyright", "2012 (c) Justin LeCheminant.  All rights reserved."
+            VALUE "LegalCopyright", "2016 (c) Justin LeCheminant.  All rights reserved."
             VALUE "OriginalFilename", "IPViewer.exe"
             VALUE "ProductName", "IP Viewer"
-            VALUE "ProductVersion", "3.2.0.0"
+            VALUE "ProductVersion", "4.0.0.0"
         END
     END
     BLOCK "VarFileInfo"

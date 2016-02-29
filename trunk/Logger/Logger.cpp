@@ -1,4 +1,4 @@
-/*
+﻿/*
 	Copyright 2012 Justin LeCheminant
 
 	This file is part of IP Viewer.
@@ -19,6 +19,10 @@
 
 #include "StdAfx.h"
 #include "Logger.h"
+
+// declare our static variables
+std::mutex CLogger::m_mutexFile;
+CFile CLogger::file;
 
 /*
 
@@ -141,43 +145,31 @@ void CLogger::Log( CString message )
 */
 void::CLogger::Log( BOOL isError, CString message )
 {	
-	// Convert a TCHAR string to a LPCSTR
-	CT2CA pszConvertedAnsiString(message);
+	// set a lock so we can write and not allow a change to the filename
+	std::lock_guard<std::mutex> lock(m_mutexFile);
 
-	// construct a std::string using the LPCSTR input
-	std::string strStd(pszConvertedAnsiString);
+	CTime time = CTime::GetCurrentTime();
+	
+	CString line = time.Format("%m/%d/%Y - ") + message + TEXT("\r\n");
 
-	if( isError )
+	// if it's an error write to the error log
+	// otherwise write it to the output log	
+	BOOL isOpen = true;
+
+	if (isError)
 	{
-		log4cpp::Category& root = log4cpp::Category::getRoot();
-		root.error( strStd );
+		isOpen = file.Open(TEXT("error.log"), CFile::modeCreate | CFile::modeNoTruncate | CFile::modeWrite | CFile::shareDenyNone);
 	}
 	else
 	{
-		log4cpp::Category& categoryData = log4cpp::Category::getInstance("AppLogging");
-		categoryData.info( strStd );
+		isOpen = file.Open(TEXT("output.log"), CFile::modeCreate | CFile::modeNoTruncate | CFile::modeWrite | CFile::shareDenyNone);
 	}
-}
 
-/*
-	Info:			Initializes the logging, needs to be called before any logging methods
-					to ensure that the logging mechanisms are setup
-	Created By:		Justin LeCheminant
-	Created Date:	2013.3.4
-
-	Parameters:		N/A
-	Return Values:	N/A
-
-*/
-void CLogger::Init( void )
-{
-	try
+	if (isOpen)
 	{
-		std::string initFileName = "c:\\log4cpp.properties";
-		log4cpp::PropertyConfigurator::configure(initFileName);
-	}
-	catch( log4cpp::ConfigureFailure e )
-	{
-		cout << e.what() << std::endl;
+		CW2A ansiText(line, CP_UTF8);
+		file.SeekToEnd();
+		file.Write(ansiText, ::strlen(ansiText));
+		file.Close();
 	}
 }

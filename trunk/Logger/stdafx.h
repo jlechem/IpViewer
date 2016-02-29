@@ -57,3 +57,5 @@
 
 #include <afxsock.h>            // MFC socket extensions
 
+#include <afxmt.h>
+#include <atltime.h>

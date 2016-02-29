@@ -21,19 +21,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_26D46CEDC309F031A06CEBC80D794481"
-        "OwnerKey" = "8:_F70B18D3A4D84BC7B2E9FD4DA31E18A7"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_60223B54F5294BD5BEE66264359034D0"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_60E67B4ADAC74C36ADC44FC08AE51BC8"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -51,62 +39,14 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_6BED1C1F7A3B4F758E0EC538B479692B"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_A7695EFF1C1A48E2AE91320319123EA2"
+        "MsmKey" = "8:_6A9EED6B0A184A608DA054ACC03B0774"
         "OwnerKey" = "8:_60223B54F5294BD5BEE66264359034D0"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_A7695EFF1C1A48E2AE91320319123EA2"
-        "OwnerKey" = "8:_FDEA370BE41944C1A08C76EA73382897"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_A7695EFF1C1A48E2AE91320319123EA2"
-        "OwnerKey" = "8:_F70B18D3A4D84BC7B2E9FD4DA31E18A7"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_A7695EFF1C1A48E2AE91320319123EA2"
-        "OwnerKey" = "8:_E3250166D1984607877D641FD9C7286F"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_A7695EFF1C1A48E2AE91320319123EA2"
-        "OwnerKey" = "8:_DC5C12FAB8694601BEFCA808CA59711F"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_A7695EFF1C1A48E2AE91320319123EA2"
-        "OwnerKey" = "8:_DAB0AD610C874046BF2D5C2768119BBB"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_A7695EFF1C1A48E2AE91320319123EA2"
-        "OwnerKey" = "8:_A9D948AB4F8443E9B1FA9D6ABAE796C9"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_A7695EFF1C1A48E2AE91320319123EA2"
-        "OwnerKey" = "8:_6BED1C1F7A3B4F758E0EC538B479692B"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_A7695EFF1C1A48E2AE91320319123EA2"
-        "OwnerKey" = "8:_60E67B4ADAC74C36ADC44FC08AE51BC8"
+        "MsmKey" = "8:_6BED1C1F7A3B4F758E0EC538B479692B"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -141,128 +81,20 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_E550ABF6892F4196AFDE0477C98D5CFB"
-        "OwnerKey" = "8:_60223B54F5294BD5BEE66264359034D0"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_E550ABF6892F4196AFDE0477C98D5CFB"
-        "OwnerKey" = "8:_FDEA370BE41944C1A08C76EA73382897"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_E550ABF6892F4196AFDE0477C98D5CFB"
-        "OwnerKey" = "8:_F70B18D3A4D84BC7B2E9FD4DA31E18A7"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_E550ABF6892F4196AFDE0477C98D5CFB"
-        "OwnerKey" = "8:_E3250166D1984607877D641FD9C7286F"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_E550ABF6892F4196AFDE0477C98D5CFB"
-        "OwnerKey" = "8:_DC5C12FAB8694601BEFCA808CA59711F"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_E550ABF6892F4196AFDE0477C98D5CFB"
-        "OwnerKey" = "8:_DAB0AD610C874046BF2D5C2768119BBB"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_E550ABF6892F4196AFDE0477C98D5CFB"
-        "OwnerKey" = "8:_A9D948AB4F8443E9B1FA9D6ABAE796C9"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_E550ABF6892F4196AFDE0477C98D5CFB"
-        "OwnerKey" = "8:_6BED1C1F7A3B4F758E0EC538B479692B"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_F45A2714E86849D58A3BCBF7E5711A66"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_F70B18D3A4D84BC7B2E9FD4DA31E18A7"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
+        "MsmKey" = "8:_F9D89806A25F4C599784F938DBE5CD00"
+        "OwnerKey" = "8:_60223B54F5294BD5BEE66264359034D0"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_FDEA370BE41944C1A08C76EA73382897"
         "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_FFC8B4D8C3257572DFF0906E10A78357"
-        "OwnerKey" = "8:_F70B18D3A4D84BC7B2E9FD4DA31E18A7"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_6BED1C1F7A3B4F758E0EC538B479692B"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_FDEA370BE41944C1A08C76EA73382897"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_F70B18D3A4D84BC7B2E9FD4DA31E18A7"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_E3250166D1984607877D641FD9C7286F"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_DC5C12FAB8694601BEFCA808CA59711F"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_DAB0AD610C874046BF2D5C2768119BBB"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_A9D948AB4F8443E9B1FA9D6ABAE796C9"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_60E67B4ADAC74C36ADC44FC08AE51BC8"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_60223B54F5294BD5BEE66264359034D0"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -390,26 +222,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_26D46CEDC309F031A06CEBC80D794481"
-            {
-            "SourcePath" = "8:urlmon.dll"
-            "TargetName" = "8:urlmon.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_1029B68BF8EE4A83A06A7D8256D5AC8B"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:4"
-            "Exclude" = "11:TRUE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6397D67377B5443282BE357E6F51B67F"
             {
             "SourcePath" = "8:..\\..\\trunk\\x64Release\\IPViewer.exe"
@@ -468,46 +280,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F45A2714E86849D58A3BCBF7E5711A66"
-            {
-            "SourcePath" = "8:..\\..\\trunk\\Logger\\log4cpp.properties"
-            "TargetName" = "8:log4cpp.properties"
-            "Tag" = "8:"
-            "Folder" = "8:_1029B68BF8EE4A83A06A7D8256D5AC8B"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FFC8B4D8C3257572DFF0906E10A78357"
-            {
-            "SourcePath" = "8:IPHLPAPI.DLL"
-            "TargetName" = "8:IPHLPAPI.DLL"
-            "Tag" = "8:"
-            "Folder" = "8:_1029B68BF8EE4A83A06A7D8256D5AC8B"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:TRUE"
-            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
         }
@@ -700,7 +472,7 @@
         {
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_A49A84EBC1A943A992FF94D857FF02D1"
             {
-            "Name" = "8:IP Viewer 3.1"
+            "Name" = "8:IP Viewer 4.0"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -1108,11 +880,11 @@
         }
         "MergeModule"
         {
-            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_A7695EFF1C1A48E2AE91320319123EA2"
+            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_6A9EED6B0A184A608DA054ACC03B0774"
             {
             "UseDynamicProperties" = "11:TRUE"
             "IsDependency" = "11:TRUE"
-            "SourcePath" = "8:Microsoft_VC100_CRT_x64.msm"
+            "SourcePath" = "8:microsoft_vc120_crt_x64.msm"
                 "Properties"
                 {
                 }
@@ -1122,11 +894,11 @@
             "Feature" = "8:"
             "IsolateTo" = "8:"
             }
-            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_E550ABF6892F4196AFDE0477C98D5CFB"
+            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_F9D89806A25F4C599784F938DBE5CD00"
             {
             "UseDynamicProperties" = "11:TRUE"
             "IsDependency" = "11:TRUE"
-            "SourcePath" = "8:Microsoft_VC100_MFC_x64.msm"
+            "SourcePath" = "8:microsoft_vc120_mfc_x64.msm"
                 "Properties"
                 {
                 }
@@ -1141,7 +913,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_60223B54F5294BD5BEE66264359034D0"
             {
-            "SourcePath" = "8:..\\..\\trunk\\x64Release\\IPViewerCHS.dll"
+            "SourcePath" = "8:"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_1029B68BF8EE4A83A06A7D8256D5AC8B"
@@ -1167,37 +939,9 @@
                 {
                 }
             }
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_60E67B4ADAC74C36ADC44FC08AE51BC8"
-            {
-            "SourcePath" = "8:..\\..\\trunk\\x64Release\\log4cpp.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_1029B68BF8EE4A83A06A7D8256D5AC8B"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            "ProjectOutputGroupRegister" = "3:1"
-            "OutputConfiguration" = "8:Release|x64"
-            "OutputGroupCanonicalName" = "8:Built"
-            "OutputProjectGuid" = "8:{8C796FDD-5BB9-41D5-8471-DDC897C8C486}"
-            "ShowKeyOutput" = "11:TRUE"
-                "ExcludeFilters"
-                {
-                }
-            }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_6BED1C1F7A3B4F758E0EC538B479692B"
             {
-            "SourcePath" = "8:..\\..\\trunk\\x64Release\\Logger.dll"
+            "SourcePath" = "8:"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_1029B68BF8EE4A83A06A7D8256D5AC8B"
@@ -1225,7 +969,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_A9D948AB4F8443E9B1FA9D6ABAE796C9"
             {
-            "SourcePath" = "8:..\\..\\trunk\\x64Release\\IPViewer.exe"
+            "SourcePath" = "8:"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_1029B68BF8EE4A83A06A7D8256D5AC8B"
@@ -1253,7 +997,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_DAB0AD610C874046BF2D5C2768119BBB"
             {
-            "SourcePath" = "8:..\\..\\trunk\\x64Release\\IPViewerDEU.dll"
+            "SourcePath" = "8:"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_1029B68BF8EE4A83A06A7D8256D5AC8B"
@@ -1281,7 +1025,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_DC5C12FAB8694601BEFCA808CA59711F"
             {
-            "SourcePath" = "8:..\\..\\trunk\\x64Release\\IPViewerJPN.dll"
+            "SourcePath" = "8:"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_1029B68BF8EE4A83A06A7D8256D5AC8B"
@@ -1309,7 +1053,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_E3250166D1984607877D641FD9C7286F"
             {
-            "SourcePath" = "8:..\\..\\trunk\\x64Release\\IPViewerRUS.dll"
+            "SourcePath" = "8:"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_1029B68BF8EE4A83A06A7D8256D5AC8B"
@@ -1337,7 +1081,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_F70B18D3A4D84BC7B2E9FD4DA31E18A7"
             {
-            "SourcePath" = "8:..\\..\\trunk\\x64Release\\IPData.dll"
+            "SourcePath" = "8:"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_1029B68BF8EE4A83A06A7D8256D5AC8B"
@@ -1365,7 +1109,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_FDEA370BE41944C1A08C76EA73382897"
             {
-            "SourcePath" = "8:..\\..\\trunk\\x64Release\\IPViewerFRA.dll"
+            "SourcePath" = "8:"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_1029B68BF8EE4A83A06A7D8256D5AC8B"
