@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<!-- Select a Product Configuration -->
+		<InstallShieldProductConfiguration>Express</InstallShieldProductConfiguration>
+		<!-- Select a Visual Studio Configuration / InstallShield Release -->
+		<Configuration>Debug</Configuration>
+		<InstallShieldRelease>$(Configuration)</InstallShieldRelease>
+	</PropertyGroup>
+	<ItemGroup>
+		<!-- The InstallShieldProject item selects the project to build -->
+		<InstallShieldProject Include="$(MSBuildProjectDirectory)\$(MSBuildProjectName).isl"/>
+		<!-- The InstallShieldReleaseFlags sets Release Flags -->
+		<!--<InstallShieldReleaseFlags Include=""/>-->
+		<!-- The InstallShieldMergeModulePath specifies what directories are
+		searched for Merge Modules -->
+		<!--<InstallShieldMergeModulePath Include=""/>-->
+	</ItemGroup>
+	<ItemGroup>
+		<!-- The ProjectReference items refer to any Visual Studio solutions you want to automatically probe for Project Output Groups.  -->
+	</ItemGroup>
+	<ItemGroup>
+		<!-- The TaggedOutputs items allow you to explicitly add extra files to output groups. Each item must include both Name and OutputGroup, as well as TargetPath metadata values. -->
+		<!--<TaggedOutputs Include="C:\My Test Exe.exe">
+			<Name>My Test Project</Name>
+			<OutputGroup>Primary output</OutputGroup>
+			<TargetPath>My Test Exe.exe</TargetPath>
+		</TaggedOutputs> -->
+	</ItemGroup>
+	<Import Project="$(MSBuildExtensionsPath32)\InstallShield\2015Limited\InstallShield.targets"/>
+	<ItemGroup>
+		<ProjectReference Include="..\IPData\IPData.vcxproj">
+			<Name>IPData</Name>
+			<Project>{85936D78-64D2-47B7-BD15-65347140F04D}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\IPViewer\IPViewer.vcxproj">
+			<Name>IPViewer</Name>
+			<Project>{2D455FB7-DAEC-498D-BCA0-C07282AFFAB7}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\Localiztion\IPViewerCHS\IPViewerCHS.vcxproj">
+			<Name>IPViewerCHS</Name>
+			<Project>{9A558ABA-0877-4EDD-907E-1FA2ECE3C693}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\Localiztion\IPViewerDEU\IPViewerDEU.vcxproj">
+			<Name>IPViewerDEU</Name>
+			<Project>{F653D36C-86A0-4DB8-AA15-47127B21E093}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\Localiztion\IPViewerFRC\IPViewerFRC.vcxproj">
+			<Name>IPViewerFRA</Name>
+			<Project>{C6F76172-4FFB-4905-A8C2-7BACD38F1FE5}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\Localiztion\IPViewerJPN\IPViewerJPN.vcxproj">
+			<Name>IPViewerJPN</Name>
+			<Project>{576BB453-2FB7-41F2-A79A-090A35423F3F}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\Localiztion\IPViewerRUS\IPViewerRUS.vcxproj">
+			<Name>IPViewerRUS</Name>
+			<Project>{CA30822C-6891-4DC3-A422-C17E0DA4EE17}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\Logger\Logger.vcxproj">
+			<Name>Logger</Name>
+			<Project>{FCCAC1FB-F16B-4DD5-939D-D19AC2C47F71}</Project>
+		</ProjectReference>
+	</ItemGroup>
+</Project>
