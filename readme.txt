@@ -2,8 +2,12 @@ READ ME for IPViewer
 
 This is the read me file for IP Viewer.
 
+Current Version is 4.0
 
-Current Version is 3.2
+This was a major upgrade so I decided to move it to 4.0. I never thought this little side project would get as big as it has. I had to get rid of log4cpp it just wasn't working as was causing all sorts of compiler warnings because the code is so old and uses deprecated functions. I lost a lot of flexibility but for now you can log to an output file if you wish. I will be adding more functionality in the future but for now it's working as expected.
+
+
+Version is 3.2
 
 This is a minor point upgrade.  Localization for German was added to the application and the logging was switched from basic file writing to use log4cpp.  This added rolling log file support and made the logging much more reliable and robust.
 
