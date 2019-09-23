@@ -70,6 +70,7 @@ END
 // remains consistent on all systems.
 IDI_ICON_IPVIEWER       ICON                    "res\\IP_Viewer.ICO"
 
+
 /////////////////////////////////////////////////////////////////////////////
 //
 // Dialog
@@ -81,7 +82,7 @@ CAPTION "About IP Viewer"
 FONT 8, "MS Shell Dlg", 0, 0, 0x1
 BEGIN
     ICON            IDI_ICON_IPVIEWER,IDC_STATIC,14,14,20,20
-    LTEXT           "IP Viewer, Version 3.2",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "IP Viewer, Version v4.0",IDC_STATIC,42,14,114,8,SS_NOPREFIX
     DEFPUSHBUTTON   "OK",IDOK,113,41,50,14,WS_GROUP
 END
 
@@ -272,6 +273,18 @@ END
 //
 
 IDR_TOOLBAR1            BITMAP                  "res\\toolbar1.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_ABOUTBOX AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
