@@ -1,0 +1,338 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\IPViewer.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON_IPVIEWER       ICON                    "res\\IP_Viewer.ICO"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 170, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About IP Viewer"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDI_ICON_IPVIEWER,IDC_STATIC,14,14,20,20
+    LTEXT           "IP Viewer, Version 3.2",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    DEFPUSHBUTTON   "OK",IDOK,113,41,50,14,WS_GROUP
+END
+
+IDD_IPVIEWER_DIALOG DIALOGEX 0, 0, 305, 156
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "IP Viewer"
+MENU IDR_MENU1
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "External IP Address:",IDC_STATIC,17,21,66,8
+    LTEXT           "127.0.0.1",IDC_TEXT_EXTERNAL,87,21,211,8
+    CONTROL         "Host Name:",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,45,34,38,8,WS_EX_RIGHT
+    LTEXT           "Localhost",IDC_TEXT_HOST,88,34,210,8
+    CONTROL         "Adapters:",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,27,64,33,8,WS_EX_RIGHT
+    COMBOBOX        IDC_COMBO_ADAPTERS,68,62,223,122,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP,WS_EX_CLIENTEDGE
+    CONTROL         "IP Addresses:",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,16,81,46,8,WS_EX_RIGHT
+    COMBOBOX        IDC_COMBO_ADDRESSES,68,79,223,122,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP,WS_EX_CLIENTEDGE
+    LTEXT           "Description:",IDC_STATIC,40,96,39,8
+    LTEXT           "Static",IDC_STATIC_DESCRIPTION,83,96,207,11
+    CONTROL         "MAC Address:",IDC_TEXT_MAC_CAPTION,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,30,108,47,10,WS_EX_RIGHT
+    LTEXT           "00-00-00-00-00-00",IDC_TEXT_MAC,83,109,207,8
+    LTEXT           "Operational Status:",IDC_STATIC,16,121,64,8
+    LTEXT           "Static",IDC_STATIC_STATUS,83,121,207,8
+    CONTROL         "IP Version 4 Enabled",IDC_CHECK_V4,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,14,134,81,10
+    CONTROL         "IP Version 6 Enabled",IDC_CHECK_V6,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,105,134,81,10
+    GROUPBOX        "Machine Specific Details",IDC_STATIC,7,7,291,40
+    GROUPBOX        "Adapter Specific Details",IDC_STATIC,7,48,291,101
+END
+
+IDD_DIALOG_SETTINGS DIALOGEX 0, 0, 298, 185
+STYLE DS_SETFONT | DS_3DLOOK | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "IP Viewer Settings"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Minimize To Tray",IDC_CHECK_MINTRAY,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,18,18,69,10
+    CONTROL         "Close To Tray",IDC_CHECK_CLOSETRAY,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,96,18,60,10
+    CONTROL         "Always On Top",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,162,18,64,10
+    CONTROL         "Start Minimized",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,228,18,64,10
+    CONTROL         "Get External IP Address",IDC_CHECK_EXTERNAL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,18,36,90,10
+    LTEXT           "Refresh Rate (min):",IDC_STATIC,120,36,64,8
+    EDITTEXT        IDC_EDIT_RATE,187,34,54,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "IP Address",IDC_RADIO_IP,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,12,78,51,10
+    CONTROL         "External IP Address",IDC_RADIO_EXTERNAL_IP,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,72,78,79,10
+    CONTROL         "Host Name",IDC_RADIO_HOST,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,162,78,51,10
+    CONTROL         "MAC Address",IDC_RADIO_MAC,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,222,78,59,10
+    CONTROL         "Enable Logging",IDC_CHECK_ENABLE_LOGGING,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,113,64,10
+    CONTROL         "Internal IP",IDC_CHECK4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,66,126,50,10
+    CONTROL         "External IP",IDC_CHECK5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,120,126,51,10
+    CONTROL         "Host Name",IDC_CHECK6,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,177,127,51,10
+    CONTROL         "MAC Address",IDC_CHECK7,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,232,127,59,10
+    EDITTEXT        IDC_EDIT_LOGINTERVAL,66,144,44,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Save",IDC_BUTTON_SAVE,187,164,50,14
+    PUSHBUTTON      "Cancel",IDC_BUTTON_CANCEL,241,164,50,14
+    LTEXT           "(seconds)",IDC_STATIC,114,146,32,8
+    GROUPBOX        "Application Settings",IDC_STATIC,7,7,284,47
+    GROUPBOX        "System Tray Display Options",IDC_STATIC,6,54,285,42,WS_GROUP
+    LTEXT           "Display the following information in the system tray notification.",IDC_STATIC,12,66,204,8
+    GROUPBOX        "Logging Options",IDC_STATIC,7,101,284,60
+    LTEXT           "Data to Log:",IDC_STATIC,18,126,41,8
+    LTEXT           "Log Interval:",IDC_STATIC,18,146,42,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 4,0,0,0
+ PRODUCTVERSION 4,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "Justin LeCheminant"
+            VALUE "FileDescription", "Executable for getting IP Information"
+            VALUE "FileVersion", "4.0.0.0"
+            VALUE "InternalName", "IPViewer.exe"
+            VALUE "LegalCopyright", "2016 (c) Justin LeCheminant.  All rights reserved."
+            VALUE "OriginalFilename", "IPViewer.exe"
+            VALUE "ProductName", "IP Viewer"
+            VALUE "ProductVersion", "4.0.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 163
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_IPVIEWER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 298
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 149
+    END
+
+    IDD_DIALOG_SETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 291
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 178
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Refresh IP Information",     ID_FILE_REFRESH
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_FILE_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "Copy &IP Address",            ID_EDIT_COPYIPADDRESS
+        MENUITEM "Copy External IP Address",    ID_EDIT_COPYEXTERNALIPADDRESS
+        MENUITEM "Copy &Host Name",             ID_EDIT_COPYHOSTNAME
+        MENUITEM "Copy &MAC Address",           ID_EDIT_COPYMACADDRESS
+        MENUITEM SEPARATOR
+        MENUITEM "&Settings",                   ID_EDIT_SETTINGS
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About",                      ID_HELP_ABOUT
+    END
+END
+
+IDR_CONTEXT_MENU MENU
+BEGIN
+    POPUP "POPUP_SUBMIT"
+    BEGIN
+        MENUITEM "Copy &IP Address",            ID_POPUP_COPYIPADDRESS
+        MENUITEM "Copy E&xternal IP Address",   ID_POPUP_COPYEXTERNALIPADDRESS
+        MENUITEM "Copy &Host Name",             ID_POPUP_COPYHOSTNAME
+        MENUITEM "Copy &MAC Address",           ID_POPUP_COPYMACADDRESS
+        MENUITEM SEPARATOR
+        MENUITEM "&Edit Settings",              ID_POPUP_EDITSETTINGS
+        MENUITEM SEPARATOR
+        MENUITEM "&Refresh Ip Information",     ID_POPUP_REFRESHIPINFORMATION
+        MENUITEM SEPARATOR
+        MENUITEM "Exit",                        ID_POPUP_EXIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_TOOLBAR1            BITMAP                  "res\\toolbar1.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "&About IPViewer..."
+    IDS_NO_EXTERNAL         "Not set to check for external ip"
+    IDP_SOCKETS_INIT_FAILED "Windows sockets initialization failed."
+    IDS_REG_PATH            "Software\\JRL Software\\IP Viewer"
+    IDS_TICK_KEY            "TICK"
+    IDS_MINTRAY_KEY         "MIN_TO_TRAY"
+    IDS_CLOSETRAY_KEY       "CLOSE_TO_TRAY"
+    IDS_SELECTED_INDEX_KEY  "SELECTED_INDEX"
+    IDS_TOOLTIP_SIZE_ERROR  "IP information is too large to be displayed."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_ONTOP_KEY           "ON_TOP"
+    IDS_REG_ERROR           "An error occured getting the settings values from the registry."
+    IDS_START_MIN_KEY       "START_MINIMIZED"
+    IDS_CHECK_EXTERNAL_KEY  "CHECK_EXTERNAL_IP"
+    IDS_ENABLE_LOGGING      "ENABLE_LOGGING"
+    IDS_LOG_INTERNAL        "LOG_INTERNAL"
+    IDS_LOG_EXTERNAL        "LOG_EXTERNAL"
+    IDS_LOG_MAC             "LOG_MAC_ADDRESS"
+    IDS_LOG_HOST            "LOG_HOSTNAME"
+    IDS_LOG_INTERVAL        "LOG_INTERVAL"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_ADDRESS_INDEX       "ADDRESS_INDEX"
+    IDS_ADAPTER_INDEX       "ADAPTER_INDEX"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\IPViewer.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
