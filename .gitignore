@@ -81,3 +81,7 @@ packages/log4net.2.0.8/lib/net45-full/log4net.dll
 packages/log4net.2.0.8/lib/net45-full/log4net.xml
 packages/log4net.2.0.8/lib/netstandard1.3/log4net.dll
 packages/log4net.2.0.8/log4net.2.0.8.nupkg
+IpViewer/obj/Debug/IpViewer.csproj.CopyComplete
+IpViewer/obj/Debug/IpViewer.csproj.CoreCompileInputs.cache
+IpViewer/obj/Debug/IpViewer.csproj.FileListAbsolute.txt
+IpViewer/obj/Debug/IpViewer.csproj.GenerateResource.cache

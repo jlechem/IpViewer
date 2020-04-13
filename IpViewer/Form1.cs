@@ -44,15 +44,13 @@ namespace IpViewer2
         {
             InitializeComponent();
 
-            _hostInformation = _adapterService.GetHostInformation();
-
-            _adapters = _adapterService.GetAdapters();
+            GetIpInformation();
 
             this.comboBoxAdapters.Items.AddRange(_adapters.Select(adapter => adapter.Name).ToArray());
 
             this.SetHostInformationControls();
 
-            this.comboBoxAdapters.SelectedIndex = 1;
+            this.comboBoxAdapters.SelectedIndex = 0;
 
         }
 
@@ -118,6 +116,16 @@ namespace IpViewer2
             this.labelHostName.Text = _hostInformation.HostName;
             this.labelInternalAddress.Text = _hostInformation.InternalIpAddress;
             this.labelExternalAddress.Text = _hostInformation.ExternalIpAddress;
+        }
+
+        /// <summary>
+        /// Gets the ip information for the system.
+        /// </summary>
+        private void GetIpInformation()
+        {
+            _hostInformation = _adapterService.GetHostInformation();
+
+            _adapters = _adapterService.GetAdapters();
         }
 
     }

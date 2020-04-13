@@ -2,7 +2,12 @@ READ ME for IPViewer
 
 This is the read me file for IP Viewer.
 
-Current Version is 4.0
+The current version if 5.0 (13-04-2020)
+
+This is a major revision of the IP Viewer software. It was first written in MFC becuase the .net framework was still new and not installed on every PC. Now with the framework being ubiquitous on windows 10 I have decided to re-write it in a more modern language. I have found it much easier to re-create the functionality with less code and less hassle. The first goal is to just make sure all existing functionality is the same. Then new features will be slowly added in. I have also upgraded the licensing to the GPU V3.
+
+
+Version 4.0
 
 This was a major upgrade so I decided to move it to 4.0. I never thought this little side project would get as big as it has. I had to get rid of log4cpp it just wasn't working as was causing all sorts of compiler warnings because the code is so old and uses deprecated functions. I lost a lot of flexibility but for now you can log to an output file if you wish. I will be adding more functionality in the future but for now it's working as expected.
 

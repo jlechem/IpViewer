@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.labelHostName = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.labelExternalAddress = new System.Windows.Forms.Label();
             this.labelInternalAddress = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,6 +50,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.refreshIPInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.copyInternalIPAddressToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,9 +60,6 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.labelHostName = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.refreshIPInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -77,6 +77,16 @@
             resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
+            // 
+            // labelHostName
+            // 
+            resources.ApplyResources(this.labelHostName, "labelHostName");
+            this.labelHostName.Name = "labelHostName";
+            // 
+            // label9
+            // 
+            resources.ApplyResources(this.label9, "label9");
+            this.label9.Name = "label9";
             // 
             // labelExternalAddress
             // 
@@ -185,6 +195,11 @@
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             resources.ApplyResources(this.fileToolStripMenuItem, "fileToolStripMenuItem");
             // 
+            // refreshIPInformationToolStripMenuItem
+            // 
+            this.refreshIPInformationToolStripMenuItem.Name = "refreshIPInformationToolStripMenuItem";
+            resources.ApplyResources(this.refreshIPInformationToolStripMenuItem, "refreshIPInformationToolStripMenuItem");
+            // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -236,21 +251,6 @@
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
-            // 
-            // labelHostName
-            // 
-            resources.ApplyResources(this.labelHostName, "labelHostName");
-            this.labelHostName.Name = "labelHostName";
-            // 
-            // label9
-            // 
-            resources.ApplyResources(this.label9, "label9");
-            this.label9.Name = "label9";
-            // 
-            // refreshIPInformationToolStripMenuItem
-            // 
-            this.refreshIPInformationToolStripMenuItem.Name = "refreshIPInformationToolStripMenuItem";
-            resources.ApplyResources(this.refreshIPInformationToolStripMenuItem, "refreshIPInformationToolStripMenuItem");
             // 
             // Form1
             // 
