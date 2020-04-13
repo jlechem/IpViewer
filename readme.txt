@@ -2,6 +2,9 @@ READ ME for IPViewer
 
 This is the read me file for IP Viewer.
 
+I have recently upgraded this project to make sure it's using the most recent windows SKD and toolkits. All projects are now targeting the windows 10 SDK and using Visual Studio 2017 toolkits. Microsoft in their infinite wisdome got rid of installer projects so I will be working on creating a new installer type project for releases. Expect a new release coming here soon!!
+
+
 Current Version is 4.0
 
 This was a major upgrade so I decided to move it to 4.0. I never thought this little side project would get as big as it has. I had to get rid of log4cpp it just wasn't working as was causing all sorts of compiler warnings because the code is so old and uses deprecated functions. I lost a lot of flexibility but for now you can log to an output file if you wish. I will be adding more functionality in the future but for now it's working as expected.
