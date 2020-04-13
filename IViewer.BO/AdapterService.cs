@@ -48,7 +48,7 @@ namespace IViewer.BO
                     {
                         Id = adapter.Id,
                         MacAddress = adapter.GetPhysicalAddress().ToString(),
-                        IpAddress = "",
+                        IpAddress = adapter.GetIPProperties()?.UnicastAddresses?.FirstOrDefault()?.Address.ToString() ?? String.Empty,
                         SupportMulticast = adapter.SupportsMulticast,
                         Name = adapter.Name,
                         Description = adapter.Description,
@@ -98,7 +98,10 @@ namespace IViewer.BO
 
             try
             {
-                // TODO: get the external ip address
+                using (var client = new WebClient())
+                {
+                    result = client.DownloadString("http://ifconfig.me").Replace("\n", "");
+                }
             }
             catch (Exception ex)
             {

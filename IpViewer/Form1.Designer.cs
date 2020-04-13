@@ -34,9 +34,7 @@
             this.labelHostName = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.labelExternalAddress = new System.Windows.Forms.Label();
-            this.labelInternalAddress = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.labelSpeed = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -44,8 +42,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.labelAdapterStatus = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.comboBoxAdapters = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -60,6 +56,8 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.labelInternalAddress = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -70,9 +68,7 @@
             this.groupBox1.Controls.Add(this.labelHostName);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.labelExternalAddress);
-            this.groupBox1.Controls.Add(this.labelInternalAddress);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
@@ -93,31 +89,21 @@
             resources.ApplyResources(this.labelExternalAddress, "labelExternalAddress");
             this.labelExternalAddress.Name = "labelExternalAddress";
             // 
-            // labelInternalAddress
-            // 
-            resources.ApplyResources(this.labelInternalAddress, "labelInternalAddress");
-            this.labelInternalAddress.Name = "labelInternalAddress";
-            // 
             // label2
             // 
             resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
             // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
-            // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.labelInternalAddress);
+            this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.labelSpeed);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.labelMacAddress);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.labelAdapterStatus);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.checkBox2);
-            this.groupBox2.Controls.Add(this.checkBox1);
             this.groupBox2.Controls.Add(this.comboBoxAdapters);
             this.groupBox2.Controls.Add(this.label3);
             resources.ApplyResources(this.groupBox2, "groupBox2");
@@ -153,18 +139,6 @@
             // 
             resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
-            // 
-            // checkBox2
-            // 
-            resources.ApplyResources(this.checkBox2, "checkBox2");
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            resources.ApplyResources(this.checkBox1, "checkBox1");
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // comboBoxAdapters
             // 
@@ -252,6 +226,16 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
             // 
+            // labelInternalAddress
+            // 
+            resources.ApplyResources(this.labelInternalAddress, "labelInternalAddress");
+            this.labelInternalAddress.Name = "labelInternalAddress";
+            // 
+            // label5
+            // 
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.Name = "label5";
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
@@ -285,16 +269,12 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelExternalAddress;
-        private System.Windows.Forms.Label labelInternalAddress;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBoxAdapters;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.ToolStripMenuItem copyInternalIPAddressToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem copyExternalIPAddressToolStripMenuItem;
         private System.Windows.Forms.Label labelAdapterStatus;
@@ -306,6 +286,8 @@
         private System.Windows.Forms.Label labelHostName;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ToolStripMenuItem refreshIPInformationToolStripMenuItem;
+        private System.Windows.Forms.Label labelInternalAddress;
+        private System.Windows.Forms.Label label5;
     }
 }
 

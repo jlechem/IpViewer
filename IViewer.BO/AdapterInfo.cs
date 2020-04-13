@@ -34,24 +34,14 @@ namespace IViewer.BO
         public string OperationalStatus { get; set; }
 
         /// <summary>
-        /// Gets or sets if IP version 4 is enabled.
+        /// Gets or sets the adapter's IP address.
         /// </summary>
-        public bool Ip4Enabled { get; set; }
-
-        /// <summary>
-        /// Gets or sets if IP version 6 is enabled.
-        /// </summary>
-        public bool Ip6Enabled { get; set; }
+        public string IpAddress { get; set; }
 
         /// <summary>
         /// Gets or sets if the adapter supports multicast.
         /// </summary>
         public bool SupportMulticast { get; set; }
-
-        /// <summary>
-        /// Gets or sets the adapter's IP address.
-        /// </summary>
-        public string IpAddress { get; set; }
 
         /// <summary>
         /// Gets or sets the speed.

@@ -106,6 +106,7 @@ namespace IpViewer2
             this.labelMacAddress.Text = adapterInfo.MacAddress;
             this.labelSpeed.Text = adapterInfo.Speed.ToString();
             this.labelAdapterStatus.Text = adapterInfo.OperationalStatus;
+            this.labelInternalAddress.Text = adapterInfo.IpAddress;
         }
 
         /// <summary>
