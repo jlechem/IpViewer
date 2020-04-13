@@ -14,7 +14,7 @@
 //   You should have received a copy of the GNU General Public License
 //   along with this program.If not, see<https://www.gnu.org/licenses/>.
 
-using IViewer.BO;
+using IViewer.BusinessObject;
 using log4net;
 using System;
 using System.Collections.Generic;
@@ -44,13 +44,11 @@ namespace IpViewer2
         {
             InitializeComponent();
 
-            GetIpInformation();
+            this.SetFormControlValuesFromSettings();
 
-            this.comboBoxAdapters.Items.AddRange(_adapters.Select(adapter => adapter.Name).ToArray());
+            this.GetIpInformation();
 
             this.SetHostInformationControls();
-
-            this.comboBoxAdapters.SelectedIndex = 0;
 
         }
 
@@ -127,6 +125,19 @@ namespace IpViewer2
             _hostInformation = _adapterService.GetHostInformation();
 
             _adapters = _adapterService.GetAdapters();
+
+            this.comboBoxAdapters.Items.AddRange(_adapters.Select(adapter => adapter.Name).ToArray());
+
+            this.comboBoxAdapters.SelectedIndex = 0;
+
+        }
+
+        /// <summary>
+        /// Sets the main form's control values from the settings.
+        /// </summary>
+        private void SetFormControlValuesFromSettings()
+        {
+            this.TopMost = IpViewerSettings.Instance.TopMost;
         }
 
     }

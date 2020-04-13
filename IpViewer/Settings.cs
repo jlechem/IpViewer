@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace IpViewer2
 {
-    public partial class IpViewerSettings : Form
+    public partial class Settings : Form
     {
-        public IpViewerSettings()
+        public Settings()
         {
             InitializeComponent();
         }

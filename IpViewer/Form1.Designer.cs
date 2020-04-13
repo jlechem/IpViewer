@@ -36,6 +36,8 @@
             this.labelExternalAddress = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.labelInternalAddress = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.labelSpeed = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.labelMacAddress = new System.Windows.Forms.Label();
@@ -56,8 +58,7 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.labelInternalAddress = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -109,6 +110,16 @@
             resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
+            // 
+            // labelInternalAddress
+            // 
+            resources.ApplyResources(this.labelInternalAddress, "labelInternalAddress");
+            this.labelInternalAddress.Name = "labelInternalAddress";
+            // 
+            // label5
+            // 
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.Name = "label5";
             // 
             // labelSpeed
             // 
@@ -226,16 +237,6 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
             // 
-            // labelInternalAddress
-            // 
-            resources.ApplyResources(this.labelInternalAddress, "labelInternalAddress");
-            this.labelInternalAddress.Name = "labelInternalAddress";
-            // 
-            // label5
-            // 
-            resources.ApplyResources(this.label5, "label5");
-            this.label5.Name = "label5";
-            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
@@ -288,6 +289,7 @@
         private System.Windows.Forms.ToolStripMenuItem refreshIPInformationToolStripMenuItem;
         private System.Windows.Forms.Label labelInternalAddress;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

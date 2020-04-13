@@ -1,6 +1,6 @@
 ﻿namespace IpViewer2
 {
-    partial class IpViewerSettings
+    partial class Settings
     {
         /// <summary>
         /// Required designer variable.

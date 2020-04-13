@@ -21,7 +21,7 @@ using System.Linq;
 using System.Net;
 using System.Net.NetworkInformation;
 
-namespace IViewer.BO
+namespace IViewer.BusinessObject
 {
    public class AdapterService
     {

@@ -64,11 +64,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="IpViewerSettings.cs">
+    <Compile Include="Settings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IpViewerSettings.Designer.cs">
-      <DependentUpon>IpViewerSettings.cs</DependentUpon>
+    <Compile Include="Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -78,8 +78,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IpViewerSettings.resx">
-      <DependentUpon>IpViewerSettings.cs</DependentUpon>
+    <EmbeddedResource Include="Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -105,13 +105,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\IViewer.BO\IViewer.BO.csproj">
-      <Project>{128d8134-b705-408d-9c82-a91aada82644}</Project>
-      <Name>IViewer.BO</Name>
-    </ProjectReference>
+    <Content Include="IP_Viewer.ICO" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="IP_Viewer.ICO" />
+    <ProjectReference Include="..\IpViewer.BusinessObject\IpViewer.BusinessObject.csproj">
+      <Project>{C0E6725C-6BB5-4FE6-865A-15B27F51AE90}</Project>
+      <Name>IpViewer.BusinessObject</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
