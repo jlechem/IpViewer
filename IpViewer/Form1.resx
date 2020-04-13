@@ -1,0 +1,1333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="&gt;&gt;labelHostName.Name" xml:space="preserve">
+    <value>labelHostName</value>
+  </data>
+  <data name="&gt;&gt;labelHostName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelHostName.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;labelHostName.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label9.Name" xml:space="preserve">
+    <value>label9</value>
+  </data>
+  <data name="&gt;&gt;label9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;labelExternalAddress.Name" xml:space="preserve">
+    <value>labelExternalAddress</value>
+  </data>
+  <data name="&gt;&gt;labelExternalAddress.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelExternalAddress.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;labelExternalAddress.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;labelInternalAddress.Name" xml:space="preserve">
+    <value>labelInternalAddress</value>
+  </data>
+  <data name="&gt;&gt;labelInternalAddress.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelInternalAddress.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;labelInternalAddress.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="groupBox1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 24</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>566, 105</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>IP Information</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="labelExternalAddress.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelExternalAddress.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelExternalAddress.Location" type="System.Drawing.Point, System.Drawing">
+    <value>120, 51</value>
+  </data>
+  <data name="labelExternalAddress.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 13</value>
+  </data>
+  <data name="labelExternalAddress.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="labelExternalAddress.Text" xml:space="preserve">
+    <value>127.0.0.1</value>
+  </data>
+  <data name="&gt;&gt;labelExternalAddress.Name" xml:space="preserve">
+    <value>labelExternalAddress</value>
+  </data>
+  <data name="&gt;&gt;labelExternalAddress.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelExternalAddress.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;labelExternalAddress.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="labelInternalAddress.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelInternalAddress.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelInternalAddress.Location" type="System.Drawing.Point, System.Drawing">
+    <value>120, 25</value>
+  </data>
+  <data name="labelInternalAddress.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 13</value>
+  </data>
+  <data name="labelInternalAddress.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="labelInternalAddress.Text" xml:space="preserve">
+    <value>127.0.0.1</value>
+  </data>
+  <data name="&gt;&gt;labelInternalAddress.Name" xml:space="preserve">
+    <value>labelInternalAddress</value>
+  </data>
+  <data name="&gt;&gt;labelInternalAddress.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelInternalAddress.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;labelInternalAddress.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 51</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 13</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>External IP Address:</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 25</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 13</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Internal IP Address:</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;labelSpeed.Name" xml:space="preserve">
+    <value>labelSpeed</value>
+  </data>
+  <data name="&gt;&gt;labelSpeed.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelSpeed.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;labelSpeed.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label7.Name" xml:space="preserve">
+    <value>label7</value>
+  </data>
+  <data name="&gt;&gt;label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;labelMacAddress.Name" xml:space="preserve">
+    <value>labelMacAddress</value>
+  </data>
+  <data name="&gt;&gt;labelMacAddress.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMacAddress.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;labelMacAddress.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;labelAdapterStatus.Name" xml:space="preserve">
+    <value>labelAdapterStatus</value>
+  </data>
+  <data name="&gt;&gt;labelAdapterStatus.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelAdapterStatus.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;labelAdapterStatus.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;checkBox2.Name" xml:space="preserve">
+    <value>checkBox2</value>
+  </data>
+  <data name="&gt;&gt;checkBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBox2.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;checkBox2.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;checkBox1.Name" xml:space="preserve">
+    <value>checkBox1</value>
+  </data>
+  <data name="&gt;&gt;checkBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBox1.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;checkBox1.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;comboBoxAdapters.Name" xml:space="preserve">
+    <value>comboBoxAdapters</value>
+  </data>
+  <data name="&gt;&gt;comboBoxAdapters.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBoxAdapters.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;comboBoxAdapters.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="groupBox2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 129</value>
+  </data>
+  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>566, 192</value>
+  </data>
+  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>Adapter Information</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="labelSpeed.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelSpeed.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelSpeed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>95, 162</value>
+  </data>
+  <data name="labelSpeed.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 13</value>
+  </data>
+  <data name="labelSpeed.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="labelSpeed.Text" xml:space="preserve">
+    <value>127.0.0.1</value>
+  </data>
+  <data name="&gt;&gt;labelSpeed.Name" xml:space="preserve">
+    <value>labelSpeed</value>
+  </data>
+  <data name="&gt;&gt;labelSpeed.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelSpeed.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;labelSpeed.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>48, 162</value>
+  </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 13</value>
+  </data>
+  <data name="label7.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Speed:</value>
+  </data>
+  <data name="&gt;&gt;label7.Name" xml:space="preserve">
+    <value>label7</value>
+  </data>
+  <data name="&gt;&gt;label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="labelMacAddress.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelMacAddress.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelMacAddress.Location" type="System.Drawing.Point, System.Drawing">
+    <value>95, 133</value>
+  </data>
+  <data name="labelMacAddress.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 13</value>
+  </data>
+  <data name="labelMacAddress.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="labelMacAddress.Text" xml:space="preserve">
+    <value>127.0.0.1</value>
+  </data>
+  <data name="&gt;&gt;labelMacAddress.Name" xml:space="preserve">
+    <value>labelMacAddress</value>
+  </data>
+  <data name="&gt;&gt;labelMacAddress.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMacAddress.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;labelMacAddress.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 133</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 13</value>
+  </data>
+  <data name="label6.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>MAC Address:</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="labelAdapterStatus.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelAdapterStatus.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelAdapterStatus.Location" type="System.Drawing.Point, System.Drawing">
+    <value>101, 108</value>
+  </data>
+  <data name="labelAdapterStatus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>22, 13</value>
+  </data>
+  <data name="labelAdapterStatus.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="labelAdapterStatus.Text" xml:space="preserve">
+    <value>UP</value>
+  </data>
+  <data name="&gt;&gt;labelAdapterStatus.Name" xml:space="preserve">
+    <value>labelAdapterStatus</value>
+  </data>
+  <data name="&gt;&gt;labelAdapterStatus.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelAdapterStatus.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;labelAdapterStatus.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 108</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 13</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Adapter Status:</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="checkBox2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="checkBox2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 75</value>
+  </data>
+  <data name="checkBox2.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <data name="checkBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 17</value>
+  </data>
+  <data name="checkBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="checkBox2.Text" xml:space="preserve">
+    <value>IP Version 6 Enabled</value>
+  </data>
+  <data name="&gt;&gt;checkBox2.Name" xml:space="preserve">
+    <value>checkBox2</value>
+  </data>
+  <data name="&gt;&gt;checkBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBox2.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;checkBox2.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="checkBox1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox1.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="checkBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 75</value>
+  </data>
+  <data name="checkBox1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <data name="checkBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 17</value>
+  </data>
+  <data name="checkBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="checkBox1.Text" xml:space="preserve">
+    <value>IP Version 4 Enabled</value>
+  </data>
+  <data name="&gt;&gt;checkBox1.Name" xml:space="preserve">
+    <value>checkBox1</value>
+  </data>
+  <data name="&gt;&gt;checkBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBox1.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;checkBox1.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="comboBoxAdapters.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="comboBoxAdapters.Location" type="System.Drawing.Point, System.Drawing">
+    <value>71, 29</value>
+  </data>
+  <data name="comboBoxAdapters.Size" type="System.Drawing.Size, System.Drawing">
+    <value>483, 21</value>
+  </data>
+  <data name="comboBoxAdapters.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;comboBoxAdapters.Name" xml:space="preserve">
+    <value>comboBoxAdapters</value>
+  </data>
+  <data name="&gt;&gt;comboBoxAdapters.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBoxAdapters.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;comboBoxAdapters.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 29</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 13</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Adapters:</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>248, 17</value>
+  </metadata>
+  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>566, 24</value>
+  </data>
+  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="menuStrip1.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 20</value>
+  </data>
+  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;File</value>
+  </data>
+  <data name="editToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 20</value>
+  </data>
+  <data name="editToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Edit</value>
+  </data>
+  <data name="settingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 22</value>
+  </data>
+  <data name="settingsToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Settings</value>
+  </data>
+  <data name="copyInternalIPAddressToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 22</value>
+  </data>
+  <data name="copyInternalIPAddressToolStripMenuItem.Text" xml:space="preserve">
+    <value>Copy Internal IP Address</value>
+  </data>
+  <data name="copyExternalIPAddressToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 22</value>
+  </data>
+  <data name="copyExternalIPAddressToolStripMenuItem.Text" xml:space="preserve">
+    <value>Copy External IP Address</value>
+  </data>
+  <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 20</value>
+  </data>
+  <data name="helpToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Help</value>
+  </data>
+  <data name="aboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 22</value>
+  </data>
+  <data name="aboutToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;About</value>
+  </data>
+  <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>363, 17</value>
+  </metadata>
+  <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 321</value>
+  </data>
+  <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>566, 22</value>
+  </data>
+  <data name="statusStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="statusStrip1.Text" xml:space="preserve">
+    <value>statusStrip1</value>
+  </data>
+  <data name="&gt;&gt;statusStrip1.Name" xml:space="preserve">
+    <value>statusStrip1</value>
+  </data>
+  <data name="&gt;&gt;statusStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;statusStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;statusStrip1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <metadata name="notifyIcon1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>479, 17</value>
+  </metadata>
+  <data name="notifyIcon1.BalloonTipTitle" xml:space="preserve">
+    <value>IP Address Information</value>
+  </data>
+  <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>592, 17</value>
+  </metadata>
+  <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 4</value>
+  </data>
+  <data name="&gt;&gt;contextMenuStrip1.Name" xml:space="preserve">
+    <value>contextMenuStrip1</value>
+  </data>
+  <data name="&gt;&gt;contextMenuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="notifyIcon1.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAMAICAQAAAABADoAgAANgAAACAgAAAAABgAqAwAAB4DAAAgIAAAAAAgAKgQAADGDwAAKAAAACAA
+        AABAAAAAAQAEAAAAAACAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAADIwMAAeICAAODo6AD4KCAAcAAAAACo
+        AAAgECgA+JiYALi4uABAQEAAqKioANjY2AD4YGAAEDAwAPj4+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAADMzMzMzMzMzMzMzMzMwfAAzMzMPMzMzMPDE8zMzDHwADPz8/Pz8/PzM/Mz8/Pz8AhE
+        RERERERERERERERERE8FBVVVVVVVVVVVVVUFUFUNBe7u7u7u7u7u7u7u7u7uCAV3fnd3d353d3d3d3d3
+        fg0FBmBmZ2ZnZmd3d3d3Bm4IBQZg5m4GZ2YHd3d3dwZuDQXnfnfn53537g7uDu537g0EVVVVVVVVVVVV
+        VVVVVVVYANTY2NiNiNiNjY2NjYgdgADykz8z//8///M/M/MzI/AAMr/MOafrGnqTzMPDMyHwADKzzDMg
+        D/oOMzw8zMMh8AAykzzPEK/yAvzMw8wzIfAAMrPMz8Dv8gL/PDzDwyHwADKTw8MQr/IKIv/MzDMh8AAy
+        s8zPwK/yACAC88PDIfAAMr/MMxDv8gL/AB/MMyHwADKTzM8Qr/IC/yAvzDMh8AAys8PPwK/yAv8AL8PD
+        IfAAMrM8zyAP+g63B/PMwyHwADKTzDmuq5rq6r88PDMh8AAys8PD//M///8zPMzDIfAAMrPMw8PMw8PM
+        PMw8PCHwAMsTzDzMw8zMPMzDzMMs8ADDzMzMzMzMzMzMzMzMMfAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAP//////////wAAAAcAAAAHAAAABgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAA
+        AADAAAABwAAAAcAAAAHAAAABwAAAAcAAAAHAAAABwAAAAcAAAAHAAAABwAAAAcAAAAHAAAABwAAAAcAA
+        AAHAAAABwAAAAf//////////KAAAACAAAABAAAAAAQAYAAAAAACADAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAN3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d
+        3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3czMzP///gAAAAAAAAAAAN3d3d3d3d3d
+        3d3d3d3d3d3d3e7u7t3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3e7u7t3d3e7u7szMzO7u7t3d3d3d3d3d
+        3d3d3d3d3d3d3e7u7szMzP///gAAAAAAAAAAAMz//8z//////sz//////sz//////sz//////sz/////
+        /sz//////sz//////sz//+7u7sz//////sz//+7u7sz//////sz//////sz//////sz//////gAAAAAA
+        AP+Zmf8AAP8zM/8zM/8AM/8zM/8zAP8AM/8zM/8zM/8AAP8zM/8zM/8zAP8zM/8zM/8zAP8zM/8zM/8z
+        AP8zM/8zM/8zAP8zM/8zM/8zM/8AAP8zM/8AM/8zM////gAAALsAACIAAFUAAFUAAFUAAEQAAEQAAFUA
+        AFUAAFUAAFUAAEQAAFUAAFUAAFUAAFUAAFUAAFUAAFUAAFUAAFUAAFUAAGYAADMAAFUAAFUAADMAAFUA
+        AFUAADMAAP9mZgAAAHcAAAAzMwAzMwAzMwAzMzMzMwAzMwAzMwAzMwAzMwAzMzMzMwAzMwAzMwAzMwAz
+        MwAzMwAzMwAzMwAzMwAzMwAzMwAzMzMzMwAzMwAzMzMzMwAzMwAzMwAAAP+ZmQAAAIgAAAAAMzMAMzMA
+        MzMzMwAAMzMAMzMAMyIiIiIiIjMAMzMAMwAzMzMAMzMAMzMAMyIiIiIiIiIiIiIiIiIiIiIiIiIiIiIi
+        IiIiIjMAMzMAMzMAMwAzMwAAAP9mZgAAAIgAAAAiAADMAADdAABEADNmAADMAADMADMAMwB3AADdAACZ
+        ADMAMwCqAADMAAB3ADMAMyIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIgBVAADdAADMADMzMwAAAP+ZmQAA
+        AIgAAAAAEQCqAACqADMzAAAzMwCqAACIADMzMwBEAACqAAB3ACIiIgB3AACqAABVACIiIiIiIiIiIiIi
+        IiIiIiIiIiIiIiIiIjMAMwBEAACqAACIAAAzMwAAAP9mZgAAAGYAAAAzMwAAMwAAMwAzMwAAIgAAMwAz
+        MwAAIgAzMwAAMwAAMwAzMwAAIgAAMwAzMwAzMwAAEQAzMwAzMwAzMwAAEQAzMwAzMwAzMwAAIgAAMwAz
+        MwAzMwAAAP9mZgAAAO4AAHcAAIgAAIgAAJkAAIgAAIgAAIgAAIgAAIgAAIgAAIgAAIgAAIgAAIgAAIgA
+        AIgAAIgAAIgAAIgAAIgAAIgAAIgAAIgAAIgAAIgAAIgAAIgAAIgAAHcAAP+ZmQAAAAAAAP9mZv8zM/9m
+        Zv+Zmf9mZv+Zmf9mZv+Zmf+Zmf9mZv+Zmf+Zmf9mZv+Zmf+Zmf9mZv+Zmf9mZv+Zmf9mZv+Zmf9mZv+Z
+        mf9mZv+Zmf+ZmcwAAP9mZv+ZmQAAAAAAAAAAAP///maZmZnMzMz//8z//////sz//8z//////v///v//
+        /v///sz//////v///v///v///sz//8z//////sz//8z//////sz//8z//+7u7maZmcz//////gAAAAAA
+        AAAAAO7u7oiIiKqqqv///t3d3d3d3e7u7ru7u1VVVSIiIjMzM6qqqszMzERERCIiIkRERLu7u+7u7t3d
+        3d3d3d3d3e7u7t3d3e7u7u7u7u7u7mZmZszMzP///gAAAAAAAAAAAO7u7oiIiKqqqu7u7t3d3d3d3e7u
+        7u7u7pmZmQAAAAAAAP///v///kRERAAAADMzM+7u7u7u7u7u7t3d3e7u7t3d3d3d3d3d3d3d3e7u7mZm
+        ZszMzP///gAAAAAAAAAAAO7u7nd3d7u7u+7u7u7u7t3d3d3d3f///szMzAAAAERERP///v///oiIiAAA
+        AJmZmf///t3d3d3d3d3d3d3d3e7u7t3d3d3d3e7u7u7u7mZmZszMzP///gAAAAAAAAAAAO7u7oiIiKqq
+        qu7u7t3d3d3d3d3d3f///t3d3QAAADMzM////v///oiIiAAAAJmZmf///v///u7u7t3d3e7u7t3d3d3d
+        3e7u7t3d3e7u7mZmZszMzP///gAAAAAAAAAAAO7u7nd3d7u7u+7u7t3d3e7u7t3d3e7u7szMzAAAAERE
+        RP///v///oiIiAAAAERERJmZmZmZmf///v///t3d3d3d3d3d3d3d3e7u7u7u7mZmZszMzP///gAAAAAA
+        AAAAAO7u7oiIiKqqqu7u7t3d3d3d3d3d3f///t3d3QAAAERERP///v///oiIiAAAABEREWZmZgAAAAAA
+        AIiIiP///u7u7t3d3e7u7t3d3e7u7mZmZszMzP///gAAAAAAAAAAAO7u7nd3d6qqqv///t3d3d3d3e7u
+        7u7u7szMzAAAADMzM////v///oiIiAAAAJmZmf///v///gAAAAAAAMzMzP///t3d3d3d3e7u7u7u7mZm
+        ZszMzP///gAAAAAAAAAAAO7u7oiIiLu7u+7u7t3d3d3d3d3d3f///szMzAAAAERERP///v///oiIiAAA
+        AIiIiP///v///nd3dwAAAGZmZv///t3d3d3d3e7u7u7u7mZmZszMzP///gAAAAAAAAAAAO7u7nd3d6qq
+        qu7u7t3d3e7u7t3d3f///t3d3QAAAERERP///v///pmZmQAAAJmZmf///v///hEREQAAAJmZmf///t3d
+        3e7u7t3d3e7u7mZmZszMzP///gAAAAAAAAAAAO7u7oiIiKqqqu7u7u7u7t3d3d3d3f///oiIiAAAAAAA
+        AP///v///kRERAAAADMzM6qqqiIiIgAAACIiIv///u7u7t3d3d3d3d3d3e7u7mZmZszMzP///gAAAAAA
+        AAAAAO7u7nd3d7u7u+7u7t3d3d3d3e7u7ru7u1VVVTMzM0RERKqqqru7u0RERDMzM0RERDMzM0RERKqq
+        qv///u7u7t3d3e7u7t3d3e7u7u7u7mZmZszMzP///gAAAAAAAAAAAO7u7oiIiKqqqu7u7t3d3e7u7t3d
+        3e7u7v///v///v///u7u7u7u7v///v///v///v///v///u7u7u7u7u7u7t3d3d3d3d3d3d3d3e7u7mZm
+        ZszMzP///gAAAAAAAAAAAO7u7nd3d6qqqu7u7t3d3d3d3d3d3e7u7t3d3e7u7t3d3d3d3d3d3e7u7t3d
+        3e7u7t3d3d3d3e7u7t3d3d3d3d3d3e7u7t3d3e7u7t3d3WZmZszMzP///gAAAAAAAAAAAN3d3aqqqszM
+        zO7u7t3d3d3d3e7u7t3d3d3d3d3d3d3d3e7u7t3d3d3d3d3d3d3d3e7u7t3d3d3d3d3d3d3d3e7u7t3d
+        3d3d3d3d3e7u7pmZmd3d3f///gAAAAAAAAAAAN3d3e7u7t3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d
+        3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3e7u7szMzP///gAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAP//////////wAAAAcAAAAHAAAABgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAA
+        AADAAAABwAAAAcAAAAHAAAABwAAAAcAAAAHAAAABwAAAAcAAAAHAAAABwAAAAcAAAAHAAAABwAAAAcAA
+        AAHAAAABwAAAAf//////////KAAAACAAAABAAAAAAQAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAN3d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/8zMzP////7/AAAAAAAAAAAAAAAA3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/7u7u/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/7u7u/93d3f/u7u7/zMzM/+7u7v/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/u7u7/zMzM/////v8AAAAAAAAAAAAAAADM////zP///////v/M///////+/8z/
+        //////7/zP///////v/M///////+/8z///////7/zP///////v/M////7u7u/8z///////7/zP///+7u
+        7v/M///////+/8z///////7/zP///////v/M///////+/wAAAAAAAAAA/5mZ//8AAP//MzP//zMz//8A
+        M///MzP//zMA//8AM///MzP//zMz//8AAP//MzP//zMz//8zAP//MzP//zMz//8zAP//MzP//zMz//8z
+        AP//MzP//zMz//8zAP//MzP//zMz//8zM///AAD//zMz//8AM///MzP////+/wAAAAC7AAD/IgAA/1UA
+        AP9VAAD/VQAA/0QAAP9EAAD/VQAA/1UAAP9VAAD/VQAA/0QAAP9VAAD/VQAA/1UAAP9VAAD/VQAA/1UA
+        AP9VAAD/VQAA/1UAAP9VAAD/ZgAA/zMAAP9VAAD/VQAA/zMAAP9VAAD/VQAA/zMAAP//Zmb/AAAAAHcA
+        AP8AMzP/ADMz/wAzM/8AMzP/MzMz/wAzM/8AMzP/ADMz/wAzM/8AMzP/MzMz/wAzM/8AMzP/ADMz/wAz
+        M/8AMzP/ADMz/wAzM/8AMzP/ADMz/wAzM/8AMzP/MzMz/wAzM/8AMzP/MzMz/wAzM/8AMzP/AAAA//+Z
+        mf8AAAAAiAAA/wAAM/8zADP/MwAz/zMzM/8AADP/MwAz/zMAM/8iIiL/IiIi/zMAM/8zADP/ADMz/zMA
+        M/8zADP/MwAz/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/zMAM/8zADP/MwAz/wAz
+        M/8AAAD//2Zm/wAAAACIAAD/ACIA/wDMAP8A3QD/AEQA/zNmAP8AzAD/AMwA/zMAM/8AdwD/AN0A/wCZ
+        AP8zADP/AKoA/wDMAP8AdwD/MwAz/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/AFUA/wDd
+        AP8AzAD/MzMz/wAAAP//mZn/AAAAAIgAAP8AABH/AKoA/wCqAP8zMwD/ADMz/wCqAP8AiAD/MzMz/wBE
+        AP8AqgD/AHcA/yIiIv8AdwD/AKoA/wBVAP8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/zMA
+        M/8ARAD/AKoA/wCIAP8AMzP/AAAA//9mZv8AAAAAZgAA/wAzM/8AADP/AAAz/wAzM/8AACL/AAAz/wAz
+        M/8AACL/ADMz/wAAM/8AADP/ADMz/wAAIv8AADP/ADMz/wAzM/8AABH/ADMz/wAzM/8AMzP/AAAR/wAz
+        M/8AMzP/ADMz/wAAIv8AADP/ADMz/wAzM/8AAAD//2Zm/wAAAADuAAD/dwAA/4gAAP+IAAD/mQAA/4gA
+        AP+IAAD/iAAA/4gAAP+IAAD/iAAA/4gAAP+IAAD/iAAA/4gAAP+IAAD/iAAA/4gAAP+IAAD/iAAA/4gA
+        AP+IAAD/iAAA/4gAAP+IAAD/iAAA/4gAAP+IAAD/iAAA/3cAAP//mZn/AAAAAAAAAAD/Zmb//zMz//9m
+        Zv//mZn//2Zm//+Zmf//Zmb//5mZ//+Zmf//Zmb//5mZ//+Zmf//Zmb//5mZ//+Zmf//Zmb//5mZ//9m
+        Zv//mZn//2Zm//+Zmf//Zmb//5mZ//9mZv//mZn//5mZ/8wAAP//Zmb//5mZ/wAAAAAAAAAAAAAAAP//
+        /v9mmZn/mczM/8z////M///////+/8z////M///////+/////v////7////+/8z///////7////+////
+        /v////7/zP///8z///////7/zP///8z///////7/zP///8z////u7u7/ZpmZ/8z///////7/AAAAAAAA
+        AAAAAAAA7u7u/4iIiP+qqqr////+/93d3f/d3d3/7u7u/7u7u/9VVVX/IiIi/zMzM/+qqqr/zMzM/0RE
+        RP8iIiL/RERE/7u7u//u7u7/3d3d/93d3f/d3d3/7u7u/93d3f/u7u7/7u7u/+7u7v9mZmb/zMzM////
+        /v8AAAAAAAAAAAAAAADu7u7/iIiI/6qqqv/u7u7/3d3d/93d3f/u7u7/7u7u/5mZmf8AAAD/AAAA////
+        /v////7/RERE/wAAAP8zMzP/7u7u/+7u7v/u7u7/3d3d/+7u7v/d3d3/3d3d/93d3f/d3d3/7u7u/2Zm
+        Zv/MzMz////+/wAAAAAAAAAAAAAAAO7u7v93d3f/u7u7/+7u7v/u7u7/3d3d/93d3f////7/zMzM/wAA
+        AP9ERET////+/////v+IiIj/AAAA/5mZmf////7/3d3d/93d3f/d3d3/3d3d/+7u7v/d3d3/3d3d/+7u
+        7v/u7u7/ZmZm/8zMzP////7/AAAAAAAAAAAAAAAA7u7u/4iIiP+qqqr/7u7u/93d3f/d3d3/3d3d////
+        /v/d3d3/AAAA/zMzM/////7////+/4iIiP8AAAD/mZmZ/////v////7/7u7u/93d3f/u7u7/3d3d/93d
+        3f/u7u7/3d3d/+7u7v9mZmb/zMzM/////v8AAAAAAAAAAAAAAADu7u7/d3d3/7u7u//u7u7/3d3d/+7u
+        7v/d3d3/7u7u/8zMzP8AAAD/RERE/////v////7/iIiI/wAAAP9ERET/mZmZ/5mZmf////7////+/93d
+        3f/d3d3/3d3d/93d3f/u7u7/7u7u/2ZmZv/MzMz////+/wAAAAAAAAAAAAAAAO7u7v+IiIj/qqqq/+7u
+        7v/d3d3/3d3d/93d3f////7/3d3d/wAAAP9ERET////+/////v+IiIj/AAAA/xEREf9mZmb/AAAA/wAA
+        AP+IiIj////+/+7u7v/d3d3/7u7u/93d3f/u7u7/ZmZm/8zMzP////7/AAAAAAAAAAAAAAAA7u7u/3d3
+        d/+qqqr////+/93d3f/d3d3/7u7u/+7u7v/MzMz/AAAA/zMzM/////7////+/4iIiP8AAAD/mZmZ////
+        /v////7/AAAA/wAAAP/MzMz////+/93d3f/d3d3/7u7u/+7u7v9mZmb/zMzM/////v8AAAAAAAAAAAAA
+        AADu7u7/iIiI/7u7u//u7u7/3d3d/93d3f/d3d3////+/8zMzP8AAAD/RERE/////v////7/iIiI/wAA
+        AP+IiIj////+/////v93d3f/AAAA/2ZmZv////7/3d3d/93d3f/u7u7/7u7u/2ZmZv/MzMz////+/wAA
+        AAAAAAAAAAAAAO7u7v93d3f/qqqq/+7u7v/d3d3/7u7u/93d3f////7/3d3d/wAAAP9ERET////+////
+        /v+ZmZn/AAAA/5mZmf////7////+/xEREf8AAAD/mZmZ/////v/d3d3/7u7u/93d3f/u7u7/ZmZm/8zM
+        zP////7/AAAAAAAAAAAAAAAA7u7u/4iIiP+qqqr/7u7u/+7u7v/d3d3/3d3d/////v+IiIj/AAAA/wAA
+        AP////7////+/0RERP8AAAD/MzMz/6qqqv8iIiL/AAAA/yIiIv////7/7u7u/93d3f/d3d3/3d3d/+7u
+        7v9mZmb/zMzM/////v8AAAAAAAAAAAAAAADu7u7/d3d3/7u7u//u7u7/3d3d/93d3f/u7u7/u7u7/1VV
+        Vf8zMzP/RERE/6qqqv+7u7v/RERE/zMzM/9ERET/MzMz/0RERP+qqqr////+/+7u7v/d3d3/7u7u/93d
+        3f/u7u7/7u7u/2ZmZv/MzMz////+/wAAAAAAAAAAAAAAAO7u7v+IiIj/qqqq/+7u7v/d3d3/7u7u/93d
+        3f/u7u7////+/////v////7/7u7u/+7u7v////7////+/////v////7////+/+7u7v/u7u7/7u7u/93d
+        3f/d3d3/3d3d/93d3f/u7u7/ZmZm/8zMzP////7/AAAAAAAAAAAAAAAA7u7u/3d3d/+qqqr/7u7u/93d
+        3f/d3d3/3d3d/+7u7v/d3d3/7u7u/93d3f/d3d3/3d3d/+7u7v/d3d3/7u7u/93d3f/d3d3/7u7u/93d
+        3f/d3d3/3d3d/+7u7v/d3d3/7u7u/93d3f9mZmb/zMzM/////v8AAAAAAAAAAAAAAADd3d3/qqqq/8zM
+        zP/u7u7/3d3d/93d3f/u7u7/3d3d/93d3f/d3d3/3d3d/+7u7v/d3d3/3d3d/93d3f/d3d3/7u7u/93d
+        3f/d3d3/3d3d/93d3f/u7u7/3d3d/93d3f/d3d3/7u7u/5mZmf/d3d3////+/wAAAAAAAAAAAAAAAN3d
+        3f/u7u7/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/7u7u/8zMzP////7/AAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAD//////////8AAAAHAAAABwAAAAYAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAA
+        AACAAAAAwAAAAcAAAAHAAAABwAAAAcAAAAHAAAABwAAAAcAAAAHAAAABwAAAAcAAAAHAAAABwAAAAcAA
+        AAHAAAABwAAAAcAAAAH//////////w==
+</value>
+  </data>
+  <data name="notifyIcon1.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelHostName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelHostName.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelHostName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>120, 76</value>
+  </data>
+  <data name="labelHostName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 13</value>
+  </data>
+  <data name="labelHostName.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;labelHostName.Name" xml:space="preserve">
+    <value>labelHostName</value>
+  </data>
+  <data name="&gt;&gt;labelHostName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelHostName.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;labelHostName.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label9.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>51, 76</value>
+  </data>
+  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 13</value>
+  </data>
+  <data name="label9.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>Host Name:</value>
+  </data>
+  <data name="&gt;&gt;label9.Name" xml:space="preserve">
+    <value>label9</value>
+  </data>
+  <data name="&gt;&gt;label9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="refreshIPInformationToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 22</value>
+  </data>
+  <data name="refreshIPInformationToolStripMenuItem.Text" xml:space="preserve">
+    <value>Refresh IP Information</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>566, 343</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAMAICAQAAAABADoAgAANgAAACAgAAAAABgAqAwAAB4DAAAgIAAAAAAgAKgQAADGDwAAKAAAACAA
+        AABAAAAAAQAEAAAAAACAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAADIwMAAeICAAODo6AD4KCAAcAAAAACo
+        AAAgECgA+JiYALi4uABAQEAAqKioANjY2AD4YGAAEDAwAPj4+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAADMzMzMzMzMzMzMzMzMwfAAzMzMPMzMzMPDE8zMzDHwADPz8/Pz8/PzM/Mz8/Pz8AhE
+        RERERERERERERERERE8FBVVVVVVVVVVVVVUFUFUNBe7u7u7u7u7u7u7u7u7uCAV3fnd3d353d3d3d3d3
+        fg0FBmBmZ2ZnZmd3d3d3Bm4IBQZg5m4GZ2YHd3d3dwZuDQXnfnfn53537g7uDu537g0EVVVVVVVVVVVV
+        VVVVVVVYANTY2NiNiNiNjY2NjYgdgADykz8z//8///M/M/MzI/AAMr/MOafrGnqTzMPDMyHwADKzzDMg
+        D/oOMzw8zMMh8AAykzzPEK/yAvzMw8wzIfAAMrPMz8Dv8gL/PDzDwyHwADKTw8MQr/IKIv/MzDMh8AAy
+        s8zPwK/yACAC88PDIfAAMr/MMxDv8gL/AB/MMyHwADKTzM8Qr/IC/yAvzDMh8AAys8PPwK/yAv8AL8PD
+        IfAAMrM8zyAP+g63B/PMwyHwADKTzDmuq5rq6r88PDMh8AAys8PD//M///8zPMzDIfAAMrPMw8PMw8PM
+        PMw8PCHwAMsTzDzMw8zMPMzDzMMs8ADDzMzMzMzMzMzMzMzMMfAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAP//////////wAAAAcAAAAHAAAABgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAA
+        AADAAAABwAAAAcAAAAHAAAABwAAAAcAAAAHAAAABwAAAAcAAAAHAAAABwAAAAcAAAAHAAAABwAAAAcAA
+        AAHAAAABwAAAAf//////////KAAAACAAAABAAAAAAQAYAAAAAACADAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAN3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d
+        3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3czMzP///gAAAAAAAAAAAN3d3d3d3d3d
+        3d3d3d3d3d3d3e7u7t3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3e7u7t3d3e7u7szMzO7u7t3d3d3d3d3d
+        3d3d3d3d3d3d3e7u7szMzP///gAAAAAAAAAAAMz//8z//////sz//////sz//////sz//////sz/////
+        /sz//////sz//////sz//+7u7sz//////sz//+7u7sz//////sz//////sz//////sz//////gAAAAAA
+        AP+Zmf8AAP8zM/8zM/8AM/8zM/8zAP8AM/8zM/8zM/8AAP8zM/8zM/8zAP8zM/8zM/8zAP8zM/8zM/8z
+        AP8zM/8zM/8zAP8zM/8zM/8zM/8AAP8zM/8AM/8zM////gAAALsAACIAAFUAAFUAAFUAAEQAAEQAAFUA
+        AFUAAFUAAFUAAEQAAFUAAFUAAFUAAFUAAFUAAFUAAFUAAFUAAFUAAFUAAGYAADMAAFUAAFUAADMAAFUA
+        AFUAADMAAP9mZgAAAHcAAAAzMwAzMwAzMwAzMzMzMwAzMwAzMwAzMwAzMwAzMzMzMwAzMwAzMwAzMwAz
+        MwAzMwAzMwAzMwAzMwAzMwAzMwAzMzMzMwAzMwAzMzMzMwAzMwAzMwAAAP+ZmQAAAIgAAAAAMzMAMzMA
+        MzMzMwAAMzMAMzMAMyIiIiIiIjMAMzMAMwAzMzMAMzMAMzMAMyIiIiIiIiIiIiIiIiIiIiIiIiIiIiIi
+        IiIiIjMAMzMAMzMAMwAzMwAAAP9mZgAAAIgAAAAiAADMAADdAABEADNmAADMAADMADMAMwB3AADdAACZ
+        ADMAMwCqAADMAAB3ADMAMyIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIgBVAADdAADMADMzMwAAAP+ZmQAA
+        AIgAAAAAEQCqAACqADMzAAAzMwCqAACIADMzMwBEAACqAAB3ACIiIgB3AACqAABVACIiIiIiIiIiIiIi
+        IiIiIiIiIiIiIiIiIjMAMwBEAACqAACIAAAzMwAAAP9mZgAAAGYAAAAzMwAAMwAAMwAzMwAAIgAAMwAz
+        MwAAIgAzMwAAMwAAMwAzMwAAIgAAMwAzMwAzMwAAEQAzMwAzMwAzMwAAEQAzMwAzMwAzMwAAIgAAMwAz
+        MwAzMwAAAP9mZgAAAO4AAHcAAIgAAIgAAJkAAIgAAIgAAIgAAIgAAIgAAIgAAIgAAIgAAIgAAIgAAIgA
+        AIgAAIgAAIgAAIgAAIgAAIgAAIgAAIgAAIgAAIgAAIgAAIgAAIgAAHcAAP+ZmQAAAAAAAP9mZv8zM/9m
+        Zv+Zmf9mZv+Zmf9mZv+Zmf+Zmf9mZv+Zmf+Zmf9mZv+Zmf+Zmf9mZv+Zmf9mZv+Zmf9mZv+Zmf9mZv+Z
+        mf9mZv+Zmf+ZmcwAAP9mZv+ZmQAAAAAAAAAAAP///maZmZnMzMz//8z//////sz//8z//////v///v//
+        /v///sz//////v///v///v///sz//8z//////sz//8z//////sz//8z//+7u7maZmcz//////gAAAAAA
+        AAAAAO7u7oiIiKqqqv///t3d3d3d3e7u7ru7u1VVVSIiIjMzM6qqqszMzERERCIiIkRERLu7u+7u7t3d
+        3d3d3d3d3e7u7t3d3e7u7u7u7u7u7mZmZszMzP///gAAAAAAAAAAAO7u7oiIiKqqqu7u7t3d3d3d3e7u
+        7u7u7pmZmQAAAAAAAP///v///kRERAAAADMzM+7u7u7u7u7u7t3d3e7u7t3d3d3d3d3d3d3d3e7u7mZm
+        ZszMzP///gAAAAAAAAAAAO7u7nd3d7u7u+7u7u7u7t3d3d3d3f///szMzAAAAERERP///v///oiIiAAA
+        AJmZmf///t3d3d3d3d3d3d3d3e7u7t3d3d3d3e7u7u7u7mZmZszMzP///gAAAAAAAAAAAO7u7oiIiKqq
+        qu7u7t3d3d3d3d3d3f///t3d3QAAADMzM////v///oiIiAAAAJmZmf///v///u7u7t3d3e7u7t3d3d3d
+        3e7u7t3d3e7u7mZmZszMzP///gAAAAAAAAAAAO7u7nd3d7u7u+7u7t3d3e7u7t3d3e7u7szMzAAAAERE
+        RP///v///oiIiAAAAERERJmZmZmZmf///v///t3d3d3d3d3d3d3d3e7u7u7u7mZmZszMzP///gAAAAAA
+        AAAAAO7u7oiIiKqqqu7u7t3d3d3d3d3d3f///t3d3QAAAERERP///v///oiIiAAAABEREWZmZgAAAAAA
+        AIiIiP///u7u7t3d3e7u7t3d3e7u7mZmZszMzP///gAAAAAAAAAAAO7u7nd3d6qqqv///t3d3d3d3e7u
+        7u7u7szMzAAAADMzM////v///oiIiAAAAJmZmf///v///gAAAAAAAMzMzP///t3d3d3d3e7u7u7u7mZm
+        ZszMzP///gAAAAAAAAAAAO7u7oiIiLu7u+7u7t3d3d3d3d3d3f///szMzAAAAERERP///v///oiIiAAA
+        AIiIiP///v///nd3dwAAAGZmZv///t3d3d3d3e7u7u7u7mZmZszMzP///gAAAAAAAAAAAO7u7nd3d6qq
+        qu7u7t3d3e7u7t3d3f///t3d3QAAAERERP///v///pmZmQAAAJmZmf///v///hEREQAAAJmZmf///t3d
+        3e7u7t3d3e7u7mZmZszMzP///gAAAAAAAAAAAO7u7oiIiKqqqu7u7u7u7t3d3d3d3f///oiIiAAAAAAA
+        AP///v///kRERAAAADMzM6qqqiIiIgAAACIiIv///u7u7t3d3d3d3d3d3e7u7mZmZszMzP///gAAAAAA
+        AAAAAO7u7nd3d7u7u+7u7t3d3d3d3e7u7ru7u1VVVTMzM0RERKqqqru7u0RERDMzM0RERDMzM0RERKqq
+        qv///u7u7t3d3e7u7t3d3e7u7u7u7mZmZszMzP///gAAAAAAAAAAAO7u7oiIiKqqqu7u7t3d3e7u7t3d
+        3e7u7v///v///v///u7u7u7u7v///v///v///v///v///u7u7u7u7u7u7t3d3d3d3d3d3d3d3e7u7mZm
+        ZszMzP///gAAAAAAAAAAAO7u7nd3d6qqqu7u7t3d3d3d3d3d3e7u7t3d3e7u7t3d3d3d3d3d3e7u7t3d
+        3e7u7t3d3d3d3e7u7t3d3d3d3d3d3e7u7t3d3e7u7t3d3WZmZszMzP///gAAAAAAAAAAAN3d3aqqqszM
+        zO7u7t3d3d3d3e7u7t3d3d3d3d3d3d3d3e7u7t3d3d3d3d3d3d3d3e7u7t3d3d3d3d3d3d3d3e7u7t3d
+        3d3d3d3d3e7u7pmZmd3d3f///gAAAAAAAAAAAN3d3e7u7t3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d
+        3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3e7u7szMzP///gAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAP//////////wAAAAcAAAAHAAAABgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAA
+        AADAAAABwAAAAcAAAAHAAAABwAAAAcAAAAHAAAABwAAAAcAAAAHAAAABwAAAAcAAAAHAAAABwAAAAcAA
+        AAHAAAABwAAAAf//////////KAAAACAAAABAAAAAAQAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAN3d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/8zMzP////7/AAAAAAAAAAAAAAAA3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/7u7u/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/7u7u/93d3f/u7u7/zMzM/+7u7v/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/u7u7/zMzM/////v8AAAAAAAAAAAAAAADM////zP///////v/M///////+/8z/
+        //////7/zP///////v/M///////+/8z///////7/zP///////v/M////7u7u/8z///////7/zP///+7u
+        7v/M///////+/8z///////7/zP///////v/M///////+/wAAAAAAAAAA/5mZ//8AAP//MzP//zMz//8A
+        M///MzP//zMA//8AM///MzP//zMz//8AAP//MzP//zMz//8zAP//MzP//zMz//8zAP//MzP//zMz//8z
+        AP//MzP//zMz//8zAP//MzP//zMz//8zM///AAD//zMz//8AM///MzP////+/wAAAAC7AAD/IgAA/1UA
+        AP9VAAD/VQAA/0QAAP9EAAD/VQAA/1UAAP9VAAD/VQAA/0QAAP9VAAD/VQAA/1UAAP9VAAD/VQAA/1UA
+        AP9VAAD/VQAA/1UAAP9VAAD/ZgAA/zMAAP9VAAD/VQAA/zMAAP9VAAD/VQAA/zMAAP//Zmb/AAAAAHcA
+        AP8AMzP/ADMz/wAzM/8AMzP/MzMz/wAzM/8AMzP/ADMz/wAzM/8AMzP/MzMz/wAzM/8AMzP/ADMz/wAz
+        M/8AMzP/ADMz/wAzM/8AMzP/ADMz/wAzM/8AMzP/MzMz/wAzM/8AMzP/MzMz/wAzM/8AMzP/AAAA//+Z
+        mf8AAAAAiAAA/wAAM/8zADP/MwAz/zMzM/8AADP/MwAz/zMAM/8iIiL/IiIi/zMAM/8zADP/ADMz/zMA
+        M/8zADP/MwAz/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/zMAM/8zADP/MwAz/wAz
+        M/8AAAD//2Zm/wAAAACIAAD/ACIA/wDMAP8A3QD/AEQA/zNmAP8AzAD/AMwA/zMAM/8AdwD/AN0A/wCZ
+        AP8zADP/AKoA/wDMAP8AdwD/MwAz/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/AFUA/wDd
+        AP8AzAD/MzMz/wAAAP//mZn/AAAAAIgAAP8AABH/AKoA/wCqAP8zMwD/ADMz/wCqAP8AiAD/MzMz/wBE
+        AP8AqgD/AHcA/yIiIv8AdwD/AKoA/wBVAP8iIiL/IiIi/yIiIv8iIiL/IiIi/yIiIv8iIiL/IiIi/zMA
+        M/8ARAD/AKoA/wCIAP8AMzP/AAAA//9mZv8AAAAAZgAA/wAzM/8AADP/AAAz/wAzM/8AACL/AAAz/wAz
+        M/8AACL/ADMz/wAAM/8AADP/ADMz/wAAIv8AADP/ADMz/wAzM/8AABH/ADMz/wAzM/8AMzP/AAAR/wAz
+        M/8AMzP/ADMz/wAAIv8AADP/ADMz/wAzM/8AAAD//2Zm/wAAAADuAAD/dwAA/4gAAP+IAAD/mQAA/4gA
+        AP+IAAD/iAAA/4gAAP+IAAD/iAAA/4gAAP+IAAD/iAAA/4gAAP+IAAD/iAAA/4gAAP+IAAD/iAAA/4gA
+        AP+IAAD/iAAA/4gAAP+IAAD/iAAA/4gAAP+IAAD/iAAA/3cAAP//mZn/AAAAAAAAAAD/Zmb//zMz//9m
+        Zv//mZn//2Zm//+Zmf//Zmb//5mZ//+Zmf//Zmb//5mZ//+Zmf//Zmb//5mZ//+Zmf//Zmb//5mZ//9m
+        Zv//mZn//2Zm//+Zmf//Zmb//5mZ//9mZv//mZn//5mZ/8wAAP//Zmb//5mZ/wAAAAAAAAAAAAAAAP//
+        /v9mmZn/mczM/8z////M///////+/8z////M///////+/////v////7////+/8z///////7////+////
+        /v////7/zP///8z///////7/zP///8z///////7/zP///8z////u7u7/ZpmZ/8z///////7/AAAAAAAA
+        AAAAAAAA7u7u/4iIiP+qqqr////+/93d3f/d3d3/7u7u/7u7u/9VVVX/IiIi/zMzM/+qqqr/zMzM/0RE
+        RP8iIiL/RERE/7u7u//u7u7/3d3d/93d3f/d3d3/7u7u/93d3f/u7u7/7u7u/+7u7v9mZmb/zMzM////
+        /v8AAAAAAAAAAAAAAADu7u7/iIiI/6qqqv/u7u7/3d3d/93d3f/u7u7/7u7u/5mZmf8AAAD/AAAA////
+        /v////7/RERE/wAAAP8zMzP/7u7u/+7u7v/u7u7/3d3d/+7u7v/d3d3/3d3d/93d3f/d3d3/7u7u/2Zm
+        Zv/MzMz////+/wAAAAAAAAAAAAAAAO7u7v93d3f/u7u7/+7u7v/u7u7/3d3d/93d3f////7/zMzM/wAA
+        AP9ERET////+/////v+IiIj/AAAA/5mZmf////7/3d3d/93d3f/d3d3/3d3d/+7u7v/d3d3/3d3d/+7u
+        7v/u7u7/ZmZm/8zMzP////7/AAAAAAAAAAAAAAAA7u7u/4iIiP+qqqr/7u7u/93d3f/d3d3/3d3d////
+        /v/d3d3/AAAA/zMzM/////7////+/4iIiP8AAAD/mZmZ/////v////7/7u7u/93d3f/u7u7/3d3d/93d
+        3f/u7u7/3d3d/+7u7v9mZmb/zMzM/////v8AAAAAAAAAAAAAAADu7u7/d3d3/7u7u//u7u7/3d3d/+7u
+        7v/d3d3/7u7u/8zMzP8AAAD/RERE/////v////7/iIiI/wAAAP9ERET/mZmZ/5mZmf////7////+/93d
+        3f/d3d3/3d3d/93d3f/u7u7/7u7u/2ZmZv/MzMz////+/wAAAAAAAAAAAAAAAO7u7v+IiIj/qqqq/+7u
+        7v/d3d3/3d3d/93d3f////7/3d3d/wAAAP9ERET////+/////v+IiIj/AAAA/xEREf9mZmb/AAAA/wAA
+        AP+IiIj////+/+7u7v/d3d3/7u7u/93d3f/u7u7/ZmZm/8zMzP////7/AAAAAAAAAAAAAAAA7u7u/3d3
+        d/+qqqr////+/93d3f/d3d3/7u7u/+7u7v/MzMz/AAAA/zMzM/////7////+/4iIiP8AAAD/mZmZ////
+        /v////7/AAAA/wAAAP/MzMz////+/93d3f/d3d3/7u7u/+7u7v9mZmb/zMzM/////v8AAAAAAAAAAAAA
+        AADu7u7/iIiI/7u7u//u7u7/3d3d/93d3f/d3d3////+/8zMzP8AAAD/RERE/////v////7/iIiI/wAA
+        AP+IiIj////+/////v93d3f/AAAA/2ZmZv////7/3d3d/93d3f/u7u7/7u7u/2ZmZv/MzMz////+/wAA
+        AAAAAAAAAAAAAO7u7v93d3f/qqqq/+7u7v/d3d3/7u7u/93d3f////7/3d3d/wAAAP9ERET////+////
+        /v+ZmZn/AAAA/5mZmf////7////+/xEREf8AAAD/mZmZ/////v/d3d3/7u7u/93d3f/u7u7/ZmZm/8zM
+        zP////7/AAAAAAAAAAAAAAAA7u7u/4iIiP+qqqr/7u7u/+7u7v/d3d3/3d3d/////v+IiIj/AAAA/wAA
+        AP////7////+/0RERP8AAAD/MzMz/6qqqv8iIiL/AAAA/yIiIv////7/7u7u/93d3f/d3d3/3d3d/+7u
+        7v9mZmb/zMzM/////v8AAAAAAAAAAAAAAADu7u7/d3d3/7u7u//u7u7/3d3d/93d3f/u7u7/u7u7/1VV
+        Vf8zMzP/RERE/6qqqv+7u7v/RERE/zMzM/9ERET/MzMz/0RERP+qqqr////+/+7u7v/d3d3/7u7u/93d
+        3f/u7u7/7u7u/2ZmZv/MzMz////+/wAAAAAAAAAAAAAAAO7u7v+IiIj/qqqq/+7u7v/d3d3/7u7u/93d
+        3f/u7u7////+/////v////7/7u7u/+7u7v////7////+/////v////7////+/+7u7v/u7u7/7u7u/93d
+        3f/d3d3/3d3d/93d3f/u7u7/ZmZm/8zMzP////7/AAAAAAAAAAAAAAAA7u7u/3d3d/+qqqr/7u7u/93d
+        3f/d3d3/3d3d/+7u7v/d3d3/7u7u/93d3f/d3d3/3d3d/+7u7v/d3d3/7u7u/93d3f/d3d3/7u7u/93d
+        3f/d3d3/3d3d/+7u7v/d3d3/7u7u/93d3f9mZmb/zMzM/////v8AAAAAAAAAAAAAAADd3d3/qqqq/8zM
+        zP/u7u7/3d3d/93d3f/u7u7/3d3d/93d3f/d3d3/3d3d/+7u7v/d3d3/3d3d/93d3f/d3d3/7u7u/93d
+        3f/d3d3/3d3d/93d3f/u7u7/3d3d/93d3f/d3d3/7u7u/5mZmf/d3d3////+/wAAAAAAAAAAAAAAAN3d
+        3f/u7u7/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/7u7u/8zMzP////7/AAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAD//////////8AAAAHAAAABwAAAAYAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAA
+        AACAAAAAwAAAAcAAAAHAAAABwAAAAcAAAAHAAAABwAAAAcAAAAHAAAABwAAAAcAAAAHAAAABwAAAAcAA
+        AAHAAAABwAAAAcAAAAH//////////w==
+</value>
+  </data>
+  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>586, 386</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>586, 386</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>IP Viewer</value>
+  </data>
+  <data name="&gt;&gt;fileToolStripMenuItem.Name" xml:space="preserve">
+    <value>fileToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;fileToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;editToolStripMenuItem.Name" xml:space="preserve">
+    <value>editToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;editToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;settingsToolStripMenuItem.Name" xml:space="preserve">
+    <value>settingsToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;settingsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;copyInternalIPAddressToolStripMenuItem.Name" xml:space="preserve">
+    <value>copyInternalIPAddressToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;copyInternalIPAddressToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;copyExternalIPAddressToolStripMenuItem.Name" xml:space="preserve">
+    <value>copyExternalIPAddressToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;copyExternalIPAddressToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;helpToolStripMenuItem.Name" xml:space="preserve">
+    <value>helpToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;helpToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;aboutToolStripMenuItem.Name" xml:space="preserve">
+    <value>aboutToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;aboutToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;notifyIcon1.Name" xml:space="preserve">
+    <value>notifyIcon1</value>
+  </data>
+  <data name="&gt;&gt;notifyIcon1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NotifyIcon, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;refreshIPInformationToolStripMenuItem.Name" xml:space="preserve">
+    <value>refreshIPInformationToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;refreshIPInformationToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Form1</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>
