@@ -156,18 +156,6 @@ namespace IpViewer2
         private void SetFormControlValuesFromSettings()
         {
             this.TopMost = IpViewerSettings.Instance.TopMost;
-
-            if( IpViewerSettings.Instance.StartMinimized)
-            {
-                this.ShowInTaskbar = false;
-                this.WindowState = FormWindowState.Minimized;
-            }
-            else
-            {
-                this.ShowInTaskbar = true;
-                this.WindowState = FormWindowState.Normal;
-            }
-
         }
 
         /// <summary>
@@ -277,5 +265,39 @@ namespace IpViewer2
             }
         }
 
+        private void Form1_Resize(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Minimized)
+            {
+                if (IpViewerSettings.Instance.MinimizeToTray)
+                {
+                    this.ShowInTaskbar = false;
+                }
+                else
+                {
+                    this.ShowInTaskbar = true;
+                }
+            }
+        }
+
+        private void notifyIcon1_DoubleClick(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+            this.ShowInTaskbar = true;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            if (IpViewerSettings.Instance.StartMinimized)
+            {
+                this.WindowState = FormWindowState.Minimized;
+                this.ShowInTaskbar = false;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Normal;
+                this.ShowInTaskbar = true;
+            }
+        }
     }
 }

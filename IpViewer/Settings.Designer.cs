@@ -40,6 +40,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.checkBoxEnableLogging = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -151,6 +152,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.checkBox1);
             this.groupBox2.Controls.Add(this.checkBoxEnableLogging);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 139);
@@ -169,6 +171,17 @@
             this.checkBoxEnableLogging.TabIndex = 0;
             this.checkBoxEnableLogging.Text = "Enable Logging";
             this.checkBoxEnableLogging.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Enabled = false;
+            this.checkBox1.Location = new System.Drawing.Point(37, 49);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(126, 17);
+            this.checkBox1.TabIndex = 1;
+            this.checkBox1.Text = "Log External Address";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // Settings
             // 
@@ -210,5 +223,6 @@
         private System.Windows.Forms.CheckBox checkBoxMinimizeToTray;
         private System.Windows.Forms.CheckBox checkBoxTopmost;
         private System.Windows.Forms.CheckBox checkBoxEnableLogging;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
