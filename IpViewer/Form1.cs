@@ -138,6 +138,18 @@ namespace IpViewer2
         private void SetFormControlValuesFromSettings()
         {
             this.TopMost = IpViewerSettings.Instance.TopMost;
+
+            if( IpViewerSettings.Instance.StartMinimized)
+            {
+                this.ShowInTaskbar = false;
+                this.WindowState = FormWindowState.Minimized;
+            }
+            else
+            {
+                this.ShowInTaskbar = true;
+                this.WindowState = FormWindowState.Normal;
+            }
+
         }
 
         /// <summary>
