@@ -19,6 +19,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Releases", "Releases", "{F6
 		Releases\IpViewerSetup_5.msi = Releases\IpViewerSetup_5.msi
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IpViewerCore", "IpViewerCore\IpViewerCore.csproj", "{6EB91F6B-4248-48ED-B72C-1F6A0A47119F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{C0E6725C-6BB5-4FE6-865A-15B27F51AE90}.Release|Any CPU.Build.0 = Release|Any CPU
 		{35E6045C-8A80-4F60-9251-D2B17BFA4007}.Debug|Any CPU.ActiveCfg = Debug
 		{35E6045C-8A80-4F60-9251-D2B17BFA4007}.Release|Any CPU.ActiveCfg = Release
+		{6EB91F6B-4248-48ED-B72C-1F6A0A47119F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EB91F6B-4248-48ED-B72C-1F6A0A47119F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EB91F6B-4248-48ED-B72C-1F6A0A47119F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EB91F6B-4248-48ED-B72C-1F6A0A47119F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
