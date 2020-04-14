@@ -12,6 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IpViewer.BusinessObject", "IpViewer.BusinessObject\IpViewer.BusinessObject.csproj", "{C0E6725C-6BB5-4FE6-865A-15B27F51AE90}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "IpViewerSetup", "IpViewerSetup\IpViewerSetup.vdproj", "{35E6045C-8A80-4F60-9251-D2B17BFA4007}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Releases", "Releases", "{F6C64AAA-27D8-4251-B9EB-A4433DFA7126}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +30,8 @@ Global
 		{C0E6725C-6BB5-4FE6-865A-15B27F51AE90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0E6725C-6BB5-4FE6-865A-15B27F51AE90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0E6725C-6BB5-4FE6-865A-15B27F51AE90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35E6045C-8A80-4F60-9251-D2B17BFA4007}.Debug|Any CPU.ActiveCfg = Debug
+		{35E6045C-8A80-4F60-9251-D2B17BFA4007}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

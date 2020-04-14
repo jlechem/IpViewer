@@ -101,3 +101,5 @@ IpViewer.BusinessObject/obj/Debug/IpViewer.BusinessObject.dll
 IpViewer.BusinessObject/obj/Debug/IpViewer.BusinessObject.pdb
 IpViewer.BusinessObject/packages.config
 IpViewer.BusinessObject/Properties/AssemblyInfo.cs
+*.pdb
+*.dll

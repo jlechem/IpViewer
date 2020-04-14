@@ -140,5 +140,52 @@ namespace IpViewer2
             this.TopMost = IpViewerSettings.Instance.TopMost;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Cursor = Cursors.WaitCursor;
+
+                var result = new Settings().ShowDialog();
+
+                if( result == DialogResult.OK)
+                {
+                    this.SetFormControlValuesFromSettings();
+                }
+            }
+            finally
+            {
+                this.Cursor = Cursors.Default;
+            }
+         
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void refreshIPInformationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Cursor = Cursors.WaitCursor;
+
+                this.GetIpInformation();
+
+                this.SetHostInformationControls();
+            }
+            finally
+            {
+                this.Cursor = Cursors.Default;
+            }
+
+        }
+
     }
 }
