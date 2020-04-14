@@ -51,8 +51,7 @@ namespace IpViewer2
         /// </summary>
         private void LoadSettings()
         {
-            this.textBoxRefreshRate.Text = IpViewerSettings.Instance.RefreshTime.ToString();
-
+            this.numericUpDownInterval.Value = IpViewerSettings.Instance.RefreshTime;
             this.checkBoxCloseToTray.Checked = IpViewerSettings.Instance.CloseToTray;
             this.checkBoxMinimizeToTray.Checked = IpViewerSettings.Instance.MinimizeToTray;
             this.checkBoxStartMinimized.Checked = IpViewerSettings.Instance.StartMinimized;
@@ -66,8 +65,8 @@ namespace IpViewer2
         /// </summary>
         private void SaveSettings()
         {
-            IpViewerSettings.Instance.RefreshTime = int.Parse(this.textBoxRefreshRate.Text);
-
+            this.numericUpDownInterval.Value = this.numericUpDownInterval.Value > 1440 ? this.numericUpDownInterval.Value : 1440;
+            IpViewerSettings.Instance.RefreshTime = this.numericUpDownInterval.Value;
             IpViewerSettings.Instance.CloseToTray = this.checkBoxCloseToTray.Checked;
             IpViewerSettings.Instance.MinimizeToTray = this.checkBoxMinimizeToTray.Checked;
             IpViewerSettings.Instance.StartMinimized = this.checkBoxStartMinimized.Checked;

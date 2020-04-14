@@ -35,15 +35,16 @@
             this.checkBoxCloseToTray = new System.Windows.Forms.CheckBox();
             this.checkBoxMinimizeToTray = new System.Windows.Forms.CheckBox();
             this.checkBoxTopmost = new System.Windows.Forms.CheckBox();
-            this.textBoxRefreshRate = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.checkBoxEnableLogging = new System.Windows.Forms.CheckBox();
             this.checkBoxLogExternal = new System.Windows.Forms.CheckBox();
+            this.checkBoxEnableLogging = new System.Windows.Forms.CheckBox();
+            this.numericUpDownInterval = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownInterval)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonOK
@@ -70,11 +71,11 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.numericUpDownInterval);
             this.groupBox1.Controls.Add(this.checkBoxStartMinimized);
             this.groupBox1.Controls.Add(this.checkBoxCloseToTray);
             this.groupBox1.Controls.Add(this.checkBoxMinimizeToTray);
             this.groupBox1.Controls.Add(this.checkBoxTopmost);
-            this.groupBox1.Controls.Add(this.textBoxRefreshRate);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
@@ -124,13 +125,6 @@
             this.checkBoxTopmost.Text = "Topmost";
             this.checkBoxTopmost.UseVisualStyleBackColor = true;
             // 
-            // textBoxRefreshRate
-            // 
-            this.textBoxRefreshRate.Location = new System.Drawing.Point(130, 22);
-            this.textBoxRefreshRate.Name = "textBoxRefreshRate";
-            this.textBoxRefreshRate.Size = new System.Drawing.Size(114, 20);
-            this.textBoxRefreshRate.TabIndex = 3;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -162,6 +156,17 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Logging Settings";
             // 
+            // checkBoxLogExternal
+            // 
+            this.checkBoxLogExternal.AutoSize = true;
+            this.checkBoxLogExternal.Enabled = false;
+            this.checkBoxLogExternal.Location = new System.Drawing.Point(37, 49);
+            this.checkBoxLogExternal.Name = "checkBoxLogExternal";
+            this.checkBoxLogExternal.Size = new System.Drawing.Size(126, 17);
+            this.checkBoxLogExternal.TabIndex = 1;
+            this.checkBoxLogExternal.Text = "Log External Address";
+            this.checkBoxLogExternal.UseVisualStyleBackColor = true;
+            // 
             // checkBoxEnableLogging
             // 
             this.checkBoxEnableLogging.AutoSize = true;
@@ -173,16 +178,27 @@
             this.checkBoxEnableLogging.UseVisualStyleBackColor = true;
             this.checkBoxEnableLogging.CheckedChanged += new System.EventHandler(this.checkBoxEnableLogging_CheckedChanged);
             // 
-            // checkBoxLogExternal
+            // numericUpDownInterval
             // 
-            this.checkBoxLogExternal.AutoSize = true;
-            this.checkBoxLogExternal.Enabled = false;
-            this.checkBoxLogExternal.Location = new System.Drawing.Point(37, 49);
-            this.checkBoxLogExternal.Name = "checkBoxLogExternal";
-            this.checkBoxLogExternal.Size = new System.Drawing.Size(126, 17);
-            this.checkBoxLogExternal.TabIndex = 1;
-            this.checkBoxLogExternal.Text = "Log External Address";
-            this.checkBoxLogExternal.UseVisualStyleBackColor = true;
+            this.numericUpDownInterval.Location = new System.Drawing.Point(130, 24);
+            this.numericUpDownInterval.Maximum = new decimal(new int[] {
+            1440,
+            0,
+            0,
+            0});
+            this.numericUpDownInterval.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDownInterval.Name = "numericUpDownInterval";
+            this.numericUpDownInterval.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDownInterval.TabIndex = 9;
+            this.numericUpDownInterval.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // Settings
             // 
@@ -206,6 +222,7 @@
             this.panel1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownInterval)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -217,7 +234,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBoxRefreshRate;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox checkBoxStartMinimized;
         private System.Windows.Forms.CheckBox checkBoxCloseToTray;
@@ -225,5 +241,6 @@
         private System.Windows.Forms.CheckBox checkBoxTopmost;
         private System.Windows.Forms.CheckBox checkBoxEnableLogging;
         private System.Windows.Forms.CheckBox checkBoxLogExternal;
+        private System.Windows.Forms.NumericUpDown numericUpDownInterval;
     }
 }

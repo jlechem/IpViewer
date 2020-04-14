@@ -134,20 +134,27 @@ namespace IpViewer2
 
             var index = 0;
 
-            foreach(var item in this.comboBoxAdapters.Items)
+            if (!String.IsNullOrWhiteSpace(IpViewerSettings.Instance.CurrentAdapterName))
             {
-                if( item.ToString() == IpViewerSettings.Instance.CurrentAdapterName)
+                foreach (var item in this.comboBoxAdapters.Items)
                 {
-                    break;
-                }
+                    if (item.ToString() == IpViewerSettings.Instance.CurrentAdapterName)
+                    {
+                        break;
+                    }
 
-                index++;
+                    index++;
+                }
             }
 
             this.comboBoxAdapters.SelectedIndex = index >= this.comboBoxAdapters.Items.Count ? 0 : index;
 
             this.notifyIcon1.Text = _hostInformation.ExternalIpAddress;
 
+            if (IpViewerSettings.Instance.LoggingEnabled && IpViewerSettings.Instance.LogIpAddress)
+            {
+                log.Info($"External IP Address: {_hostInformation.ExternalIpAddress}");
+            }
         }
 
         /// <summary>
@@ -156,6 +163,9 @@ namespace IpViewer2
         private void SetFormControlValuesFromSettings()
         {
             this.TopMost = IpViewerSettings.Instance.TopMost;
+
+            this.timer1.Interval = (int)IpViewerSettings.Instance.RefreshTime * 60000;
+
         }
 
         /// <summary>
@@ -265,6 +275,11 @@ namespace IpViewer2
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Form1_Resize(object sender, EventArgs e)
         {
             if (WindowState == FormWindowState.Minimized)
@@ -280,12 +295,22 @@ namespace IpViewer2
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void notifyIcon1_DoubleClick(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Normal;
             this.ShowInTaskbar = true;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Form1_Load(object sender, EventArgs e)
         {
             if (IpViewerSettings.Instance.StartMinimized)
@@ -329,5 +354,18 @@ namespace IpViewer2
         {
             Clipboard.SetText(_hostInformation.ExternalIpAddress);
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            this.GetIpInformation();
+
+            this.SetHostInformationControls();
+        }
+
     }
 }
