@@ -16,13 +16,13 @@
         "Entry"
         {
         "MsmKey" = "8:_2E8FE94800FE3DB55D6B10D29BB5502F"
-        "OwnerKey" = "8:_E2CF7C463AEE4B71860BE059B768C72A"
+        "OwnerKey" = "8:_5A729E7CA0734ADAB65060F8C6FD3870"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_2E8FE94800FE3DB55D6B10D29BB5502F"
-        "OwnerKey" = "8:_5A729E7CA0734ADAB65060F8C6FD3870"
+        "OwnerKey" = "8:_E2CF7C463AEE4B71860BE059B768C72A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -34,13 +34,13 @@
         "Entry"
         {
         "MsmKey" = "8:_60E20E054B98B75FE480766E0A8501B7"
-        "OwnerKey" = "8:_E2CF7C463AEE4B71860BE059B768C72A"
+        "OwnerKey" = "8:_5A729E7CA0734ADAB65060F8C6FD3870"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_60E20E054B98B75FE480766E0A8501B7"
-        "OwnerKey" = "8:_5A729E7CA0734ADAB65060F8C6FD3870"
+        "OwnerKey" = "8:_E2CF7C463AEE4B71860BE059B768C72A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -58,13 +58,13 @@
         "Entry"
         {
         "MsmKey" = "8:_BF7960F52312B8B104C7D781C59CD937"
-        "OwnerKey" = "8:_5A729E7CA0734ADAB65060F8C6FD3870"
+        "OwnerKey" = "8:_E2CF7C463AEE4B71860BE059B768C72A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_BF7960F52312B8B104C7D781C59CD937"
-        "OwnerKey" = "8:_E2CF7C463AEE4B71860BE059B768C72A"
+        "OwnerKey" = "8:_5A729E7CA0734ADAB65060F8C6FD3870"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -82,13 +82,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_5A729E7CA0734ADAB65060F8C6FD3870"
+        "OwnerKey" = "8:_E2CF7C463AEE4B71860BE059B768C72A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_E2CF7C463AEE4B71860BE059B768C72A"
+        "OwnerKey" = "8:_5A729E7CA0734ADAB65060F8C6FD3870"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -287,7 +287,7 @@
         {
             "{3C67513D-01DD-4637-8A68-80971EB9504F}:_284512E110B248098676FD4E34E26138"
             {
-            "DefaultLocation" = "8:[ProgramFilesFolder][Manufacturer]\\[ProductName]"
+            "DefaultLocation" = "8:[ProgramFiles64Folder][Manufacturer]\\[ProductName]"
             "Name" = "8:#1925"
             "AlwaysCreate" = "11:FALSE"
             "Condition" = "8:"
@@ -347,28 +347,28 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:IpViewerSetup"
         "ProductCode" = "8:{6F167F56-ECC5-4F8A-A61F-DE9395332B13}"
-        "PackageCode" = "8:{6C45BB26-EEBD-42E0-A8C3-79CCBC270AF4}"
+        "PackageCode" = "8:{35B701AE-E2C1-490E-8844-4062E87BDBF7}"
         "UpgradeCode" = "8:{FB1872AE-CB72-4FD3-ABFC-9A4DEBC18763}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
-        "RemovePreviousVersions" = "11:FALSE"
+        "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
-        "InstallAllUsers" = "11:FALSE"
+        "InstallAllUsers" = "11:TRUE"
         "ProductVersion" = "8:1.0.0"
-        "Manufacturer" = "8:Default Company Name"
+        "Manufacturer" = "8:Sasquatch Software"
         "ARPHELPTELEPHONE" = "8:"
-        "ARPHELPLINK" = "8:"
+        "ARPHELPLINK" = "8:www.sasquatchsoftware.com"
         "Title" = "8:IpViewerSetup"
         "Subject" = "8:"
         "ARPCONTACT" = "8:Default Company Name"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
-        "ARPURLINFOABOUT" = "8:"
+        "ARPURLINFOABOUT" = "8:www.sasquatchsoftware.com"
         "ARPPRODUCTICON" = "8:"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
-        "TargetPlatform" = "3:0"
+        "TargetPlatform" = "3:1"
         "PreBuildEvent" = "8:"
         "PostBuildEvent" = "8:"
         "RunPostBuildEvent" = "3:0"
@@ -882,7 +882,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_5A729E7CA0734ADAB65060F8C6FD3870"
             {
-            "SourcePath" = "8:..\\IpViewer\\obj\\Debug\\IpViewer2.exe"
+            "SourcePath" = "8:..\\IpViewer\\obj\\Debug\\IpViewer.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_284512E110B248098676FD4E34E26138"
@@ -910,7 +910,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_E2CF7C463AEE4B71860BE059B768C72A"
             {
-            "SourcePath" = "8:..\\IpViewer\\obj\\Debug\\IpViewer2.exe"
+            "SourcePath" = "8:..\\IpViewer\\obj\\Debug\\IpViewer.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_284512E110B248098676FD4E34E26138"

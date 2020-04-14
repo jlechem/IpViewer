@@ -137,3 +137,5 @@ IpViewer/bin/Debug/IpViewer.exe.config
 *.exe
 IpViewer/bin/Debug/IpViewer.exe.config
 IpViewer/bin/Debug/logs/ip-viewer.log.2020-04-13
+IpViewerSetup/Debug/IpViewerSetup_5.msi
+IpViewerSetup/Release/IpViewerSetup_5.tmp
