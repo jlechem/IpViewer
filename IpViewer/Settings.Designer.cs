@@ -31,15 +31,14 @@
             this.buttonOK = new System.Windows.Forms.Button();
             this.buttonCANCEL = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.checkBoxStartMinimized = new System.Windows.Forms.CheckBox();
+            this.checkBoxCloseToTray = new System.Windows.Forms.CheckBox();
+            this.checkBoxMinimizeToTray = new System.Windows.Forms.CheckBox();
+            this.checkBoxTopmost = new System.Windows.Forms.CheckBox();
             this.textBoxRefreshRate = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.checkBoxTopmost = new System.Windows.Forms.CheckBox();
-            this.checkBoxGetExternalIP = new System.Windows.Forms.CheckBox();
-            this.checkBoxMinimizeToTray = new System.Windows.Forms.CheckBox();
-            this.checkBoxCloseToTray = new System.Windows.Forms.CheckBox();
-            this.checkBoxStartMinimized = new System.Windows.Forms.CheckBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.checkBoxEnableLogging = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -73,7 +72,6 @@
             this.groupBox1.Controls.Add(this.checkBoxStartMinimized);
             this.groupBox1.Controls.Add(this.checkBoxCloseToTray);
             this.groupBox1.Controls.Add(this.checkBoxMinimizeToTray);
-            this.groupBox1.Controls.Add(this.checkBoxGetExternalIP);
             this.groupBox1.Controls.Add(this.checkBoxTopmost);
             this.groupBox1.Controls.Add(this.textBoxRefreshRate);
             this.groupBox1.Controls.Add(this.label1);
@@ -84,6 +82,62 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Application Settings";
+            // 
+            // checkBoxStartMinimized
+            // 
+            this.checkBoxStartMinimized.AutoSize = true;
+            this.checkBoxStartMinimized.Location = new System.Drawing.Point(12, 77);
+            this.checkBoxStartMinimized.Name = "checkBoxStartMinimized";
+            this.checkBoxStartMinimized.Size = new System.Drawing.Size(97, 17);
+            this.checkBoxStartMinimized.TabIndex = 8;
+            this.checkBoxStartMinimized.Text = "Start Minimized";
+            this.checkBoxStartMinimized.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxCloseToTray
+            // 
+            this.checkBoxCloseToTray.AutoSize = true;
+            this.checkBoxCloseToTray.Location = new System.Drawing.Point(13, 103);
+            this.checkBoxCloseToTray.Name = "checkBoxCloseToTray";
+            this.checkBoxCloseToTray.Size = new System.Drawing.Size(92, 17);
+            this.checkBoxCloseToTray.TabIndex = 7;
+            this.checkBoxCloseToTray.Text = "Close To Tray";
+            this.checkBoxCloseToTray.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxMinimizeToTray
+            // 
+            this.checkBoxMinimizeToTray.AutoSize = true;
+            this.checkBoxMinimizeToTray.Location = new System.Drawing.Point(115, 54);
+            this.checkBoxMinimizeToTray.Name = "checkBoxMinimizeToTray";
+            this.checkBoxMinimizeToTray.Size = new System.Drawing.Size(106, 17);
+            this.checkBoxMinimizeToTray.TabIndex = 6;
+            this.checkBoxMinimizeToTray.Text = "Minimize To Tray";
+            this.checkBoxMinimizeToTray.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxTopmost
+            // 
+            this.checkBoxTopmost.AutoSize = true;
+            this.checkBoxTopmost.Location = new System.Drawing.Point(13, 54);
+            this.checkBoxTopmost.Name = "checkBoxTopmost";
+            this.checkBoxTopmost.Size = new System.Drawing.Size(67, 17);
+            this.checkBoxTopmost.TabIndex = 4;
+            this.checkBoxTopmost.Text = "Topmost";
+            this.checkBoxTopmost.UseVisualStyleBackColor = true;
+            // 
+            // textBoxRefreshRate
+            // 
+            this.textBoxRefreshRate.Location = new System.Drawing.Point(130, 22);
+            this.textBoxRefreshRate.Name = "textBoxRefreshRate";
+            this.textBoxRefreshRate.Size = new System.Drawing.Size(114, 20);
+            this.textBoxRefreshRate.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(118, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Refresh Rate (minutes):";
             // 
             // panel1
             // 
@@ -105,72 +159,6 @@
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Logging Settings";
-            // 
-            // textBoxRefreshRate
-            // 
-            this.textBoxRefreshRate.Location = new System.Drawing.Point(130, 22);
-            this.textBoxRefreshRate.Name = "textBoxRefreshRate";
-            this.textBoxRefreshRate.Size = new System.Drawing.Size(114, 20);
-            this.textBoxRefreshRate.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Refresh Rate (minutes):";
-            // 
-            // checkBoxTopmost
-            // 
-            this.checkBoxTopmost.AutoSize = true;
-            this.checkBoxTopmost.Location = new System.Drawing.Point(13, 54);
-            this.checkBoxTopmost.Name = "checkBoxTopmost";
-            this.checkBoxTopmost.Size = new System.Drawing.Size(67, 17);
-            this.checkBoxTopmost.TabIndex = 4;
-            this.checkBoxTopmost.Text = "Topmost";
-            this.checkBoxTopmost.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxGetExternalIP
-            // 
-            this.checkBoxGetExternalIP.AutoSize = true;
-            this.checkBoxGetExternalIP.Location = new System.Drawing.Point(115, 77);
-            this.checkBoxGetExternalIP.Name = "checkBoxGetExternalIP";
-            this.checkBoxGetExternalIP.Size = new System.Drawing.Size(138, 17);
-            this.checkBoxGetExternalIP.TabIndex = 5;
-            this.checkBoxGetExternalIP.Text = "Get External IP Address";
-            this.checkBoxGetExternalIP.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxMinimizeToTray
-            // 
-            this.checkBoxMinimizeToTray.AutoSize = true;
-            this.checkBoxMinimizeToTray.Location = new System.Drawing.Point(115, 54);
-            this.checkBoxMinimizeToTray.Name = "checkBoxMinimizeToTray";
-            this.checkBoxMinimizeToTray.Size = new System.Drawing.Size(106, 17);
-            this.checkBoxMinimizeToTray.TabIndex = 6;
-            this.checkBoxMinimizeToTray.Text = "Minimize To Tray";
-            this.checkBoxMinimizeToTray.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxCloseToTray
-            // 
-            this.checkBoxCloseToTray.AutoSize = true;
-            this.checkBoxCloseToTray.Location = new System.Drawing.Point(13, 103);
-            this.checkBoxCloseToTray.Name = "checkBoxCloseToTray";
-            this.checkBoxCloseToTray.Size = new System.Drawing.Size(92, 17);
-            this.checkBoxCloseToTray.TabIndex = 7;
-            this.checkBoxCloseToTray.Text = "Close To Tray";
-            this.checkBoxCloseToTray.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxStartMinimized
-            // 
-            this.checkBoxStartMinimized.AutoSize = true;
-            this.checkBoxStartMinimized.Location = new System.Drawing.Point(12, 77);
-            this.checkBoxStartMinimized.Name = "checkBoxStartMinimized";
-            this.checkBoxStartMinimized.Size = new System.Drawing.Size(97, 17);
-            this.checkBoxStartMinimized.TabIndex = 8;
-            this.checkBoxStartMinimized.Text = "Start Minimized";
-            this.checkBoxStartMinimized.UseVisualStyleBackColor = true;
             // 
             // checkBoxEnableLogging
             // 
@@ -220,7 +208,6 @@
         private System.Windows.Forms.CheckBox checkBoxStartMinimized;
         private System.Windows.Forms.CheckBox checkBoxCloseToTray;
         private System.Windows.Forms.CheckBox checkBoxMinimizeToTray;
-        private System.Windows.Forms.CheckBox checkBoxGetExternalIP;
         private System.Windows.Forms.CheckBox checkBoxTopmost;
         private System.Windows.Forms.CheckBox checkBoxEnableLogging;
     }

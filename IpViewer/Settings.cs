@@ -54,7 +54,6 @@ namespace IpViewer2
             this.textBoxRefreshRate.Text = IpViewerSettings.Instance.RefreshTime.ToString();
 
             this.checkBoxCloseToTray.Checked = IpViewerSettings.Instance.CloseToTray;
-            this.checkBoxGetExternalIP.Checked = IpViewerSettings.Instance.GetExternalAddress;
             this.checkBoxMinimizeToTray.Checked = IpViewerSettings.Instance.MinimizeToTray;
             this.checkBoxStartMinimized.Checked = IpViewerSettings.Instance.StartMinimized;
             this.checkBoxTopmost.Checked = IpViewerSettings.Instance.TopMost;
@@ -69,13 +68,11 @@ namespace IpViewer2
             IpViewerSettings.Instance.RefreshTime = int.Parse(this.textBoxRefreshRate.Text);
 
             IpViewerSettings.Instance.CloseToTray = this.checkBoxCloseToTray.Checked;
-            IpViewerSettings.Instance.GetExternalAddress = this.checkBoxGetExternalIP.Checked;
             IpViewerSettings.Instance.MinimizeToTray = this.checkBoxMinimizeToTray.Checked;
             IpViewerSettings.Instance.StartMinimized = this.checkBoxStartMinimized.Checked;
             IpViewerSettings.Instance.TopMost = this.checkBoxTopmost.Checked;
             IpViewerSettings.Instance.LoggingEnabled = this.checkBoxEnableLogging.Checked;
             IpViewerSettings.Instance.SaveSettings();
-
         }
 
     }

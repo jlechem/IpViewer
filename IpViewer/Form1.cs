@@ -35,6 +35,7 @@ namespace IpViewer2
 
         private AdapterService _adapterService = new AdapterService();
 
+        private bool _closeFromContextMenu = false;
         #endregion
         
         /// <summary>
@@ -130,6 +131,8 @@ namespace IpViewer2
 
             this.comboBoxAdapters.SelectedIndex = 0;
 
+            this.notifyIcon1.Text = _hostInformation.ExternalIpAddress;
+
         }
 
         /// <summary>
@@ -174,7 +177,6 @@ namespace IpViewer2
             {
                 this.Cursor = Cursors.Default;
             }
-         
         }
 
         /// <summary>
@@ -197,6 +199,67 @@ namespace IpViewer2
                 this.Cursor = Cursors.Default;
             }
 
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.GetIpInformation();
+
+            this.SetHostInformationControls();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            _closeFromContextMenu = true;
+
+            this.Close();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (!_closeFromContextMenu)
+            {
+                if (IpViewerSettings.Instance.CloseToTray)
+                {
+                    this.WindowState = FormWindowState.Minimized;
+                    this.ShowInTaskbar = false;
+                    e.Cancel = false;
+                }
+                else
+                {
+                    this.Close();
+                }
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void settingsToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var result = new Settings().ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                this.SetFormControlValuesFromSettings();
+            }
         }
 
     }

@@ -103,3 +103,5 @@ IpViewer.BusinessObject/packages.config
 IpViewer.BusinessObject/Properties/AssemblyInfo.cs
 *.pdb
 *.dll
+IpViewer/obj/Debug/IpViewer.exe
+IpViewer/obj/Debug/IpViewer.Properties.Resources.resources
