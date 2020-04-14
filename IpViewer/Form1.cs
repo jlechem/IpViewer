@@ -102,6 +102,9 @@ namespace IpViewer2
         /// <param name="adapterInfo"></param>
         private void SetAdapterInformationControls(AdapterInfo adapterInfo)
         {
+            IpViewerSettings.Instance.CurrentAdapterName = adapterInfo.Name;
+            IpViewerSettings.Instance.SaveSettings();
+
             this.labelMacAddress.Text = adapterInfo.MacAddress;
             this.labelSpeed.Text = adapterInfo.Speed.ToString();
             this.labelAdapterStatus.Text = adapterInfo.OperationalStatus;
@@ -129,7 +132,19 @@ namespace IpViewer2
 
             this.comboBoxAdapters.Items.AddRange(_adapters.Select(adapter => adapter.Name).ToArray());
 
-            this.comboBoxAdapters.SelectedIndex = 0;
+            var index = 0;
+
+            foreach(var item in this.comboBoxAdapters.Items)
+            {
+                if( item.ToString() == IpViewerSettings.Instance.CurrentAdapterName)
+                {
+                    break;
+                }
+
+                index++;
+            }
+
+            this.comboBoxAdapters.SelectedIndex = index >= this.comboBoxAdapters.Items.Count ? 0 : index;
 
             this.notifyIcon1.Text = _hostInformation.ExternalIpAddress;
 
