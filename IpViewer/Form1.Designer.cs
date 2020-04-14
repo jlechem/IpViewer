@@ -65,6 +65,8 @@
             this.settingsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.copyExternalAddressToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -218,11 +220,13 @@
             // 
             this.copyInternalIPAddressToolStripMenuItem.Name = "copyInternalIPAddressToolStripMenuItem";
             resources.ApplyResources(this.copyInternalIPAddressToolStripMenuItem, "copyInternalIPAddressToolStripMenuItem");
+            this.copyInternalIPAddressToolStripMenuItem.Click += new System.EventHandler(this.copyInternalIPAddressToolStripMenuItem_Click);
             // 
             // copyExternalIPAddressToolStripMenuItem
             // 
             this.copyExternalIPAddressToolStripMenuItem.Name = "copyExternalIPAddressToolStripMenuItem";
             resources.ApplyResources(this.copyExternalIPAddressToolStripMenuItem, "copyExternalIPAddressToolStripMenuItem");
+            this.copyExternalIPAddressToolStripMenuItem.Click += new System.EventHandler(this.copyExternalIPAddressToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -255,6 +259,8 @@
             this.toolStripSeparator3,
             this.settingsToolStripMenuItem1,
             this.toolStripSeparator2,
+            this.copyExternalAddressToolStripMenuItem,
+            this.toolStripSeparator4,
             this.toolStripMenuItem2});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
@@ -286,6 +292,17 @@
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
+            // 
+            // copyExternalAddressToolStripMenuItem
+            // 
+            this.copyExternalAddressToolStripMenuItem.Name = "copyExternalAddressToolStripMenuItem";
+            resources.ApplyResources(this.copyExternalAddressToolStripMenuItem, "copyExternalAddressToolStripMenuItem");
+            this.copyExternalAddressToolStripMenuItem.Click += new System.EventHandler(this.copyExternalAddressToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            resources.ApplyResources(this.toolStripSeparator4, "toolStripSeparator4");
             // 
             // Form1
             // 
@@ -350,6 +367,8 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem copyExternalAddressToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
     }
 }
 

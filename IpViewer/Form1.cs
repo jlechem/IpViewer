@@ -299,5 +299,35 @@ namespace IpViewer2
                 this.ShowInTaskbar = true;
             }
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void copyExternalIPAddressToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(_hostInformation.ExternalIpAddress);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void copyInternalIPAddressToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(this.labelInternalAddress.Text);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void copyExternalAddressToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(_hostInformation.ExternalIpAddress);
+        }
     }
 }

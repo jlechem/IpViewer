@@ -58,6 +58,7 @@ namespace IpViewer2
             this.checkBoxStartMinimized.Checked = IpViewerSettings.Instance.StartMinimized;
             this.checkBoxTopmost.Checked = IpViewerSettings.Instance.TopMost;
             this.checkBoxEnableLogging.Checked = IpViewerSettings.Instance.LoggingEnabled;
+            this.checkBoxLogExternal.Checked = IpViewerSettings.Instance.LogIpAddress;
         }
 
         /// <summary>
@@ -72,8 +73,19 @@ namespace IpViewer2
             IpViewerSettings.Instance.StartMinimized = this.checkBoxStartMinimized.Checked;
             IpViewerSettings.Instance.TopMost = this.checkBoxTopmost.Checked;
             IpViewerSettings.Instance.LoggingEnabled = this.checkBoxEnableLogging.Checked;
+            IpViewerSettings.Instance.LogIpAddress = this.checkBoxLogExternal.Checked;
+
             IpViewerSettings.Instance.SaveSettings();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void checkBoxEnableLogging_CheckedChanged(object sender, EventArgs e)
+        {
+            this.checkBoxLogExternal.Enabled = this.checkBoxEnableLogging.Checked;
+        }
     }
 }
