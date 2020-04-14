@@ -16,7 +16,7 @@ Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "IpViewerSetup", "IpViewerSe
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Releases", "Releases", "{F6C64AAA-27D8-4251-B9EB-A4433DFA7126}"
 	ProjectSection(SolutionItems) = preProject
-		IpViewerSetup\Release\IpViewerSetup_5.msi = IpViewerSetup\Release\IpViewerSetup_5.msi
+		Releases\IpViewerSetup_5.msi = Releases\IpViewerSetup_5.msi
 	EndProjectSection
 EndProject
 Global
