@@ -16,6 +16,7 @@
 
 
 using IViewer.BusinessObject;
+using log4net;
 using System;
 using System.Windows.Forms;
 
@@ -23,6 +24,12 @@ namespace IpViewer2
 {
     public partial class Settings : Form
     {
+        #region Fields
+
+        private static readonly ILog log = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
+        #endregion
+
         /// <summary>
         /// 
         /// </summary>
@@ -52,12 +59,25 @@ namespace IpViewer2
         private void LoadSettings()
         {
             this.numericUpDownInterval.Value = IpViewerSettings.Instance.RefreshTime;
-            this.checkBoxCloseToTray.Checked = IpViewerSettings.Instance.CloseToTray;
-            this.checkBoxMinimizeToTray.Checked = IpViewerSettings.Instance.MinimizeToTray;
-            this.checkBoxStartMinimized.Checked = IpViewerSettings.Instance.StartMinimized;
-            this.checkBoxTopmost.Checked = IpViewerSettings.Instance.TopMost;
-            this.checkBoxEnableLogging.Checked = IpViewerSettings.Instance.LoggingEnabled;
-            this.checkBoxLogExternal.Checked = IpViewerSettings.Instance.LogIpAddress;
+
+            var nodes = this.treeViewSettings.Nodes;
+
+            try
+            {
+                nodes.Find("CloseToTray", true)[0].Checked = IpViewerSettings.Instance.CloseToTray;
+                nodes.Find("MinimizeToTray", true)[0].Checked = IpViewerSettings.Instance.MinimizeToTray;
+                nodes.Find("StartMinimized", true)[0].Checked = IpViewerSettings.Instance.StartMinimized;
+                nodes.Find("Topmost", true)[0].Checked = IpViewerSettings.Instance.TopMost;
+                nodes.Find("EnableLogging", true)[0].Checked = IpViewerSettings.Instance.LoggingEnabled;
+                nodes.Find("LogExternalAddress", true)[0].Checked = IpViewerSettings.Instance.LogExternalIpAddress;
+                nodes.Find("LogAdapterInformation", true)[0].Checked = IpViewerSettings.Instance.LogAdapterInformation;
+                nodes.Find("IPAddress", true)[0].Checked = IpViewerSettings.Instance.LogAdapterIpAddress;
+                nodes.Find("OperationalStatus", true)[0].Checked = IpViewerSettings.Instance.LogAdapterOperationalStatus;
+            }
+            catch (Exception ex)
+            {
+                log.Error("An exception occured in LoadSettings().", ex);
+            }
         }
 
         /// <summary>
@@ -66,25 +86,29 @@ namespace IpViewer2
         private void SaveSettings()
         {
             this.numericUpDownInterval.Value = this.numericUpDownInterval.Value > 1440 ? this.numericUpDownInterval.Value : 1440;
-            IpViewerSettings.Instance.RefreshTime = this.numericUpDownInterval.Value;
-            IpViewerSettings.Instance.CloseToTray = this.checkBoxCloseToTray.Checked;
-            IpViewerSettings.Instance.MinimizeToTray = this.checkBoxMinimizeToTray.Checked;
-            IpViewerSettings.Instance.StartMinimized = this.checkBoxStartMinimized.Checked;
-            IpViewerSettings.Instance.TopMost = this.checkBoxTopmost.Checked;
-            IpViewerSettings.Instance.LoggingEnabled = this.checkBoxEnableLogging.Checked;
-            IpViewerSettings.Instance.LogIpAddress = this.checkBoxLogExternal.Checked;
 
-            IpViewerSettings.Instance.SaveSettings();
-        }
+            var nodes = this.treeViewSettings.Nodes;
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void checkBoxEnableLogging_CheckedChanged(object sender, EventArgs e)
-        {
-            this.checkBoxLogExternal.Enabled = this.checkBoxEnableLogging.Checked;
+            try
+            {
+                IpViewerSettings.Instance.CloseToTray = nodes.Find("CloseToTray", true)[0].Checked;
+                IpViewerSettings.Instance.MinimizeToTray = nodes.Find("MinimizeToTray", true)[0].Checked;
+                IpViewerSettings.Instance.StartMinimized = nodes.Find("StartMinimized", true)[0].Checked;
+                IpViewerSettings.Instance.TopMost = nodes.Find("Topmost", true)[0].Checked;
+                IpViewerSettings.Instance.LoggingEnabled = nodes.Find("EnableLogging", true)[0].Checked;
+                IpViewerSettings.Instance.LogExternalIpAddress = nodes.Find("LogExternalAddress", true)[0].Checked;
+                IpViewerSettings.Instance.LogAdapterInformation = nodes.Find("LogAdapterInformation", true)[0].Checked;
+                IpViewerSettings.Instance.LogAdapterIpAddress = nodes.Find("IPAddress", true)[0].Checked;
+                IpViewerSettings.Instance.LogAdapterOperationalStatus = nodes.Find("OperationalStatus", true)[0].Checked;  
+            }
+            catch (Exception ex)
+            {
+                log.Error("An exception occured in LoadSettings().", ex);
+            }
+            finally
+            {
+                IpViewerSettings.Instance.SaveSettings();
+            }
         }
     }
 }

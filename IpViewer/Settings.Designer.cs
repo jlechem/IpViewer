@@ -28,29 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Topmost");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Start Minimized");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Close To Tray");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Minimize To Tray");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Log External IP Address");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("IP Address");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Operational Status");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Log Adapter Information", new System.Windows.Forms.TreeNode[] {
+            treeNode6,
+            treeNode7});
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Enable Logging", new System.Windows.Forms.TreeNode[] {
+            treeNode5,
+            treeNode8});
             this.buttonOK = new System.Windows.Forms.Button();
             this.buttonCANCEL = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkBoxStartMinimized = new System.Windows.Forms.CheckBox();
-            this.checkBoxCloseToTray = new System.Windows.Forms.CheckBox();
-            this.checkBoxMinimizeToTray = new System.Windows.Forms.CheckBox();
-            this.checkBoxTopmost = new System.Windows.Forms.CheckBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.checkBoxLogExternal = new System.Windows.Forms.CheckBox();
-            this.checkBoxEnableLogging = new System.Windows.Forms.CheckBox();
+            this.treeViewSettings = new System.Windows.Forms.TreeView();
             this.numericUpDownInterval = new System.Windows.Forms.NumericUpDown();
-            this.groupBox1.SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownInterval)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonOK
             // 
             this.buttonOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonOK.Location = new System.Drawing.Point(99, 9);
+            this.buttonOK.Location = new System.Drawing.Point(101, 9);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(75, 23);
             this.buttonOK.TabIndex = 0;
@@ -62,125 +68,69 @@
             // 
             this.buttonCANCEL.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCANCEL.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCANCEL.Location = new System.Drawing.Point(180, 9);
+            this.buttonCANCEL.Location = new System.Drawing.Point(182, 9);
             this.buttonCANCEL.Name = "buttonCANCEL";
             this.buttonCANCEL.Size = new System.Drawing.Size(75, 23);
             this.buttonCANCEL.TabIndex = 1;
             this.buttonCANCEL.Text = "CANCEL";
             this.buttonCANCEL.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.numericUpDownInterval);
-            this.groupBox1.Controls.Add(this.checkBoxStartMinimized);
-            this.groupBox1.Controls.Add(this.checkBoxCloseToTray);
-            this.groupBox1.Controls.Add(this.checkBoxMinimizeToTray);
-            this.groupBox1.Controls.Add(this.checkBoxTopmost);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(267, 139);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Application Settings";
-            // 
-            // checkBoxStartMinimized
-            // 
-            this.checkBoxStartMinimized.AutoSize = true;
-            this.checkBoxStartMinimized.Location = new System.Drawing.Point(12, 77);
-            this.checkBoxStartMinimized.Name = "checkBoxStartMinimized";
-            this.checkBoxStartMinimized.Size = new System.Drawing.Size(97, 17);
-            this.checkBoxStartMinimized.TabIndex = 8;
-            this.checkBoxStartMinimized.Text = "Start Minimized";
-            this.checkBoxStartMinimized.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxCloseToTray
-            // 
-            this.checkBoxCloseToTray.AutoSize = true;
-            this.checkBoxCloseToTray.Location = new System.Drawing.Point(13, 103);
-            this.checkBoxCloseToTray.Name = "checkBoxCloseToTray";
-            this.checkBoxCloseToTray.Size = new System.Drawing.Size(92, 17);
-            this.checkBoxCloseToTray.TabIndex = 7;
-            this.checkBoxCloseToTray.Text = "Close To Tray";
-            this.checkBoxCloseToTray.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxMinimizeToTray
-            // 
-            this.checkBoxMinimizeToTray.AutoSize = true;
-            this.checkBoxMinimizeToTray.Location = new System.Drawing.Point(115, 54);
-            this.checkBoxMinimizeToTray.Name = "checkBoxMinimizeToTray";
-            this.checkBoxMinimizeToTray.Size = new System.Drawing.Size(106, 17);
-            this.checkBoxMinimizeToTray.TabIndex = 6;
-            this.checkBoxMinimizeToTray.Text = "Minimize To Tray";
-            this.checkBoxMinimizeToTray.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxTopmost
-            // 
-            this.checkBoxTopmost.AutoSize = true;
-            this.checkBoxTopmost.Location = new System.Drawing.Point(13, 54);
-            this.checkBoxTopmost.Name = "checkBoxTopmost";
-            this.checkBoxTopmost.Size = new System.Drawing.Size(67, 17);
-            this.checkBoxTopmost.TabIndex = 4;
-            this.checkBoxTopmost.Text = "Topmost";
-            this.checkBoxTopmost.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Refresh Rate (minutes):";
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.buttonOK);
             this.panel1.Controls.Add(this.buttonCANCEL);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 239);
+            this.panel1.Location = new System.Drawing.Point(0, 290);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(267, 44);
+            this.panel1.Size = new System.Drawing.Size(269, 44);
             this.panel1.TabIndex = 3;
             // 
-            // groupBox2
+            // treeViewSettings
             // 
-            this.groupBox2.Controls.Add(this.checkBoxLogExternal);
-            this.groupBox2.Controls.Add(this.checkBoxEnableLogging);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(0, 139);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(267, 100);
-            this.groupBox2.TabIndex = 4;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Logging Settings";
-            // 
-            // checkBoxLogExternal
-            // 
-            this.checkBoxLogExternal.AutoSize = true;
-            this.checkBoxLogExternal.Enabled = false;
-            this.checkBoxLogExternal.Location = new System.Drawing.Point(37, 49);
-            this.checkBoxLogExternal.Name = "checkBoxLogExternal";
-            this.checkBoxLogExternal.Size = new System.Drawing.Size(126, 17);
-            this.checkBoxLogExternal.TabIndex = 1;
-            this.checkBoxLogExternal.Text = "Log External Address";
-            this.checkBoxLogExternal.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxEnableLogging
-            // 
-            this.checkBoxEnableLogging.AutoSize = true;
-            this.checkBoxEnableLogging.Location = new System.Drawing.Point(12, 26);
-            this.checkBoxEnableLogging.Name = "checkBoxEnableLogging";
-            this.checkBoxEnableLogging.Size = new System.Drawing.Size(100, 17);
-            this.checkBoxEnableLogging.TabIndex = 0;
-            this.checkBoxEnableLogging.Text = "Enable Logging";
-            this.checkBoxEnableLogging.UseVisualStyleBackColor = true;
-            this.checkBoxEnableLogging.CheckedChanged += new System.EventHandler(this.checkBoxEnableLogging_CheckedChanged);
+            this.treeViewSettings.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.treeViewSettings.CheckBoxes = true;
+            this.treeViewSettings.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeViewSettings.Location = new System.Drawing.Point(0, 38);
+            this.treeViewSettings.Name = "treeViewSettings";
+            treeNode1.Name = "TopMost";
+            treeNode1.Tag = "Topmost";
+            treeNode1.Text = "Topmost";
+            treeNode2.Name = "StartMinimized";
+            treeNode2.Tag = "StartMinimized";
+            treeNode2.Text = "Start Minimized";
+            treeNode3.Name = "CloseToTray";
+            treeNode3.Tag = "CloseToTray";
+            treeNode3.Text = "Close To Tray";
+            treeNode4.Name = "MinimizeToTray";
+            treeNode4.Tag = "MinimizeToTray";
+            treeNode4.Text = "Minimize To Tray";
+            treeNode5.Name = "LogExternalAddress";
+            treeNode5.Tag = "LogExternalAddress";
+            treeNode5.Text = "Log External IP Address";
+            treeNode6.Name = "IPAddress";
+            treeNode6.Tag = "IPAddress";
+            treeNode6.Text = "IP Address";
+            treeNode7.Name = "OperationalStatus";
+            treeNode7.Tag = "OperationalStatus";
+            treeNode7.Text = "Operational Status";
+            treeNode8.Name = "LogAdapterInformation";
+            treeNode8.Tag = "LogAdapterInformation";
+            treeNode8.Text = "Log Adapter Information";
+            treeNode9.Name = "EnableLogging";
+            treeNode9.Tag = "EnableLogging";
+            treeNode9.Text = "Enable Logging";
+            this.treeViewSettings.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2,
+            treeNode3,
+            treeNode4,
+            treeNode9});
+            this.treeViewSettings.Size = new System.Drawing.Size(269, 252);
+            this.treeViewSettings.TabIndex = 2;
             // 
             // numericUpDownInterval
             // 
-            this.numericUpDownInterval.Location = new System.Drawing.Point(130, 24);
+            this.numericUpDownInterval.Location = new System.Drawing.Point(136, 7);
             this.numericUpDownInterval.Maximum = new decimal(new int[] {
             1440,
             0,
@@ -193,12 +143,31 @@
             0});
             this.numericUpDownInterval.Name = "numericUpDownInterval";
             this.numericUpDownInterval.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDownInterval.TabIndex = 9;
+            this.numericUpDownInterval.TabIndex = 13;
             this.numericUpDownInterval.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(118, 13);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Refresh Rate (minutes):";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.numericUpDownInterval);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(269, 38);
+            this.panel2.TabIndex = 14;
             // 
             // Settings
             // 
@@ -206,10 +175,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonCANCEL;
-            this.ClientSize = new System.Drawing.Size(267, 283);
-            this.Controls.Add(this.groupBox2);
+            this.ClientSize = new System.Drawing.Size(269, 334);
+            this.Controls.Add(this.treeViewSettings);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.groupBox1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Settings";
@@ -217,12 +186,10 @@
             this.ShowInTaskbar = false;
             this.Text = "Ip Viewer Settings";
             this.TopMost = true;
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownInterval)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -231,16 +198,10 @@
 
         private System.Windows.Forms.Button buttonOK;
         private System.Windows.Forms.Button buttonCANCEL;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckBox checkBoxStartMinimized;
-        private System.Windows.Forms.CheckBox checkBoxCloseToTray;
-        private System.Windows.Forms.CheckBox checkBoxMinimizeToTray;
-        private System.Windows.Forms.CheckBox checkBoxTopmost;
-        private System.Windows.Forms.CheckBox checkBoxEnableLogging;
-        private System.Windows.Forms.CheckBox checkBoxLogExternal;
+        private System.Windows.Forms.TreeView treeViewSettings;
         private System.Windows.Forms.NumericUpDown numericUpDownInterval;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

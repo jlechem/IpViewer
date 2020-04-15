@@ -151,10 +151,6 @@ namespace IpViewer2
 
             this.notifyIcon1.Text = _hostInformation.ExternalIpAddress;
 
-            if (IpViewerSettings.Instance.LoggingEnabled && IpViewerSettings.Instance.LogIpAddress)
-            {
-                log.Info($"External IP Address: {_hostInformation.ExternalIpAddress}");
-            }
         }
 
         /// <summary>
@@ -367,5 +363,14 @@ namespace IpViewer2
             this.SetHostInformationControls();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            this.toolStripStatusLabel1.Text = DateTime.Now.ToString("hh:mm:ss tt");
+        }
     }
 }

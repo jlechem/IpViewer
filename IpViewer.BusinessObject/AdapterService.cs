@@ -20,6 +20,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.NetworkInformation;
+using System.Text;
 
 namespace IViewer.BusinessObject
 {
@@ -55,6 +56,11 @@ namespace IViewer.BusinessObject
                         Speed = adapter.Speed,
                         OperationalStatus = adapter.OperationalStatus.ToString()
                     }));
+
+                if(IpViewerSettings.Instance.LoggingEnabled && IpViewerSettings.Instance.LogAdapterInformation)
+                {
+                    LogAdapterInfo(result);
+                }
             }
             catch (Exception ex)
             {
@@ -108,7 +114,40 @@ namespace IViewer.BusinessObject
                 log.Error("An exception occured in GetExternalIpAddress().", ex);
             }
 
+            if (IpViewerSettings.Instance.LoggingEnabled && IpViewerSettings.Instance.LogExternalIpAddress)
+            {
+                log.Info($"External IP Address: {result}");
+            }
+
             return result;
+        }
+
+        /// <summary>
+        /// Logs the adapter information.
+        /// </summary>
+        /// <param name="adapters"></param>
+        private void LogAdapterInfo(List<AdapterInfo> adapters)
+        {
+            var logEntry = new StringBuilder();
+
+            foreach( var adapter in adapters )
+            {
+                logEntry.Append($"{adapter.Name} -");
+
+                if(IpViewerSettings.Instance.LogAdapterIpAddress)
+                {
+                    logEntry.Append($" IP Address: {adapter.IpAddress}");
+                }
+
+                if (IpViewerSettings.Instance.LogAdapterOperationalStatus)
+                {
+                    logEntry.Append($" Operational Status: {adapter.OperationalStatus}");
+                }
+
+                logEntry.Append(Environment.NewLine);
+            }
+
+            log.Info($"Adapter Information{Environment.NewLine}{logEntry}");
         }
 
     }
