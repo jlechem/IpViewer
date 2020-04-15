@@ -17,9 +17,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Releases", "Releases", "{F6C64AAA-27D8-4251-B9EB-A4433DFA7126}"
 	ProjectSection(SolutionItems) = preProject
 		Releases\IpViewerSetup_5.msi = Releases\IpViewerSetup_5.msi
+		Releases\IpViewerSetup_5_1.msi = Releases\IpViewerSetup_5_1.msi
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IpViewerCore", "IpViewerCore\IpViewerCore.csproj", "{6EB91F6B-4248-48ED-B72C-1F6A0A47119F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IpViewerCore", "IpViewerCore\IpViewerCore.csproj", "{6EB91F6B-4248-48ED-B72C-1F6A0A47119F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
