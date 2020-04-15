@@ -170,3 +170,7 @@ IpViewer/bin/Debug/IpViewer.exe.config
 IpViewer/bin/Debug/IpViewer.exe
 IpViewer/bin/Debug/IpViewer.BusinessObject.pdb
 IpViewer/bin/Debug/IpViewer.BusinessObject.dll
+IpViewerCore/obj/Release/netcoreapp3.1/IpViewerCore.csprojAssemblyReference.cache
+IpViewerCore/obj/Release/netcoreapp3.1/IpViewerCore.assets.cache
+IpViewerCore/obj/Release/netcoreapp3.1/IpViewerCore.AssemblyInfoInputs.cache
+IpViewerCore/obj/Release/netcoreapp3.1/IpViewerCore.AssemblyInfo.cs

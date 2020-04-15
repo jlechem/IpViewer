@@ -15,6 +15,12 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_00FFA53FEBB84987B5A048B22B06479E"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_2E8FE94800FE3DB55D6B10D29BB5502F"
         "OwnerKey" = "8:_5A729E7CA0734ADAB65060F8C6FD3870"
         "MsmSig" = "8:_UNDEFINED"
@@ -111,7 +117,7 @@
         "DisplayName" = "8:Debug"
         "IsDebugOnly" = "11:TRUE"
         "IsReleaseOnly" = "11:FALSE"
-        "OutputFilename" = "8:Debug\\IpViewerSetup_5.msi"
+        "OutputFilename" = "8:Debug\\IpViewerSetup_5_1.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -135,7 +141,7 @@
         "DisplayName" = "8:Release"
         "IsDebugOnly" = "11:FALSE"
         "IsReleaseOnly" = "11:TRUE"
-        "OutputFilename" = "8:Release\\IpViewerSetup_5.msi"
+        "OutputFilename" = "8:Release\\IpViewerSetup_5_1.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -182,6 +188,26 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_00FFA53FEBB84987B5A048B22B06479E"
+            {
+            "SourcePath" = "8:..\\IpViewer\\IP_Viewer.ICO"
+            "TargetName" = "8:IP_Viewer.ICO"
+            "Tag" = "8:"
+            "Folder" = "8:_284512E110B248098676FD4E34E26138"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_2E8FE94800FE3DB55D6B10D29BB5502F"
             {
             "AssemblyRegister" = "3:1"
@@ -217,7 +243,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:IpViewer.BusinessObject, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:IpViewer.BusinessObject, Version=5.1.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_60E20E054B98B75FE480766E0A8501B7"
@@ -376,11 +402,11 @@
         "ARPHELPLINK" = "8:www.sasquatchsoftware.com"
         "Title" = "8:Ip Viewer Setup"
         "Subject" = "8:"
-        "ARPCONTACT" = "8:Default Company Name"
+        "ARPCONTACT" = "8:Sasquatch Software"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:www.sasquatchsoftware.com"
-        "ARPPRODUCTICON" = "8:"
+        "ARPPRODUCTICON" = "8:_00FFA53FEBB84987B5A048B22B06479E"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
@@ -898,7 +924,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_5A729E7CA0734ADAB65060F8C6FD3870"
             {
-            "SourcePath" = "8:..\\IpViewer\\obj\\Debug\\IpViewer.exe"
+            "SourcePath" = "8:..\\IpViewer\\obj\\Release\\IpViewer.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_284512E110B248098676FD4E34E26138"
@@ -926,7 +952,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_E2CF7C463AEE4B71860BE059B768C72A"
             {
-            "SourcePath" = "8:..\\IpViewer\\obj\\Debug\\IpViewer.exe"
+            "SourcePath" = "8:..\\IpViewer\\obj\\Release\\IpViewer.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_284512E110B248098676FD4E34E26138"
