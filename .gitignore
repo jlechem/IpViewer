@@ -166,3 +166,7 @@ IpViewer/bin/Debug/IpViewer.exe
 IpViewerCore/obj/Debug/netcoreapp3.1/IpViewerCore.AboutBox.resources
 IpViewerCore/obj/Debug/netcoreapp3.1/IpViewerCore.csproj.GenerateResource.cache
 IpViewerCore/IpViewerCore.csproj.user
+IpViewer/bin/Debug/IpViewer.exe.config
+IpViewer/bin/Debug/IpViewer.exe
+IpViewer/bin/Debug/IpViewer.BusinessObject.pdb
+IpViewer/bin/Debug/IpViewer.BusinessObject.dll
