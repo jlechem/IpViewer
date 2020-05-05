@@ -174,3 +174,5 @@ IpViewerCore/obj/Release/netcoreapp3.1/IpViewerCore.csprojAssemblyReference.cach
 IpViewerCore/obj/Release/netcoreapp3.1/IpViewerCore.assets.cache
 IpViewerCore/obj/Release/netcoreapp3.1/IpViewerCore.AssemblyInfoInputs.cache
 IpViewerCore/obj/Release/netcoreapp3.1/IpViewerCore.AssemblyInfo.cs
+/IpViewer/obj/Release
+/IpViewer.BusinessObject/obj/Release/IpViewer.BusinessObject.csprojAssemblyReference.cache
