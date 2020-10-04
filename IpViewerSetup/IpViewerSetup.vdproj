@@ -39,38 +39,8 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_60E20E054B98B75FE480766E0A8501B7"
-        "OwnerKey" = "8:_5A729E7CA0734ADAB65060F8C6FD3870"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_60E20E054B98B75FE480766E0A8501B7"
-        "OwnerKey" = "8:_E2CF7C463AEE4B71860BE059B768C72A"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_BF7795092E82482CAE0AA01C0FEC97C7"
         "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_BF7960F52312B8B104C7D781C59CD937"
-        "OwnerKey" = "8:_60E20E054B98B75FE480766E0A8501B7"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_BF7960F52312B8B104C7D781C59CD937"
-        "OwnerKey" = "8:_E2CF7C463AEE4B71860BE059B768C72A"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_BF7960F52312B8B104C7D781C59CD937"
-        "OwnerKey" = "8:_5A729E7CA0734ADAB65060F8C6FD3870"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -89,18 +59,6 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_E2CF7C463AEE4B71860BE059B768C72A"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_60E20E054B98B75FE480766E0A8501B7"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_BF7960F52312B8B104C7D781C59CD937"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -134,6 +92,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
         "Release"
@@ -158,6 +124,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
     }
@@ -239,37 +213,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_60E20E054B98B75FE480766E0A8501B7"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:IpViewer.BusinessObject, Version=5.1.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_60E20E054B98B75FE480766E0A8501B7"
-                    {
-                    "Name" = "8:IpViewer.BusinessObject.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:IpViewer.BusinessObject.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_284512E110B248098676FD4E34E26138"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BF7795092E82482CAE0AA01C0FEC97C7"
             {
             "SourcePath" = "8:..\\GPL v3.txt"
@@ -288,37 +231,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_BF7960F52312B8B104C7D781C59CD937"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_BF7960F52312B8B104C7D781C59CD937"
-                    {
-                    "Name" = "8:log4net.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:log4net.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_284512E110B248098676FD4E34E26138"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
         }
@@ -388,19 +300,19 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Ip Viewer"
-        "ProductCode" = "8:{0F025D6B-64BE-4F9B-A9D1-022E899D01EC}"
-        "PackageCode" = "8:{FB21894E-546C-41D3-BB1F-9B2E88746A15}"
+        "ProductCode" = "8:{B9A5398B-E039-4C1D-AAFB-D53726C4F6D7}"
+        "PackageCode" = "8:{D7AAC2C3-892B-4920-82F1-76E7334678E0}"
         "UpgradeCode" = "8:{FB1872AE-CB72-4FD3-ABFC-9A4DEBC18763}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:5.1.0"
+        "ProductVersion" = "8:5.2.0"
         "Manufacturer" = "8:Sasquatch Software"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:www.sasquatchsoftware.com"
-        "Title" = "8:Ip Viewer Setup"
+        "Title" = "8:Ip Viewer 5.2 Setup"
         "Subject" = "8:"
         "ARPCONTACT" = "8:Sasquatch Software"
         "Keywords" = "8:"
@@ -924,7 +836,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_5A729E7CA0734ADAB65060F8C6FD3870"
             {
-            "SourcePath" = "8:..\\IpViewer\\obj\\Release\\IpViewer.exe"
+            "SourcePath" = "8:..\\IpViewer\\obj\\Debug\\IpViewer.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_284512E110B248098676FD4E34E26138"
@@ -952,7 +864,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_E2CF7C463AEE4B71860BE059B768C72A"
             {
-            "SourcePath" = "8:..\\IpViewer\\obj\\Release\\IpViewer.exe"
+            "SourcePath" = "8:..\\IpViewer\\obj\\Debug\\IpViewer.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_284512E110B248098676FD4E34E26138"

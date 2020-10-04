@@ -21,8 +21,9 @@ using System.Linq;
 using System.Net;
 using System.Net.NetworkInformation;
 using System.Text;
+using IpViewer.BusinessObject;
 
-namespace IViewer.BusinessObject
+namespace IPViewer.BusinessObject
 {
    public class AdapterService
     {
@@ -64,7 +65,7 @@ namespace IViewer.BusinessObject
             }
             catch (Exception ex)
             {
-                log.Error("An exception occured in GetAdapters().", ex);
+                log.Error("An exception occurred in GetAdapters().", ex);
             }
             
             return result;
@@ -88,7 +89,7 @@ namespace IViewer.BusinessObject
             }
             catch (Exception ex)
             {
-                log.Error("An exception occured in GetHostInformation().", ex);
+                log.Error("An exception occurred in GetHostInformation().", ex);
             }
 
             return result;

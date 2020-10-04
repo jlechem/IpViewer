@@ -15,10 +15,11 @@
 //   along with this program.If not, see<https://www.gnu.org/licenses/>.
 
 
-using IViewer.BusinessObject;
+using IPViewer.BusinessObject;
 using log4net;
 using System;
 using System.Windows.Forms;
+using IpViewer.BusinessObject;
 
 namespace IpViewer2
 {
@@ -103,7 +104,7 @@ namespace IpViewer2
             }
             catch (Exception ex)
             {
-                log.Error("An exception occured in LoadSettings().", ex);
+                log.Error("An exception occurred in LoadSettings().", ex);
             }
             finally
             {

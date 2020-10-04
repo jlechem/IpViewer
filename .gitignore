@@ -181,3 +181,7 @@ IpViewerCore/obj/Debug/netcoreapp3.1/IpViewerCore.designer.deps.json
 IpViewerCore/obj/Debug/netcoreapp3.1/IpViewerCore.designer.runtimeconfig.json
 IpViewerCore/obj/Debug/netcoreapp3.1/IpViewerCore.Form1.resources
 IpViewer/obj/Debug/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs
+IpViewer/bin/Debug/IpViewer.BusinessObject.dll
+IpViewer/bin/Debug/IpViewer.BusinessObject.pdb
+IpViewer/bin/Debug/IpViewer.exe
+IpViewer/bin/Debug/IpViewer.exe.config

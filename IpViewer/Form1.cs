@@ -14,12 +14,13 @@
 //   You should have received a copy of the GNU General Public License
 //   along with this program.If not, see<https://www.gnu.org/licenses/>.
 
-using IViewer.BusinessObject;
+using IPViewer.BusinessObject;
 using log4net;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using IpViewer.BusinessObject;
 
 namespace IpViewer2
 {
@@ -247,7 +248,7 @@ namespace IpViewer2
                 {
                     this.WindowState = FormWindowState.Minimized;
                     this.ShowInTaskbar = false;
-                    e.Cancel = false;
+                    e.Cancel = true;
                 }
                 else
                 {
