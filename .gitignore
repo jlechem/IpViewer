@@ -176,3 +176,8 @@ IpViewerCore/obj/Release/netcoreapp3.1/IpViewerCore.AssemblyInfoInputs.cache
 IpViewerCore/obj/Release/netcoreapp3.1/IpViewerCore.AssemblyInfo.cs
 /IpViewer/obj/Release
 /IpViewer.BusinessObject/obj/Release/IpViewer.BusinessObject.csprojAssemblyReference.cache
+IpViewerCore/obj/Debug/netcoreapp3.1/.NETCoreApp,Version=v3.1.AssemblyAttributes.cs
+IpViewerCore/obj/Debug/netcoreapp3.1/IpViewerCore.designer.deps.json
+IpViewerCore/obj/Debug/netcoreapp3.1/IpViewerCore.designer.runtimeconfig.json
+IpViewerCore/obj/Debug/netcoreapp3.1/IpViewerCore.Form1.resources
+IpViewer/obj/Debug/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs
