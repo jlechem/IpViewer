@@ -2,7 +2,12 @@ READ ME for IPViewer
 
 This is the read me file for IP Viewer.
 
-The current version if 5.1 (14-04-2020)
+The current version if 5.2 (3-10-2020)
+
+This is a minor bug fix for closing to tray not working correctly.
+
+
+Version if 5.1
 
 This is a major revision of the IP Viewer software. It was first written in MFC becuase the .net framework was still new and not installed on every PC. Now with the framework being ubiquitous on windows 10 I have decided to re-write it in a more modern language. I have found it much easier to re-create the functionality with less code and less hassle. The first goal is to just make sure all existing functionality is the same. Then new features will be slowly added in. I have also upgraded the licensing to the GPU V3.
 

@@ -185,3 +185,9 @@ IpViewer/bin/Debug/IpViewer.BusinessObject.dll
 IpViewer/bin/Debug/IpViewer.BusinessObject.pdb
 IpViewer/bin/Debug/IpViewer.exe
 IpViewer/bin/Debug/IpViewer.exe.config
+IpViewer/bin/Debug/IpViewer.exe
+IpViewer/bin/Debug/IpViewer.exe.config
+IpViewerCore/obj/Release/netcoreapp3.1/.NETCoreApp,Version=v3.1.AssemblyAttributes.cs
+IpViewerSetup/Debug/IpViewerSetup_5_1.msi
+IpViewerSetup/Release/IpViewerSetup_5_1.msi
+IpViewerSetup/Release/IpViewerSetup_5_2.msi
