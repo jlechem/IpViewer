@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Topmost");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Start Minimized");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Close To Tray");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Minimize To Tray");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Use 12 Hour Clock");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Log External IP Address");
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("IP Address");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Operational Status");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Log Adapter Information", new System.Windows.Forms.TreeNode[] {
-            treeNode7,
-            treeNode8});
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Enable Logging", new System.Windows.Forms.TreeNode[] {
-            treeNode6,
-            treeNode9});
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Topmost");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Start Minimized");
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Close To Tray");
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Minimize To Tray");
+            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Use 12 Hour Clock");
+            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Log External IP Address");
+            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("IP Address");
+            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Operational Status");
+            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Log Adapter Information", new System.Windows.Forms.TreeNode[] {
+            treeNode17,
+            treeNode18});
+            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Enable Logging", new System.Windows.Forms.TreeNode[] {
+            treeNode16,
+            treeNode19});
             this.buttonOK = new System.Windows.Forms.Button();
             this.buttonCANCEL = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -49,9 +49,13 @@
             this.numericUpDownInterval = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.trackBarOpacity = new System.Windows.Forms.TrackBar();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownInterval)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarOpacity)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonOK
@@ -90,47 +94,47 @@
             // 
             this.treeViewSettings.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.treeViewSettings.CheckBoxes = true;
-            this.treeViewSettings.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeViewSettings.Dock = System.Windows.Forms.DockStyle.Top;
             this.treeViewSettings.Location = new System.Drawing.Point(0, 38);
             this.treeViewSettings.Name = "treeViewSettings";
-            treeNode1.Name = "TopMost";
-            treeNode1.Tag = "Topmost";
-            treeNode1.Text = "Topmost";
-            treeNode2.Name = "StartMinimized";
-            treeNode2.Tag = "StartMinimized";
-            treeNode2.Text = "Start Minimized";
-            treeNode3.Name = "CloseToTray";
-            treeNode3.Tag = "CloseToTray";
-            treeNode3.Text = "Close To Tray";
-            treeNode4.Name = "MinimizeToTray";
-            treeNode4.Tag = "MinimizeToTray";
-            treeNode4.Text = "Minimize To Tray";
-            treeNode5.Name = "Use12HourClock";
-            treeNode5.Tag = "Use12HourClock";
-            treeNode5.Text = "Use 12 Hour Clock";
-            treeNode6.Name = "LogExternalAddress";
-            treeNode6.Tag = "LogExternalAddress";
-            treeNode6.Text = "Log External IP Address";
-            treeNode7.Name = "IPAddress";
-            treeNode7.Tag = "IPAddress";
-            treeNode7.Text = "IP Address";
-            treeNode8.Name = "OperationalStatus";
-            treeNode8.Tag = "OperationalStatus";
-            treeNode8.Text = "Operational Status";
-            treeNode9.Name = "LogAdapterInformation";
-            treeNode9.Tag = "LogAdapterInformation";
-            treeNode9.Text = "Log Adapter Information";
-            treeNode10.Name = "EnableLogging";
-            treeNode10.Tag = "EnableLogging";
-            treeNode10.Text = "Enable Logging";
+            treeNode11.Name = "TopMost";
+            treeNode11.Tag = "Topmost";
+            treeNode11.Text = "Topmost";
+            treeNode12.Name = "StartMinimized";
+            treeNode12.Tag = "StartMinimized";
+            treeNode12.Text = "Start Minimized";
+            treeNode13.Name = "CloseToTray";
+            treeNode13.Tag = "CloseToTray";
+            treeNode13.Text = "Close To Tray";
+            treeNode14.Name = "MinimizeToTray";
+            treeNode14.Tag = "MinimizeToTray";
+            treeNode14.Text = "Minimize To Tray";
+            treeNode15.Name = "Use12HourClock";
+            treeNode15.Tag = "Use12HourClock";
+            treeNode15.Text = "Use 12 Hour Clock";
+            treeNode16.Name = "LogExternalAddress";
+            treeNode16.Tag = "LogExternalAddress";
+            treeNode16.Text = "Log External IP Address";
+            treeNode17.Name = "IPAddress";
+            treeNode17.Tag = "IPAddress";
+            treeNode17.Text = "IP Address";
+            treeNode18.Name = "OperationalStatus";
+            treeNode18.Tag = "OperationalStatus";
+            treeNode18.Text = "Operational Status";
+            treeNode19.Name = "LogAdapterInformation";
+            treeNode19.Tag = "LogAdapterInformation";
+            treeNode19.Text = "Log Adapter Information";
+            treeNode20.Name = "EnableLogging";
+            treeNode20.Tag = "EnableLogging";
+            treeNode20.Text = "Enable Logging";
             this.treeViewSettings.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2,
-            treeNode3,
-            treeNode4,
-            treeNode5,
-            treeNode10});
-            this.treeViewSettings.Size = new System.Drawing.Size(269, 252);
+            treeNode11,
+            treeNode12,
+            treeNode13,
+            treeNode14,
+            treeNode15,
+            treeNode20});
+            this.treeViewSettings.Size = new System.Drawing.Size(269, 203);
             this.treeViewSettings.TabIndex = 2;
             // 
             // numericUpDownInterval
@@ -174,6 +178,26 @@
             this.panel2.Size = new System.Drawing.Size(269, 38);
             this.panel2.TabIndex = 14;
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.trackBarOpacity);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 241);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(269, 49);
+            this.panel3.TabIndex = 15;
+            // 
+            // trackBarOpacity
+            // 
+            this.trackBarOpacity.Location = new System.Drawing.Point(3, 6);
+            this.trackBarOpacity.Maximum = 100;
+            this.trackBarOpacity.Minimum = 10;
+            this.trackBarOpacity.Name = "trackBarOpacity";
+            this.trackBarOpacity.Size = new System.Drawing.Size(253, 45);
+            this.trackBarOpacity.TabIndex = 0;
+            this.trackBarOpacity.Value = 10;
+            this.trackBarOpacity.ValueChanged += new System.EventHandler(this.trackBarOpacity_ValueChanged);
+            // 
             // Settings
             // 
             this.AcceptButton = this.buttonOK;
@@ -181,6 +205,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonCANCEL;
             this.ClientSize = new System.Drawing.Size(269, 334);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.treeViewSettings);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -195,6 +220,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownInterval)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarOpacity)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -208,5 +236,7 @@
         private System.Windows.Forms.NumericUpDown numericUpDownInterval;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TrackBar trackBarOpacity;
     }
 }

@@ -107,7 +107,7 @@ namespace IpViewer2
             IpViewerSettings.Instance.SaveSettings();
 
             this.labelMacAddress.Text = adapterInfo.MacAddress;
-            this.labelSpeed.Text = adapterInfo.Speed.ToString();
+            this.labelSpeed.Text = $"{adapterInfo.Speed * 0.000000125} MegaBytes / sec";
             this.labelAdapterStatus.Text = adapterInfo.OperationalStatus;
             this.labelInternalAddress.Text = adapterInfo.IpAddress;
         }
@@ -165,6 +165,7 @@ namespace IpViewer2
 
             this.timer1.Interval = (int)IpViewerSettings.Instance.RefreshTime * 60000;
 
+            this.Opacity = IpViewerSettings.Instance.Opacity;
         }
 
         private void SetTime()

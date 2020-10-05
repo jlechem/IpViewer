@@ -75,10 +75,14 @@ namespace IpViewer2
                 nodes.Find("IPAddress", true)[0].Checked = IpViewerSettings.Instance.LogAdapterIpAddress;
                 nodes.Find("OperationalStatus", true)[0].Checked = IpViewerSettings.Instance.LogAdapterOperationalStatus;
                 nodes.Find("Use12HourClock", true)[0].Checked = IpViewerSettings.Instance.Use12HourClock;
+
+                this.Opacity = IpViewerSettings.Instance.Opacity;
+                var temp = IpViewerSettings.Instance.Opacity * 100;
+                this.trackBarOpacity.Value = (int)temp;
             }
             catch (Exception ex)
             {
-                log.Error("An exception occured in LoadSettings().", ex);
+                log.Error("An exception occurred in LoadSettings().", ex);
             }
         }
 
@@ -103,6 +107,9 @@ namespace IpViewer2
                 IpViewerSettings.Instance.LogAdapterIpAddress = nodes.Find("IPAddress", true)[0].Checked;
                 IpViewerSettings.Instance.LogAdapterOperationalStatus = nodes.Find("OperationalStatus", true)[0].Checked;
                 IpViewerSettings.Instance.Use12HourClock = nodes.Find("Use12HourClock", true)[0].Checked;
+
+                IpViewerSettings.Instance.Opacity = ((double)this.trackBarOpacity.Value / 100);
+
             }
             catch (Exception ex)
             {
@@ -112,6 +119,11 @@ namespace IpViewer2
             {
                 IpViewerSettings.Instance.SaveSettings();
             }
+        }
+
+        private void trackBarOpacity_ValueChanged(object sender, EventArgs e)
+        {
+            this.Opacity = ((double) this.trackBarOpacity.Value / 100);
         }
     }
 }
