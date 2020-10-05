@@ -188,3 +188,12 @@ IpViewerCore/obj/Release/netcoreapp3.1/.NETCoreApp,Version=v3.1.AssemblyAttribut
 IpViewerSetup/Debug/IpViewerSetup_5_1.msi
 IpViewerSetup/Release/IpViewerSetup_5_1.msi
 IpViewerSetup/Release/IpViewerSetup_5_2.msi
+IpViewerCore/bin/Release/netcoreapp3.1/IpViewerCore.deps.json
+IpViewerCore/bin/Release/netcoreapp3.1/IpViewerCore.runtimeconfig.dev.json
+IpViewerCore/bin/Release/netcoreapp3.1/IpViewerCore.runtimeconfig.json
+IpViewerCore/obj/Release/netcoreapp3.1/IpViewerCore.AboutBox.resources
+IpViewerCore/obj/Release/netcoreapp3.1/IpViewerCore.csproj.CoreCompileInputs.cache
+IpViewerCore/obj/Release/netcoreapp3.1/IpViewerCore.csproj.FileListAbsolute.txt
+IpViewerCore/obj/Release/netcoreapp3.1/IpViewerCore.csproj.GenerateResource.cache
+IpViewerCore/obj/Release/netcoreapp3.1/IpViewerCore.Form1.resources
+IpViewerCore/obj/Release/netcoreapp3.1/IpViewerCore.genruntimeconfig.cache
