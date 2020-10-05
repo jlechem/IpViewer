@@ -10,9 +10,14 @@ namespace IpViewer.BusinessObject
 {
     public class IpViewerSettings
     {
+        #region
+
         public static IpViewerSettings _instance;
 
         public static object _lock = new object();
+
+        #endregion
+
         public static IpViewerSettings Instance
         {
             get
@@ -35,6 +40,8 @@ namespace IpViewer.BusinessObject
         {
 
         }
+
+        #region Properties
 
         public bool Use12HourClock { get; set; }
 
@@ -64,9 +71,14 @@ namespace IpViewer.BusinessObject
         
         public bool LogIpAddress { get; set; }
 
+        public double Opacity { get; set; }
+
+        #endregion
+
         private void LoadSettings()
         {
             RefreshTime = int.Parse(ConfigurationManager.AppSettings["RefreshTime"]);
+            Opacity = double.Parse(ConfigurationManager.AppSettings["Opacity"]);
             LoggingEnabled = bool.Parse(ConfigurationManager.AppSettings["LoggingEnabled"]);
             LogIpAddress = bool.Parse(ConfigurationManager.AppSettings["LogIpAddress"]);
             MinimizeToTray = bool.Parse(ConfigurationManager.AppSettings["MinimizeToTray"]);
@@ -86,6 +98,7 @@ namespace IpViewer.BusinessObject
             var manager = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
 
             manager.AppSettings.Settings["RefreshTime"].Value = RefreshTime.ToString();
+            manager.AppSettings.Settings["Opacity"].Value = Opacity.ToString();
             manager.AppSettings.Settings["LoggingEnabled"].Value = LoggingEnabled.ToString();
             manager.AppSettings.Settings["LogIpAddress"].Value = LogIpAddress.ToString();
             manager.AppSettings.Settings["MinimizeToTray"].Value = MinimizeToTray.ToString();
