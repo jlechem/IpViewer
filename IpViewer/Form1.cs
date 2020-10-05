@@ -159,6 +159,10 @@ namespace IpViewer2
         /// </summary>
         private void SetFormControlValuesFromSettings()
         {
+            this.toolStripStatusLabel1.Text = IpViewerSettings.Instance.Use12HourClock
+                ? DateTime.Now.ToString("hh:mm:ss tt")
+                : DateTime.Now.ToString("H:mm:ss");
+
             this.TopMost = IpViewerSettings.Instance.TopMost;
 
             this.timer1.Interval = (int)IpViewerSettings.Instance.RefreshTime * 60000;
@@ -371,7 +375,9 @@ namespace IpViewer2
         /// <param name="e"></param>
         private void timer2_Tick(object sender, EventArgs e)
         {
-            this.toolStripStatusLabel1.Text = DateTime.Now.ToString("hh:mm:ss tt");
+            this.toolStripStatusLabel1.Text = IpViewerSettings.Instance.Use12HourClock
+                ? DateTime.Now.ToString("hh:mm:ss tt")
+                : DateTime.Now.ToString("H:mm:ss");
         }
     }
 }

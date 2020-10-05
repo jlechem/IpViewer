@@ -74,6 +74,7 @@ namespace IpViewer2
                 nodes.Find("LogAdapterInformation", true)[0].Checked = IpViewerSettings.Instance.LogAdapterInformation;
                 nodes.Find("IPAddress", true)[0].Checked = IpViewerSettings.Instance.LogAdapterIpAddress;
                 nodes.Find("OperationalStatus", true)[0].Checked = IpViewerSettings.Instance.LogAdapterOperationalStatus;
+                nodes.Find("Use12HourClock", true)[0].Checked = IpViewerSettings.Instance.Use12HourClock;
             }
             catch (Exception ex)
             {
@@ -100,7 +101,8 @@ namespace IpViewer2
                 IpViewerSettings.Instance.LogExternalIpAddress = nodes.Find("LogExternalAddress", true)[0].Checked;
                 IpViewerSettings.Instance.LogAdapterInformation = nodes.Find("LogAdapterInformation", true)[0].Checked;
                 IpViewerSettings.Instance.LogAdapterIpAddress = nodes.Find("IPAddress", true)[0].Checked;
-                IpViewerSettings.Instance.LogAdapterOperationalStatus = nodes.Find("OperationalStatus", true)[0].Checked;  
+                IpViewerSettings.Instance.LogAdapterOperationalStatus = nodes.Find("OperationalStatus", true)[0].Checked;
+                IpViewerSettings.Instance.Use12HourClock = nodes.Find("Use12HourClock", true)[0].Checked;
             }
             catch (Exception ex)
             {

@@ -32,15 +32,16 @@
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Start Minimized");
             System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Close To Tray");
             System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Minimize To Tray");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Log External IP Address");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("IP Address");
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Operational Status");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Log Adapter Information", new System.Windows.Forms.TreeNode[] {
-            treeNode6,
-            treeNode7});
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Enable Logging", new System.Windows.Forms.TreeNode[] {
-            treeNode5,
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Use 12 Hour Clock");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Log External IP Address");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("IP Address");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Operational Status");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Log Adapter Information", new System.Windows.Forms.TreeNode[] {
+            treeNode7,
             treeNode8});
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Enable Logging", new System.Windows.Forms.TreeNode[] {
+            treeNode6,
+            treeNode9});
             this.buttonOK = new System.Windows.Forms.Button();
             this.buttonCANCEL = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -104,27 +105,31 @@
             treeNode4.Name = "MinimizeToTray";
             treeNode4.Tag = "MinimizeToTray";
             treeNode4.Text = "Minimize To Tray";
-            treeNode5.Name = "LogExternalAddress";
-            treeNode5.Tag = "LogExternalAddress";
-            treeNode5.Text = "Log External IP Address";
-            treeNode6.Name = "IPAddress";
-            treeNode6.Tag = "IPAddress";
-            treeNode6.Text = "IP Address";
-            treeNode7.Name = "OperationalStatus";
-            treeNode7.Tag = "OperationalStatus";
-            treeNode7.Text = "Operational Status";
-            treeNode8.Name = "LogAdapterInformation";
-            treeNode8.Tag = "LogAdapterInformation";
-            treeNode8.Text = "Log Adapter Information";
-            treeNode9.Name = "EnableLogging";
-            treeNode9.Tag = "EnableLogging";
-            treeNode9.Text = "Enable Logging";
+            treeNode5.Name = "Use12HourClock";
+            treeNode5.Tag = "Use12HourClock";
+            treeNode5.Text = "Use 12 Hour Clock";
+            treeNode6.Name = "LogExternalAddress";
+            treeNode6.Tag = "LogExternalAddress";
+            treeNode6.Text = "Log External IP Address";
+            treeNode7.Name = "IPAddress";
+            treeNode7.Tag = "IPAddress";
+            treeNode7.Text = "IP Address";
+            treeNode8.Name = "OperationalStatus";
+            treeNode8.Tag = "OperationalStatus";
+            treeNode8.Text = "Operational Status";
+            treeNode9.Name = "LogAdapterInformation";
+            treeNode9.Tag = "LogAdapterInformation";
+            treeNode9.Text = "Log Adapter Information";
+            treeNode10.Name = "EnableLogging";
+            treeNode10.Tag = "EnableLogging";
+            treeNode10.Text = "Enable Logging";
             this.treeViewSettings.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode1,
             treeNode2,
             treeNode3,
             treeNode4,
-            treeNode9});
+            treeNode5,
+            treeNode10});
             this.treeViewSettings.Size = new System.Drawing.Size(269, 252);
             this.treeViewSettings.TabIndex = 2;
             // 

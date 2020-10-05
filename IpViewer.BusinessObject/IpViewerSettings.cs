@@ -36,6 +36,8 @@ namespace IpViewer.BusinessObject
 
         }
 
+        public bool Use12HourClock { get; set; }
+
         public bool GetExternalAddress { get; set; }
 
         public bool StartMinimized { get; set; }
@@ -76,6 +78,7 @@ namespace IpViewer.BusinessObject
             LogAdapterInformation = bool.Parse(ConfigurationManager.AppSettings["LogAdapterInformation"]);
             LogAdapterIpAddress = bool.Parse(ConfigurationManager.AppSettings["LogAdapterIpAddress"]);
             LogAdapterOperationalStatus = bool.Parse(ConfigurationManager.AppSettings["LogAdapterOperationalStatus"]);
+            Use12HourClock = bool.Parse(ConfigurationManager.AppSettings["Use12HourClock"]);
         }
 
         public void SaveSettings()
@@ -94,6 +97,7 @@ namespace IpViewer.BusinessObject
             manager.AppSettings.Settings["LogAdapterInformation"].Value = LogAdapterInformation.ToString();
             manager.AppSettings.Settings["LogAdapterIpAddress"].Value = LogAdapterIpAddress.ToString();
             manager.AppSettings.Settings["LogAdapterOperationalStatus"].Value = LogAdapterOperationalStatus.ToString();
+            manager.AppSettings.Settings["Use12HourClock"].Value = Use12HourClock.ToString();
 
             manager.Save(ConfigurationSaveMode.Full, true);
             ConfigurationManager.RefreshSection("appSettings");

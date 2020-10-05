@@ -197,3 +197,8 @@ IpViewerCore/obj/Release/netcoreapp3.1/IpViewerCore.csproj.FileListAbsolute.txt
 IpViewerCore/obj/Release/netcoreapp3.1/IpViewerCore.csproj.GenerateResource.cache
 IpViewerCore/obj/Release/netcoreapp3.1/IpViewerCore.Form1.resources
 IpViewerCore/obj/Release/netcoreapp3.1/IpViewerCore.genruntimeconfig.cache
+IpViewer/bin/Debug/IpViewer.BusinessObject.dll
+IpViewer/bin/Debug/IpViewer.BusinessObject.pdb
+IpViewer/bin/Debug/IpViewer.exe
+IpViewer/bin/Debug/IpViewer.exe.config
+IpViewer/bin/Debug/logs/ip-viewer.log.2020-10-03
