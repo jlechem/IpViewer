@@ -49,6 +49,7 @@
     <Compile Include="AdapterService.cs" />
     <Compile Include="HostInformation.cs" />
     <Compile Include="IpViewerSettings.cs" />
+    <Compile Include="PacketInformation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
