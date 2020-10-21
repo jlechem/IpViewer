@@ -1,6 +1,7 @@
 ﻿using IpViewer.BusinessObject;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using IPViewer.BusinessObject;
 
 namespace IpViewer
 {
@@ -15,6 +16,14 @@ namespace IpViewer
         public Packets()
         {
             InitializeComponent();
+        }
+
+        public Packets(AdapterInfo ai)
+        {
+            InitializeComponent();
+
+            this.labelAdapter.Text = ai.Name;
+
         }
 
         private void GetPackets()

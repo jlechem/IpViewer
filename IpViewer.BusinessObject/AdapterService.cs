@@ -55,7 +55,8 @@ namespace IPViewer.BusinessObject
                         Name = adapter.Name,
                         Description = adapter.Description,
                         Speed = adapter.Speed,
-                        OperationalStatus = adapter.OperationalStatus.ToString()
+                        OperationalStatus = adapter.OperationalStatus.ToString(),
+                        NIC = adapter
                     }));
 
                 if(IpViewerSettings.Instance.LoggingEnabled && IpViewerSettings.Instance.LogAdapterInformation)

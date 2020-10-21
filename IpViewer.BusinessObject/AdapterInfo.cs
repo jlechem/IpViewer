@@ -14,6 +14,8 @@
 //   You should have received a copy of the GNU General Public License
 //   along with this program.If not, see<https://www.gnu.org/licenses/>.
 
+using System.Net.NetworkInformation;
+
 namespace IPViewer.BusinessObject
 {
     public class AdapterInfo
@@ -57,6 +59,8 @@ namespace IPViewer.BusinessObject
         /// Gets or sets the adapter's description.
         /// </summary>
         public string Description { get; set; }
+
+        public NetworkInterface NIC { get; set; } = null;
 
     }
 }
