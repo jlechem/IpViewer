@@ -290,3 +290,6 @@ packages/PacketDotNet.1.1.1/.signature.p7s
 IpViewer/bin/Debug/IpViewer.BusinessObject.dll
 IpViewer/bin/Debug/IpViewer.BusinessObject.pdb
 IpViewer/bin/Debug/IpViewer.exe
+IpViewer/bin/Debug/IpViewer.BusinessObject.dll
+IpViewer/bin/Debug/IpViewer.BusinessObject.pdb
+IpViewer/bin/Debug/IpViewer.exe
