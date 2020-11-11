@@ -131,6 +131,7 @@ namespace IpViewer2
 
             _adapters = _adapterService.GetAdapters();
 
+            this.comboBoxAdapters.Items.Clear();
             this.comboBoxAdapters.Items.AddRange(_adapters.Select(adapter => adapter.Name).ToArray());
 
             var index = 0;

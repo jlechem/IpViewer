@@ -52,6 +52,8 @@
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.viewPacketsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.copyInternalIPAddressToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.copyExternalIPAddressToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -69,8 +71,6 @@
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.viewPacketsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -223,6 +223,16 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
             // 
+            // viewPacketsToolStripMenuItem
+            // 
+            this.viewPacketsToolStripMenuItem.Name = "viewPacketsToolStripMenuItem";
+            resources.ApplyResources(this.viewPacketsToolStripMenuItem, "viewPacketsToolStripMenuItem");
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            resources.ApplyResources(this.toolStripSeparator5, "toolStripSeparator5");
+            // 
             // copyInternalIPAddressToolStripMenuItem
             // 
             this.copyInternalIPAddressToolStripMenuItem.Name = "copyInternalIPAddressToolStripMenuItem";
@@ -330,16 +340,6 @@
             this.timer2.Enabled = true;
             this.timer2.Interval = 500;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // viewPacketsToolStripMenuItem
-            // 
-            this.viewPacketsToolStripMenuItem.Name = "viewPacketsToolStripMenuItem";
-            resources.ApplyResources(this.viewPacketsToolStripMenuItem, "viewPacketsToolStripMenuItem");
-            // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            resources.ApplyResources(this.toolStripSeparator5, "toolStripSeparator5");
             // 
             // Form1
             // 

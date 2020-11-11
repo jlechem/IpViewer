@@ -82,19 +82,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_A3029CEFBBB9A4E61C9C2368356E70F3"
+        "OwnerKey" = "8:_5A729E7CA0734ADAB65060F8C6FD3870"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_E2CF7C463AEE4B71860BE059B768C72A"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_5A729E7CA0734ADAB65060F8C6FD3870"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -107,6 +101,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_F66AB60547179C0F292C9F48D90DC924"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_A3029CEFBBB9A4E61C9C2368356E70F3"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -404,19 +404,19 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Ip Viewer"
-        "ProductCode" = "8:{00240483-1CB4-42DB-8C15-AF7410B98CDF}"
-        "PackageCode" = "8:{595F9F17-19EC-43D0-8D22-32ABA3F19D95}"
+        "ProductCode" = "8:{56823122-63BF-4AEA-A50F-497FFEBE8D68}"
+        "PackageCode" = "8:{5F44C60A-6CA7-4493-8B76-F066F519576A}"
         "UpgradeCode" = "8:{FB1872AE-CB72-4FD3-ABFC-9A4DEBC18763}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:5.4.0"
+        "ProductVersion" = "8:5.5.0"
         "Manufacturer" = "8:Sasquatch Software"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:www.sasquatchsoftware.com"
-        "Title" = "8:Ip Viewer 5.3 Setup"
+        "Title" = "8:Ip Viewer 5.5 Setup"
         "Subject" = "8:"
         "ARPCONTACT" = "8:Sasquatch Software"
         "Keywords" = "8:"
@@ -940,7 +940,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_5A729E7CA0734ADAB65060F8C6FD3870"
             {
-            "SourcePath" = "8:..\\IpViewer\\obj\\Release\\IpViewer.exe"
+            "SourcePath" = "8:..\\IpViewer\\obj\\Debug\\IpViewer.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_284512E110B248098676FD4E34E26138"
@@ -968,7 +968,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_E2CF7C463AEE4B71860BE059B768C72A"
             {
-            "SourcePath" = "8:..\\IpViewer\\obj\\Release\\IpViewer.exe"
+            "SourcePath" = "8:..\\IpViewer\\obj\\Debug\\IpViewer.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_284512E110B248098676FD4E34E26138"
