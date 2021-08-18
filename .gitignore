@@ -298,3 +298,8 @@ IpViewer/bin/Debug/logs/ip-viewer.log.2020-10-21
 IpViewer/bin/Debug/IpViewer.exe
 IpViewer/bin/Debug/IpViewer.BusinessObject.pdb
 IpViewer/bin/Debug/IpViewer.BusinessObject.dll
+IpViewer.BusinessObject/obj/Debug/IpViewer.BusinessObject.csproj.AssemblyReference.cache
+IpViewer/obj/Debug/IpViewer.csproj.AssemblyReference.cache
+IpViewerCore/obj/Debug/netcoreapp3.1/IpViewerCore.GeneratedMSBuildEditorConfig.editorconfig
+IpViewerCore/obj/Debug/netcoreapp3.1/IpViewerCore.csproj.AssemblyReference.cache
+UpgradeLog.htm
