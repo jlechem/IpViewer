@@ -303,3 +303,8 @@ IpViewer/obj/Debug/IpViewer.csproj.AssemblyReference.cache
 IpViewerCore/obj/Debug/netcoreapp3.1/IpViewerCore.GeneratedMSBuildEditorConfig.editorconfig
 IpViewerCore/obj/Debug/netcoreapp3.1/IpViewerCore.csproj.AssemblyReference.cache
 UpgradeLog.htm
+*.dll
+IpViewer.BusinessObject/Properties/Settings.settings
+*.dll
+*.pdb
+IpViewer/bin/Debug/IpViewer.exe
