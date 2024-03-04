@@ -308,3 +308,10 @@ IpViewer.BusinessObject/Properties/Settings.settings
 *.dll
 *.pdb
 IpViewer/bin/Debug/IpViewer.exe
+/.vs/IpViewer
+/IpViewer/.vs
+/packages/log4net.2.0.15
+/IpViewer.BusinessObject/.vs
+/IpViewer.BusinessObject/obj/Debug
+/UpgradeLog2.htm
+/IpViewer/obj/Debug/IpViewer.csproj.Up2Date
