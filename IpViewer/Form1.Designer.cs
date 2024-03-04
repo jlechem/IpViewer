@@ -28,346 +28,325 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.labelHostName = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.labelExternalAddress = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.labelInternalAddress = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.labelSpeed = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.labelMacAddress = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.labelAdapterStatus = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.comboBoxAdapters = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.refreshIPInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.viewPacketsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.copyInternalIPAddressToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.copyExternalIPAddressToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.settingsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.copyExternalAddressToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
-            this.contextMenuStrip1.SuspendLayout();
-            this.SuspendLayout();
+            groupBox1 = new System.Windows.Forms.GroupBox();
+            labelHostName = new System.Windows.Forms.Label();
+            label9 = new System.Windows.Forms.Label();
+            labelExternalAddress = new System.Windows.Forms.Label();
+            label2 = new System.Windows.Forms.Label();
+            groupBox2 = new System.Windows.Forms.GroupBox();
+            labelInternalAddress = new System.Windows.Forms.Label();
+            label5 = new System.Windows.Forms.Label();
+            labelSpeed = new System.Windows.Forms.Label();
+            label7 = new System.Windows.Forms.Label();
+            labelMacAddress = new System.Windows.Forms.Label();
+            label6 = new System.Windows.Forms.Label();
+            labelAdapterStatus = new System.Windows.Forms.Label();
+            label4 = new System.Windows.Forms.Label();
+            comboBoxAdapters = new System.Windows.Forms.ComboBox();
+            label3 = new System.Windows.Forms.Label();
+            menuStrip1 = new System.Windows.Forms.MenuStrip();
+            fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            refreshIPInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            viewPacketsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            copyInternalIPAddressToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            copyExternalIPAddressToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            statusStrip1 = new System.Windows.Forms.StatusStrip();
+            toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            notifyIcon1 = new System.Windows.Forms.NotifyIcon(components);
+            contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(components);
+            toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            settingsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            copyExternalAddressToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            timer1 = new System.Windows.Forms.Timer(components);
+            timer2 = new System.Windows.Forms.Timer(components);
+            groupBox1.SuspendLayout();
+            groupBox2.SuspendLayout();
+            menuStrip1.SuspendLayout();
+            statusStrip1.SuspendLayout();
+            contextMenuStrip1.SuspendLayout();
+            SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.labelHostName);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.labelExternalAddress);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            resources.ApplyResources(this.groupBox1, "groupBox1");
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.TabStop = false;
+            groupBox1.Controls.Add(labelHostName);
+            groupBox1.Controls.Add(label9);
+            groupBox1.Controls.Add(labelExternalAddress);
+            groupBox1.Controls.Add(label2);
+            resources.ApplyResources(groupBox1, "groupBox1");
+            groupBox1.Name = "groupBox1";
+            groupBox1.TabStop = false;
             // 
             // labelHostName
             // 
-            resources.ApplyResources(this.labelHostName, "labelHostName");
-            this.labelHostName.Name = "labelHostName";
+            resources.ApplyResources(labelHostName, "labelHostName");
+            labelHostName.Name = "labelHostName";
             // 
             // label9
             // 
-            resources.ApplyResources(this.label9, "label9");
-            this.label9.Name = "label9";
+            resources.ApplyResources(label9, "label9");
+            label9.Name = "label9";
             // 
             // labelExternalAddress
             // 
-            resources.ApplyResources(this.labelExternalAddress, "labelExternalAddress");
-            this.labelExternalAddress.Name = "labelExternalAddress";
+            resources.ApplyResources(labelExternalAddress, "labelExternalAddress");
+            labelExternalAddress.Name = "labelExternalAddress";
             // 
             // label2
             // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
+            resources.ApplyResources(label2, "label2");
+            label2.Name = "label2";
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.labelInternalAddress);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.labelSpeed);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.labelMacAddress);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.labelAdapterStatus);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.comboBoxAdapters);
-            this.groupBox2.Controls.Add(this.label3);
-            resources.ApplyResources(this.groupBox2, "groupBox2");
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.TabStop = false;
+            groupBox2.Controls.Add(labelInternalAddress);
+            groupBox2.Controls.Add(label5);
+            groupBox2.Controls.Add(labelSpeed);
+            groupBox2.Controls.Add(label7);
+            groupBox2.Controls.Add(labelMacAddress);
+            groupBox2.Controls.Add(label6);
+            groupBox2.Controls.Add(labelAdapterStatus);
+            groupBox2.Controls.Add(label4);
+            groupBox2.Controls.Add(comboBoxAdapters);
+            groupBox2.Controls.Add(label3);
+            resources.ApplyResources(groupBox2, "groupBox2");
+            groupBox2.Name = "groupBox2";
+            groupBox2.TabStop = false;
             // 
             // labelInternalAddress
             // 
-            resources.ApplyResources(this.labelInternalAddress, "labelInternalAddress");
-            this.labelInternalAddress.Name = "labelInternalAddress";
+            resources.ApplyResources(labelInternalAddress, "labelInternalAddress");
+            labelInternalAddress.Name = "labelInternalAddress";
             // 
             // label5
             // 
-            resources.ApplyResources(this.label5, "label5");
-            this.label5.Name = "label5";
+            resources.ApplyResources(label5, "label5");
+            label5.Name = "label5";
             // 
             // labelSpeed
             // 
-            resources.ApplyResources(this.labelSpeed, "labelSpeed");
-            this.labelSpeed.Name = "labelSpeed";
+            resources.ApplyResources(labelSpeed, "labelSpeed");
+            labelSpeed.Name = "labelSpeed";
             // 
             // label7
             // 
-            resources.ApplyResources(this.label7, "label7");
-            this.label7.Name = "label7";
+            resources.ApplyResources(label7, "label7");
+            label7.Name = "label7";
             // 
             // labelMacAddress
             // 
-            resources.ApplyResources(this.labelMacAddress, "labelMacAddress");
-            this.labelMacAddress.Name = "labelMacAddress";
+            resources.ApplyResources(labelMacAddress, "labelMacAddress");
+            labelMacAddress.Name = "labelMacAddress";
             // 
             // label6
             // 
-            resources.ApplyResources(this.label6, "label6");
-            this.label6.Name = "label6";
+            resources.ApplyResources(label6, "label6");
+            label6.Name = "label6";
             // 
             // labelAdapterStatus
             // 
-            resources.ApplyResources(this.labelAdapterStatus, "labelAdapterStatus");
-            this.labelAdapterStatus.Name = "labelAdapterStatus";
+            resources.ApplyResources(labelAdapterStatus, "labelAdapterStatus");
+            labelAdapterStatus.Name = "labelAdapterStatus";
             // 
             // label4
             // 
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.Name = "label4";
+            resources.ApplyResources(label4, "label4");
+            label4.Name = "label4";
             // 
             // comboBoxAdapters
             // 
-            resources.ApplyResources(this.comboBoxAdapters, "comboBoxAdapters");
-            this.comboBoxAdapters.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxAdapters.FormattingEnabled = true;
-            this.comboBoxAdapters.Name = "comboBoxAdapters";
-            this.comboBoxAdapters.SelectedIndexChanged += new System.EventHandler(this.comboBoxAdapters_SelectedIndexChanged);
+            resources.ApplyResources(comboBoxAdapters, "comboBoxAdapters");
+            comboBoxAdapters.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            comboBoxAdapters.FormattingEnabled = true;
+            comboBoxAdapters.Name = "comboBoxAdapters";
+            comboBoxAdapters.SelectedIndexChanged += comboBoxAdapters_SelectedIndexChanged;
             // 
             // label3
             // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
+            resources.ApplyResources(label3, "label3");
+            label3.Name = "label3";
             // 
             // menuStrip1
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.editToolStripMenuItem,
-            this.helpToolStripMenuItem});
-            resources.ApplyResources(this.menuStrip1, "menuStrip1");
-            this.menuStrip1.Name = "menuStrip1";
+            menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { fileToolStripMenuItem, editToolStripMenuItem, helpToolStripMenuItem });
+            resources.ApplyResources(menuStrip1, "menuStrip1");
+            menuStrip1.Name = "menuStrip1";
             // 
             // fileToolStripMenuItem
             // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.refreshIPInformationToolStripMenuItem});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            resources.ApplyResources(this.fileToolStripMenuItem, "fileToolStripMenuItem");
+            fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { refreshIPInformationToolStripMenuItem });
+            fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            resources.ApplyResources(fileToolStripMenuItem, "fileToolStripMenuItem");
             // 
             // refreshIPInformationToolStripMenuItem
             // 
-            this.refreshIPInformationToolStripMenuItem.Name = "refreshIPInformationToolStripMenuItem";
-            resources.ApplyResources(this.refreshIPInformationToolStripMenuItem, "refreshIPInformationToolStripMenuItem");
-            this.refreshIPInformationToolStripMenuItem.Click += new System.EventHandler(this.refreshIPInformationToolStripMenuItem_Click);
+            refreshIPInformationToolStripMenuItem.Name = "refreshIPInformationToolStripMenuItem";
+            resources.ApplyResources(refreshIPInformationToolStripMenuItem, "refreshIPInformationToolStripMenuItem");
+            refreshIPInformationToolStripMenuItem.Click += refreshIPInformationToolStripMenuItem_Click;
             // 
             // editToolStripMenuItem
             // 
-            this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.settingsToolStripMenuItem,
-            this.toolStripSeparator1,
-            this.viewPacketsToolStripMenuItem,
-            this.toolStripSeparator5,
-            this.copyInternalIPAddressToolStripMenuItem,
-            this.copyExternalIPAddressToolStripMenuItem});
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            resources.ApplyResources(this.editToolStripMenuItem, "editToolStripMenuItem");
+            editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { settingsToolStripMenuItem, toolStripSeparator1, viewPacketsToolStripMenuItem, toolStripSeparator5, copyInternalIPAddressToolStripMenuItem, copyExternalIPAddressToolStripMenuItem });
+            editToolStripMenuItem.Name = "editToolStripMenuItem";
+            resources.ApplyResources(editToolStripMenuItem, "editToolStripMenuItem");
             // 
             // settingsToolStripMenuItem
             // 
-            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            resources.ApplyResources(this.settingsToolStripMenuItem, "settingsToolStripMenuItem");
-            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
+            settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            resources.ApplyResources(settingsToolStripMenuItem, "settingsToolStripMenuItem");
+            settingsToolStripMenuItem.Click += settingsToolStripMenuItem_Click;
             // 
             // toolStripSeparator1
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            resources.ApplyResources(toolStripSeparator1, "toolStripSeparator1");
             // 
             // viewPacketsToolStripMenuItem
             // 
-            this.viewPacketsToolStripMenuItem.Name = "viewPacketsToolStripMenuItem";
-            resources.ApplyResources(this.viewPacketsToolStripMenuItem, "viewPacketsToolStripMenuItem");
+            viewPacketsToolStripMenuItem.Name = "viewPacketsToolStripMenuItem";
+            resources.ApplyResources(viewPacketsToolStripMenuItem, "viewPacketsToolStripMenuItem");
             // 
             // toolStripSeparator5
             // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            resources.ApplyResources(this.toolStripSeparator5, "toolStripSeparator5");
+            toolStripSeparator5.Name = "toolStripSeparator5";
+            resources.ApplyResources(toolStripSeparator5, "toolStripSeparator5");
             // 
             // copyInternalIPAddressToolStripMenuItem
             // 
-            this.copyInternalIPAddressToolStripMenuItem.Name = "copyInternalIPAddressToolStripMenuItem";
-            resources.ApplyResources(this.copyInternalIPAddressToolStripMenuItem, "copyInternalIPAddressToolStripMenuItem");
-            this.copyInternalIPAddressToolStripMenuItem.Click += new System.EventHandler(this.copyInternalIPAddressToolStripMenuItem_Click);
+            copyInternalIPAddressToolStripMenuItem.Name = "copyInternalIPAddressToolStripMenuItem";
+            resources.ApplyResources(copyInternalIPAddressToolStripMenuItem, "copyInternalIPAddressToolStripMenuItem");
+            copyInternalIPAddressToolStripMenuItem.Click += copyInternalIPAddressToolStripMenuItem_Click;
             // 
             // copyExternalIPAddressToolStripMenuItem
             // 
-            this.copyExternalIPAddressToolStripMenuItem.Name = "copyExternalIPAddressToolStripMenuItem";
-            resources.ApplyResources(this.copyExternalIPAddressToolStripMenuItem, "copyExternalIPAddressToolStripMenuItem");
-            this.copyExternalIPAddressToolStripMenuItem.Click += new System.EventHandler(this.copyExternalIPAddressToolStripMenuItem_Click);
+            copyExternalIPAddressToolStripMenuItem.Name = "copyExternalIPAddressToolStripMenuItem";
+            resources.ApplyResources(copyExternalIPAddressToolStripMenuItem, "copyExternalIPAddressToolStripMenuItem");
+            copyExternalIPAddressToolStripMenuItem.Click += copyExternalIPAddressToolStripMenuItem_Click;
             // 
             // helpToolStripMenuItem
             // 
-            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutToolStripMenuItem});
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            resources.ApplyResources(this.helpToolStripMenuItem, "helpToolStripMenuItem");
+            helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { aboutToolStripMenuItem });
+            helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            resources.ApplyResources(helpToolStripMenuItem, "helpToolStripMenuItem");
             // 
             // aboutToolStripMenuItem
             // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            resources.ApplyResources(aboutToolStripMenuItem, "aboutToolStripMenuItem");
+            aboutToolStripMenuItem.Click += aboutToolStripMenuItem_Click;
             // 
             // statusStrip1
             // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1});
-            resources.ApplyResources(this.statusStrip1, "statusStrip1");
-            this.statusStrip1.Name = "statusStrip1";
+            statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { toolStripStatusLabel1 });
+            resources.ApplyResources(statusStrip1, "statusStrip1");
+            statusStrip1.Name = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            resources.ApplyResources(this.toolStripStatusLabel1, "toolStripStatusLabel1");
-            this.toolStripStatusLabel1.Spring = true;
+            toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            resources.ApplyResources(toolStripStatusLabel1, "toolStripStatusLabel1");
+            toolStripStatusLabel1.Spring = true;
             // 
             // notifyIcon1
             // 
-            resources.ApplyResources(this.notifyIcon1, "notifyIcon1");
-            this.notifyIcon1.ContextMenuStrip = this.contextMenuStrip1;
-            this.notifyIcon1.DoubleClick += new System.EventHandler(this.notifyIcon1_DoubleClick);
+            resources.ApplyResources(notifyIcon1, "notifyIcon1");
+            notifyIcon1.ContextMenuStrip = contextMenuStrip1;
+            notifyIcon1.DoubleClick += notifyIcon1_DoubleClick;
             // 
             // contextMenuStrip1
             // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.toolStripSeparator3,
-            this.settingsToolStripMenuItem1,
-            this.toolStripSeparator2,
-            this.copyExternalAddressToolStripMenuItem,
-            this.toolStripSeparator4,
-            this.toolStripMenuItem2});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
+            contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { toolStripMenuItem1, toolStripSeparator3, settingsToolStripMenuItem1, toolStripSeparator2, copyExternalAddressToolStripMenuItem, toolStripSeparator4, toolStripMenuItem2 });
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            resources.ApplyResources(contextMenuStrip1, "contextMenuStrip1");
             // 
             // toolStripMenuItem1
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            toolStripMenuItem1.Name = "toolStripMenuItem1";
+            resources.ApplyResources(toolStripMenuItem1, "toolStripMenuItem1");
+            toolStripMenuItem1.Click += toolStripMenuItem1_Click;
             // 
             // toolStripSeparator3
             // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
+            toolStripSeparator3.Name = "toolStripSeparator3";
+            resources.ApplyResources(toolStripSeparator3, "toolStripSeparator3");
             // 
             // settingsToolStripMenuItem1
             // 
-            this.settingsToolStripMenuItem1.Name = "settingsToolStripMenuItem1";
-            resources.ApplyResources(this.settingsToolStripMenuItem1, "settingsToolStripMenuItem1");
-            this.settingsToolStripMenuItem1.Click += new System.EventHandler(this.settingsToolStripMenuItem1_Click);
+            settingsToolStripMenuItem1.Name = "settingsToolStripMenuItem1";
+            resources.ApplyResources(settingsToolStripMenuItem1, "settingsToolStripMenuItem1");
+            settingsToolStripMenuItem1.Click += settingsToolStripMenuItem1_Click;
             // 
             // toolStripSeparator2
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
+            toolStripSeparator2.Name = "toolStripSeparator2";
+            resources.ApplyResources(toolStripSeparator2, "toolStripSeparator2");
             // 
             // copyExternalAddressToolStripMenuItem
             // 
-            this.copyExternalAddressToolStripMenuItem.Name = "copyExternalAddressToolStripMenuItem";
-            resources.ApplyResources(this.copyExternalAddressToolStripMenuItem, "copyExternalAddressToolStripMenuItem");
-            this.copyExternalAddressToolStripMenuItem.Click += new System.EventHandler(this.copyExternalAddressToolStripMenuItem_Click);
+            copyExternalAddressToolStripMenuItem.Name = "copyExternalAddressToolStripMenuItem";
+            resources.ApplyResources(copyExternalAddressToolStripMenuItem, "copyExternalAddressToolStripMenuItem");
+            copyExternalAddressToolStripMenuItem.Click += copyExternalAddressToolStripMenuItem_Click;
             // 
             // toolStripSeparator4
             // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            resources.ApplyResources(this.toolStripSeparator4, "toolStripSeparator4");
+            toolStripSeparator4.Name = "toolStripSeparator4";
+            resources.ApplyResources(toolStripSeparator4, "toolStripSeparator4");
             // 
             // toolStripMenuItem2
             // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            resources.ApplyResources(this.toolStripMenuItem2, "toolStripMenuItem2");
-            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
+            toolStripMenuItem2.Name = "toolStripMenuItem2";
+            resources.ApplyResources(toolStripMenuItem2, "toolStripMenuItem2");
+            toolStripMenuItem2.Click += toolStripMenuItem2_Click;
             // 
             // timer1
             // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 3600000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            timer1.Enabled = true;
+            timer1.Interval = 3600000;
+            timer1.Tick += timer1_Tick;
             // 
             // timer2
             // 
-            this.timer2.Enabled = true;
-            this.timer2.Interval = 500;
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            timer2.Enabled = true;
+            timer2.Interval = 500;
+            timer2.Tick += timer2_Tick;
             // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.menuStrip1);
-            this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.MaximizeBox = false;
-            this.Name = "Form1";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.Resize += new System.EventHandler(this.Form1_Resize);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
-            this.contextMenuStrip1.ResumeLayout(false);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            Controls.Add(groupBox2);
+            Controls.Add(groupBox1);
+            Controls.Add(statusStrip1);
+            Controls.Add(menuStrip1);
+            DoubleBuffered = true;
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            MaximizeBox = false;
+            Name = "Form1";
+            FormClosing += Form1_FormClosing;
+            Load += Form1_Load;
+            Resize += Form1_Resize;
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
+            statusStrip1.ResumeLayout(false);
+            statusStrip1.PerformLayout();
+            contextMenuStrip1.ResumeLayout(false);
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

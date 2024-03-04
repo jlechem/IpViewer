@@ -65,7 +65,9 @@ namespace IpViewer2
             {
                 this.Cursor = Cursors.WaitCursor;
 
-                new AboutBox1().ShowDialog();
+                var box = new AboutBox1();
+                box.TopMost = true;
+                box.ShowDialog();
             }
             finally
             {
