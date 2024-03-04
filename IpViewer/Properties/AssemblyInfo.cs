@@ -10,8 +10,8 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Sasquatch Software")]
 [assembly: AssemblyProduct("IpViewer")]
-[assembly: AssemblyCopyright("Copyright ©  2020 Sasquatch Software")]
-[assembly: AssemblyTrademark("Copyright ©  2020 Sasquatch Software")]
+[assembly: AssemblyCopyright("Copyright ©  2024 Justin LeCheminant")]
+[assembly: AssemblyTrademark("Copyright ©  2024 Justin LeCheminant")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible
