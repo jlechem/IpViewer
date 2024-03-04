@@ -1,24 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29926.136
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IpViewer", "IpViewer\IpViewer.csproj", "{CEC8F7CA-E713-466A-9312-BAC6772F3BE5}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{C4AEBDB9-B2C2-48C7-AF01-888C974BB894}"
-	ProjectSection(SolutionItems) = preProject
-		readme.txt = readme.txt
-	EndProjectSection
-EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "IpViewerSetup", "IpViewerSetup\IpViewerSetup.vdproj", "{35E6045C-8A80-4F60-9251-D2B17BFA4007}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Releases", "Releases", "{F6C64AAA-27D8-4251-B9EB-A4433DFA7126}"
-	ProjectSection(SolutionItems) = preProject
-		Releases\IpViewerSetup_5.msi = Releases\IpViewerSetup_5.msi
-		Releases\IpViewerSetup_5_1.msi = Releases\IpViewerSetup_5_1.msi
-	EndProjectSection
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IpViewerCore", "IpViewerCore\IpViewerCore.csproj", "{6EB91F6B-4248-48ED-B72C-1F6A0A47119F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IpViewer.BusinessObject", "IpViewer.BusinessObject\IpViewer.BusinessObject.csproj", "{0747BCCA-17D9-4F89-A514-6D8501CF613B}"
 EndProject
@@ -32,12 +17,6 @@ Global
 		{CEC8F7CA-E713-466A-9312-BAC6772F3BE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CEC8F7CA-E713-466A-9312-BAC6772F3BE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CEC8F7CA-E713-466A-9312-BAC6772F3BE5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{35E6045C-8A80-4F60-9251-D2B17BFA4007}.Debug|Any CPU.ActiveCfg = Debug
-		{35E6045C-8A80-4F60-9251-D2B17BFA4007}.Release|Any CPU.ActiveCfg = Release
-		{6EB91F6B-4248-48ED-B72C-1F6A0A47119F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6EB91F6B-4248-48ED-B72C-1F6A0A47119F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6EB91F6B-4248-48ED-B72C-1F6A0A47119F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6EB91F6B-4248-48ED-B72C-1F6A0A47119F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0747BCCA-17D9-4F89-A514-6D8501CF613B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0747BCCA-17D9-4F89-A514-6D8501CF613B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0747BCCA-17D9-4F89-A514-6D8501CF613B}.Release|Any CPU.ActiveCfg = Release|Any CPU
