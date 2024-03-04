@@ -109,7 +109,7 @@ namespace IpViewer2
             IpViewerSettings.Instance.SaveSettings();
 
             this.labelMacAddress.Text = adapterInfo.MacAddress;
-            this.labelSpeed.Text = $"{adapterInfo.Speed * 0.000000125} MegaBytes / sec";
+            this.labelSpeed.Text = $"{(adapterInfo.Speed * 0.000000125):0.##} MegaBytes / sec";
             this.labelAdapterStatus.Text = adapterInfo.OperationalStatus;
             this.labelInternalAddress.Text = adapterInfo.IpAddress;
         }
